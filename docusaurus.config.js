@@ -13,40 +13,57 @@ module.exports = {
   organizationName: 'waggle-sensor',
   projectName: 'waggle-docs',
   trailingSlash: false,
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     navbar: {
-      title: 'Waggle',
+      title: 'Sage',
+      logo: {
+        alt: 'Site Logo',
+        src: 'img/logo.png',
+        srcDark: 'img/logo_dark.svg',
+        className: 'custom-navbar-logo-class',
+      },
       items: [
         {
           to: '/docs/about/overview',
           position: 'left',
-          label: 'About',
+          label: 'Docs',
         },
         {
-          to: '/docs/tutorials/accessing-data',
-          position: 'left',
-          label: 'Tutorials',
-        },
-        /*{
           to: '/blog',
           label: 'News',
           position: 'left'
-        },*/
+        },
         {
+          to: '/publications',
+          label: 'Publications',
+          position: 'left'
+        },
+        /* {
           to: 'https://portal.sagecontinuum.org',
           label: 'Sage Portal',
           position: 'left'
-        },
-        /*
+        },*/
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          type: 'dropdown',
           position: 'right',
-        },
-        */
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+          items: [
+            {
+              label: 'Sage',
+              href: 'https://github.com/sagecontinuum',
+            },
+            {
+              label: 'Waggle',
+              href: 'https://github.com/waggle-sensor',
+            }
+          ],
+        }
       ],
     },
     footer: {
+      /*
       style: 'dark',
       links: [
         {
@@ -68,6 +85,7 @@ module.exports = {
         }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Waggle`,
+      */
     },
     prism: {
       theme: lightCodeTheme,
@@ -124,6 +142,17 @@ module.exports = {
           },
         ],
       },
-    ]
+    ],
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
   ]
 };

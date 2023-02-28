@@ -1,47 +1,29 @@
-import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
-import  { Redirect } from 'react-router-dom';
-// import HomepageFeatures from '../components/HomepageFeatures';
-// import Layout from '@theme/Layout';
+import React from 'react'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import Head from '@docusaurus/Head'
+import Layout from '@theme/Layout'
+import LandingPage from './home/home'
+
+// import  { Redirect } from 'react-router-dom'
 
 
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/about">
-              About
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+
 
 export default function Home() {
-  return <Redirect to='/docs/about/overview' />;
+  // return <Redirect to='/docs/about/overview' />;
 
-  /* We don't need a home page, or at least for now
-  const {siteConfig} = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext()
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      title={`${siteConfig.title}`}
+      description="Sage website">
+      <Head>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </Head>
       <main>
-        <HomepageFeatures />
+        <LandingPage />
       </main>
     </Layout>
-  );
-  */
+  )
 }
