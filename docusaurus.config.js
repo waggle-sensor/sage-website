@@ -25,9 +25,19 @@ module.exports = {
       },
       items: [
         {
-          to: '/docs/about/overview',
+          to: '/about',
           position: 'left',
-          label: 'Docs',
+          label: 'About',
+        },
+        {
+          to: '/science',
+          label: 'Science',
+          position: 'left'
+        },
+        {
+          to: '/publications',
+          label: 'Publications',
+          position: 'left'
         },
         {
           to: '/blog',
@@ -35,9 +45,14 @@ module.exports = {
           position: 'left'
         },
         {
-          to: '/publications',
-          label: 'Publications',
+          to: '/team',
+          label: 'Team',
           position: 'left'
+        },
+        {
+          to: '/docs/about/overview',
+          position: 'left',
+          label: 'Docs'
         },
         /* {
           to: 'https://portal.sagecontinuum.org',
@@ -51,12 +66,12 @@ module.exports = {
           'aria-label': 'GitHub repository',
           items: [
             {
-              label: 'Sage',
-              href: 'https://github.com/sagecontinuum',
+              label: 'Sage GitHub',
+              href: 'https://github.com/sagecontinuum'
             },
             {
-              label: 'Waggle',
-              href: 'https://github.com/waggle-sensor',
+              label: 'Waggle Sensor GitHub',
+              href: 'https://github.com/waggle-sensor'
             }
           ],
         }

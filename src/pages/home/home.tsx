@@ -86,7 +86,7 @@ export default function Home() {
         <div className="section">
           <Subtext>
             A new kind of national-scale cyberinfrastructure
-            to enable AI at the Edge.
+            to enable AI at the Edge for science.
           </Subtext>
 
           <Cards>
@@ -313,9 +313,7 @@ const Root = styled.div`
   /**
   * Resets; back to MUI Global and Sage Portals CSS
   */
-  h1, h2, h3, h4, h5, h6 {
-    font-size: revert;  // ignore docusaurus
-  }
+
 
   a {
     color: #0080c7;

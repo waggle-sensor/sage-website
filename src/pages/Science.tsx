@@ -10,9 +10,9 @@ export default function Publications() {
           height: '50vh',
           fontSize: '20px',
         }}>
-          <h1>Publications</h1>
+          <h1>Science</h1>
 
-          [publications go here]
+          [Science goes here]
       </Page>
     </Layout>
   );
