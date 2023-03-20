@@ -74,7 +74,13 @@ module.exports = {
               href: 'https://github.com/waggle-sensor'
             }
           ],
-        }
+        },
+        { // note: this is positioned right of search bar
+          type: 'custom-signInBtn',
+          position: "right",
+          itemProp: 44,
+          anotherProp: "xyz"
+        },
       ],
     },
     footer: {

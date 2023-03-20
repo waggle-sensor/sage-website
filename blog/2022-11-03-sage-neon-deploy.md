@@ -11,15 +11,17 @@ tags: [node, deployment]
 
 <p>In April 2022, 4 Sage nodes (3 <a href="https://docs.waggle-edge.ai/docs/about/architecture#wild-waggle-node" target="_blank" rel="noopener">Wild Waggle Nodes</a> and 1 <a href="https://docs.waggle-edge.ai/docs/about/architecture#waggle-blade-node" target="_blank" rel="noopener">Waggle Blade Node</a>) were deployed with an array of sensors (thermographic camera, air quality sensor, etc.) to collect data to better our understanding of smoke and wildfire detection.</p>
 
+<!--truncate-->
+
 <iframe title="Sage NEON deployment to the Konza LTER site in Kansas." src="https://www.youtube.com/embed/GF0jbkMPlTc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%" allowfullscreen="" id="fitvid61143"></iframe>
 
 
 
-## Thermal imaging was used to understand how air temperature can be used to detect smoke and the early warning signs of fire.
+#### Thermal imaging was used to understand how air temperature can be used to detect smoke and the early warning signs of fire.
 
 
 <img src="https://sagecontinuum.org/wp-content/uploads/2022/11/during_burn-2048x1152.png" />
-<figcaption>Deployed MDP tower hosting Sage nodes in the middle of the controlled burn</figcaption>
+Deployed MDP tower hosting Sage nodes in the middle of the controlled burn
 
 ![thermal image](https://sagecontinuum.org/wp-content/uploads/2022/11/Screen-Shot-2022-11-03-at-1.16.50-PM.png)
 <figcaption>Thermal images showing the detected increase in air temperature</figcaption>

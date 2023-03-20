@@ -11,10 +11,11 @@ import Twitter from '@mui/icons-material/Twitter'
 import { Card as PortalCard, CardViewStyle } from '../../components/layout/Layout'
 
 import CodeWindow from './CodeWindow'
+import BlogPreview from './BlogPreview'
 
-// import createAppImg from 'url:./create-app.png'
 
-const docs = 'https://docs.waggle-edge.ai/docs'
+const docs = '/docs'
+const portal = 'https://portal.sagecontinuum.org'
 const waggleOrg = 'https://github.com/waggle-sensor'
 
 
@@ -55,6 +56,7 @@ const scienceTexts = [
 ]
 
 
+
 export default function Home() {
 
   const [devHover, setDevHover] = useState('client')
@@ -67,19 +69,17 @@ export default function Home() {
 
   return (
     <Root>
-      <Banner className="flex">
-        <BannerLeft>
+      <Banner className="flex flex-col md:flex-row justify-between items-center">
+        <div className="text-[#f9f9f9] text-6xl ml-10">
           AI @ the Edge<br/>
           for <TypeWriter texts={scienceTexts}>{' '}</TypeWriter>
-        </BannerLeft>
+        </div>
 
-        <BannerRight className="flex flex-col justify-center items-center">
-          <div>
-            <h3>Getting Started</h3>
-            <a href={docs} className="focused-link gap-1">Documentation <Arrow className="shadow" /></a>
-            <Link to="/data" className="focused-link gap-1">Browse Data <Arrow/></Link>
-          </div>
-        </BannerRight>
+        <div className="flex flex-col mr-40">
+          <h3 className="text-slate-300">Getting Started</h3>
+          <a href="/docs/about/overview" className="focused-link gap-1">Documentation <Arrow className="shadow" /></a>
+          <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow/></a>
+        </div>
       </Banner>
 
       <div className="bg-white">
@@ -89,78 +89,118 @@ export default function Home() {
             to enable AI at the Edge for science.
           </Subtext>
 
-          <Cards>
-            <div className="card">
+          <div className="flex flex-col md:flex-row gap-10">
+            <div className="card flex flex-col">
               <img src={edURL} />
               <h3>Learn</h3>
-              <p>[Sage's goal on Education].  Read more about Sage project</p>
+              <p>Explore some of the science made possible with Sage</p>
             </div>
             <div className="card">
-              <img src="https://raw.githubusercontent.com/sagecontinuum/sage-gui/main/apps/sage/home/create-app.png" />
+              <img src="/img/home/create-app.png" />
               <h3>Contribute</h3>
-              <p>Upload, build, and share <Link to="apps">apps</Link> for AI at the edge</p>
+              <p>Upload, build, and share <a href={`${portal}/apps`}>apps</a> for AI at the edge</p>
             </div>
-            <div className="card">
+            <a className="card" href={`${portal}/jobs`}>
               <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/Wagman-v4.jpg" />
-              <h3>Run</h3>
-              <p>
-                Schedule jobs to run on nodes.<br/>
-              </p>
-            </div>
+              <h3>Run jobs</h3>
+              <p>Create <a href={`${portal}/create-job?tab=editor&start_with_sample=true`}>science goals</a> to run apps on nodes.<br/></p>
+            </a>
             <div className="card">
+              <img src="/img/home/browse.png" />
               <h3>Browse</h3>
-              <p>Browse <Link to="data">data</Link> from sensors and edge apps</p>
+              <p>Browse <a href={`${portal}/data`}>data</a> from sensors and edge apps</p>
             </div>
             <div className="card">
               <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/1820-1024-tweak.jpg" />
               <h3>Analyze</h3>
               <p>Use Sage APIs to fetch, analyze, or integrate data.</p>
             </div>
-          </Cards>
+          </div>
         </div>
       </div>
 
-      <div className="news section flex justify-center gap-2">
+      <div className="section flex flex-col md:flex-row gap-2">
         <CardViewStyle />
-        <PortalCard className="match-twitter-card w-3/4">
-          <h2 className="w-full border-b-1 border-slate-100">News</h2>
-          <br/>
-          <h2><a>SAGE NEON Deployment to the Konza LTER Site in Kansas</a></h2>
-          <p>
-          In April 2022, 4 Sage nodes (3 Wild Waggle Nodes and 1 Waggle Blade Node) were
-          deployed with an array of sensors (thermographic camera, air quality sensor, etc.)
-          to collect data to better our understanding of smoke and wildfire detection. <a>Read more...</a>
-          </p>
-          <br/>
-          <h2><a>Excepteur sint occaecat cupidatat</a></h2>
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. <a>Read more...</a>
-          </p>
-          <br/>
-          <h2><a>Excepteur cupidatat</a></h2>
-          <p>
-            Onec adipiscing tristique ac turpis egestas integer eget aliquet.
-            Morbi tristique senectus et netus et malesuada fames <a>Read more...</a>
-          </p>
+        <PortalCard className="match-twitter-card md:w-3/4">
+          <h2>News</h2>
+          <hr className="mt-8"/>
+          <div className="news-list">
+            <BlogPreview />
+          </div>
         </PortalCard>
         <a
           className="twitter-timeline"
           href="https://twitter.com/sagecontinuum?ref_src=twsrc%5Etfw"
-          data-width="400" data-height="600"
+          data-width="400"
+          data-height="600"
         >
           Tweets by sagecontinuum
         </a>
       </div>
 
+      <div className="bg-emerald-50 border-solid border-t-2 border-b-4 border-slate-200">
+        <div className="section gap-2">
+          <h2 className="text-purple font-bold mb-10">Developer Friendly Tools for Research and Analysis</h2>
+
+          <div className="flex flex-col md:flex-row text-slate-200 gap-10">
+            <div className="sci-items flex flex-col gap-4 md:w-7/12">
+              <div className="sci-item" onMouseOver={() => setDevHover('client')}>
+                <h3 className="text-slate-200 font-bold">Python Data Client</h3>
+                Easily analyze data in Pandas with the Sage Data Client
+              </div>
+              <div className="sci-item" onMouseOver={() => setDevHover('api')}>
+                <h3 className="text-slate-200 font-bold">HTTP APIs</h3>
+                Access and update data via web APIs
+              </div>
+              <div className="sci-item" onMouseOver={() => setDevHover('ui')}>
+                <h3 className="text-slate-200 font-bold">Web UI tools</h3>
+                Navigating job results and data is as easily as a few clicks
+              </div>
+              <div className="sci-item">
+                <h3 className="text-slate-200 font-bold">Open Source</h3>
+                All code related to Sage Project is publicly accessible available via
+                on Github: <br/>
+                <a href={waggleOrg} target="_blank" className="font-bold">
+                  Waggle GitHub
+                </a> | <a href="https://github.com/sagecontinuum" target="_blank" className="font-bold">
+                  Sage GitHub
+                </a>
+              </div>
+
+              <div className="hidden md:flex justify-between mx-5 text-slate-200">
+                <a className="focused-link purple gap-1" href={docs} >Documentation <Arrow /></a>
+                <a className="focused-link purple gap-1" href={docs} >Examples <Arrow /></a>
+                <a className="focused-link purple gap-1" href={`${portal}/query-browser`}>Query Browser <Arrow /></a>
+              </div>
+            </div>
+
+            <div className="md:w-5/12">
+
+              {devHover == 'client' &&
+                <CodeWindow title="Sage Data Client" code={clientSnippet} />
+              }
+              {devHover == 'api' &&
+                <CodeWindow title="Web API" code={httpSnippet} />
+              }
+              {devHover == 'ui' &&
+                <CodeWindow title="portal.sagecontinuum.org" code={''} showUrlBar={true} />
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className="bg-purple">
-        <div className="section column items-center gap-2">
+        <div className="section items-center gap-2">
 
           <h2 className="text-slate-200 font-bold">Featured Science</h2>
 
-          <div className="flex items-center text-slate-200">
-            <img src="https://ecr.sagecontinuum.org/api/meta-files/dariodematties1/avian-diversity-monitoring/0.2.4/ecr-icon.jpg" width="400" />
-            <div className="flex flex-col gap-4 mx-5 sci-items">
+          <div className="flex flex-col md:flex-row text-slate-200">
+            <div className="md:w-1/3 hidden md:block" >
+            <img src="https://ecr.sagecontinuum.org/api/meta-files/dariodematties1/avian-diversity-monitoring/0.2.4/ecr-icon.jpg"/>
+            </div>
+            <div className="flex flex-col gap-4 mx-5 md:w-2/3 sci-items">
               <div className="sci-item">
                 <h3 className="text-slate-200 font-bold">Optimizing cloud motion estimation on the edge with phase correlation and optical flow</h3>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -182,68 +222,18 @@ export default function Home() {
                 dipiscing diam donec adipiscing tristique ac turpis egestas integer eget aliquet.
                 Morbi tristique senectus et netus et malesuada fames
               </div>
-              <div className="flex justify-between mx-5">
+              <div className="hidden md:flex justify-between mx-5">
                 <Link to="publications" className="focused-link gap-1">Publications <Arrow className="shadow" /></Link>
-                <a href={docs} className="focused-link gap-1">Apps <Arrow className="shadow" /></a>
-                <a href={docs} className="focused-link gap-1">Sage Science Projects<Arrow className="shadow" /></a>
+                <a href={`${portal}/apps`} className="focused-link gap-1">Apps <Arrow className="shadow" /></a>
+                <Link to="science" className="focused-link gap-1">Sage Science<Arrow className="shadow" /></Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-emerald-50">
-        <div className="section column flex-col items-center gap-2">
-          <h2 className="text-purple font-bold mb-10">Developer Friendly Tools for Research and Analysis</h2>
 
-          <div className="flex text-slate-200">
-            <div className="flex flex-col gap-4 mx-5 sci-items w-7/12">
-              <div className="sci-item" onMouseOver={() => setDevHover('client')}>
-                <h3 className="text-slate-200 font-bold">Python Data Client</h3>
-                Easily analyze data in Pandas with the Sage Data Client
-              </div>
-              <div className="sci-item" onMouseOver={() => setDevHover('api')}>
-                <h3 className="text-slate-200 font-bold">HTTP APIs</h3>
-                Access and update data via web APIs
-              </div>
-              <div className="sci-item" onMouseOver={() => setDevHover('ui')}>
-                <h3 className="text-slate-200 font-bold">Web UI tools</h3>
-                Navigating job results and data is as easily as a click of a button
-              </div>
-              <div className="sci-item">
-                <h3 className="text-slate-200 font-bold">Open Source</h3>
-                All code related to Sage Project is publicly accessible available via
-                on Github: <a href={waggleOrg} target="_blank" className="font-bold">
-                  Waggle's Organizaion
-                </a> or <a href="https://github.com/sagecontinuum" target="_blank" className="font-bold">
-                  Sage's Organizaion
-                </a>
-              </div>
-              <div className="flex justify-between mx-5 text-slate-200">
-                <a className="focused-link purple gap-1" href={docs} >Documentation <Arrow /></a>
-                <a className="focused-link purple gap-1" href={docs} >Examples <Arrow /></a>
-                <a className="focused-link purple gap-1" href="https://portal.sagecontinuum.org/query-browser">Query Browser <Arrow /></a>
-              </div>
-            </div>
-
-            <div className="w-5/12">
-
-              {devHover == 'client' &&
-                <CodeWindow title="Sage Data Client" code={clientSnippet} />
-              }
-              {devHover == 'api' &&
-                <CodeWindow title="Web API" code={httpSnippet} />
-              }
-              {devHover == 'ui' &&
-                <CodeWindow title="portal.sagecontinuum.org" code={''} showUrlBar={true} />
-              }
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div className="user-stories section flex-col justify-center gap-2">
+      <div className="user-stories section justify-center gap-2">
         <CardViewStyle />
 
         <div>
@@ -256,45 +246,47 @@ export default function Home() {
           */}
         </div>
         <br/>
-        [logos with links goes here]
+        [logos with links go here?]
       </div>
 
 
-      <footer className="dark flex justify-around">
-        <div className="">
-          <div className="nsf-info flex muted items-center">
-            <img src="https://www.nsf.gov/policies/images/NSF_Official_logo.svg" width="150"/>
-            <div>
-              SAGE is supported by<br/> NSF Mid-Scale RI-1 grant #1935984
+      <footer className="dark">
+        <div className="section flex flex-col md:flex-row justify-between py-10">
+          <div>
+            <div className="flex muted items-center">
+              <img src="https://www.nsf.gov/policies/images/NSF_Official_logo.svg" width="150"/>
+              <div>
+                SAGE is supported by<br/> NSF Mid-Scale RI-1 grant #1935984
+              </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <h4>About</h4>
-          <ul>
-            <li><a href="https://sagecontinuum.org/news/" target="_blank" rel="noreferrer">News</a></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/about">Docs</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Browse</h4>
-          <ul>
-            <li><Link to="/">browse 1</Link></li>
-            <li><Link to="/">browse 2</Link></li>
-            <li><Link to="/">foo bar</Link></li>
-            <li><Link to="/">some link</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><Link to={`${docs}/contact-us`}>Contact us</Link></li>
-          </ul>
-          <div className="flex">
-            <IconButton href="https://github.com/waggle-sensor" target="_blank"><GitHub sx={{color: '#aaa'}}/></IconButton>
-            <IconButton><Twitter sx={{color: '#aaa'}}/></IconButton>
+          <div>
+            <h4 className="text-slate-200">About</h4>
+            <ul>
+              <li><a href="https://sagecontinuum.org/news/" target="_blank" rel="noreferrer">News</a></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/about">Docs</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-slate-200">Browse</h4>
+            <ul>
+              <li><Link to="/">browse 1</Link></li>
+              <li><Link to="/">browse 2</Link></li>
+              <li><Link to="/">foo bar</Link></li>
+              <li><Link to="/">some link</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-slate-200">Contact</h4>
+            <ul>
+              <li><Link to={`${docs}/contact-us`}>Contact us</Link></li>
+            </ul>
+            <div className="flex">
+              <IconButton href="https://github.com/waggle-sensor" target="_blank"><GitHub sx={{color: '#aaa'}}/></IconButton>
+              <IconButton><Twitter sx={{color: '#aaa'}}/></IconButton>
+            </div>
           </div>
         </div>
       </footer>
@@ -309,11 +301,9 @@ const sage = 'rgb(135, 186, 166)'
 
 
 const Root = styled.div`
-
   /**
   * Resets; back to MUI Global and Sage Portals CSS
   */
-
 
   a {
     color: #0080c7;
@@ -328,14 +318,12 @@ const Root = styled.div`
   */
 
   .card {
+    color: initial;
     padding: 0;
-    max-width: 250px;
     background: #fff;
     border: 1px solid #ddd;
 
     img {
-      max-width:100%;
-      max-height:100px;
       border-radius: 5px 5px 0 0;
     }
 
@@ -345,6 +333,7 @@ const Root = styled.div`
 
     border-bottom: 3px solid #7a6bac;
     :hover {
+      text-decoration: none;
       border: 1px solid #7a6bac;
       border-bottom: 3px solid ${purple};
     }
@@ -385,13 +374,19 @@ const Root = styled.div`
     width: 90%;
   }
 
-  .read-news {
-    width: 75%;
-  }
-
-
   .match-twitter-card {
     border-radius: 12px;
+    .MuiCardContent-root {
+      h2 {
+        padding: 0 16px;
+      }
+
+      padding-left: 0px;
+      padding-right: 0px;
+      .news-list {
+        padding: 0 16px;
+      }
+    }
   }
 
   .sci-items {
@@ -426,10 +421,6 @@ const Root = styled.div`
         color: #999999;
       }
     }
-
-    .nsf-info {
-
-    }
   }
 
 
@@ -449,19 +440,6 @@ const Banner = styled.div`
   text-shadow: 0px 0px 6px #666;
 `
 
-const BannerLeft = styled.div`
-  color: #f9f9f9;
-  font-size: 4em;
-  flex: 1;
-  margin: auto 0;
-`
-
-const BannerRight = styled.div`
-  flex: 1;
-  h3 {
-    color: #ccc;
-  }
-`
 
 const Subtext = styled.div`
   font-size: 2em;
@@ -471,15 +449,6 @@ const Subtext = styled.div`
   text-align: center;
   color: ${purple};
 `
-
-
-const Cards = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-`
-
-
 
 
 function TypeWriter(props) {
@@ -499,7 +468,7 @@ function TypeWriter(props) {
     const handle = setTimeout(() => {
       setText(`${text}${fullText[index]}`)
       setIndex(index + 1)
-    }, 50)
+    }, 10)
 
     return () => clearTimeout(handle)
   }, [index, fullText, text])
