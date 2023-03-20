@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Layout from '@theme/Layout';
 import Page from './Page';
 
-import team from './team-list'
+import team from '../team-list'
 
 export default function Team() {
   return (
@@ -38,6 +38,5 @@ const Root = styled(Page)`
   img {
     width: 175px;
   }
-
 `
 

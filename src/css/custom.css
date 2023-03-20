@@ -99,7 +99,7 @@ html[data-theme='dark'] .navbar__link--active  {
   }
 }
 
-div[class^=searchBox_node_modules] {
+div[class^=searchBox] {
   position: absolute;
   right: 140px;
 }

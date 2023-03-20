@@ -2,7 +2,7 @@ import React from 'react'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Head from '@docusaurus/Head'
 import Layout from '@theme/Layout'
-import Home from './home/Home'
+import Home from '../components/home/Home'
 
 // import  { Redirect } from 'react-router-dom'
 

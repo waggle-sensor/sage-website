@@ -1,22 +1,19 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { IconButton } from '@mui/material'
 import Arrow from '@mui/icons-material/PlayCircleOutlineRounded'
-import GitHub from '@mui/icons-material/GitHub'
-import Twitter from '@mui/icons-material/Twitter'
 
-import { Card as PortalCard, CardViewStyle } from '../../components/layout/Layout'
-
+import { Card as PortalCard, CardViewStyle } from '../layout/Layout'
 import CodeWindow from './CodeWindow'
 import BlogPreview from './BlogPreview'
+import TypeWriter from './TypeWriter'
+import Footer from '../Footer'
 
+import config from '../../config'
+const {docs, portal, waggleOrg} = config
 
-const docs = '/docs'
-const portal = 'https://portal.sagecontinuum.org'
-const waggleOrg = 'https://github.com/waggle-sensor'
 
 
 const clientSnippet =
@@ -58,14 +55,7 @@ const scienceTexts = [
 
 
 export default function Home() {
-
   const [devHover, setDevHover] = useState('client')
-
-  useEffect(() => {
-    setTimeout(() => {
-      twttr.widgets.load()
-    })
-  }, [])
 
   return (
     <Root>
@@ -77,7 +67,7 @@ export default function Home() {
 
         <div className="flex flex-col mr-40">
           <h3 className="text-slate-300">Getting Started</h3>
-          <a href="/docs/about/overview" className="focused-link gap-1">Documentation <Arrow className="shadow" /></a>
+          <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow className="shadow" /></a>
           <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow/></a>
         </div>
       </Banner>
@@ -90,31 +80,31 @@ export default function Home() {
           </Subtext>
 
           <div className="flex flex-col md:flex-row gap-10">
-            <div className="card flex flex-col">
+            <Link to="science" className="card">
               <img src={edURL} />
               <h3>Learn</h3>
-              <p>Explore some of the science made possible with Sage</p>
-            </div>
-            <div className="card">
-              <img src="/img/home/create-app.png" />
+              <p>Explore some of the <Link to="science">science</Link> made possible with Sage</p>
+            </Link>
+            <a href={`${portal}/apps`} className="card">
+              <img src={require('@site/static/img/home/create-app.png').default} />
               <h3>Contribute</h3>
               <p>Upload, build, and share <a href={`${portal}/apps`}>apps</a> for AI at the edge</p>
-            </div>
+            </a>
             <a className="card" href={`${portal}/jobs`}>
               <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/Wagman-v4.jpg" />
               <h3>Run jobs</h3>
               <p>Create <a href={`${portal}/create-job?tab=editor&start_with_sample=true`}>science goals</a> to run apps on nodes.<br/></p>
             </a>
-            <div className="card">
-              <img src="/img/home/browse.png" />
+            <a href={`${portal}/data`} className="card">
+              <img src={require('@site/static/img/home/browse.png').default} />
               <h3>Browse</h3>
               <p>Browse <a href={`${portal}/data`}>data</a> from sensors and edge apps</p>
-            </div>
-            <div className="card">
+            </a>
+            <Link to="docs/tutorials/accessing-data" className="card">
               <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/1820-1024-tweak.jpg" />
               <h3>Analyze</h3>
               <p>Use Sage APIs to fetch, analyze, or integrate data.</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -134,7 +124,7 @@ export default function Home() {
           data-width="400"
           data-height="600"
         >
-          Tweets by sagecontinuum
+          Tweets from @sagecontinuum
         </a>
       </div>
 
@@ -177,7 +167,7 @@ export default function Home() {
             <div className="md:w-5/12">
 
               {devHover == 'client' &&
-                <CodeWindow title="Sage Data Client" code={clientSnippet} />
+                <CodeWindow title="Python Data Client" code={clientSnippet} />
               }
               {devHover == 'api' &&
                 <CodeWindow title="Web API" code={httpSnippet} />
@@ -250,46 +240,7 @@ export default function Home() {
       </div>
 
 
-      <footer className="dark">
-        <div className="section flex flex-col md:flex-row justify-between py-10">
-          <div>
-            <div className="flex muted items-center">
-              <img src="https://www.nsf.gov/policies/images/NSF_Official_logo.svg" width="150"/>
-              <div>
-                SAGE is supported by<br/> NSF Mid-Scale RI-1 grant #1935984
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-slate-200">About</h4>
-            <ul>
-              <li><a href="https://sagecontinuum.org/news/" target="_blank" rel="noreferrer">News</a></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/about">Docs</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-slate-200">Browse</h4>
-            <ul>
-              <li><Link to="/">browse 1</Link></li>
-              <li><Link to="/">browse 2</Link></li>
-              <li><Link to="/">foo bar</Link></li>
-              <li><Link to="/">some link</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-slate-200">Contact</h4>
-            <ul>
-              <li><Link to={`${docs}/contact-us`}>Contact us</Link></li>
-            </ul>
-            <div className="flex">
-              <IconButton href="https://github.com/waggle-sensor" target="_blank"><GitHub sx={{color: '#aaa'}}/></IconButton>
-              <IconButton><Twitter sx={{color: '#aaa'}}/></IconButton>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </Root>
   )
 }
@@ -358,10 +309,6 @@ const Root = styled.div`
     filter: drop-shadow( 0px 0px 2px #414141);
   }
 
-  .dark {
-    background: #2b2b2b;
-  }
-
   .bg-purple { background: ${purple}; }
   .text-purple { color: ${purple}; }
 
@@ -405,26 +352,6 @@ const Root = styled.div`
     }
   }
 
-
-  footer {
-    color: #f2f2f2;
-    height: 500px;
-    background: #2b2b2b;
-
-    h5 {
-
-    }
-    ul {
-      padding:0;
-      list-style: none;
-      a {
-        color: #999999;
-      }
-    }
-  }
-
-
-
   .code-window {
     .prism-code {
       border-radius: 0px 0px 10px 10px;
@@ -451,55 +378,3 @@ const Subtext = styled.div`
 `
 
 
-function TypeWriter(props) {
-
-  const [text, setText] = useState('')
-  const [index, setIndex] = useState(0)
-
-  const [phraseIndex, setPhraseIndex] = useState(0)
-  const [fullText, setFullText] = useState(props.texts[phraseIndex] || '')
-
-
-  // typing effect
-  useEffect(() => {
-    if (index >= fullText.length)
-      return
-
-    const handle = setTimeout(() => {
-      setText(`${text}${fullText[index]}`)
-      setIndex(index + 1)
-    }, 10)
-
-    return () => clearTimeout(handle)
-  }, [index, fullText, text])
-
-
-  // changing text index
-  useEffect(() => {
-    function update() {
-      const handle = setTimeout(() => {
-        setPhraseIndex(prev => (prev + 1) % props.texts.length)
-        update()
-      }, 3000)
-
-      return handle
-    }
-
-    const handle = update()
-
-    return () => clearTimeout(handle)
-  }, [])
-
-
-  // change actual text, reset index/text
-  useEffect(() => {
-    setIndex(0)
-    setText('')
-    setFullText(props.texts[phraseIndex])
-  }, [phraseIndex])
-
-
-  return (
-    <span className="text-emerald-200">{text ? text : <>&nbsp;</>}</span>
-  )
-}

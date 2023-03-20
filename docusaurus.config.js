@@ -3,14 +3,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Waggle Docs',
+  title: 'Sage Website',
   tagline: 'AI at the Edge',
-  url: 'https://docs.waggle-edge.ai',
-  baseUrl: '/',
+  url: 'https://nconrad.github.io',
+  baseUrl: '/waggle-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/sage-favicon.png',
-  organizationName: 'waggle-sensor',
+  organizationName: 'nconrad',
   projectName: 'waggle-docs',
   trailingSlash: false,
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
