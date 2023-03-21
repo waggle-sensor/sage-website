@@ -12,13 +12,13 @@ import TypeWriter from './TypeWriter'
 import Footer from '../Footer'
 
 import config from '../../config'
+import { LaunchRounded } from '@mui/icons-material'
 const {docs, portal, waggleOrg} = config
 
 
 
 const clientSnippet =
-`
-import sage_data_client
+`import sage_data_client
 
 df = sage_data_client.query(
     start="2023-02-24T01:15:30.550Z",
@@ -29,8 +29,8 @@ df = sage_data_client.query(
 )
 `
 
-const httpSnippet = `
-curl -H 'Content-Type: application/json' \\
+const httpSnippet =
+`curl -H 'Content-Type: application/json' \\
 https://data.sagecontinuum.org/api/v1/query -d '
 {
     "start": "-10s",
@@ -39,6 +39,22 @@ https://data.sagecontinuum.org/api/v1/query -d '
     }
 }
 '
+`
+
+const appTemplateSnippet =
+`pip3 install cookiecutter
+cookiecutter gh:waggle-sensor/cookiecutter-sage-app
+
+...
+name [My Amazing App]: image_classification
+repo: https://github.com/geeklair/img_class.git
+author [My name]: geeklair
+version [0.1.0]: 0.2.0
+Select template:
+1 - vision
+2 - usbserial_sensor
+3 - minimal
+Choose from 1, 2, 3 [1]: 1
 `
 
 const edURL = 'https://sagecontinuum.org/wp-content/uploads/2019/11/LofT-Wrigley-Jose-Osorio-Chicago-Tribune-.jpg'
@@ -53,9 +69,10 @@ const scienceTexts = [
 ]
 
 
+type DevTools = 'client' | 'api' | 'ui' | 'template'
 
 export default function Home() {
-  const [devHover, setDevHover] = useState('client')
+  const [devHover, setDevHover] = useState<DevTools>('client')
 
   return (
     <Root>
@@ -111,7 +128,7 @@ export default function Home() {
 
       <div className="section flex flex-col md:flex-row gap-2">
         <CardViewStyle />
-        <PortalCard className="match-twitter-card md:w-3/4">
+        <PortalCard className="match-twitter-card md:w-3/4 h-[600px]">
           <h2>News</h2>
           <hr className="mt-8"/>
           <div className="news-list">
@@ -119,12 +136,12 @@ export default function Home() {
           </div>
         </PortalCard>
         <a
-          className="twitter-timeline"
+          className="twitter-timeline h-[600px]"
           href="https://twitter.com/sagecontinuum?ref_src=twsrc%5Etfw"
           data-width="400"
           data-height="600"
         >
-          Tweets from @sagecontinuum
+          loading tweets from @sagecontinuum...
         </a>
       </div>
 
@@ -133,49 +150,70 @@ export default function Home() {
           <h2 className="text-purple font-bold mb-10">Developer Friendly Tools for Research and Analysis</h2>
 
           <div className="flex flex-col md:flex-row text-slate-200 gap-10">
-            <div className="sci-items flex flex-col gap-4 md:w-7/12">
-              <div className="sci-item" onMouseOver={() => setDevHover('client')}>
-                <h3 className="text-slate-200 font-bold">Python Data Client</h3>
-                Easily analyze data in Pandas with the Sage Data Client
-              </div>
-              <div className="sci-item" onMouseOver={() => setDevHover('api')}>
-                <h3 className="text-slate-200 font-bold">HTTP APIs</h3>
-                Access and update data via web APIs
-              </div>
-              <div className="sci-item" onMouseOver={() => setDevHover('ui')}>
-                <h3 className="text-slate-200 font-bold">Web UI tools</h3>
-                Navigating job results and data is as easily as a few clicks
-              </div>
-              <div className="sci-item">
-                <h3 className="text-slate-200 font-bold">Open Source</h3>
-                All code related to Sage Project is publicly accessible available via
-                on Github: <br/>
+
+            <div className="sci-items flex flex-col gap-4 md:w-7/12 ">
+              <a className="sci-item group" onMouseOver={() => setDevHover('client')} href="https://pypi.org/project/sage-data-client" target="_blank">
+                <div className="flex justify-between [&>*]:text-slate-200">
+                  <h3>Python Data Client</h3>
+                  <div className="hidden group-hover:block"><LaunchRounded /></div>
+                </div>
+                <span className="text-slate-200">Easily analyze data in Pandas with the Sage Data Client</span>
+              </a>
+              <Link className="sci-item group" onMouseOver={() => setDevHover('api')} to="docs/tutorials/accessing-data#http-api">
+                <div className="flex justify-between [&>*]:text-slate-200">
+                  <h3>HTTP APIs</h3>
+                </div>
+                <span className="text-slate-200">Access and update data via web APIs</span>
+              </Link>
+              <a className="sci-item group" onMouseOver={() => setDevHover('ui')} href={`${portal}/query-browser`} target="_blank">
+                <div className="flex justify-between [&>*]:text-slate-200">
+                  <h3>Web Tools</h3>
+                  <div className="hidden group-hover:block"><LaunchRounded /></div>
+                </div>
+                <span className="text-slate-200">Navigating job results and data is as easy as a few clicks</span>
+              </a>
+              <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="https://github.com/waggle-sensor/cookiecutter-sage-app" target="_blank">
+                <div className="flex justify-between [&>*]:text-slate-200">
+                  <h3>Developer Template</h3>
+                  <div className="hidden group-hover:block"><LaunchRounded /></div>
+                </div>
+                <span className="text-slate-200">Get started quickly with templates and snippets</span>
+              </a>
+
+              <div className="hidden md:flex justify-between mx-5 text-slate-200">
+                <Link className="focused-link purple gap-1" to="docs/tutorials/edge-apps/intro-to-edge-apps" >Tutorials <Arrow /></Link>
+                <Link className="focused-link purple gap-1" to="docs/reference-guides/pluginctl" >Reference Guides <Arrow /></Link>
+                <a className="focused-link purple gap-1" href={`${portal}/query-browser`}>Query Browser <Arrow /></a>
+                {/*
                 <a href={waggleOrg} target="_blank" className="font-bold">
                   Waggle GitHub
                 </a> | <a href="https://github.com/sagecontinuum" target="_blank" className="font-bold">
                   Sage GitHub
                 </a>
-              </div>
-
-              <div className="hidden md:flex justify-between mx-5 text-slate-200">
-                <a className="focused-link purple gap-1" href={docs} >Documentation <Arrow /></a>
-                <a className="focused-link purple gap-1" href={docs} >Examples <Arrow /></a>
-                <a className="focused-link purple gap-1" href={`${portal}/query-browser`}>Query Browser <Arrow /></a>
+                */}
               </div>
             </div>
 
             <div className="md:w-5/12">
-
               {devHover == 'client' &&
                 <CodeWindow title="Python Data Client" code={clientSnippet} />
               }
               {devHover == 'api' &&
                 <CodeWindow title="Web API" code={httpSnippet} />
               }
-              {devHover == 'ui' &&
-                <CodeWindow title="portal.sagecontinuum.org" code={''} showUrlBar={true} />
+              {/* preload images for hover */}
+              <div className={devHover == 'ui' ? 'block' : 'hidden'}>
+                <CodeWindow
+                  title="portal.sagecontinuum.org"
+                  src={require('@site/static/img/home/query-browser.png').default}
+                  showUrlBar={true}
+                />
+              </div>
+              {devHover == 'template' &&
+                <CodeWindow title="Templates" code={appTemplateSnippet} lanuage="bash" />
               }
             </div>
+
           </div>
         </div>
       </div>
@@ -184,38 +222,38 @@ export default function Home() {
       <div className="bg-purple">
         <div className="section items-center gap-2">
 
-          <h2 className="text-slate-200 font-bold">Featured Science</h2>
+          <h2 className="text-slate-200 font-bold mb-10">Featured Science</h2>
 
           <div className="flex flex-col md:flex-row text-slate-200">
-            <div className="md:w-1/3 hidden md:block" >
-            <img src="https://ecr.sagecontinuum.org/api/meta-files/dariodematties1/avian-diversity-monitoring/0.2.4/ecr-icon.jpg"/>
+            <div className="md:w-1/3 hidden md:block mr-5" >
+              <img src="https://ecr.sagecontinuum.org/api/meta-files/dariodematties1/avian-diversity-monitoring/0.2.4/ecr-icon.jpg"/>
             </div>
-            <div className="flex flex-col gap-4 mx-5 md:w-2/3 sci-items">
+            <div className="flex flex-col gap-y-4 md:w-2/3 sci-items">
               <div className="sci-item">
-                <h3 className="text-slate-200 font-bold">Optimizing cloud motion estimation on the edge with phase correlation and optical flow</h3>
+                <h3 className="text-slate-200">Optimizing cloud motion estimation on the edge with phase correlation and optical flow</h3>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </div>
               <div className="sci-item">
-                <h3 className="text-slate-200 font-bold">A Self-Supervised Approach for Cloud Image Analysis</h3>
+                <h3 className="text-slate-200">A Self-Supervised Approach for Cloud Image Analysis</h3>
                 Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra.
                 Posuere ac ut consequat semper viverra nam.
               </div>
               <div className="sci-item">
-                <h3 className="text-slate-200 font-bold">Designing Edge Computing-Capable ML Algorithms to Target ARM Dopler Lidar Processing</h3>
+                <h3 className="text-slate-200">Designing Edge Computing-Capable ML Algorithms to Target ARM Dopler Lidar Processing</h3>
                 Sed risus ultricies tristique nulla aliquet enim tortor at auctor.
                 Pretium nibh ipsum consequat nisl vel pretium lectus quam id.
               </div>
               <div className="sci-item">
-                <h3 className="text-slate-200 font-bold">Prediction of Solar Irradiance and Photovoltaic Solar Energy Based on Cloud Coverage...</h3>
+                <h3 className="text-slate-200">Prediction of Solar Irradiance and Photovoltaic Solar Energy Based on Cloud Coverage...</h3>
                 dipiscing diam donec adipiscing tristique ac turpis egestas integer eget aliquet.
                 Morbi tristique senectus et netus et malesuada fames
               </div>
               <div className="hidden md:flex justify-between mx-5">
                 <Link to="publications" className="focused-link gap-1">Publications <Arrow className="shadow" /></Link>
+                <Link to="science" className="focused-link gap-1">Science<Arrow className="shadow" /></Link>
                 <a href={`${portal}/apps`} className="focused-link gap-1">Apps <Arrow className="shadow" /></a>
-                <Link to="science" className="focused-link gap-1">Sage Science<Arrow className="shadow" /></Link>
               </div>
             </div>
           </div>
@@ -301,10 +339,6 @@ const Root = styled.div`
     color: ${purple};
   }
 
-  .sci-items .focused-link {
-    font-size: 1.5em;
-  }
-
   .shadow {
     filter: drop-shadow( 0px 0px 2px #414141);
   }
@@ -341,20 +375,19 @@ const Root = styled.div`
       background: #63509c;
       padding: 10px;
       border-radius: 10px;
+
+      h3 {
+        font: bold;
+      }
     }
 
     .sci-item:hover {
+      text-decoration: none;
       background: #70619f;
     }
 
-    .sci-item a {
-      color: #f2f2f2;
-    }
-  }
-
-  .code-window {
-    .prism-code {
-      border-radius: 0px 0px 10px 10px;
+    .focused-link {
+      font-size: 1.5em;
     }
   }
 `

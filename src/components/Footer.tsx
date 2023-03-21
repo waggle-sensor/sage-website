@@ -7,7 +7,7 @@ import GitHub from '@mui/icons-material/GitHub'
 import Twitter from '@mui/icons-material/Twitter'
 
 import config from '../config'
-const {docs} = config
+const {portal} = config
 
 
 
@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="flex muted items-center">
             <img src="https://www.nsf.gov/policies/images/NSF_Official_logo.svg" width="150"/>
             <div>
-              SAGE is supported by<br/> NSF Mid-Scale RI-1 grant #1935984
+              Sage is supported by<br/> NSF Mid-Scale RI-1 grant #1935984
             </div>
           </div>
         </div>
@@ -28,28 +28,33 @@ export default function Footer() {
         <div>
           <h4 className="text-neutral-200">About</h4>
           <ul>
-            <li><a href="https://sagecontinuum.org/news/" target="_blank" rel="noreferrer">News</a></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/about">Docs</Link></li>
+            <li><Link to="about">Science</Link></li>
+            <li><Link to="blog">News</Link></li>
+            <li><Link to="about">Publications</Link></li>
+            <li><Link to="docs">Docs</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="text-neutral-200">Browse</h4>
           <ul>
-            <li><Link to="/">browse 1</Link></li>
-            <li><Link to="/">browse 2</Link></li>
-            <li><Link to="/">foo bar</Link></li>
-            <li><Link to="/">some link</Link></li>
+            <li><a href={`${portal}/apps`}>Apps</a></li>
+            <li><a href={`${portal}/data`}>Data</a></li>
+            <li><a href={`${portal}/query-browser`}>Query Browser</a></li>
+            <li><a href={`${portal}/nodes`}>Nodes</a></li>
           </ul>
         </div>
         <div>
           <h4 className="text-neutral-200">Contact</h4>
           <ul>
-            <li><Link to={`${docs}/contact-us`}>Contact us</Link></li>
+            <li><Link to={`docs/contact-us`}>Contact us</Link></li>
           </ul>
           <div className="flex">
-            <IconButton href="https://github.com/waggle-sensor" target="_blank"><GitHub sx={{color: '#aaa'}}/></IconButton>
-            <IconButton><Twitter sx={{color: '#aaa'}}/></IconButton>
+            <IconButton href="https://github.com/waggle-sensor" target="_blank">
+              <GitHub className="text-neutral-200" />
+            </IconButton>
+            <IconButton href="https://twitter.com/sagecontinuum" target="_blank">
+              <Twitter className="text-neutral-200" />
+            </IconButton>
           </div>
         </div>
       </div>
@@ -58,8 +63,6 @@ export default function Footer() {
 }
 
 const Root = styled.footer`
-  height: 400px;
-
   ul {
     padding:0;
     list-style: none;

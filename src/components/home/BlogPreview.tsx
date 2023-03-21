@@ -7,7 +7,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
 /**
  * BlogPreview parses the articles from production site (or whatever is provided in /docusaurus.config.js)
- * and renders the article body (up until <!--truncate-->), including with links to articles
+ * and renders the article body (up until <!--truncate-->), with links to articles
  *
  * Note docusaurus is following the schema.org format https://schema.org/BlogPosting
  */
