@@ -9,7 +9,7 @@ tags: [node, deployment]
 ---
 
 
-<p>In April 2022, 4 Sage nodes (3 <a href="https://docs.waggle-edge.ai/docs/about/architecture#wild-waggle-node" target="_blank" rel="noopener">Wild Waggle Nodes</a> and 1 <a href="https://docs.waggle-edge.ai/docs/about/architecture#waggle-blade-node" target="_blank" rel="noopener">Waggle Blade Node</a>) were deployed with an array of sensors (thermographic camera, air quality sensor, etc.) to collect data to better our understanding of smoke and wildfire detection.</p>
+<p>In April 2022, 4 Sage nodes (3 <a href="/docs/about/architecture#wild-waggle-node" target="_blank" rel="noopener">Wild Waggle Nodes</a> and 1 <a href="/docs/about/architecture#waggle-blade-node" target="_blank" rel="noopener">Waggle Blade Node</a>) were deployed with an array of sensors (thermographic camera, air quality sensor, etc.) to collect data to better our understanding of smoke and wildfire detection.</p>
 
 <!--truncate-->
 

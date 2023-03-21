@@ -78,7 +78,7 @@ The data store is a time-series database of key-value pairs with each entry cont
 
 In the above example, the value of `25050` was collected @ `2022-06-10T22:37:47.369013647Z` from the `bme680` sensor on node `000048b02d35a97c` via the `plugin-iio:0.6.0` [plugin](#what-is-a-plugin).
 
-> _Note_: see the [Access and use data](https://docs.waggle-edge.ai/docs/tutorials/accessing-data) site for more details and data access examples.
+> _Note_: see the [Access and use data](/docs/tutorials/accessing-data) site for more details and data access examples.
 
 > Details & source code: https://github.com/waggle-sensor/data-repository
 
@@ -161,10 +161,10 @@ The Waggle Edge Stack is the set of core services running within the [Waggle nod
 
 ![Figure 8: Waggle Edge Stack Overview](./images/wes_overview_01.svg)
 
-The above diagram demonstrates 2 [plugins](#what-is-a-plugin) running on a Waggle node.  Plugin 1 ("neon-kafka") is an example [plugin](#what-is-a-plugin) that is running alongside Plugin 2 ("data-smooth"). In this example, "neon-kafka" (via the WES tools) is reading metrics from the node's sensors and then publishing that data within the WES run-time environment (internal to the node). 
+The above diagram demonstrates 2 [plugins](#what-is-a-plugin) running on a Waggle node.  Plugin 1 ("neon-kafka") is an example [plugin](#what-is-a-plugin) that is running alongside Plugin 2 ("data-smooth"). In this example, "neon-kafka" (via the WES tools) is reading metrics from the node's sensors and then publishing that data within the WES run-time environment (internal to the node).
 At the same time, the "data-smooth" [plugin](#what-is-a-plugin) is subscribing to this data stream, performing some sort of inference and then publishing the inference results (via WES tools) to Beehive.
 
-> _Note_: see the [Edge apps](https://docs.waggle-edge.ai/docs/category/edge-apps) guide on how to create a Waggle [plugin](#what-is-a-plugin).
+> _Note_: see the [Edge apps](/docs/category/edge-apps) guide on how to create a Waggle [plugin](#what-is-a-plugin).
 
 > Details & source code: https://github.com/waggle-sensor/waggle-edge-stack
 
@@ -172,7 +172,7 @@ At the same time, the "data-smooth" [plugin](#what-is-a-plugin) is subscribing t
 
 Plugins are the user developed module that the Waggle cyberinfrastructure is designed around. At it's simplest definition a "plugin" is code that runs @ the edge to perform some task. That task may be simply collecting sample camera images or a complex inference combining sensor data and results published from other plugins. A plugin's code will interface with the edge node's sensor(s) and then publish resulting data via the tools provided by [WES](#waggle-edge-stack-wes). All developed plugins are hosted by the Beehive [Edge Code Repository](#edge-code-repository-ecr).
 
-> See [how to create plugins](https://docs.waggle-edge.ai/docs/category/edge-apps) for details.
+> See [how to create plugins](/docs/category/edge-apps) for details.
 
 ### Science Goals
 
