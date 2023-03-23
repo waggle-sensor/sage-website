@@ -16,11 +16,14 @@ To get started in boot-strapping your Waggle Edge Computing kit you can follow t
 
 ### Registering your Waggle device
 
-During the bootstrapping process you will have the option to register your device within the [web portal](https://portal.sagecontinuum.org). It is highly recommended to register your device, as this enables all the core [WES tools](../about/architecture.md#waggle-edge-stack-wes) to be automatically downloaded, enabling the edge app development and run-time environment. Additionally, this enables your edge apps to publish data to the development [Beehive](../about/architecture.md#beehive), accessible to cloud-based analysis tools and workflow frameworks.
+During the bootstrapping process you will have the option to register your device within the web portal [here](https://portal.sagecontinuum.org/account/dev-devices). It is highly recommended to register your device, as this enables all the core [WES tools](../about/architecture.md#waggle-edge-stack-wes) to be automatically downloaded, enabling the edge app development and run-time environment. Additionally, this enables your edge apps to publish data to the development [Beehive](../about/architecture.md#beehive), accessible to cloud-based analysis tools and workflow frameworks.
 
-To register your device, navigate to "Account" > ["My Nodes"](https://portal.sagecontinuum.org/account/my-nodes). Enter your device ID (which you will obtain through the hardware boot-strapping process) then click "Get Keys" button. A "registration zip" file will be generated and available for download. Then follow the instructions for [your device](https://github.com/waggle-sensor/node-platforms) to load the registration keys.
+To register your device, use the [dev devices form](https://portal.sagecontinuum.org/account/dev-devices). Enter your device ID (which you will obtain through the hardware boot-strapping process) then click "Get Keys" button. A "registration zip" file will be generated and available for download. Then follow the instructions for [your device](https://github.com/waggle-sensor/node-platforms) to load the registration keys.
 
+<!---
 ![Figure 1: Registering my devices](./images/sage-my-devices.png)
+-->
+
 > You may register as many times as you want. But note that each registration key has a short expiration time and should be used shortly after generation.
 
 Now you are ready to develop your edge apps and/or introduce new sensors to the Waggle platform. Head over to the [overview](../about/overview.md) to find the instructions you need for development.
