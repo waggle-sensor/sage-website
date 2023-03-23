@@ -13,7 +13,7 @@ import Footer from '../Footer'
 
 import config from '../../config'
 import { LaunchRounded } from '@mui/icons-material'
-const {docs, portal, waggleOrg} = config
+const { portal } = config
 
 
 
@@ -77,12 +77,12 @@ export default function Home() {
   return (
     <Root>
       <Banner className="flex flex-col md:flex-row justify-between items-center">
-        <div className="text-[#f9f9f9] text-6xl ml-10">
+        <div className="text-[#f9f9f9] text-4xl md:text-6xl md:mx-10 self-start md:self-center">
           AI @ the Edge<br/>
           for <TypeWriter texts={scienceTexts}>{' '}</TypeWriter>
         </div>
 
-        <div className="flex flex-col mr-40">
+        <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center">
           <h3 className="text-slate-300">Getting Started</h3>
           <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow className="shadow" /></a>
           <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow/></a>
@@ -91,12 +91,12 @@ export default function Home() {
 
       <div className="bg-white">
         <div className="section">
-          <Subtext>
+          <div className="text-[2em] leading-relaxed m-auto pb-12 md:text-center text-purple md:w-1/2">
             A new kind of national-scale cyberinfrastructure
             to enable AI at the Edge for science.
-          </Subtext>
+          </div>
 
-          <div className="flex flex-col md:flex-row gap-10">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-4 xl:gap-10">
             <Link to="science" className="card">
               <img src={edURL} />
               <h3>Learn</h3>
@@ -128,21 +128,22 @@ export default function Home() {
 
       <div className="section flex flex-col md:flex-row gap-2">
         <CardViewStyle />
-        <PortalCard className="match-twitter-card md:w-3/4 h-[600px]">
+        <PortalCard className="match-twitter-card md:w-2/3 h-[600px]">
           <h2>News</h2>
           <hr className="mt-8"/>
           <div className="news-list">
             <BlogPreview />
           </div>
         </PortalCard>
-        <a
-          className="twitter-timeline h-[600px]"
-          href="https://twitter.com/sagecontinuum?ref_src=twsrc%5Etfw"
-          data-width="400"
-          data-height="600"
-        >
-          loading tweets from @sagecontinuum...
-        </a>
+        <div className="md:w-1/3">
+          <a
+            className="twitter-timeline"
+            href="https://twitter.com/sagecontinuum?ref_src=twsrc%5Etfw"
+            data-height="600"
+          >
+            tweets from @sagecontinuum...
+          </a>
+        </div>
       </div>
 
       <div className="bg-emerald-50 border-solid border-t-2 border-b-4 border-slate-200">
@@ -174,7 +175,7 @@ export default function Home() {
               </a>
               <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="https://github.com/waggle-sensor/cookiecutter-sage-app" target="_blank">
                 <div className="flex justify-between [&>*]:text-slate-200">
-                  <h3>Developer Template</h3>
+                  <h3>Developer Templates</h3>
                   <div className="hidden group-hover:block"><LaunchRounded /></div>
                 </div>
                 <span className="text-slate-200">Get started quickly with templates and snippets</span>
@@ -284,8 +285,6 @@ export default function Home() {
 }
 
 const purple = 'rgb(78, 42, 132)'
-const lightPurple = 'rgb(112, 97, 159)'
-
 const sage = 'rgb(135, 186, 166)'
 
 
@@ -400,14 +399,5 @@ const Banner = styled.div`
   text-shadow: 0px 0px 6px #666;
 `
 
-
-const Subtext = styled.div`
-  font-size: 2em;
-  margin: auto;
-  width: 50%;
-  padding-bottom: 2em;
-  text-align: center;
-  color: ${purple};
-`
 
 
