@@ -1,18 +1,10 @@
-import React from 'react';
-import styled from 'styled-components'
-import Layout from '@theme/Layout';
-import Page from './Page';
+import React from 'react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
+import Layout from '@theme/Layout'
+import Card from '@mui/material/Card'
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-
-
-// console.log('wildfire', wildfire)
 
 type LinkCardProps = {
   title: string
@@ -23,23 +15,15 @@ type LinkCardProps = {
 
 
 export function LinkCard(props: LinkCardProps) {
-  const {title, src, link, description} = props
+  const {title, src, link} = props
   return (
-    <Card sx={{ maxWidth: 345 }} component={Link} to={link}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          src={src}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            {title}
-          </Typography>
-          {description && <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>}
-        </CardContent>
-      </CardActionArea>
+    <Card
+      className="card z-0 relative"
+      component={Link}
+      to={link}
+    >
+      <img src={src} className="max-w-[256px] sm:max-w-[256px] md:max-w-[220px] md:max-w-[220px] md:max-h-[220px]" />
+      <h3 className="text-white z-1 absolute left-4 bottom-0 z-10">{title}</h3>
     </Card>
   );
 }
@@ -47,11 +31,10 @@ export function LinkCard(props: LinkCardProps) {
 
 export default function Science() {
   return (
-    <Layout title="Publications" description="Sage Publications">
-      <Root className="mb-10">
+    <Layout title="Science Projects" description="Sage Science Projects">
+      <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-10">
         <h1>Science Projects</h1>
-
-        <div className="flex flex-row flex-wrap gap-10">
+        <div className="flex flex-col md:flex-row flex-wrap justify-between gap-10">
           <LinkCard
             title="Wildfire Science"
             link="science/wildfire-science"
@@ -68,6 +51,11 @@ export default function Science() {
             src={require('@site/static/img/science/water_seg-icon.jpg').default}
           />
           <LinkCard
+            title="Monitoring Biodiversity Using Acoustic Data"
+            link="science/monitoring-biodiversity"
+            src={require('@site/static/img/science/bar-lt_panel-2048x689-2.jpg').default}
+          />
+          <LinkCard
             title="Water Level Detection"
             link="science/water-level-detection"
             src={require('@site/static/img/science/water_level-icon.jpg').default}
@@ -78,14 +66,14 @@ export default function Science() {
             src={require('@site/static/img/science/vehicle_track-icon.jpg').default}
           />
           <LinkCard
-            title="Lightning Science"
-            link="science/lightning-science"
-            src={require('@site/static/img/science/lightning-icon2-1.jpg').default}
-          />
-          <LinkCard
             title="Characterizing Clouds"
             link="science/characterizing-clouds"
             src={require('@site/static/img/science/cloud-icon.jpg').default}
+          />
+          <LinkCard
+            title="Lightning Science"
+            link="science/lightning-science"
+            src={require('@site/static/img/science/lightning-icon2-1.jpg').default}
           />
           <LinkCard
             title="Bandwidth Aware Learning"
@@ -104,13 +92,8 @@ export default function Science() {
           />
           <LinkCard
             title="Integrating Chameleon"
-            link="science/integrating-chamelon"
+            link="science/integrating-chameleon"
             src={require('@site/static/img/science/chameleon_integration-icon.jpg').default}
-          />
-          <LinkCard
-            title="Monitoring Biodiversity Using Acoustic Data"
-            link="science/monitoring-biodiversity"
-            src={require('@site/static/img/science/bar-lt_panel-2048x689-2.jpg').default}
           />
           <LinkCard
             title="Traffic State Estimation"
@@ -123,11 +106,23 @@ export default function Science() {
   );
 }
 
-const Root = styled(Page)`
-  .MuiCardMedia-img {
-    width:  256px;
-    height: 256px;
-    object-fit: cover;
+const Root = styled.div`
+  img {
+  }
+
+  .card::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    margin-top: -110px;
+    height: 110px;
+    width: 100%;
+    content: '';
+  }
+
+  .card:hover h3 {
+    color: rgb(0, 128, 199);
+    text-decoration: underline;
   }
 `
 

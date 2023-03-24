@@ -20,22 +20,29 @@ const { portal } = config
 const clientSnippet =
 `import sage_data_client
 
+# fetch cloud motion data uploaded
+# from two nodes in Chicago
 df = sage_data_client.query(
-    start="2023-02-24T01:15:30.550Z",
-    end="2023-02-24T02:15:30.550Z",
+    start="2023-02-24T10:00:00Z",
+    end="2023-02-24T11:00:00Z",
     filter={
-        "plugin": ".*plugin-iio.*"
+        "plugin": ".*cloud-motion.*",
+        "vsn": "W02C|W079"
     }
 )
 `
 
 const httpSnippet =
-`curl -H 'Content-Type: application/json' \\
+`# fetch recent bme680 sensor temperature uploaded
+# from all nodes
+
+curl -H 'Content-Type: application/json' \\
 https://data.sagecontinuum.org/api/v1/query -d '
 {
     "start": "-10s",
     "filter": {
-        "sensor": "bme680"
+        "sensor": "bme680",
+        "name": "env.temperature"
     }
 }
 '
@@ -200,7 +207,7 @@ export default function Home() {
                 <CodeWindow title="Python Data Client" code={clientSnippet} />
               }
               {devHover == 'api' &&
-                <CodeWindow title="Web API" code={httpSnippet} />
+                <CodeWindow title="Web API" code={httpSnippet} language="bash"/>
               }
               {/* preload images for hover */}
               <div className={devHover == 'ui' ? 'block' : 'hidden'}>
@@ -211,7 +218,7 @@ export default function Home() {
                 />
               </div>
               {devHover == 'template' &&
-                <CodeWindow title="Templates" code={appTemplateSnippet} lanuage="bash" />
+                <CodeWindow title="Templates" code={appTemplateSnippet} language="bash" />
               }
             </div>
 

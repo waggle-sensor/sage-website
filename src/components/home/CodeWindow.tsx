@@ -26,9 +26,7 @@ export default function CodeWindow(props: Props) {
       <div className="code-window shadow-2xl text-[.9em]">
         <div className="bg-gray-200 dark:bg-gray-800 flex flex-row justify-start items-center p-2 rounded-t-md gap-2">
           <div className="flex flex-row left-2 top-2">
-            <div className="bg-red-500 h-3 mr-2 rounded-full w-3">
-                <div id="hmrUnsaved" className="bg-gray-900 h-1 m-1 rounded-full w-1"></div>
-            </div>
+            <div className="bg-red-500 h-3 mr-2 rounded-full w-3"></div>
             <div className="bg-yellow-500 h-3 mr-2 rounded-full w-3"></div>
             <div className="bg-green-500 h-3 rounded-full w-3"></div>
           </div>

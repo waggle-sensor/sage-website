@@ -2,9 +2,9 @@ name: build-and-deploy
 
 on:
   pull_request:
-    branches: [landing]
+    branches: [main]
   push:
-    branches: [landing]
+    branches: [main]
 
 jobs:
   checks:
