@@ -8,6 +8,8 @@ import Twitter from '@mui/icons-material/Twitter'
 import NULogo from '@site/static/img/northwestern-university.svg'
 import ANLLogo from '@site/static/img/anl-logo.png'
 
+import { Section } from './home/Home'
+
 import config from '../config'
 const {portal} = config
 
@@ -17,11 +19,11 @@ export default function Footer() {
 
   return (
     <Root className="bg-neutral-900">
-      <div className="section">
+      <Section>
         <div className="flex flex-col md:flex-row justify-between pt-8 pb-16 text-neutral-200">
           <div>
             <div className="flex items-center text-neutral-400">
-              <img src="https://www.nsf.gov/policies/images/NSF_Official_logo.svg" className="w-[100px] xmd:w-[150px]"/>
+              <img src="https://www.nsf.gov/policies/images/NSF_Official_logo.svg" className="w-[100px] md:w-[150px]"/>
               <div>
                 Sage is supported by<br/> NSF Mid-Scale RI-1 grant #1935984
               </div>
@@ -70,7 +72,7 @@ export default function Footer() {
             <a href="https://www.anl.gov"><img src={ANLLogo} className="h-[30px] md:h-[45px] pb-1" /></a>
           </div>
         </div>
-      </div>
+      </Section>
     </Root>
   )
 }

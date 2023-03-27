@@ -22,7 +22,7 @@ export function LinkCard(props: LinkCardProps) {
       component={Link}
       to={link}
     >
-      <img src={src} className="max-w-[256px] sm:max-w-[256px] md:max-w-[220px] md:max-w-[220px] md:max-h-[220px]" />
+      <img src={src} className="max-w-[256px] md:max-w-[220px] md:max-h-[220px]" />
       <h3 className="text-white z-1 absolute left-4 bottom-0 z-10">{title}</h3>
     </Card>
   );
@@ -106,10 +106,8 @@ export default function Science() {
   );
 }
 
-const Root = styled.div`
-  img {
-  }
 
+const Root = styled.div`
   .card::after {
     display: block;
     position: relative;

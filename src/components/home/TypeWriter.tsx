@@ -49,6 +49,6 @@ export default function TypeWriter(props) {
 
 
   return (
-    <span className="text-emerald-200">{text ? text : <>&nbsp;</>}</span>
+    <>{text ? text : <>&nbsp;</>}</>
   )
 }

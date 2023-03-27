@@ -28,23 +28,19 @@ module.exports = {
           to: '/about',
           position: 'left',
           label: 'About',
-        },
-        {
+        }, {
           to: '/science',
           label: 'Science',
           position: 'left'
-        },
-        {
-          to: '/publications',
-          label: 'Publications',
-          position: 'left'
-        },
-        {
+        }, {
           to: '/blog',
           label: 'News',
           position: 'left'
-        },
-        {
+        }, {
+          to: '/publications',
+          label: 'Publications',
+          position: 'left'
+        }, {
           to: '/team',
           label: 'Team',
           position: 'left'
@@ -74,8 +70,8 @@ module.exports = {
               href: 'https://github.com/waggle-sensor'
             }
           ],
-        },
-        { // note: this is positioned right of search bar
+        }, {
+          // note: this is positioned right of search bar
           type: 'custom-signInBtn',
           position: "right",
           itemProp: 44,
@@ -84,29 +80,7 @@ module.exports = {
       ],
     },
     footer: {
-      /*
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'About',
-              to: '/docs/about/overview'
-            },
-            {
-              label: 'Tutorials',
-              to: '/docs/category/tutorials'
-            },
-            {
-              label: 'Get Support',
-              to: '/docs/contact-us'
-            },
-          ],
-        }
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Waggle`,
-      */
+      // see custom footer component
     },
     prism: {
       theme: lightCodeTheme,

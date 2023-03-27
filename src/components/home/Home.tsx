@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Arrow from '@mui/icons-material/PlayCircleOutlineRounded'
+import LaunchRounded from '@mui/icons-material/LaunchRounded'
 
-import { Card as PortalCard, CardViewStyle } from '../layout/Layout'
 import CodeWindow from './CodeWindow'
 import BlogPreview from './BlogPreview'
 import TypeWriter from './TypeWriter'
 import Footer from '../Footer'
 
 import config from '../../config'
-import { LaunchRounded } from '@mui/icons-material'
+
 const { portal } = config
 
 
@@ -76,6 +76,13 @@ const scienceTexts = [
 ]
 
 
+export const Section = (props) =>
+  <section className={`mx-auto py-[4em] h-full w-[90%] ${props.className || ''}` }>
+    {props.children}
+  </section>
+
+
+
 type DevTools = 'client' | 'api' | 'ui' | 'template'
 
 export default function Home() {
@@ -83,21 +90,23 @@ export default function Home() {
 
   return (
     <Root>
-      <Banner className="flex flex-col md:flex-row justify-between items-center">
+      <div className="banner flex flex-col md:flex-row justify-between items-center h-[400px] p-[40px]">
         <div className="text-[#f9f9f9] text-4xl md:text-6xl md:mx-10 self-start md:self-center">
           AI @ the Edge<br/>
-          for <TypeWriter texts={scienceTexts}>{' '}</TypeWriter>
+          for <span className="text-emerald-200">
+            <TypeWriter texts={scienceTexts} />
+          </span>
         </div>
 
-        <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center">
+        <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center ">
           <h3 className="text-slate-300">Getting Started</h3>
-          <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow className="shadow" /></a>
-          <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow/></a>
+          <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow /></a>
+          <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow /></a>
         </div>
-      </Banner>
+      </div>
 
       <div className="bg-white">
-        <div className="section">
+        <Section>
           <div className="text-[2em] leading-relaxed m-auto pb-12 md:text-center text-purple md:w-1/2">
             A new kind of national-scale cyberinfrastructure
             to enable AI at the Edge for science.
@@ -130,31 +139,32 @@ export default function Home() {
               <p>Use Sage APIs to fetch, analyze, or integrate data.</p>
             </Link>
           </div>
-        </div>
+        </Section>
       </div>
 
-      <div className="section flex flex-col md:flex-row gap-2">
-        <CardViewStyle />
-        <PortalCard className="match-twitter-card md:w-2/3 h-[600px]">
-          <h2>News</h2>
-          <hr className="mt-8"/>
-          <div className="news-list">
-            <BlogPreview />
+      <div className="bg-[#e7ebf0]"> {/* (bg color matches portal) */}
+        <Section className="flex flex-col md:flex-row gap-2">
+          <div className="bg-white shadow-sm rounded-md md:w-2/3 h-[600px]">
+            <h2 className="p-[16px] m-0">News</h2>
+            <hr className="m-0"/>
+            <div className="news-list p-[16px]">
+              <BlogPreview />
+            </div>
           </div>
-        </PortalCard>
-        <div className="md:w-1/3">
-          <a
-            className="twitter-timeline"
-            href="https://twitter.com/sagecontinuum?ref_src=twsrc%5Etfw"
-            data-height="600"
-          >
-            tweets from @sagecontinuum...
-          </a>
-        </div>
+          <div className="md:w-1/3  rounded-md">
+            <a
+              className="twitter-timeline"
+              href="https://twitter.com/sagecontinuum?ref_src=twsrc%5Etfw"
+              data-height="600"
+            >
+              tweets from @sagecontinuum...
+            </a>
+          </div>
+        </Section>
       </div>
 
       <div className="bg-emerald-50 border-solid border-t-2 border-b-4 border-slate-200">
-        <div className="section gap-2">
+        <Section className="gap-2">
           <h2 className="text-purple font-bold mb-10">Developer Friendly Tools for Research and Analysis</h2>
 
           <div className="flex flex-col md:flex-row text-slate-200 gap-10">
@@ -173,19 +183,19 @@ export default function Home() {
                 </div>
                 <span className="text-slate-200">Access and update data via web APIs</span>
               </Link>
-              <a className="sci-item group" onMouseOver={() => setDevHover('ui')} href={`${portal}/query-browser`} target="_blank">
-                <div className="flex justify-between [&>*]:text-slate-200">
-                  <h3>Web Tools</h3>
-                  <div className="hidden group-hover:block"><LaunchRounded /></div>
-                </div>
-                <span className="text-slate-200">Navigating job results and data is as easy as a few clicks</span>
-              </a>
               <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="https://github.com/waggle-sensor/cookiecutter-sage-app" target="_blank">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>Developer Templates</h3>
                   <div className="hidden group-hover:block"><LaunchRounded /></div>
                 </div>
                 <span className="text-slate-200">Get started quickly with templates and snippets</span>
+              </a>
+              <a className="sci-item group" onMouseOver={() => setDevHover('ui')} href={`${portal}/query-browser`} target="_blank">
+                <div className="flex justify-between [&>*]:text-slate-200">
+                  <h3>Web Tools</h3>
+                  <div className="hidden group-hover:block"><LaunchRounded /></div>
+                </div>
+                <span className="text-slate-200">Navigating job results and data is as easy as a few clicks</span>
               </a>
 
               <div className="hidden md:flex justify-between mx-5 text-slate-200">
@@ -223,13 +233,12 @@ export default function Home() {
             </div>
 
           </div>
-        </div>
+        </Section>
       </div>
 
 
       <div className="bg-purple">
-        <div className="section items-center gap-2">
-
+        <Section className="items-center gap-2">
           <h2 className="text-slate-200 font-bold mb-10">Featured Science</h2>
 
           <div className="flex flex-col md:flex-row text-slate-200">
@@ -259,32 +268,29 @@ export default function Home() {
                 Morbi tristique senectus et netus et malesuada fames
               </div>
               <div className="hidden md:flex justify-between mx-5">
-                <Link to="publications" className="focused-link gap-1">Publications <Arrow className="shadow" /></Link>
-                <Link to="science" className="focused-link gap-1">Science<Arrow className="shadow" /></Link>
-                <a href={`${portal}/apps`} className="focused-link gap-1">Apps <Arrow className="shadow" /></a>
+                <Link to="publications" className="focused-link gap-1">Publications <Arrow /></Link>
+                <Link to="science" className="focused-link gap-1">Science<Arrow /></Link>
+                <a href={`${portal}/apps`} className="focused-link gap-1">Apps <Arrow /></a>
               </div>
             </div>
           </div>
-        </div>
+        </Section>
       </div>
 
 
-      <div className="user-stories section justify-center gap-2">
-        <CardViewStyle />
-
-        <div>
-          <h2>User Stories</h2>
-          {/*
-          <div className="flex">
-            <img src="https://avatars.githubusercontent.com/u/104843704?s=200&v=4" />
-            CROCUS
+      {/* add user stories?
+        <div className="user-stories section justify-center gap-2">
+          <div>
+            <h2>User Stories</h2>
+            <div className="flex">
+              <img src="https://avatars.githubusercontent.com/u/104843704?s=200&v=4" />
+              CROCUS
+            </div>
           </div>
-          */}
+          <br/>
+          [logos with links go here?]
         </div>
-        <br/>
-        [logos with links go here?]
-      </div>
-
+      */}
 
       <Footer />
     </Root>
@@ -296,21 +302,9 @@ const sage = 'rgb(135, 186, 166)'
 
 
 const Root = styled.div`
-  /**
-  * Resets; back to MUI Global and Sage Portals CSS
-  */
-
-  a {
-    color: #0080c7;
-    cursor: pointer;
-    text-decoration: none;
+  .banner {
+    background: radial-gradient(farthest-side ellipse at 0% 0,#87baa6 20%,#382d64);
   }
-
-  a:hover { text-decoration: underline; }
-
-  /**
-  * home page
-  */
 
   .card {
     color: initial;
@@ -345,36 +339,10 @@ const Root = styled.div`
     color: ${purple};
   }
 
-  .shadow {
-    filter: drop-shadow( 0px 0px 2px #414141);
-  }
-
   .bg-purple { background: ${purple}; }
   .text-purple { color: ${purple}; }
 
   .bg-sage { background: ${sage}; }
-
-  .section {
-    margin: 0 auto;
-    padding: 4em 0;
-    height: 100%;
-    width: 90%;
-  }
-
-  .match-twitter-card {
-    border-radius: 12px;
-    .MuiCardContent-root {
-      h2 {
-        padding: 0 16px;
-      }
-
-      padding-left: 0px;
-      padding-right: 0px;
-      .news-list {
-        padding: 0 16px;
-      }
-    }
-  }
 
   .sci-items {
     .sci-item {
@@ -397,14 +365,5 @@ const Root = styled.div`
     }
   }
 `
-
-
-const Banner = styled.div`
-  padding: 40px;
-  height: 400px;
-  background: radial-gradient(farthest-side ellipse at 0% 0,#87baa6 20%,#382d64);
-  text-shadow: 0px 0px 6px #666;
-`
-
 
 
