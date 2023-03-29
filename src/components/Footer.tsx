@@ -31,16 +31,16 @@ export default function Footer() {
           </div>
 
           <div className="mt-12 md:m-0">
-            <h4 className="text-neutral-200">About</h4>
+            <h4><a href="about" className="text-neutral-200 hover:text-neutral-100">About</a></h4>
             <ul>
-              <li><Link to="about">Science</Link></li>
+              <li><Link to="science">Science</Link></li>
               <li><Link to="blog">News</Link></li>
               <li><Link to="about">Publications</Link></li>
               <li><Link to="docs">Docs</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="text-neutral-200">Browse</h4>
+            <h4><a href={portal} className="text-neutral-200 hover:text-neutral-300">Browse</a></h4>
             <ul>
               <li><a href={`${portal}/apps`}>Apps</a></li>
               <li><a href={`${portal}/data`}>Data</a></li>
@@ -49,7 +49,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-neutral-200">Contact</h4>
+            <h4><Link to={`docs/contact-us`} className="text-neutral-200 hover:text-neutral-300">Contact</Link></h4>
             <ul>
               <li><Link to={`docs/contact-us`}>Contact Us</Link></li>
             </ul>
@@ -63,7 +63,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
 
         <div className="flex items-center justify-between text-neutral-400">
           <div className="mx-2 mb-2">Copyright © {new Date().getFullYear()} Sage</div>
@@ -85,5 +84,4 @@ const Root = styled.footer`
       color: #999999;
     }
   }
-
 `

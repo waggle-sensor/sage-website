@@ -2,7 +2,7 @@
 
 Hello! My name is Akhil Kodumuri, and I am currently a Sophomore pursuing a Computer Engineering degree at the University of Illinois at Urbana-Champaign. My work with Sage this Summer consisted of integrating Sage AI at the edge cyberinfrastructure with the Chameleon platform to simulate a testing and deploying environment.
 
-## Setting The Stage
+## Setting the Stage
 
 The goal of the Sage project is to design and build a new kind of national-scale reusable cyberinfrastructure to enable AI at the edge. Wildfire, flood, and climate change change detection will be made available at the edge thanks to the Sage project.
 

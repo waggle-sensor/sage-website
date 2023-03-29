@@ -23,7 +23,7 @@ export function LinkCard(props: LinkCardProps) {
       to={link}
     >
       <img src={src} className="max-w-[256px] md:max-w-[220px] md:max-h-[220px]" />
-      <h3 className="text-white z-1 absolute left-4 bottom-0 z-10">{title}</h3>
+      <h3 className="text-white absolute left-4 bottom-0 z-10">{title}</h3>
     </Card>
   );
 }
