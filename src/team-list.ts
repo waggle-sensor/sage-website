@@ -1,108 +1,107 @@
-
-type Member = {
+export type TeamMember = {
   name: string
   image: string
   institution: string
   title: string
-  link?: string
+  href?: string
 }
 
 
-const team : Member[] = [{
+const team : TeamMember[] = [{
   name: 'Pete Beckman',
-  image: 'http://sagecontinuum.org/wp-content/uploads/2019/11/pete_beckman.jpg',
+  image: require('@site/static/img/team/pete_beckman.jpg').default,
   institution: 'Northwestern University / ANL',
   title: 'Director',
-  link: 'https://www.anl.gov/profile/pete-beckman',
+  href: 'https://www.anl.gov/profile/pete-beckman',
 }, {
   name: 'Nicola Ferrier',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/nicola_ferrier.jpg',
+  image: require('@site/static/img/team/nicola_ferrier.jpg').default,
   institution: 'Northwestern University / ANL',
   title: 'Deputy Director / ML@Edge',
-  link: 'https://www.anl.gov/profile/nicola-j-ferrier'
+  href: 'https://www.anl.gov/profile/nicola-j-ferrier'
 }, {
   name: 'Daniel Reed',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/dan_reed-2.jpg',
+  image: require('@site/static/img/team/dan_reed-2.jpg').default,
   institution: 'University of Utah',
   title: 'Chief Architect',
-  link: null
+  href: null
 }, {
   name: 'Jim Olds',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/James-Olds-400.jpg',
+  image: require('@site/static/img/team/James-Olds-400.jpg').default,
   institution: 'George Mason University',
   title: 'Risk Management'
 }, {
   name: 'Scott Collis',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/scott_collis.jpeg',
+  image: require('@site/static/img/team/scott_collis.jpeg').default,
   institution: 'Northwestern University / ANL',
-  title: 'Instrumentation Chair / Atmosphere',
-  link: 'https://www.anl.gov/profile/scott-m-collis'
+  title: 'Instru. Chair / Atmosphere',
+  href: 'https://www.anl.gov/profile/scott-m-collis'
 }, {
   name: 'Eugene Kelly',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/Eugene_Kelly-1-1024x1024.jpg',
+  image: require('@site/static/img/team/Eugene_Kelly-1-1024x1024.jpg').default,
   institution: 'Colorado State University',
   title: 'Bio / Ecology (NEON)',
-  link: 'https://soilcrop.agsci.colostate.edu/faculty-2/kelly-eugene/'
+  href: 'https://soilcrop.agsci.colostate.edu/faculty-2/kelly-eugene/'
 }, {
   name: 'Frank Vernon',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/frank_vernon.png',
-  institution: 'University of California-San Diego',
+  image: require('@site/static/img/team/frank_vernon.png').default,
+  institution: 'Univ. of California-San Diego',
   title: 'Wildlife',
-  link: null
+  href: null
 }, {
   name: 'Charlie Catlett',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/charlie_catlett-3.jpg',
+  image: require('@site/static/img/team/charlie_catlett-3.jpg').default,
   institution: 'DPI / ANL',
   title: 'Urban (AoT)',
-  link: null
+  href: null
 }, {
   name: 'Ilkay Altintas',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/ilkay_altintas.jpg',
-  institution: 'University of California-San Diego / SDSC',
-  title: 'Cyberinfrastructure Chair / Data Architect',
-  link: 'https://words.sdsc.edu/ilkay/'
+  image: require('@site/static/img/team/ilkay_altintas.jpg').default,
+  institution: 'Univ. of California-San Diego / SDSC',
+  title: 'Cyberinfrastructure / Data Architect',
+  href: 'https://words.sdsc.edu/ilkay/'
 }, {
   name: 'Rajesh Sankaran',
-  image: 'http://sagecontinuum.org/wp-content/uploads/2020/07/raj_sankaran-1.jpeg',
+  image: require('@site/static/img/team/raj_sankaran-1.jpg').default,
   institution: 'Northwestern University / ANL',
   title: 'Platform',
-  link: 'https://www.anl.gov/profile/rajesh-sankaran'
+  href: 'https://www.anl.gov/profile/rajesh-sankaran'
 }, {
   name: 'Valerie Taylor',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/Taylor-Valerie-31958D07-copy-1.jpg',
+  image: require('@site/static/img/team/valerie-taylor.jpg').default,
   institution: 'University of Chicago / ANL',
   title: 'Education Chair / Curricula',
-  link: 'https://www.anl.gov/profile/valerie-e-taylor'
+  href: 'https://www.anl.gov/profile/valerie-e-taylor'
 }, {
   name: 'Mike Papka',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/MEP2018-sm-1.png',
+  image: require('@site/static/img/team/mike_papka.jpg').default,
   institution: 'Northern Illinois University / ANL',
   title: 'Student Tools',
-  link: 'https://www.anl.gov/profile/michael-e-papka'
+  href: 'https://www.anl.gov/profile/michael-e-papka'
 }, {
   name: 'Irene Qualters',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/irene_qualters.jpeg',
+  image: require('@site/static/img/team/irene_qualters.jpeg').default,
   institution: 'Los Alamos National Lab',
   title: 'Advisory Committee Chair',
-  link: 'https://www.lanl.gov/about/leadership-governance/ald-simu-comp.php'
+  href: 'https://www.lanl.gov/about/leadership-governance/ald-simu-comp.php'
 }, {
   name: 'Paul Messina',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/FTD_9410_14405_Messina-Paul.jpg',
+  image: require('@site/static/img/team/FTD_9410_14405_Messina-Paul.jpg').default,
   institution: 'ANL',
   title: 'Advisory Committee Chair',
-  link: 'https://www.anl.gov/profile/paul-c-messina',
+  href: 'https://www.anl.gov/profile/paul-c-messina',
 }, {
   name: 'Anke Kamrath',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/Anke-450-2.jpg',
+  image: require('@site/static/img/team/Anke-450-2.jpg').default,
   institution: 'NCAR',
   title: 'Advisory Committee Chair',
-  link: 'https://www2.cisl.ucar.edu/anke-kamrath-named-new-cisl-director'
+  href: 'https://www2.cisl.ucar.edu/anke-kamrath-named-new-cisl-director'
 }, {
   name: 'Aaron Packman',
-  image: 'https://sagecontinuum.org/wp-content/uploads/2020/07/packman-aaron.jpg',
+  image: require('@site/static/img/team/packman-aaron.jpg').default,
   institution: 'Northwestern University',
   title: 'Advisory Committee Chair',
-  link: 'https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/packman-aaron.html'
+  href: 'https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/packman-aaron.html'
 }]
 
 

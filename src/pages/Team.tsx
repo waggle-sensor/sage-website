@@ -1,42 +1,82 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import Layout from '@theme/Layout';
-import Page from './Page';
+import Layout from '@theme/Layout'
 
-import team from '../team-list'
+import team, { type TeamMember } from '../team-list'
+
+
+const TeamCard = (props: TeamMember) => {
+  const {name, image, institution, title, href} = props
+  return (
+    <>
+      <div className="card z-0 relative w-[256px] md:w-[300px] md:h-[300px]">
+        <img src={image} className=""/>
+        <h3 className="text-white absolute left-4 bottom-0 z-10 ">{name}</h3>
+      </div>
+      <p className="m-0 py-2 px-4">
+        <div>{institution}</div>
+        <div><i>{title}</i></div>
+      </p>
+    </>
+  )
+}
+
+
+const LinkCard = (props: TeamMember) => {
+  const {href, ...rest} = props
+  return (
+    <>
+      {href ?
+        <a href={href} className="card-container m-5">
+          <TeamCard {...rest} />
+        </a> :
+        <div className="card-container m-5">
+          <TeamCard {...rest} />
+        </div>
+      }
+    </>
+  )
+}
 
 export default function Team() {
   return (
     <Layout title="Team" description="Sage Team">
-      <Root>
-        <h1>Sage Leadership</h1>
+      <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-5">
+        <h1>Team</h1>
 
-        {team.map(person => {
-          const {name, image, institution, title, link} = person
-          return (
-            <div key={name} className="flex-col justify-items-center my-10">
-              <div className="flex">
-                {link ? <a href={link}><img src={image} /></a> : <img src={image} />}
-                <div className="flex-col mx-5">
-                  <h3>
-                    {link ? <a href={link}>{name}</a> : name}
-                  </h3>
-                  <div>{institution}</div>
-                  <div><i>{title}</i></div>
-                </div>
-              </div>
-            </div>
-          )
-        })}
+        <p>The Sage team brings together experts from institutions across the country.</p>
+
+        <h2>Sage Leadership</h2>
+
+        <div className="flex flex-col md:flex-row flex-wrap justify-between items-center -m-5">
+          {team.map(person => <LinkCard {...person} />)}
+        </div>
       </Root>
     </Layout>
   );
 }
 
 
-const Root = styled(Page)`
-  img {
-    width: 175px;
+const Root = styled.div`
+  .card::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    margin-top: -80px;
+    height: 80px;
+    width: 100%;
+    content: '';
+  }
+
+  a:hover h3 {
+    color: rgb(0, 128, 199);
+    text-decoration: underline;
+  }
+
+  .card-container p,
+  .card-container:hover p {
+    color: #444;
+    text-decoration: none;
   }
 `
 
