@@ -7,7 +7,7 @@ export type Publication = {
   hideInFullList?: boolean
 
   // extra attrs for home page?
-  title?: string
+  shortTitle?: string
   href?: string
   image?: string
   id?: string
@@ -15,35 +15,36 @@ export type Publication = {
 }
 
 const publications : Publication[] = [{
+  name: 'ARMing the Edge: Using Edge Computing and Machine Learning to Improve ARM Doppler Lidar Measurements',
   authors: 'Jackson, R., Collis, S., Beckman, P., Ferrier. N., Sankaran, R., Kim, Y., Park, S., Shakarami, S., and Newsom, R.',
-  name: 'ARMing the Edge: using edge computing and machine learning to improve ARM Doppler Lidar measurements',
-  source: 'under review.',
-  year: 2022,
-  title: 'Designing Edge Computing-Capable ML Algorithms to Target ARM Dopler Lidar Processing',
+  source: '(under review)',
+  year: 2023,
+  image: require('@site/static/img/home/featured-science/armDoppler.png').default,
   id: 'armDoppler'
 }, {
+  name: 'Optimizing Cloud Motion Estimation on the Edge with Phase Correlation and Optical Flow',
   authors: 'Raut, Bhupendra A., Paytsar Muradyan, Rajesh Sankaran, Robert C. Jackson, Seongha Park, Sean A. Shahkarami, Dario Dematties, Yongho Kim, Joseph Swantek, Neal Conrad, Wolfgang Gerlach, Sergey Shemyakin, Pete Beckman, Nicola J. Ferrier, and Scott M. Collis.',
-  name: '"Optimizing cloud motion estimation on the edge with phase correlation and optical flow."',
   source: 'Atmospheric Measurement Techniques 16, no. 5 (2023): 1195-1209.',
   year: 2023,
-  title: 'Optimizing cloud motion estimation on the edge with phase correlation and optical flow',
   href: 'https://amt.copernicus.org/articles/16/1195/2023/',
   image: require('@site/static/img/home/featured-science/cloudMotion.jpg').default,
   id: 'cloudMotion'
 }, {
+  name: 'Let\’s Unleash the Network Judgment: A Self-Supervised Approach for Cloud Image Analysis',
   authors: 'Dematties, Dario, Bhupendra A. Raut, Seongha Park, Robert C. Jackson, Sean Shahkarami, Yongho Kim, Rajesh Sankaran, Pete Beckman, Scott M. Collis, and Nicola Ferrier.',
-  name: '"Let\’s Unleash the Network Judgment: A Self-Supervised Approach for Cloud Image Analysis."',
   source: 'Artificial Intelligence for the Earth Systems (2023): 1-34.',
   year: 2023,
-  title: 'A Self-Supervised Approach for Cloud Image Analysis',
+  href: 'https://journals.ametsoc.org/view/journals/aies/aop/AIES-D-22-0063.1/AIES-D-22-0063.1.xml',
+  image: require('@site/static/img/home/featured-science/selfSupervised.png').default,
   id: 'selfSupervised'
 }, {
-  aurthors: '__todo?__',
-  name: '__todo?__',
-  year: 2023,
-  title: 'Prediction of Solar Irradiance and Photovoltaic Solar Energy Based on Cloud Coverage...',
-  id: 'solarIrradiance',
-  hideInFullList: true
+  name: 'Prediction of Solar Irradiance and Photovoltaic Solar Energy Product Based on Cloud Coverage Estimation Using Machine Learning Methods',
+  authors: 'Seongha Park, Yongho Kim, Nicola J. Ferrier, Scott M. Collis, Rajesh Sankaran and Pete H. Beckman.',
+  source: '2020, Atmosphere, Volume 12, Issue 3, pages 395.',
+  year: 2021,
+  href: 'https://www.mdpi.com/2073-4433/12/3/395',
+  image: require('@site/static/img/home/featured-science/solarIrradiance.png').default,
+  id: 'solarIrradiance'
 }]
 
 

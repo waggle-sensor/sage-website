@@ -26,10 +26,8 @@ export default function Publications() {
                   return (
                     <tr key={i}>
                       <td>
-                        {href ?
-                          <><a href={href}>{name}</a> {authors} {source}</> :
-                          <>{name} {authors} {source}</>
-                        }
+                        <h3>{href ? <a href={href}>{name}</a> : name}</h3>
+                        <p>{authors} {source}</p>
                       </td>
                       <td className="hidden md:block">{year}</td>
                     </tr>
