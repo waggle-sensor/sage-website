@@ -1,14 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
-import { geoPath, geoAlbersUsa } from 'https://cdn.jsdelivr.net/npm/d3-geo@3/+esm'
+import { geoPath, geoAlbersUsa } from 'd3-geo'
+import { select, pointer } from 'd3-selection'
+import { axisTop } from 'd3-axis'
+import { scaleLinear } from 'd3-scale'
+import { Delaunay } from 'd3-delaunay'
+import { schemeCategory10 as colorScheme } from 'd3-scale-chromatic'
 import * as topojson from 'topojson'
-import { select, pointer } from 'https://cdn.skypack.dev/d3-selection@3'
-import { axisTop } from 'https://cdn.skypack.dev/d3-axis@3'
-import { scaleLinear } from 'https://cdn.skypack.dev/d3-scale@4'
-import { Delaunay } from 'https://cdn.skypack.dev/d3-delaunay@6'
-// import { zoom, zoomIdentity } from 'https://cdn.skypack.dev/d3-zoom@3'
-
-import { schemeCategory10 as colorScheme } from 'https://cdn.skypack.dev/d3-scale-chromatic@3'
 
 import { groupBy, uniq } from 'lodash'
 
