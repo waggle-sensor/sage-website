@@ -11,8 +11,8 @@ export default function TwitterSkeleton() {
         <Skeleton width={75}/>
       </div>
       <hr className="m-0"/>
-      {Array.from(Array(5).keys()).map(() =>
-        <div className="flex flex-col">
+      {Array.from(Array(5).keys()).map((i) =>
+        <div className="flex flex-col" key={i}>
           <div className="flex gap-2 m-4">
             <div>
               <Skeleton variant="circular" width={50} height={50} />

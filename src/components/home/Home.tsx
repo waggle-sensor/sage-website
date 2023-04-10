@@ -11,10 +11,11 @@ import BlogPreview from './BlogPreview'
 import TypeWriter from './TypeWriter'
 import TwitterSkeleton from './TwitterSkeleton'
 import Footer from '../Footer'
+import Globe from './AppsChart'
 
+import publications, { type Publication } from '../../publications'
 
 import config from '../../config'
-
 const { portal } = config
 
 
@@ -85,21 +86,30 @@ export const Section = (props) =>
 
 
 type DevTools = 'client' | 'api' | 'ui' | 'template'
+type FeaturedSci = 'cloudMotion' | 'armDoppler' | 'selfSupervised' | 'solarRadiance'
 
 export default function Home() {
   const [devHover, setDevHover] = useState<DevTools>('client')
+  const [sciHover, setSciHover] = useState<FeaturedSci>('cloudMotion')
 
   return (
     <Root>
       <div className="banner flex flex-col md:flex-row justify-between items-center h-[400px] p-[40px]">
-        <div className="text-[#f9f9f9] text-4xl md:text-6xl md:mx-10 self-start md:self-center">
-          AI @ the Edge<br/>
-          for <span className="text-emerald-200">
-            <TypeWriter texts={scienceTexts} />
-          </span>
+        <div className="flex flex-col justify-between md:mx-10 self-start md:self-center">
+          <div className="text-[#f9f9f9] text-4xl md:text-6xl">
+            AI @ the Edge<br/>
+            for <span className="text-emerald-200">
+              <TypeWriter texts={scienceTexts} />
+            </span>
+          </div>
+
+          <div className="hidden lg:block text-xl w-3/4 leading-relaxed text-[#f9f9f9]">
+            A new kind of national-scale cyberinfrastructure
+            to enable AI at the Edge for science.
+          </div>
         </div>
 
-        <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center ">
+        <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center">
           <h3 className="text-slate-300">Getting Started</h3>
           <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow /></a>
           <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow /></a>
@@ -108,11 +118,6 @@ export default function Home() {
 
       <div className="bg-white">
         <Section>
-          <div className="text-[2em] leading-relaxed m-auto pb-12 md:text-center text-purple md:w-1/2">
-            A new kind of national-scale cyberinfrastructure
-            to enable AI at the Edge for science.
-          </div>
-
           <div className="flex flex-col md:flex-row gap-10 md:gap-4 xl:gap-10">
             <Link to="science" className="card">
               <img src={edURL} />
@@ -143,6 +148,11 @@ export default function Home() {
         </Section>
       </div>
 
+      <Section className="pt-0">
+        <h2 className="text-purple font-bold mb-10">Status</h2>
+        <Globe />
+      </Section>
+
       <div className="bg-[#e7ebf0]"> {/* (bg color matches portal) */}
         <Section className="flex flex-col md:flex-row gap-2">
           <div className="bg-white shadow-sm rounded-xl md:w-2/3 h-[600px]">
@@ -171,8 +181,7 @@ export default function Home() {
           <h2 className="text-purple font-bold mb-10">Developer Friendly Tools for Research and Analysis</h2>
 
           <div className="flex flex-col md:flex-row text-slate-200 gap-10">
-
-            <div className="sci-items flex flex-col gap-4 md:w-7/12 ">
+            <div className="sci-items flex flex-col gap-4 md:w-7/12">
               <a className="sci-item group" onMouseOver={() => setDevHover('client')} href="https://pypi.org/project/sage-data-client" target="_blank">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>Python Data Client</h3>
@@ -180,12 +189,12 @@ export default function Home() {
                 </div>
                 <span className="text-slate-200">Easily analyze data in Pandas with the Sage Data Client</span>
               </a>
-              <Link className="sci-item group" onMouseOver={() => setDevHover('api')} to="docs/tutorials/accessing-data#http-api">
+              <a className="sci-item group" onMouseOver={() => setDevHover('api')}  href={`/docs/tutorials/accessing-data#http-api`} target="_blank">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>HTTP APIs</h3>
                 </div>
                 <span className="text-slate-200">Access and update data via web APIs</span>
-              </Link>
+              </a>
               <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="https://github.com/waggle-sensor/cookiecutter-sage-app" target="_blank">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>Developer Templates</h3>
@@ -246,30 +255,25 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row text-slate-200">
             <div className="md:w-1/3 hidden md:block mr-5" >
-              <img src="https://ecr.sagecontinuum.org/api/meta-files/dariodematties1/avian-diversity-monitoring/0.2.4/ecr-icon.jpg"/>
+              {sciHover == 'cloudMotion' &&
+                <img src={publications.find(pub => pub.id == sciHover).image} />
+              }
             </div>
             <div className="flex flex-col gap-y-4 md:w-2/3 sci-items">
-              <div className="sci-item">
-                <h3 className="text-slate-200">Optimizing cloud motion estimation on the edge with phase correlation and optical flow</h3>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </div>
-              <div className="sci-item">
-                <h3 className="text-slate-200">A Self-Supervised Approach for Cloud Image Analysis</h3>
-                Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra.
-                Posuere ac ut consequat semper viverra nam.
-              </div>
-              <div className="sci-item">
-                <h3 className="text-slate-200">Designing Edge Computing-Capable ML Algorithms to Target ARM Dopler Lidar Processing</h3>
-                Sed risus ultricies tristique nulla aliquet enim tortor at auctor.
-                Pretium nibh ipsum consequat nisl vel pretium lectus quam id.
-              </div>
-              <div className="sci-item">
-                <h3 className="text-slate-200">Prediction of Solar Irradiance and Photovoltaic Solar Energy Based on Cloud Coverage...</h3>
-                dipiscing diam donec adipiscing tristique ac turpis egestas integer eget aliquet.
-                Morbi tristique senectus et netus et malesuada fames
-              </div>
+
+              {publications.map(pub => {
+                const {title, href, id, description} = pub
+                return (
+                  <a className="sci-item group" onMouseOver={() => setDevHover(id)} href={href} target="_blank">
+                    <div className="flex justify-between [&>*]:text-slate-200">
+                      <h3>{title}</h3>
+                      <div className="hidden group-hover:block"><LaunchRounded /></div>
+                    </div>
+                    {description && <span className="text-slate-200">{description}</span>}
+                  </a>
+                )
+                })}
+
               <div className="hidden md:flex justify-between mx-5">
                 <Link to="publications" className="focused-link gap-1">Publications <Arrow /></Link>
                 <Link to="science" className="focused-link gap-1">Science<Arrow /></Link>

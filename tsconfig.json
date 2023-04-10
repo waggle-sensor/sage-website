@@ -2,7 +2,8 @@
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
     "jsx": "react",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "target": "es2015"
   }
 }
 
