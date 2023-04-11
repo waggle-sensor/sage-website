@@ -103,7 +103,7 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="hidden lg:block text-xl w-3/4 leading-relaxed text-[#f9f9f9]">
+          <div className="hidden lg:block text-xl w-3/4 leading-relaxed mt-4 text-[#f9f9f9]">
             A new kind of national-scale cyberinfrastructure
             to enable AI at the Edge for science.
           </div>
@@ -149,7 +149,7 @@ export default function Home() {
       </div>
 
       <Section className="pt-0">
-        <h2 className="text-purple font-bold mb-10">Status</h2>
+        <h2 className="text-purple font-bold mb-10">AI/ML Status</h2>
         <Globe />
       </Section>
 

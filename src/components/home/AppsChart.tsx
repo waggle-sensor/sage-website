@@ -51,6 +51,7 @@ type Node = {
 
 
 type MapProps = {
+  title: string
   nodes: Node[]
   onHover: (node: Node) => void
   color?: string
@@ -59,7 +60,7 @@ type MapProps = {
 
 
 function Map(props: MapProps) {
-  const {nodes, onHover, color} = props
+  const {title, nodes, onHover, color} = props
 
   const ref = useRef()
 
@@ -104,12 +105,26 @@ function Map(props: MapProps) {
 
   }, [ref, color])
 
+  useEffect(() => {
+    const svg = select(ref.current)
+    svg.selectAll('.title').remove()
+    svg.append('text')
+      .text(title)
+      .attr('class', 'title')
+      .attr('x', 959 / 2)
+      .attr('y', 15)
+      .attr('text-anchor', 'middle')
+      .attr('font-weight', '500')
+      .attr('fill', '#333')
+  }, [title])
+
+
   const projection = geoAlbersUsa().scale(1300).translate([487.5, 305])
   const path = geoPath()
   const delaunay = Delaunay.from(nodes, d => d.gps_lon, d => d.gps_lat)
 
   return (
-    <svg viewBox="0 0 959 593" width="100%" height="100%" ref={ref}>
+    <svg viewBox="0 0 959 650" width="100%" height="100%" ref={ref}>
       <path fill="#ddd" d={path(topojson.feature(us, us.objects.nation))}></path>
       <path
         fill="none"
@@ -133,14 +148,15 @@ type ChartProps = {
 function initChart(props: ChartProps) {
   const {chartEle, apps, onHover} = props
 
-  const margin = { top: 20, left: 20, right: 20, bottom: 20 }
+  const margin = { top: 40, left: 30, right: 20, bottom: 20 }
   const canvasWidth = 600
+  const canvasHeight = 550
 
   const maxNodes = apps[0].nodes.length
 
   const svg = select(chartEle).append('svg')
     .attr('preserveAspectRatio', 'xMinYMin meet')
-    .attr('viewBox', `0 0 ${canvasWidth} 400`)
+    .attr('viewBox', `0 0 ${canvasWidth} ${canvasHeight}`)
 
   // create scaling functions
   const x = scaleLinear()
@@ -164,12 +180,12 @@ function initChart(props: ChartProps) {
     .enter()
     .append("g")
     .on('mouseenter', function(evt, d) {
-      onHover(d.appName)
       select(this).select('rect').attr('opacity', 1.0)
+      setTimeout(() => onHover(d.appName)) // prevent flicker when entering new
     })
     .on('mouseleave', function() {
       select(this).select('rect').attr('opacity', .5)
-      onHover(null)
+      setTimeout(() => onHover(null))
     })
     .attr('cursor', 'pointer')
     .on('click', (evt, d) => {
@@ -180,18 +196,18 @@ function initChart(props: ChartProps) {
   groups.append('rect')
     .attr('class', 'node')
     .attr('x', 0)
-    .attr('y', (d, i) => (i) * (barHeight))
+    .attr('y', (d, i) => i * (barHeight))
     .attr('width', (d) => {
       const {nodes} = d
       const nodeCount = nodes.length
-      const w = (nodeCount / maxNodes) * canvasWidth - margin.right - margin.left
+      const w = (nodeCount / maxNodes) * (canvasWidth - margin.right - margin.left)
 
       return w
     })
     .attr('height', barHeight)
     .attr('opacity', .5)
-    //.attr('stroke', '#fff')
-    //.attr('stroke-width', 1)
+    .attr('stroke', '#fff')
+    .attr('stroke-width', 2)
     .attr('fill', (d, i) => colorScheme[i % 8])
 
   groups.append('text')
@@ -202,6 +218,25 @@ function initChart(props: ChartProps) {
     .attr('font-weight', '500')
     .attr('fill', '#000')
     .attr('font-size', '12px')
+
+  svg.append('text')
+    .text('Number of Nodes')
+    .attr('x', canvasWidth / 2)
+    .attr('y', 15)
+    .attr('text-anchor', 'middle')
+    .attr('font-weight', '500')
+    .attr('fill', '#33')
+
+  const xPos = 10, yPos = canvasHeight / 2
+  svg.append('text')
+    .text('Active Applications')
+    .attr('x', xPos)
+    .attr('y', yPos)
+    .attr('font-weight', '500')
+    .attr('fill', '#333')
+    .attr('dominant-baseline', 'central')
+    .attr('text-anchor', 'middle')
+    .attr('transform', `rotate(-90,${xPos},${yPos})`)
 }
 
 
@@ -260,9 +295,8 @@ function getRecentApps() : Promise<AppSummary[]> {
         }
       }, {})
 
-      // convert to list and sort
+      // convert to list
       const summary = Object.values(byApp)
-      summary.sort((a, b) => b.nodes.length - a.nodes.length)
 
       return summary as AppSummary[]
    })
@@ -273,7 +307,7 @@ const nodesToPoints = (nodes) =>
 
 
 
-const barHeight = 20
+const barHeight = 25
 
 
 
@@ -298,17 +332,18 @@ export default function AppsChart() {
   useEffect(() => {
     Promise.all([getRecentApps(), getNodes()])
       .then(([apps, nodes]) => {
-        // only include relavant nodes for each app
+        // only include relevant nodes for each app
         const vsns = nodes.map(obj => obj.vsn)
         apps = apps
           .map(obj => ({...obj, nodes: obj.nodes.filter(vsn => vsns.includes(vsn))}))
           .filter(obj => obj.nodes.length)
+          .sort((a, b) => b.nodes.length - a.nodes.length)
 
         setApps(apps)
         setNodes(nodes)
         setVisibleNodes(nodes)
       })
-      .catch(err => setError('unable to fetch app data and/or nodes'))
+      .catch(err => setError('The AI/ML status view is currently unavailable.'))
   }, [])
 
 
@@ -320,7 +355,7 @@ export default function AppsChart() {
   }, [apps, nodes])
 
 
-  const handleChartHover = useCallback((appName) => {
+  const handleChartHover = (appName) => {
     if (!appName) {
       // show all nodes
       setVisibleNodes(nodes)
@@ -333,12 +368,12 @@ export default function AppsChart() {
 
     setVisibleNodes(showNodes)
     setHoverID(appName)
-  }, [apps, nodes])
-
+  }
 
   const handleMapHover = (node: Node) => {
     if (!node) {
       setAppsOnNode(null)
+      setNode(null)
 
       chartRef.current.innerHTML = "";
       const chartEle = chartRef.current
@@ -352,19 +387,32 @@ export default function AppsChart() {
     setAppsOnNode(appList)
   }
 
+  const nodesWithGps = (visibleNodes || []).filter(obj => obj.gps_lon && obj.gps_lat)
+  const nodeCount = (visibleNodes || []).length
+
   return (
-    <div className="flex">
-      <div className="w-7/12">
+    <div className="flex flex-col md:flex-row">
+      <div className="md:w-7/12">
         {visibleNodes && apps &&
           <Map
-            nodes={visibleNodes.filter(obj => obj.gps_lon && obj.gps_lat)}
+            title={
+              node ? `Node ${node.vsn}` : (
+              hoverID ?
+                `${nodeCount} node${nodeCount > 1 ? 's are' : ' is'} running ${hoverID}` :
+                `${nodeCount} Node${nodeCount > 1 ? 's' : ''}` )
+            }
+            nodes={nodesWithGps}
             onHover={handleMapHover}
             color={colorScheme[apps.findIndex(obj => obj.appName == hoverID) % 8] || null }
           />
         }
+
+        {error &&
+          <p>{error}</p>
+        }
       </div>
 
-      <div className="w-5/12">
+      <div className="md:w-5/12">
         {!appsOnNode &&
           <div ref={chartRef}></div>
         }
@@ -386,10 +434,6 @@ export default function AppsChart() {
           </div>
         }
       </div>
-
-      {error &&
-        <p>{error}</p>
-      }
 
     </div>
   )
