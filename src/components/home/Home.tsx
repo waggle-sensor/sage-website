@@ -11,9 +11,9 @@ import BlogPreview from './BlogPreview'
 import TypeWriter from './TypeWriter'
 import TwitterSkeleton from './TwitterSkeleton'
 import Footer from '../Footer'
-import Globe from './AppsChart'
+import Globe from './StatusChart'
 
-import publications, { type Publication } from '../../publications'
+import publications from '../../publications'
 
 import config from '../../config'
 const { portal } = config

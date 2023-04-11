@@ -311,7 +311,7 @@ const barHeight = 25
 
 
 
-export default function AppsChart() {
+export default function StatusChart() {
   const ref = useRef<HTMLCanvasElement>()
   const chartRef = useRef()
   const [globe, setGlobe] = useState<{context: CanvasRenderingContext2D, path}>()
