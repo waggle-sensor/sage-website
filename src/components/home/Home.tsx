@@ -67,7 +67,6 @@ Select template:
 Choose from 1, 2, 3 [1]: 1
 `
 
-const edURL = 'https://sagecontinuum.org/wp-content/uploads/2019/11/LofT-Wrigley-Jose-Osorio-Chicago-Tribune-.jpg'
 
 const scienceTexts = [
   'Climate Research',
@@ -120,7 +119,7 @@ export default function Home() {
         <Section>
           <div className="flex flex-col md:flex-row gap-10 md:gap-4 xl:gap-10">
             <Link to="science" className="card">
-              <img src={edURL} />
+              <img src={require('@site/static/img/home/learn.jpg').default} />
               <h3>Learn</h3>
               <p>Explore some of the <Link to="science">science</Link> made possible with Sage</p>
             </Link>
@@ -130,7 +129,7 @@ export default function Home() {
               <p>Upload, build, and share <a href={`${portal}/apps`}>apps</a> for AI at the edge</p>
             </a>
             <a className="card" href={`${portal}/jobs`}>
-              <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/Wagman-v4.jpg" />
+              <img src={require('@site/static/img/home/circuit-board.jpg').default} />
               <h3>Run jobs</h3>
               <p>Create <a href={`${portal}/create-job?tab=editor&start_with_sample=true`}>science goals</a> to run apps on nodes<br/></p>
             </a>
@@ -140,7 +139,7 @@ export default function Home() {
               <p>Browse <a href={`${portal}/data`}>data</a> from sensors and edge apps</p>
             </a>
             <Link to="docs/tutorials/accessing-data" className="card">
-              <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/1820-1024-tweak.jpg" />
+              <img src={require('@site/static/img/home/wildfire.jpg').default} />
               <h3>Analyze</h3>
               <p>Use Sage APIs to fetch, analyze, or integrate data</p>
             </Link>
