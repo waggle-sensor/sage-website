@@ -5,13 +5,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Sage Website',
   tagline: 'AI at the Edge',
-  url: 'https://nconrad.github.io',
-  baseUrl: '/waggle-docs/',
+  url: 'https://waggle-sensor.github.io',
+  baseUrl: '/sage-website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/sage-favicon.png',
-  organizationName: 'nconrad',
-  projectName: 'waggle-docs',
+  organizationName: 'waggle-sensor',
+  projectName: 'sage-website',
   trailingSlash: false,
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
@@ -50,11 +50,6 @@ module.exports = {
           position: 'left',
           label: 'Docs'
         },
-        /* {
-          to: 'https://portal.sagecontinuum.org',
-          label: 'Sage Portal',
-          position: 'left'
-        },*/
         {
           type: 'dropdown',
           position: 'right',
@@ -110,15 +105,13 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/waggle-sensor/waggle-docs/edit/main/',
+            'https://github.com/waggle-sensor/sage-website/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/waggle-sensor/waggle-docs/edit/main/',
+            'https://github.com/waggle-sensor/sage-website/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
