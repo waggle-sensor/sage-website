@@ -11,7 +11,7 @@ import BlogPreview from './BlogPreview'
 import TypeWriter from './TypeWriter'
 import TwitterSkeleton from './TwitterSkeleton'
 import Footer from '../Footer'
-import Globe from './StatusChart'
+import StatusChart from './StatusChart'
 
 import publications from '../../publications'
 
@@ -145,13 +145,12 @@ export default function Home() {
               <p>Use Sage APIs to fetch, analyze, or integrate data</p>
             </Link>
           </div>
+
+          <h2 className="text-purple font-bold mt-16">AI/ML Status</h2>
+          <StatusChart />
+
         </Section>
       </div>
-
-      <Section className="pt-0">
-        <h2 className="text-purple font-bold mb-10">AI/ML Status</h2>
-        <Globe />
-      </Section>
 
       <div className="bg-[#e7ebf0]"> {/* (bg color matches portal) */}
         <Section className="flex flex-col md:flex-row gap-2">
