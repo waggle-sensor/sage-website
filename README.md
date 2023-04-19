@@ -1,4 +1,4 @@
-# Waggle Documentation and Tutorials
+# Sage Website, Documentation, and Tutorials
 
 
 ## Writing Docs
