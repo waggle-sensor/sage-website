@@ -80,7 +80,7 @@ const scienceTexts = [
 
 
 export const Section = (props) =>
-  <section className={`mx-auto py-[4em] h-full w-[90%] ${props.className || ''}` }>
+  <section className={`mx-auto py-16 h-full w-[90%] ${props.className || ''}` }>
     {props.children}
   </section>
 

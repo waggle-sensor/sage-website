@@ -68,7 +68,6 @@ function Map(props: MapProps) {
     if (!ref.current) return
 
     const svg = select(ref.current)
-      .attr('cursor', 'pointer')
 
     select(ref.current).append("defs").append("style")
       .text(`circle.highlighted { stroke: ${colorScheme[0]}; fill: ${colorScheme[0]}; }`);
@@ -86,7 +85,8 @@ function Map(props: MapProps) {
       .attr('transform', d => `translate( ${projection([d.gps_lon, d.gps_lat]).join(",")} )`)
       .attr('r', 5)
       .attr('fill', color || 'rgb(0, 58, 29)')
-      .on('click', (evt, d) => {
+      .attr('cursor', 'pointer')
+      .on('click', (_, d) => {
         window.open(`https://portal.sagecontinuum.org/node/${d.name}`)
       })
 
@@ -136,7 +136,6 @@ function Map(props: MapProps) {
     </svg>
   )
 }
-
 
 
 function getNodes() : Promise<Node[]> {
@@ -294,7 +293,6 @@ export default function StatusChart() {
 
         getPluginCounts(nodes.map(o => o.vsn))
           .then(data => {
-            console.log('data', data)
             setDataCounts(data)
           })
       })

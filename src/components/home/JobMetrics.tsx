@@ -42,7 +42,7 @@ export default function JobMetrics(props: Props) {
         <div className="mb-4">
           <div className="flex items-center gap-2">
             <InsightIcon  />
-              <div className="text-2xl">App Inferences/Data</div>
+            <div className="text-2xl">App Data</div>
           </div>
           <div className="flex-col">
             {/* use approx char?
