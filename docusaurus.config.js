@@ -6,7 +6,7 @@ module.exports = {
   title: 'Sage Website',
   tagline: 'AI at the Edge',
   url: 'https://waggle-sensor.github.io',
-  baseUrl: '/sage-website/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/sage-favicon.png',

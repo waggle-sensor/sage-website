@@ -84,24 +84,6 @@ const team : TeamMember[] = [{
   institution: 'Los Alamos National Lab',
   title: 'Advisory Committee Chair',
   href: 'https://www.lanl.gov/about/leadership-governance/ald-simu-comp.php'
-}, {
-  name: 'Paul Messina',
-  image: require('@site/static/img/team/FTD_9410_14405_Messina-Paul.jpg').default,
-  institution: 'ANL',
-  title: 'Advisory Committee Chair',
-  href: 'https://www.anl.gov/profile/paul-c-messina',
-}, {
-  name: 'Anke Kamrath',
-  image: require('@site/static/img/team/Anke-450-2.jpg').default,
-  institution: 'NCAR',
-  title: 'Advisory Committee Chair',
-  href: 'https://www2.cisl.ucar.edu/anke-kamrath-named-new-cisl-director'
-}, {
-  name: 'Aaron Packman',
-  image: require('@site/static/img/team/packman-aaron.jpg').default,
-  institution: 'Northwestern University',
-  title: 'Advisory Committee Chair',
-  href: 'https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/packman-aaron.html'
 }]
 
 

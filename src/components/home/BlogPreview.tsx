@@ -15,12 +15,11 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 export default function BlogPreview() {
 
   const [data, setData] = useState()
-  const {siteConfig} = useDocusaurusContext()
+  // const {siteConfig} = useDocusaurusContext()
 
   useEffect(() => {
     // fetch blog preview from prod site
-    const {url, baseUrl} = siteConfig
-    fetch(url + baseUrl + 'blog')
+    fetch('https://www.sagecontinuum.org/' + 'blog')
       .then(res => res.text())
       .then(content => {
         const parser = new DOMParser()
