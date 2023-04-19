@@ -19,7 +19,7 @@ export default function BlogPreview() {
 
   useEffect(() => {
     // fetch blog preview from prod site
-    fetch('https://www.sagecontinuum.org/' + 'blog')
+    fetch('https://sagecontinuum.org/' + 'blog')
       .then(res => res.text())
       .then(content => {
         const parser = new DOMParser()

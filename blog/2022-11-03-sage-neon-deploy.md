@@ -13,18 +13,17 @@ tags: [node, deployment]
 
 <!--truncate-->
 
-<iframe title="Sage NEON deployment to the Konza LTER site in Kansas." src="https://www.youtube.com/embed/GF0jbkMPlTc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%" allowfullscreen="" id="fitvid61143"></iframe>
-
+<iframe title="Sage NEON deployment to the Konza LTER site in Kansas." src="https://www.youtube.com/embed/GF0jbkMPlTc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="400" allowfullscreen="" id="fitvid61143"></iframe>
 
 
 #### Thermal imaging was used to understand how air temperature can be used to detect smoke and the early warning signs of fire.
 
 
-<img src="https://sagecontinuum.org/wp-content/uploads/2022/11/during_burn-2048x1152.png" />
+![Deployed MDP tower](img/sage-neon-deploy/during-burn.png)
 Deployed MDP tower hosting Sage nodes in the middle of the controlled burn
 
-![thermal image](https://sagecontinuum.org/wp-content/uploads/2022/11/Screen-Shot-2022-11-03-at-1.16.50-PM.png)
+![thermal images](img/sage-neon-deploy/thermal-img.png)
 <figcaption>Thermal images showing the detected increase in air temperature</figcaption>
 
-![dashboard](https://sagecontinuum.org/wp-content/uploads/2022/11/Screen-Shot-2022-11-03-at-1.23.14-PM.png)
+![dashboard](img/sage-neon-deploy/konza-dash.png)
 <figcaption>Sage portal website showing data, image and audio feeds from Sage nodes</figcaption>
