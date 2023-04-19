@@ -1,9 +1,7 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { geoPath, geoAlbersUsa } from 'd3-geo'
 import { select, pointer } from 'd3-selection'
-import { axisTop } from 'd3-axis'
-import { scaleLinear } from 'd3-scale'
 import { Delaunay } from 'd3-delaunay'
 import { schemeCategory10 as colorScheme } from 'd3-scale-chromatic'
 import * as topojson from 'topojson'
@@ -12,31 +10,33 @@ import { groupBy, uniq } from 'lodash'
 
 import us from '@site/static/geo/states-albers-10m.json'
 
+import JobMetrics from './JobMetrics'
 
 
-
-// the bare min Job type; todo(nc): import client/component lib
-type JobMap = {
-  [jobID: number]: {
-    nodes: {
-      [vsn: string]: true | null
-    }
-    state: {
-      last_state: string
-    }
-    plugins: {
-      name: string
-      plugin_spec: {image: string}
-    }[]
+// the bare min Job type; todo(nc): import client/component lib?
+type Job = {
+  nodes: {
+    [vsn: string]: true | null
   }
+  state: {
+    last_state: string
+  }
+  plugins: {
+    name: string
+    plugin_spec: {image: string}
+  }[]
 }
 
-type App = {
+type JobMap = {
+  [jobID: number]: Job
+}
+
+export type App = {
   appName: string
   image: string
 }
 
-type AppSummary = App & {
+export type AppSummary = App & {
   nodes: string[]
 }
 
@@ -139,110 +139,8 @@ function Map(props: MapProps) {
 
 
 
-type ChartProps = {
-  chartEle: HTMLElement
-  apps: AppSummary[]
-  onHover: (appName: string) => void
-}
-
-function initChart(props: ChartProps) {
-  const {chartEle, apps, onHover} = props
-
-  const margin = { top: 40, left: 30, right: 20, bottom: 20 }
-  const canvasWidth = 600
-  const canvasHeight = 550
-
-  const maxNodes = apps[0].nodes.length
-
-  const svg = select(chartEle).append('svg')
-    .attr('preserveAspectRatio', 'xMinYMin meet')
-    .attr('viewBox', `0 0 ${canvasWidth} ${canvasHeight}`)
-
-  // create scaling functions
-  const x = scaleLinear()
-    .domain([0, maxNodes])
-    .range([margin.left, canvasWidth - margin.right])
-
-
-  // create axis
-  const xAxis = axisTop(x)
-
-  svg.append('g')
-    .attr('transform', `translate(0, ${margin.top})`)
-    .call(xAxis)
-
-  const bars = svg.append('g')
-    .style('cursor', 'pointer')
-    .attr('transform', `translate(${margin.left}, ${margin.top})`)
-
-  const groups = bars.selectAll(".groups")
-    .data(apps)
-    .enter()
-    .append("g")
-    .on('mouseenter', function(evt, d) {
-      select(this).select('rect').attr('opacity', 1.0)
-      setTimeout(() => onHover(d.appName)) // prevent flicker when entering new
-    })
-    .on('mouseleave', function() {
-      select(this).select('rect').attr('opacity', .5)
-      setTimeout(() => onHover(null))
-    })
-    .attr('cursor', 'pointer')
-    .on('click', (evt, d) => {
-      const path = d.image.replace('registry.sagecontinuum.org/', '').split(':')[0]
-      window.open(`https://portal.sagecontinuum.org/apps/app/${path}?tab=data`)
-    })
-
-  groups.append('rect')
-    .attr('class', 'node')
-    .attr('x', 0)
-    .attr('y', (d, i) => i * (barHeight))
-    .attr('width', (d) => {
-      const {nodes} = d
-      const nodeCount = nodes.length
-      const w = (nodeCount / maxNodes) * (canvasWidth - margin.right - margin.left)
-
-      return w
-    })
-    .attr('height', barHeight)
-    .attr('opacity', .5)
-    .attr('stroke', '#fff')
-    .attr('stroke-width', 2)
-    .attr('fill', (d, i) => colorScheme[i % 8])
-
-  groups.append('text')
-    .text((d) => d.appName)
-    .attr('x', 4)
-    .attr('y', (d, i) => (i) * (barHeight) + (barHeight/2) + 2)
-    .attr('dominant-baseline', 'middle')
-    .attr('font-weight', '500')
-    .attr('fill', '#000')
-    .attr('font-size', '12px')
-
-  svg.append('text')
-    .text('Number of Nodes')
-    .attr('x', canvasWidth / 2)
-    .attr('y', 15)
-    .attr('text-anchor', 'middle')
-    .attr('font-weight', '500')
-    .attr('fill', '#33')
-
-  const xPos = 10, yPos = canvasHeight / 2
-  svg.append('text')
-    .text('Active Applications')
-    .attr('x', xPos)
-    .attr('y', yPos)
-    .attr('font-weight', '500')
-    .attr('fill', '#333')
-    .attr('dominant-baseline', 'central')
-    .attr('text-anchor', 'middle')
-    .attr('transform', `rotate(-90,${xPos},${yPos})`)
-}
-
-
-
 function getNodes() : Promise<Node[]> {
-  const p1 = fetch('https://auth.sagecontinuum.org/manifests/')
+  const p1 = fetch('https://auth.sagecontinuum.org/manifests')
   const p2 = fetch('https://api.sagecontinuum.org/production')
 
   return Promise.all([p1, p2])
@@ -258,7 +156,7 @@ function getNodes() : Promise<Node[]> {
 }
 
 
-function getRecentApps() : Promise<AppSummary[]> {
+function getRecentData() : Promise<{apps: AppSummary[], jobs: Job[]}> {
   return fetch('https://es.sagecontinuum.org/api/v1/jobs/list')
     .then(res => res.json())
     .then(jobMap => {
@@ -296,62 +194,119 @@ function getRecentApps() : Promise<AppSummary[]> {
       }, {})
 
       // convert to list
-      const summary = Object.values(byApp)
+      const summary: AppSummary[] = Object.values(byApp)
 
-      return summary as AppSummary[]
+      return {
+        apps: summary,
+        jobs
+      }
    })
 }
 
-const nodesToPoints = (nodes) =>
-  nodes.map(obj => [obj.gps_lon, obj.gps_lat])
+
+type Record = {
+  timestamp: string
+  name: string
+  value: number
+  meta: {node: string}
+}
+
+function getPluginCounts(vsns: string | string[]) : Promise<Record[]> {
+  const vsn = Array.isArray(vsns) ? vsns.join('|') : vsns
+
+  const params = {
+    bucket: 'plugin-stats',
+    start: '-24h',
+    filter: {
+      ...(vsn && {vsn})
+    }
+  }
+
+  return fetch('https://data.sagecontinuum.org/api/v1/query', {
+    method: 'POST',
+    body: JSON.stringify(params)
+  }).then(res => res.text())
+    .then(text => {
+      const data = text.trim()
+        .split('\n')
+        .map(str => JSON.parse(str))
+      return data
+  })
+}
 
 
+type DataCount = {
+  name: 'total'
+  timestamp: string
+  value: string
+  meta:  {
+    vsn: string
+    node: string
+    plugin: 'registry.sagecontinuum.org/dariodematties/sound-event-detection:0.1.1',
+  }
+}
 
-const barHeight = 25
+const getDataCount = (dataCounts: DataCount[], vsn?: string) : number => {
+  if (vsn) {
+    dataCounts = [...dataCounts.filter(obj => obj.meta.vsn == vsn)]
+  }
+
+  const count = dataCounts.reduce((acc, obj) => {
+    return acc + obj.value
+  }, 0)
+
+  return count
+}
 
 
 
 export default function StatusChart() {
-  const ref = useRef<HTMLCanvasElement>()
-  const chartRef = useRef()
-  const [globe, setGlobe] = useState<{context: CanvasRenderingContext2D, path}>()
-
   const [nodes, setNodes] = useState<Node[]>()
   const [visibleNodes, setVisibleNodes] = useState<Node[]>()
 
+  const [jobs, setJobs] = useState<Job[]>()
   const [apps, setApps] = useState<AppSummary[]>()
+  const [dataCounts, setDataCounts] = useState()
 
-  const [appsOnNode, setAppsOnNode] = useState<App[]>()
   const [node, setNode] = useState<Node>()
+  const [appsOnNode, setAppsOnNode] = useState<App[]>()
 
   const [error, setError] = useState<string>(null)
-
   const [hoverID, setHoverID] = useState<string>(null)
 
 
   useEffect(() => {
-    Promise.all([getRecentApps(), getNodes()])
-      .then(([apps, nodes]) => {
+    Promise.all([getRecentData(), getNodes()])
+      .then(([recentData, nodes]) => {
+        let {apps, jobs} = recentData
+
         // only include relevant nodes for each app
         const vsns = nodes.map(obj => obj.vsn)
         apps = apps
           .map(obj => ({...obj, nodes: obj.nodes.filter(vsn => vsns.includes(vsn))}))
-          .filter(obj => obj.nodes.length)
+          .filter(obj => obj.nodes.length && !obj.appName.includes('sampler'))
           .sort((a, b) => b.nodes.length - a.nodes.length)
 
+        setJobs(jobs)
         setApps(apps)
         setNodes(nodes)
         setVisibleNodes(nodes)
+
+        getPluginCounts(nodes.map(o => o.vsn))
+          .then(data => {
+            console.log('data', data)
+            setDataCounts(data)
+          })
       })
-      .catch(err => setError('The AI/ML status view is currently unavailable.'))
+      .catch(err => {
+        console.log('fetch error:', err)
+        setError('The AI/ML status view is currently unavailable.')
+      })
   }, [])
 
 
   useEffect(() => {
     if (!apps || !nodes) return
-
-    const chartEle = chartRef.current
-    initChart({chartEle, apps, onHover: handleChartHover})
   }, [apps, nodes])
 
 
@@ -374,10 +329,6 @@ export default function StatusChart() {
     if (!node) {
       setAppsOnNode(null)
       setNode(null)
-
-      chartRef.current.innerHTML = "";
-      const chartEle = chartRef.current
-      initChart({chartEle, apps, onHover: handleChartHover})
       return
     }
 
@@ -413,25 +364,14 @@ export default function StatusChart() {
       </div>
 
       <div className="md:w-5/12">
-        {!appsOnNode &&
-          <div ref={chartRef}></div>
-        }
-
-        {appsOnNode && node &&
-          <div className="mx-5">
-            <h3>
-              <span className="text-purple">Node {node.vsn}</span>
-              <span className="text-gray-700"> | {appsOnNode.length} active apps</span>
-            </h3>
-            <ul className="list-none p-0">
-              {appsOnNode.map(obj => {
-                const {appName} = obj
-                return (
-                  <li key={appName}>{appName}</li>
-                )
-              })}
-            </ul>
-          </div>
+        {nodes && jobs && apps && dataCounts &&
+          <JobMetrics
+            node={node?.vsn}
+            nodes={nodes.length}
+            jobs={node ? jobs.filter(obj => node.vsn in obj.nodes).length : jobs.length}
+            apps={node ? apps.filter(obj => obj.nodes.includes(node.vsn)).length : apps.length}
+            records={getDataCount(dataCounts, node?.vsn)}
+          />
         }
       </div>
 

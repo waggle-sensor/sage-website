@@ -132,7 +132,7 @@ export default function Home() {
             <a className="card" href={`${portal}/jobs`}>
               <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/Wagman-v4.jpg" />
               <h3>Run jobs</h3>
-              <p>Create <a href={`${portal}/create-job?tab=editor&start_with_sample=true`}>science goals</a> to run apps on nodes.<br/></p>
+              <p>Create <a href={`${portal}/create-job?tab=editor&start_with_sample=true`}>science goals</a> to run apps on nodes<br/></p>
             </a>
             <a href={`${portal}/data`} className="card">
               <img src={require('@site/static/img/home/browse.png').default} />
@@ -142,7 +142,7 @@ export default function Home() {
             <Link to="docs/tutorials/accessing-data" className="card">
               <img src="https://sagecontinuum.org/wp-content/uploads/2019/11/1820-1024-tweak.jpg" />
               <h3>Analyze</h3>
-              <p>Use Sage APIs to fetch, analyze, or integrate data.</p>
+              <p>Use Sage APIs to fetch, analyze, or integrate data</p>
             </Link>
           </div>
         </Section>
@@ -208,7 +208,7 @@ export default function Home() {
                   <h3>Web GUIs</h3>
                   <div className="invisible group-hover:visible"><LaunchRounded /></div>
                 </div>
-                <span className="text-slate-200">Navigate job/sampler data quickly with a few clicks</span>
+                <span className="text-slate-200">Quickly navigate job/sampler data with a few clicks</span>
               </a>
 
               <div className="hidden md:flex justify-between mx-5 text-slate-200">
@@ -262,7 +262,7 @@ export default function Home() {
               {publications.map(pub => {
                 const {name, href, id, description} = pub
                 return (
-                  <a className="sci-item group" onMouseOver={() => setSciHover(id)} href={href} target="_blank">
+                  <a className="sci-item group" onMouseOver={() => setSciHover(id)} href={href} target="_blank" key={id}>
                     <div className="flex justify-between [&>*]:text-slate-200">
                       <h3>{name}</h3>
                       {href && <div className="invisible group-hover:visible"><LaunchRounded /></div>}
