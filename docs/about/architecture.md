@@ -5,17 +5,17 @@ sidebar_position: 2
 
 # Architecture
 
-The Waggle cyberinfrastructure consists of coordinating hardware and software services enabling AI at the edge. Below is a quick summary of the different infrastructure pieces, starting at the highest-level and zooming into each component to understand the relationships and role each plays.
+The cyberinfrastructure consists of coordinating hardware and software services enabling AI at the edge. Below is a quick summary of the different infrastructure pieces, starting at the highest-level and zooming into each component to understand the relationships and role each plays.
 
 ## High-Level Infrastructure
 
 ![Figure 1: High-level Node & Beehive Relationship](./images/arch_high_01.svg)
 
-There are 2 main components of the Waggle cyberinfrastructure:
-- the [Waggle Nodes](#waggle-nodes) that exist at the edge
-- the Waggle Cloud that hosts services and storage systems to facilitate running [“science goals”](#science-goals) @ the edge
+There are 2 main components of the cyberinfrastructure:
+- [Nodes](#waggle-nodes) that exist at the edge
+- The cloud that hosts services and storage systems to facilitate running [“science goals”](#science-goals) @ the edge
 
-Every edge node maintains connections to 2 core Waggle Cloud components: 1 to a [Beehive](#beehive) and 1 to a [Beekeeper](#beekeper)
+Every edge node maintains connections to 2 core cloud components: 1 to a [Beehive](#beehive) and 1 to a [Beekeeper](#beekeper)
 
 ### Beekeeper
 
@@ -31,7 +31,7 @@ The overall Waggle infrastructure supports multiple Beehives, where each Waggle 
 
 ![Figure 2: Multiple Beehives](./images/arch_beehives_01.svg)
 
-In the example above, there are 2 Waggle nodes associated with Beehive 1, while a single Waggle node is associated with Beehive 2.  With all Waggle nodes, in this example, being administered by a single [Beekeeper](#beekeeper).
+In the example above, there are 2 nodes associated with Beehive 1, while a single Waggle node is associated with Beehive 2.  With all nodes, in this example, being administered by a single [Beekeeper](#beekeeper).
 
 > _Note_: the example above shows a single Beekeeper, but a second Beekeeper could have been used for administrative isolation.
 
@@ -104,22 +104,22 @@ To-Edge triggers are messages that are to change a node's behavior. For example 
 
 > Details & source code: https://github.com/waggle-sensor/lambda-triggers
 
-## Waggle Nodes
+## Nodes
 
-The Waggle nodes are the edge computing component of the cyberinfrastructure. All Waggle nodes consist of 3 items:
+Nodes are the edge computing component of the cyberinfrastructure. All nodes consist of 3 items:
 1. **Persisent storage** for housing downloaded [plugins](#what-is-a-plugin) and caching published data before it is transferred to the node's Beehive
 2. **CPU and GPU compute modules** where [plugins](#what-is-a-plugin) are executed and perform the accelerated inferences
 3. **Sensors** such as environment sensors, cameras and [LiDAR systems](https://en.wikipedia.org/wiki/Lidar)
 
 ![Figure 5: Waggle Node Overview](./images/node_overview_01.svg)
 
-Waggle nodes enable @ the edge fast computation, leveraging the large non-volatile storage to handle caching of high frequency data (including images, audio and video) in the event the node is "offline" from its Beehive.  Through expansion ports the nodes support the adding and removing of sensors to fully customize the node deployments for the particular deployment environment.
+Sage/Waggle nodes enable @ the edge fast computation, leveraging the large non-volatile storage to handle caching of high frequency data (including images, audio and video) in the event the node is "offline" from its Beehive.  Through expansion ports the nodes support the adding and removing of sensors to fully customize the node deployments for the particular deployment environment.
 
 Overall, even though the nodes may use different CPU architectures and different sensor configurations, they all leverage the same [Waggle Edge Stack (WES)](#waggle-edge-stack-wes) to run [plugins](#what-is-a-plugin).
 
-### Wild Waggle Node
+### Wild Sage/Waggle Node
 
-The Wild Waggle Node is a custom built weather-proof enclosure intended for remote outdoor installation. The node features software and hardware resilience via the [custom Waggle operating system](https://github.com/waggle-sensor/wildnode-image) and [custom Wagman circuit board](https://github.com/waggle-sensor/wagman). Internal to the node is a power supply and PoE network switch supporting the addition of sensors through standard Ethernet (PoE), USB and other embedded protocols via the node expansion ports.
+The Wild Sage Node (or Wild Waggle Node) is a custom built weather-proof enclosure intended for remote outdoor installation. The node features software and hardware resilience via the [custom Waggle operating system](https://github.com/waggle-sensor/wildnode-image) and [custom Wagman circuit board](https://github.com/waggle-sensor/wagman). Internal to the node is a power supply and PoE network switch supporting the addition of sensors through standard Ethernet (PoE), USB and other embedded protocols via the node expansion ports.
 
 ![Figure 6: Wild Waggle Node Overview](./images/node_wild_01.svg)
 
