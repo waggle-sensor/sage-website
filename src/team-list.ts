@@ -75,9 +75,9 @@ const team : TeamMember[] = [{
 }, {
   name: 'Mike Papka',
   image: require('@site/static/img/team/mike_papka.jpg').default,
-  institution: 'Northern Illinois University / ANL',
+  institution: 'University of Illinois Chicago / ANL',
   title: 'Student Tools',
-  href: 'https://www.anl.gov/profile/michael-e-papka'
+  href: 'https://cs.uic.edu/profiles/papka-michael'
 }, {
   name: 'Irene Qualters',
   image: require('@site/static/img/team/irene_qualters.jpeg').default,
