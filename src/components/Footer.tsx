@@ -21,11 +21,18 @@ export default function Footer() {
     <Root className="bg-neutral-900">
       <Section>
         <div className="flex flex-col md:flex-row justify-between pt-8 pb-16 text-neutral-200">
-          <div>
+          <div className="md:w-3/6">
             <div className="flex items-center text-neutral-400">
               <img src="https://www.nsf.gov/policies/images/NSF_Official_logo.svg" className="w-[100px] md:w-[150px]"/>
               <div>
-                Sage is supported by<br/> NSF Mid-Scale RI-1 grant #1935984
+                This material is based upon work supported by
+                the National Science Foundation under Grant No. OAC-1935984.
+                <br/>
+                <small className="text-neutral-500">
+                  Any opinions, findings, and conclusions or recommendations expressed in this material
+                  are those of the author(s) and do not necessarily reflect the views
+                  of the National Science Foundation.
+                </small>
               </div>
             </div>
           </div>
