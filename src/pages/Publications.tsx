@@ -2,39 +2,59 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from '@theme/Layout'
 
-import publications from '../publications'
+import publications, { conferenceProceedings } from '../publications'
+
+
+function PubRows(props) {
+  const {publications} = props
+
+  return (
+    <table className="w-full">
+      <thead>
+        <tr>
+          <th className="text-left pl-0">Title</th>
+          <th className="hidden md:block pr-0">Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        {publications.filter(pub => !pub.hideInFullList)
+          .map((pub, i) => {
+            const {
+              title, authors, publication, volume,
+              number, pages, year, href
+            } = pub
+
+            return (
+              <tr key={i}>
+                <td className="pl-0">
+                  <h4 className="mb-2">{href ? <a href={href} target="_blank">{title}</a> : title}</h4>
+                  <p>
+                    {authors}<br/>
+                    <i>{publication}</i>{' '}
+                    {volume ? volume : ''}{!number && volume ? ', ' : ' '}
+                    {number ? `(${number})` : ''}{(volume && number) ? ', ' : ''}
+                    {pages ? pages : ''}
+                  </p>
+                </td>
+                <td className="hidden md:block pr-0">{year}</td>
+              </tr>
+            )
+          })}
+      </tbody>
+    </table>
+  )
+}
 
 
 export default function Publications() {
   return (
     <Layout title="Publications" description="Sage Publications">
       <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-5">
-          <h1>Publications</h1>
+          <h1>Journal publications</h1>
+          <PubRows publications={publications} />
 
-          <table>
-            <thead>
-              <tr>
-                <th className="text-left">Name</th>
-                <th className="hidden md:block">Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              {publications.filter(pub => !pub.hideInFullList)
-                .map((pub, i) => {
-                  const {authors, name, source, href, year} = pub
-
-                  return (
-                    <tr key={i}>
-                      <td>
-                        <h3>{href ? <a href={href}>{name}</a> : name}</h3>
-                        <p>{authors} {source}</p>
-                      </td>
-                      <td className="hidden md:block">{year}</td>
-                    </tr>
-                  )
-                })}
-            </tbody>
-          </table>
+          <h1>Publications in conference proceedings</h1>
+          <PubRows publications={conferenceProceedings} />
       </Root>
     </Layout>
   );

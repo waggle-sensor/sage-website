@@ -257,17 +257,19 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-y-4 md:w-2/3 sci-items">
-              {publications.map(pub => {
-                const {name, href, id, description} = pub
-                return (
-                  <a className="sci-item group" onMouseOver={() => setSciHover(id)} href={href} target="_blank" key={id}>
-                    <div className="flex justify-between [&>*]:text-slate-200">
-                      <h3>{name}</h3>
-                      {href && <div className="invisible group-hover:visible"><LaunchRounded /></div>}
-                    </div>
-                    {description && <span className="text-slate-200">{description}</span>}
-                  </a>
-                )
+              {publications
+                .filter(pub => pub.image && pub.id)
+                .slice(0, 4)
+                .map(pub => {
+                  const {title, href, id} = pub
+                  return (
+                    <a className="sci-item group" onMouseOver={() => setSciHover(id)} href={href} target="_blank" key={id}>
+                      <div className="flex justify-between [&>*]:text-slate-200">
+                        <h3>{title}</h3>
+                        {href && <div className="invisible group-hover:visible"><LaunchRounded /></div>}
+                      </div>
+                    </a>
+                  )
                 })}
 
               <div className="hidden md:flex justify-between mx-5">
