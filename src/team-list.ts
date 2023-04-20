@@ -46,13 +46,13 @@ const team : TeamMember[] = [{
   name: 'Frank Vernon',
   image: require('@site/static/img/team/frank_vernon.png').default,
   institution: 'Univ. of California-San Diego',
-  title: 'Wildlife',
+  title: 'SoCal Network and Deployment',
   href: null
 }, {
   name: 'Charlie Catlett',
   image: require('@site/static/img/team/charlie_catlett-3.jpg').default,
-  institution: 'DPI / ANL',
-  title: 'Urban (AoT)',
+  institution: 'Univ. of Illinois Chicago / ANL',
+  title: 'Urban / Chicago',
   href: null
 }, {
   name: 'Ilkay Altintas',
@@ -64,7 +64,7 @@ const team : TeamMember[] = [{
   name: 'Rajesh Sankaran',
   image: require('@site/static/img/team/raj_sankaran-1.jpg').default,
   institution: 'Northwestern University / ANL',
-  title: 'Platform',
+  title: 'Chief Platform Architect',
   href: 'https://www.anl.gov/profile/rajesh-sankaran'
 }, {
   name: 'Valerie Taylor',
