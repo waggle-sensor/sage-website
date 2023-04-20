@@ -13,7 +13,7 @@ function PubRows(props) {
       <thead>
         <tr>
           <th className="text-left pl-0">Title</th>
-          <th className="hidden md:block pr-0">Year</th>
+          <th className="hidden md:block pr-0 text-right">Year</th>
         </tr>
       </thead>
       <tbody>
@@ -27,7 +27,7 @@ function PubRows(props) {
             return (
               <tr key={i}>
                 <td className="pl-0">
-                  <h4 className="mb-2">{href ? <a href={href} target="_blank">{title}</a> : title}</h4>
+                  <h3 className="mb-2">{href ? <a href={href} target="_blank">{title}</a> : title}</h3>
                   <p>
                     {authors}<br/>
                     <i>{publication}</i>{' '}
@@ -36,7 +36,7 @@ function PubRows(props) {
                     {pages ? pages : ''}
                   </p>
                 </td>
-                <td className="hidden md:block pr-0">{year}</td>
+                <td className="hidden md:block pr-0 text-right">{year}</td>
               </tr>
             )
           })}
@@ -49,7 +49,7 @@ function PubRows(props) {
 export default function Publications() {
   return (
     <Layout title="Publications" description="Sage Publications">
-      <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-5">
+      <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-5 md:mx-auto my-5">
           <h1>Journal publications</h1>
           <PubRows publications={publications} />
 
