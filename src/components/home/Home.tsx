@@ -19,6 +19,7 @@ import config from '../../config'
 const { portal } = config
 
 
+const MaxNumOfPublications = 4
 
 const clientSnippet =
 `import sage_data_client
@@ -90,6 +91,12 @@ type FeaturedSci = 'cloudMotion' | 'armDoppler' | 'selfSupervised' | 'solarRadia
 export default function Home() {
   const [devHover, setDevHover] = useState<DevTools>('client')
   const [sciHover, setSciHover] = useState<FeaturedSci>('cloudMotion')
+
+
+  const getRecentPubs = () =>
+    publications
+      .filter(pub => pub.image && pub.id)
+      .slice(0, MaxNumOfPublications)
 
   return (
     <Root>
@@ -253,13 +260,21 @@ export default function Home() {
           <h2 className="text-slate-200 font-bold mb-10">Featured Science</h2>
           <div className="flex flex-col md:flex-row text-slate-200">
             <div className="md:w-1/3 hidden md:flex mr-5 flex justify-center" >
-              <img src={publications.find(pub => pub.id == sciHover).image} className="max-h-96 object-contain"/>
+             {getRecentPubs()
+                .map(pub => {
+                  return (
+                    <img
+                      key={pub.id}
+                      src={pub.image}
+                      className={`${pub.id == sciHover ? 'flex' : 'hidden'} max-h-96 object-contain`}
+                    />
+                  )
+                })
+              }
             </div>
 
             <div className="flex flex-col gap-y-4 md:w-2/3 sci-items">
-              {publications
-                .filter(pub => pub.image && pub.id)
-                .slice(0, 4)
+              {getRecentPubs()
                 .map(pub => {
                   const {title, href, id} = pub
                   return (
