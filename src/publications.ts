@@ -55,7 +55,7 @@ const publications : Publication[] = [{
   image: require('@site/static/img/home/featured-science/solarIrradiance.png').default,
   id: 'solarIrradiance'
 }, {
-  title: 'Goal-driven scheduling model in edge computing for smart city applications',
+  title: 'Goal-driven Scheduling Model in Edge Computing for Smart City Applications',
   authors: 'Kim, Yongho, Seongha Park, Sean Shahkarami, Rajesh Sankaran, Nicola Ferrier, and Pete Beckman.',
   publication: 'Journal of Parallel and Distributed Computing',
   volume: 167,
