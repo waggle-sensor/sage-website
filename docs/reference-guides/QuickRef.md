@@ -168,7 +168,7 @@ When you encounter a failing/long pending job with an error, you can use the fol
 By following these steps, you can better understand why the job is failing and take steps to resolve the issue.
 
 
-## Edge code repository
+## Edge Code Repository
 ### How to get your plugin on ECR
 
 To publish your Plugin on ECR, follow these steps:
@@ -233,7 +233,7 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 - You can also make it triggered by a value. Please [read this](https://github.com/waggle-sensor/sciencerule-checker/blob/master/docs/supported_functions.md) for supported functions.
 
 
-### Scheduling Scripts
+### Scheduling scripts
 :sparkles: Check user friendly [job submission UI](https://portal.sagecontinuum.org/jobs/all-jobs) which is mostly  stable now (March 2023)
 
 :green_book: Check [sesctl docs](https://github.com/waggle-sensor/edge-scheduler/tree/main/docs/sesctl) for command line tool.
@@ -344,7 +344,7 @@ cloud-motion: 3, 8, 13, etc.
 image-sampl: 4, 9, 14, etc.
 
 
-### Debugging Failed Jobs
+### Debugging failed jobs
 Do you know how to identify why a job is failing using this code? By specifying the plugin name and node, the code will print out the reasons for job failure within the last 60 minutes.
 
 ```python=
