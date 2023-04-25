@@ -167,12 +167,3 @@ html[data-theme="dark"] .header-github-link:before {
   right: 475px;
 }
 
-
-/**
- * footer
- */
-
-/* hide docusaurus footer for now */
-footer.footer {
-  display: none;
-}

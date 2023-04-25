@@ -8,7 +8,7 @@ import Home from '../components/home/Home'
 export default function LandingPage() {
   return (
     <Layout
-      title="Sage"
+      title="Home"
       description="Sage website home">
       <Head>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

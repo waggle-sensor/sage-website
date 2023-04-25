@@ -10,7 +10,6 @@ import CodeWindow from './CodeWindow'
 import BlogPreview from './BlogPreview'
 import TypeWriter from './TypeWriter'
 import TwitterSkeleton from './TwitterSkeleton'
-import Footer from '../Footer'
 import StatusChart from './StatusChart'
 
 import publications from '../../publications'
@@ -220,13 +219,6 @@ export default function Home() {
                 <Link className="focused-link purple gap-1" to="docs/tutorials/edge-apps/intro-to-edge-apps" >Tutorials <Arrow /></Link>
                 <Link className="focused-link purple gap-1" to="docs/reference-guides/pluginctl" >Reference Guides <Arrow /></Link>
                 <a className="focused-link purple gap-1" href={`${portal}/query-browser`}>Query Browser <Arrow /></a>
-                {/*
-                <a href={waggleOrg} target="_blank" className="font-bold">
-                  Waggle GitHub
-                </a> | <a href="https://github.com/sagecontinuum" target="_blank" className="font-bold">
-                  Sage GitHub
-                </a>
-                */}
               </div>
             </div>
 
@@ -311,8 +303,6 @@ export default function Home() {
           [logos with links go here?]
         </div>
       */}
-
-      <Footer />
     </Root>
   )
 }

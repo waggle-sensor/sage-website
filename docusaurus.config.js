@@ -75,7 +75,8 @@ module.exports = {
       ],
     },
     footer: {
-      // see custom footer component
+      // see custom (swizzled) footer component:
+      // src/theme/Footer/index.js
     },
     prism: {
       theme: lightCodeTheme,

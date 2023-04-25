@@ -1,23 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { IconButton } from '@mui/material'
 
+import { IconButton } from '@mui/material'
 import GitHub from '@mui/icons-material/GitHub'
 import Twitter from '@mui/icons-material/Twitter'
 import NULogo from '@site/static/img/northwestern-university.svg'
 import ANLLogo from '@site/static/img/anl-logo.png'
 import NSFLogo from '@site/static/img/NSF_Official_logo.svg'
 
-import { Section } from './home/Home'
+import { Section } from '../../components/home/Home'
 
-import config from '../config'
-const {portal} = config
+import config from '../../config'
+const { portal } = config
 
 
-
-export default function Footer() {
-
+function Footer() {
   return (
     <Root className="bg-neutral-900">
       <Section>
@@ -84,6 +82,7 @@ export default function Footer() {
   )
 }
 
+
 const Root = styled.footer`
   ul {
     padding:0;
@@ -93,3 +92,5 @@ const Root = styled.footer`
     }
   }
 `
+
+export default React.memo(Footer);
