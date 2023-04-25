@@ -68,21 +68,23 @@ function Map(props: MapProps) {
     if (!ref.current) return
 
     const svg = select(ref.current)
+    const projection = geoAlbersUsa().scale(1300).translate([487.5, 305])
+    const delaunay = Delaunay.from(nodes, d => d.gps_lon, d => d.gps_lat)
 
-    select(ref.current).append("defs").append("style")
-      .text(`circle.highlighted { stroke: ${colorScheme[0]}; fill: ${colorScheme[0]}; }`);
+    select(ref.current).append('defs').append('style')
+      .text(`circle.highlighted { stroke: ${colorScheme[0]}; fill: ${colorScheme[0]}; }`)
 
-    svg.selectAll("g").remove()
+    svg.selectAll('g').remove()
 
-    const g = svg.append("g")
+    const g = svg.append('g')
 
     const points = g
-      .selectAll("g")
+      .selectAll('g')
       .data(nodes)
       .enter()
       .append('circle')
       .attr('class', 'node')
-      .attr('transform', d => `translate( ${projection([d.gps_lon, d.gps_lat]).join(",")} )`)
+      .attr('transform', d => `translate( ${projection([d.gps_lon, d.gps_lat]).join(',')} )`)
       .attr('r', 5)
       .attr('fill', color || 'rgb(0, 58, 29)')
       .attr('cursor', 'pointer')
@@ -119,9 +121,7 @@ function Map(props: MapProps) {
   }, [title])
 
 
-  const projection = geoAlbersUsa().scale(1300).translate([487.5, 305])
   const path = geoPath()
-  const delaunay = Delaunay.from(nodes, d => d.gps_lon, d => d.gps_lat)
 
   return (
     <svg viewBox="0 0 959 650" width="100%" height="100%" ref={ref}>
@@ -129,8 +129,8 @@ function Map(props: MapProps) {
       <path
         fill="none"
         stroke="#fff"
-        stroke-linejoin="round"
-        stroke-linecap="round"
+        strokeLinejoin="round"
+        strokeLinecap="round"
         d={path(topojson.mesh(us, us.objects.states, (a, b) => a !== b))}>
       </path>
     </svg>
@@ -167,7 +167,7 @@ function getRecentData() : Promise<{apps: AppSummary[], jobs: Job[]}> {
       // flatten job into data {appName, image, nodes}
       const apps = jobs.flatMap(job => {
         const app = job.plugins.map(plugin => ({
-          appName: plugin.name.replace(/\-top|\-bottom|\-left|\-right/g, ''), // ignore orientations
+          appName: plugin.name.replace(/-top|-bottom|-left|-right/g, ''), // ignore orientations
           image: plugin.plugin_spec.image,
           nodes: Object.keys(job.nodes)
         }))
@@ -199,7 +199,7 @@ function getRecentData() : Promise<{apps: AppSummary[], jobs: Job[]}> {
         apps: summary,
         jobs
       }
-   })
+    })
 }
 
 
@@ -230,7 +230,7 @@ function getPluginCounts(vsns: string | string[]) : Promise<Record[]> {
         .split('\n')
         .map(str => JSON.parse(str))
       return data
-  })
+    })
 }
 
 
@@ -268,16 +268,15 @@ export default function StatusChart() {
   const [dataCounts, setDataCounts] = useState()
 
   const [node, setNode] = useState<Node>()
-  const [appsOnNode, setAppsOnNode] = useState<App[]>()
 
   const [error, setError] = useState<string>(null)
-  const [hoverID, setHoverID] = useState<string>(null)
 
 
   useEffect(() => {
     Promise.all([getRecentData(), getNodes()])
       .then(([recentData, nodes]) => {
-        let {apps, jobs} = recentData
+        const {jobs} = recentData
+        let {apps} = recentData
 
         // only include relevant nodes for each app
         const vsns = nodes.map(obj => obj.vsn)
@@ -308,32 +307,17 @@ export default function StatusChart() {
   }, [apps, nodes])
 
 
-  const handleChartHover = (appName) => {
-    if (!appName) {
-      // show all nodes
-      setVisibleNodes(nodes)
-      setHoverID(null)
-      return
-    }
-
-    const vsns = apps.find(obj => obj.appName == appName).nodes
-    let showNodes = nodes.filter(obj => vsns.includes(obj.vsn))
-
-    setVisibleNodes(showNodes)
-    setHoverID(appName)
-  }
-
   const handleMapHover = (node: Node) => {
     if (!node) {
-      setAppsOnNode(null)
       setNode(null)
       return
     }
 
     setNode(node)
 
-    const appList = (apps || []).filter(obj => obj.nodes.includes(node.vsn))
-    setAppsOnNode(appList)
+    // psuedo code for use showing particular nodes with an app:
+    // const appList = (apps || []).filter(obj => obj.nodes.includes(node.vsn))
+    // setAppsOnNode(appList)
   }
 
   const nodesWithGps = (visibleNodes || []).filter(obj => obj.gps_lon && obj.gps_lat)
@@ -345,14 +329,12 @@ export default function StatusChart() {
         {visibleNodes && apps &&
           <Map
             title={
-              node ? `Node ${node.vsn}` : (
-              hoverID ?
-                `${nodeCount} node${nodeCount > 1 ? 's are' : ' is'} running ${hoverID}` :
-                `${nodeCount} Node${nodeCount > 1 ? 's' : ''}` )
+              node ? `Node ${node.vsn}` :
+                `${nodeCount} Node${nodeCount > 1 ? 's' : ''}`
             }
             nodes={nodesWithGps}
             onHover={handleMapHover}
-            color={colorScheme[apps.findIndex(obj => obj.appName == hoverID) % 8] || null }
+            // color={colorScheme[apps.findIndex(obj => obj.appName == hoverID) % 8] || null }
           />
         }
 

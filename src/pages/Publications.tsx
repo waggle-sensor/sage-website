@@ -27,7 +27,7 @@ function PubRows(props) {
             return (
               <tr key={i}>
                 <td className="pl-0">
-                  <h3 className="mb-2">{href ? <a href={href} target="_blank">{title}</a> : title}</h3>
+                  <h3 className="mb-2">{href ? <a href={href} target="_blank" rel="noreferrer">{title}</a> : title}</h3>
                   <p>
                     {authors}<br/>
                     <i>{publication}</i>{' '}
@@ -50,14 +50,14 @@ export default function Publications() {
   return (
     <Layout title="Publications" description="Sage Publications">
       <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-5 md:mx-auto my-5">
-          <h1>Journal publications</h1>
-          <PubRows publications={publications} />
+        <h1>Journal publications</h1>
+        <PubRows publications={publications} />
 
-          <h1>Publications in conference proceedings</h1>
-          <PubRows publications={conferenceProceedings} />
+        <h1>Publications in conference proceedings</h1>
+        <PubRows publications={conferenceProceedings} />
       </Root>
     </Layout>
-  );
+  )
 }
 
 

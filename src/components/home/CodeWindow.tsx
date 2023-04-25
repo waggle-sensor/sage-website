@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Highlight, { defaultProps } from "prism-react-renderer"
+import Highlight, { defaultProps } from 'prism-react-renderer'
 
 
 type Props = {
@@ -51,9 +51,9 @@ export default function CodeWindow(props: Props) {
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <pre className={className} style={style}>
                 {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
+                  <div key={i} {...getLineProps({ line, key: i })}>
                     {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
+                      <span key={key} {...getTokenProps({ token, key })} />
                     ))}
                   </div>
                 ))}
@@ -71,13 +71,6 @@ export default function CodeWindow(props: Props) {
   )
 }
 
-/*
-background-color: #aaa;
-    display: block;
-    height: 3px;
-    margin: 3px 0;
-    width: 17px;
-    */
 
 const Root = styled.div`
   .code-window {

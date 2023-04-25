@@ -9,7 +9,7 @@ type Props = {
   appsOnNode: App[]
 }
 
-export default function (props: Props) {
+export default function _DeprecatedActiveApps(props: Props) {
   const {appsOnNode, vsn} = props
 
   return (

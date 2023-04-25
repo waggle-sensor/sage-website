@@ -6,7 +6,7 @@ import team, { type TeamMember } from '../team-list'
 
 
 const TeamCard = (props: TeamMember) => {
-  const {name, image, institution, title, href} = props
+  const {name, image, institution, title} = props
   return (
     <>
       <div className="card z-0 relative w-[256px] md:w-[300px] md:h-[300px]">
@@ -49,11 +49,11 @@ export default function Team() {
         <h2>Sage Leadership</h2>
 
         <div className="flex flex-col md:flex-row flex-wrap justify-between items-center -m-5">
-          {team.map(person => <LinkCard {...person} />)}
+          {team.map(person => <LinkCard key={person.name} {...person} />)}
         </div>
       </Root>
     </Layout>
-  );
+  )
 }
 
 

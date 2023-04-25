@@ -1,18 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '@mui/material/Button';
-import { LoginRounded } from '@mui/icons-material';
+import React from 'react'
+import styled from 'styled-components'
+import Button from '@mui/material/Button'
+import { LoginRounded } from '@mui/icons-material'
 
 
 const portal = 'https://portal.sagecontinuum.org'
 
-type Props = {
 
-}
-
-export default function (props: Props) {
-
-
+export default function SignInBtn() {
   return (
     <Root>
       <Button variant="outlined" href={portal} endIcon={<LoginRounded />} disableRipple>Portal</Button>

@@ -1,5 +1,5 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -68,9 +68,9 @@ module.exports = {
         }, {
           // note: this is positioned right of search bar
           type: 'custom-signInBtn',
-          position: "right",
+          position: 'right',
           itemProp: 44,
-          anotherProp: "xyz"
+          anotherProp: 'xyz'
         },
       ],
     },
@@ -84,7 +84,6 @@ module.exports = {
     },
     disableSwitch: true,
     algolia: {
-      apiKey: 'BH4D9OD16A',
       indexName: 'sage',
       contextualSearch: false, // mostly for versioned docs
       appId: 'XYV3A23P29',
@@ -123,14 +122,14 @@ module.exports = {
   plugins: [
     async function tailwindConfigPlugin() {
       return {
-        name: "docusaurus-tailwindcss",
+        name: 'docusaurus-tailwindcss',
         configurePostCss(postcssOptions) {
           // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
+          postcssOptions.plugins.push(require('tailwindcss'))
+          postcssOptions.plugins.push(require('autoprefixer'))
+          return postcssOptions
         },
-      };
+      }
     }, [
       '@docusaurus/plugin-client-redirects',
       {
@@ -149,4 +148,4 @@ module.exports = {
       }
     ]
   ]
-};
+}

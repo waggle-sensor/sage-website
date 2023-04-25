@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
 
 /**
@@ -24,7 +23,7 @@ export default function BlogPreview() {
       .then(content => {
         const parser = new DOMParser()
         const parsedHtml = parser.parseFromString(content, 'text/html')
-        const items = parsedHtml.getElementsByTagName("article")
+        const items = parsedHtml.getElementsByTagName('article')
 
         let data
         try {

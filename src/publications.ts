@@ -35,7 +35,7 @@ const publications : Publication[] = [{
   image: require('@site/static/img/home/featured-science/cloudMotion.jpg').default,
   id: 'cloudMotion'
 }, {
-  title: 'Let\’s Unleash the Network Judgment: A Self-Supervised Approach for Cloud Image Analysis',
+  title: 'Let’s Unleash the Network Judgment: A Self-Supervised Approach for Cloud Image Analysis',
   authors: 'Dematties, Dario, Bhupendra A. Raut, Seongha Park, Robert C. Jackson, Sean Shahkarami, Yongho Kim, Rajesh Sankaran, Pete Beckman, Scott M. Collis, and Nicola Ferrier.',
   publication: 'Artificial Intelligence for the Earth Systems.',
   pages: '1-34',

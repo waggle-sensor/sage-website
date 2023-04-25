@@ -93,4 +93,4 @@ const Root = styled.footer`
   }
 `
 
-export default React.memo(Footer);
+export default React.memo(Footer)

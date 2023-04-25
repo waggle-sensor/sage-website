@@ -37,7 +37,7 @@ export default function TypeWriter(props) {
     const handle = update()
 
     return () => clearTimeout(handle)
-  }, [])
+  }, [props.texts.length])
 
 
   // change actual text, reset index/text
@@ -45,7 +45,7 @@ export default function TypeWriter(props) {
     setIndex(0)
     setText('')
     setFullText(props.texts[phraseIndex])
-  }, [phraseIndex])
+  }, [phraseIndex, props.texts])
 
 
   return (

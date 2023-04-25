@@ -186,28 +186,28 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row text-slate-200 gap-10">
             <div className="sci-items flex flex-col gap-4 md:w-7/12">
-              <a className="sci-item group" onMouseOver={() => setDevHover('client')} href="https://pypi.org/project/sage-data-client" target="_blank">
+              <a className="sci-item group" onMouseOver={() => setDevHover('client')} href="https://pypi.org/project/sage-data-client" target="_blank" rel="noreferrer">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>Python Data Client</h3>
                   <div className="invisible group-hover:visible"><LaunchRounded /></div>
                 </div>
                 <span className="text-slate-200">Easily analyze data in Pandas with the Sage Data Client</span>
               </a>
-              <a className="sci-item group" onMouseOver={() => setDevHover('api')}  href={`/docs/tutorials/accessing-data#http-api`} target="_blank">
+              <a className="sci-item group" onMouseOver={() => setDevHover('api')}  href={`/docs/tutorials/accessing-data#http-api`} target="_blank" rel="noreferrer">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>HTTP APIs</h3>
                   <div className="invisible group-hover:visible"><LaunchRounded /></div>
                 </div>
                 <span className="text-slate-200">Access and update data via web APIs</span>
               </a>
-              <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="https://github.com/waggle-sensor/cookiecutter-sage-app" target="_blank">
+              <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="https://github.com/waggle-sensor/cookiecutter-sage-app" target="_blank" rel="noreferrer">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>Developer Templates</h3>
                   <div className="invisible group-hover:visible"><LaunchRounded /></div>
                 </div>
                 <span className="text-slate-200">Get started building apps quickly with templates and snippets</span>
               </a>
-              <a className="sci-item group" onMouseOver={() => setDevHover('ui')} href={`${portal}/query-browser`} target="_blank">
+              <a className="sci-item group" onMouseOver={() => setDevHover('ui')} href={`${portal}/query-browser`} target="_blank" rel="noreferrer">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>Web GUIs</h3>
                   <div className="invisible group-hover:visible"><LaunchRounded /></div>
@@ -252,7 +252,7 @@ export default function Home() {
           <h2 className="text-slate-200 font-bold mb-10">Featured Science</h2>
           <div className="flex flex-col md:flex-row text-slate-200">
             <div className="md:w-1/3 hidden md:flex mr-5 flex justify-center" >
-             {getRecentPubs()
+              {getRecentPubs()
                 .map(pub => {
                   return (
                     <img
@@ -270,7 +270,7 @@ export default function Home() {
                 .map(pub => {
                   const {title, href, id} = pub
                   return (
-                    <a className="sci-item group" onMouseOver={() => setSciHover(id)} href={href} target="_blank" key={id}>
+                    <a className="sci-item group" onMouseOver={() => setSciHover(id)} href={href} target="_blank" key={id} rel="noreferrer">
                       <div className="flex justify-between [&>*]:text-slate-200">
                         <h3>{title}</h3>
                         {href && <div className="invisible group-hover:visible"><LaunchRounded /></div>}

@@ -45,10 +45,10 @@ export function initChart(props: ChartProps) {
     .style('cursor', 'pointer')
     .attr('transform', `translate(${margin.left}, ${margin.top})`)
 
-  const groups = bars.selectAll(".groups")
+  const groups = bars.selectAll('.groups')
     .data(apps)
     .enter()
-    .append("g")
+    .append('g')
     .on('mouseenter', function(evt, d) {
       select(this).select('rect').attr('opacity', 1.0)
       setTimeout(() => onHover(d.appName)) // prevent flicker when entering new
