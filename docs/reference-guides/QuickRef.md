@@ -208,7 +208,7 @@ sudo pluginctl run --name test-run registry.sagecontinuum.org/bhupendraraut/clou
 
 Assuming that the plugin has been installed correctly and the ECR image is available, running this command should test the "test-motion" plugin on the node. 
 
-You may also have to call the `kubectl` <<POD>> commands as in the testing section if this fails.
+You may also have to call the `kubectl <POD>` commands as in the testing section if this fails.
 
 ## Scheduling the Job
 :::warning
