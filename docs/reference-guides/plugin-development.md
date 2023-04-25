@@ -4,7 +4,7 @@
 ## Disclaimer
 :warning: This is a quick-reference guide, not a complete guide to making a plugin.
 Use this to copy-paste commands while working on plugins and to troubleshoot them in the testing and scheduling stages.
-Please consult the official Waggle-Sage :green_book:[Plugin Tutorials](/docs/category/tutorials) for detailed guidance.
+Please consult the official :green_book:[Plugin Tutorials](/docs/tutorials/edge-apps/intro-to-edge-apps) for detailed guidance.
 
 
 ## Tips
@@ -60,7 +60,7 @@ Note: Variable names in `plugin.publish` should be descriptive and specific.
 `Makefile`
 : optional but the recommended file includes commands for building the Docker image, running tests, and deploying the plugin.
 
-### 3. ECR Configs and docs
+### 3. ECR configs and docs
 You can do this step (_except **sage.yaml**_) after testing on the node but before the [ERC submission](#Edge-code-repository). :smile:
 
 `sage.yaml*`
