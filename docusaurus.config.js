@@ -3,7 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Sage Website',
+  title: 'Sage',
   tagline: 'AI at the Edge',
   url: 'https://waggle-sensor.github.io',
   baseUrl: '/',
@@ -131,8 +131,7 @@ module.exports = {
           return postcssOptions;
         },
       };
-    },
-    [
+    }, [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
@@ -142,17 +141,12 @@ module.exports = {
           },
         ],
       },
-    ],
-    async function myPlugin(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
-    },
+    ], [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'G-NMP80C7S04',
+        anonymizeIP: true,
+      }
+    ]
   ]
 };
