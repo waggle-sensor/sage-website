@@ -210,7 +210,7 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 
 ## Scheduling the job
 :::warning
-:exclamation: If you get an error like `registry does not exist in ECR` or something similar, then first check that your plugin is made public. If you are getting the error even after making it public, ask to update the registry on our Slack channel.
+:exclamation: If you get an error like `registry does not exist in ECR`, then check that your plugin is made public.
 :::
 
 
@@ -234,7 +234,7 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 
 
 ### Scheduling scripts
-:sparkles: Check user friendly [job submission UI](https://portal.sagecontinuum.org/jobs/all-jobs) which is mostly  stable now (March 2023)
+:sparkles: Check user friendly [job submission UI](https://portal.sagecontinuum.org/jobs/all-jobs).
 
 :green_book: Check [sesctl docs](https://github.com/waggle-sensor/edge-scheduler/tree/main/docs/sesctl) for command line tool.
 
