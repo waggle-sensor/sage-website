@@ -47,7 +47,7 @@ Note: Variable names in `plugin.publish` should be descriptive and specific.
 :point_right: Put everything in a Docker container using a waggle base image and make it work. This may require some work if libraries are not compatible. Always use the latest base images from [Dockerhub](https://hub.docker.com/r/waggle/plugin-base/tags)
 
 `Dockerfile*`
-: contains instructions for building a Docker image for the plugin. It specifies the waggle base image from [dockerhub](https://hub.docker.com/r/waggle/plugin-base/tags), sets up the environment, installs dependencies, and sets the ==entrypoint== for the container.
+: contains instructions for building a Docker image for the plugin. It specifies the waggle base image from [dockerhub](https://hub.docker.com/r/waggle/plugin-base/tags), sets up the environment, installs dependencies, and sets the __entrypoint__ for the container.
 
 :warning: Keep it simple `ENTRYPOINT ["python3", "/app/app.py"]`
 
@@ -94,11 +94,9 @@ You can do this step (_except **sage.yaml**_) after testing on the node but befo
 > Enter the passphrase to continue.
 
 
-3. To connect to the node, execute ==`ssh waggle-dev-node-V032`== and enter your _passphrase_ (required twice).
+3. To connect to the node, execute `ssh waggle-dev-node-V032` and enter your _passphrase_ (required twice).
 
 You should see the following message,
-
-> Welcome to our node SSH gateway, Bhupendra Raut!
 > We are connecting you to node V032
 
 :::info
@@ -117,7 +115,11 @@ You should see the following message,
 #### Download
 - If you have not already done it, you need your plugin in a public GitHub repository at this stage.
 - To test the app on a node, go to nodes W0xx (e.g. W023) and clone your repo there using the command `git clone`.
-- At this stage, you can play with your plugin in the docker container until you are happy. Then if there are changes, do `git commit -am 'changes from node'` and `git push -u origin main`
+- At this stage, you can play with your plugin in the docker container until you are happy. Then if there are changes made to the plugin, I reccomend replicating the same in your local repository and pushing it to the github and node.
+- or do `git commit -am 'changes from node'` and `git push -u origin main`.  
+- However, before commiting from node, you must run following commands at least once in your git repository on the node. 
+`git config [--locale] user.name "Full Name"`
+`git config [--locale] user.email "email@address.com"`
 
 :::danger
 :warning: Make sure your **Dockerfile** has a proper **entrypoint** or the `pluginctl` run will fail.
@@ -135,7 +137,7 @@ You should see the following message,
 7.  IF you need GPU, use the selector `sudo pluginctl run -n <some-unique-name> <1x.xx.xx.x:5000/local/my-plugin-name> -- -i top_camera`.
 8. :exclamation: `--` is a separator. After the `--` all arguments are for your entrypoint i.e. app.py.
 9. To check running plugins, execute `sudo pluginctl ps`. To stop the plugin, execute `sudo pluginctl rm` cloud-motion.
-:warning:==Do not forget to stop the plugins== after testing or it will run forever.
+:warning:Do not forget to stop the plugins after testing or it will run forever.
 
 ### Testing USBSerial devices
 :point_right:The USBserial device template is in [Cookiecutter Template](https://github.com/waggle-sensor/cookiecutter-sage-app). Also check [wxt536](https://github.com/jrobrien91/waggle-wxt536) plugin.
@@ -143,7 +145,7 @@ You should see the following message,
 Steps for working with a USB serial device
 
 1. First, you need to confirm which computing unit the USB device is connected to, RPi or nxcore.
-2. Then, you tell the edge scheduler to schedule the plugin on the computing unit with the USB device by adding the `--selector` and `--privileged` options to the `pluginctl`  command during testing and specifying the same in the **job.yaml** for scheduling.
+2. Then, you add the `--selector` and `--privileged` options to the `pluginctl`  command during testing and specifying the same in the **job.yaml** for scheduling.
 3. To test the plugin on _nxcore_, which has the USB device, use the command `sudo pluginctl run -n testname --selector zone=core --privileged 10.31.81.1:5000/local/plugin-name`.
 4. The `--selector` and `--privileged` attributes should be added to the _pluginSpec_ in the job submission script as shown in the example YAML code.
 5. You can check which computing unit is being used by the edge scheduler by running the `kubectl describe pod` command and checking the output.
@@ -191,8 +193,8 @@ After the build process is complete, you need to **make the plugin public** to s
 :::danger
 You can not resubmit the plugin to ECR with the same version number again.
 :::
-- So think about how you change it every time you resubmit to ERC and make your style of versioning.
-- I use _'vx.y.m.d'_ e.g. _'v0.23.3.4'_ but then I can only have 1 version a day, so now I am thinking of adding an incremental integer to it (I am not sure if that's a great idea :thinking_face:)
+- So think about how you change it every time you resubmit to ERC and make your style of versioning. :thinking_face:
+- I use _'vx.y.m.d'_ e.g. _'v0.23.3.4'_ but then I can only have 1 version a day, so now I am thinking of adding an incremental integer to it.
 
 ### After ECR registry test (generally not required)
 1. Generally successfully tested plugins just work. However, in case they are failing in the scheduled jobs after running for a while or after successfully running in the above tests, do the following.
@@ -202,7 +204,7 @@ sudo pluginctl run --name test-run registry.sagecontinuum.org/bhupendraraut/clou
 `
 2. This command will execute the plugin with the specified ECR image (version 1.23.01.24), passing the "-input top" argument to the plugin (Note `--` after the image telling `pluginctl` that these arguments are for the plugin).
 
-:point_right: Note the use of `sudo` in all commands on the node.
+:point_right: Note the use of `sudo` in all `pluginctl` and  `docker` commands on the node.
 
 Assuming that the plugin has been installed correctly and the ECR image is available, running this command should test the "test-motion" plugin on the node.
 
@@ -210,7 +212,7 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 
 ## Scheduling the job
 :::warning
-:exclamation: If you get an error like `registry does not exist in ECR` or something similar, then first check that your plugin is made public. If you are getting the error even after making it public, ask to update the registry on our Slack channel.
+:exclamation: If you get an error like `registry does not exist in ECR`, then check that your plugin is made public.
 :::
 
 
@@ -234,11 +236,11 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 
 
 ### Scheduling scripts
-:sparkles: Check user friendly [job submission UI](https://portal.sagecontinuum.org/jobs/all-jobs) which is mostly  stable now (March 2023)
+:sparkles: Check user friendly [job submission UI](https://portal.sagecontinuum.org/jobs/all-jobs).
 
 :green_book: Check [sesctl docs](https://github.com/waggle-sensor/edge-scheduler/tree/main/docs/sesctl) for command line tool.
 
-1. :point_up: Do not use capital letters/dots in the job name. (someone please explain the rules to me)
+1. :point_up: Do not use capital letters/dots in the job name.
 2. :point_up: make the plugin `public` in the Sage app portal.
 
 
