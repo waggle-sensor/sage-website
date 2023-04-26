@@ -2,8 +2,8 @@
 
 ---
 
-# Wild Waggle Node manual
+# Wild Sage Node manual
 
-The Wild Waggle Node "Getting Started" manual is complete overview of getting started with your new WSN.
+The Wild Sage Node "Getting Started" manual is a complete overview of getting started with your new WSN.
 
 [Download WSN manual](./WSN_GS_V1.pdf)
