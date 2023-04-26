@@ -47,7 +47,7 @@ Note: Variable names in `plugin.publish` should be descriptive and specific.
 :point_right: Put everything in a Docker container using a waggle base image and make it work. This may require some work if libraries are not compatible. Always use the latest base images from [Dockerhub](https://hub.docker.com/r/waggle/plugin-base/tags)
 
 `Dockerfile*`
-: contains instructions for building a Docker image for the plugin. It specifies the waggle base image from [dockerhub](https://hub.docker.com/r/waggle/plugin-base/tags), sets up the environment, installs dependencies, and sets the ==entrypoint== for the container.
+: contains instructions for building a Docker image for the plugin. It specifies the waggle base image from [dockerhub](https://hub.docker.com/r/waggle/plugin-base/tags), sets up the environment, installs dependencies, and sets the __entrypoint__ for the container.
 
 :warning: Keep it simple `ENTRYPOINT ["python3", "/app/app.py"]`
 
@@ -94,7 +94,7 @@ You can do this step (_except **sage.yaml**_) after testing on the node but befo
 > Enter the passphrase to continue.
 
 
-3. To connect to the node, execute ==`ssh waggle-dev-node-V032`== and enter your _passphrase_ (required twice).
+3. To connect to the node, execute `ssh waggle-dev-node-V032` and enter your _passphrase_ (required twice).
 
 You should see the following message,
 
@@ -135,7 +135,7 @@ You should see the following message,
 7.  IF you need GPU, use the selector `sudo pluginctl run -n <some-unique-name> <1x.xx.xx.x:5000/local/my-plugin-name> -- -i top_camera`.
 8. :exclamation: `--` is a separator. After the `--` all arguments are for your entrypoint i.e. app.py.
 9. To check running plugins, execute `sudo pluginctl ps`. To stop the plugin, execute `sudo pluginctl rm` cloud-motion.
-:warning:==Do not forget to stop the plugins== after testing or it will run forever.
+:warning:Do not forget to stop the plugins after testing or it will run forever.
 
 ### Testing USBSerial devices
 :point_right:The USBserial device template is in [Cookiecutter Template](https://github.com/waggle-sensor/cookiecutter-sage-app). Also check [wxt536](https://github.com/jrobrien91/waggle-wxt536) plugin.
