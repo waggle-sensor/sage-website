@@ -206,7 +206,7 @@ sudo pluginctl run --name test-run registry.sagecontinuum.org/bhupendraraut/clou
 `
 2. This command will execute the plugin with the specified ECR image (version 1.23.01.24), passing the "-input top" argument to the plugin (Note `--` after the image telling `pluginctl` that these arguments are for the plugin).
 
-:point_right: Note the use of `sudo` in all commands on the node.
+:point_right: Note the use of `sudo` in all `pluginctl` and  `docker` commands on the node.
 
 Assuming that the plugin has been installed correctly and the ECR image is available, running this command should test the "test-motion" plugin on the node.
 
@@ -242,7 +242,7 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 
 :green_book: Check [sesctl docs](https://github.com/waggle-sensor/edge-scheduler/tree/main/docs/sesctl) for command line tool.
 
-1. :point_up: Do not use capital letters/dots in the job name. (someone please explain the rules to me)
+1. :point_up: Do not use capital letters/dots in the job name.
 2. :point_up: make the plugin `public` in the Sage app portal.
 
 
