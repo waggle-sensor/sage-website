@@ -1,4 +1,4 @@
-# Plugin development
+# Developer quick reference
 
 
 ## Disclaimer
@@ -116,8 +116,8 @@ You should see the following message,
 - If you have not already done it, you need your plugin in a public GitHub repository at this stage.
 - To test the app on a node, go to nodes W0xx (e.g. W023) and clone your repo there using the command `git clone`.
 - At this stage, you can play with your plugin in the docker container until you are happy. Then if there are changes made to the plugin, I reccomend replicating the same in your local repository and pushing it to the github and node.
-- or do `git commit -am 'changes from node'` and `git push -u origin main`.  
-- However, before commiting from node, you must run following commands at least once in your git repository on the node. 
+- or do `git commit -am 'changes from node'` and `git push -u origin main`.
+- However, before commiting from node, you must run following commands at least once in your git repository on the node.
 `git config [--locale] user.name "Full Name"`
 `git config [--locale] user.email "email@address.com"`
 
