@@ -117,7 +117,11 @@ You should see the following message,
 #### Download
 - If you have not already done it, you need your plugin in a public GitHub repository at this stage.
 - To test the app on a node, go to nodes W0xx (e.g. W023) and clone your repo there using the command `git clone`.
-- At this stage, you can play with your plugin in the docker container until you are happy. Then if there are changes, do `git commit -am 'changes from node'` and `git push -u origin main`
+- At this stage, you can play with your plugin in the docker container until you are happy. Then if there are changes made to the plugin, I reccomend replicating the same in your local repository and pushing it to the github and node.
+- or do `git commit -am 'changes from node'` and `git push -u origin main`.  
+- However, before commiting from node, you must run following commands at least once in your git repository on the node. 
+`git config [--locale] user.name "Full Name"`
+`git config [--locale] user.email "email@address.com"`
 
 :::danger
 :warning: Make sure your **Dockerfile** has a proper **entrypoint** or the `pluginctl` run will fail.
@@ -143,7 +147,7 @@ You should see the following message,
 Steps for working with a USB serial device
 
 1. First, you need to confirm which computing unit the USB device is connected to, RPi or nxcore.
-2. Then, you tell the edge scheduler to schedule the plugin on the computing unit with the USB device by adding the `--selector` and `--privileged` options to the `pluginctl`  command during testing and specifying the same in the **job.yaml** for scheduling.
+2. Then, you add the `--selector` and `--privileged` options to the `pluginctl`  command during testing and specifying the same in the **job.yaml** for scheduling.
 3. To test the plugin on _nxcore_, which has the USB device, use the command `sudo pluginctl run -n testname --selector zone=core --privileged 10.31.81.1:5000/local/plugin-name`.
 4. The `--selector` and `--privileged` attributes should be added to the _pluginSpec_ in the job submission script as shown in the example YAML code.
 5. You can check which computing unit is being used by the edge scheduler by running the `kubectl describe pod` command and checking the output.
