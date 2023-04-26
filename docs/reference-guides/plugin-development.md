@@ -97,8 +97,6 @@ You can do this step (_except **sage.yaml**_) after testing on the node but befo
 3. To connect to the node, execute `ssh waggle-dev-node-V032` and enter your _passphrase_ (required twice).
 
 You should see the following message,
-
-> Welcome to our node SSH gateway, Bhupendra Raut!
 > We are connecting you to node V032
 
 :::info
@@ -195,8 +193,8 @@ After the build process is complete, you need to **make the plugin public** to s
 :::danger
 You can not resubmit the plugin to ECR with the same version number again.
 :::
-- So think about how you change it every time you resubmit to ERC and make your style of versioning.
-- I use _'vx.y.m.d'_ e.g. _'v0.23.3.4'_ but then I can only have 1 version a day, so now I am thinking of adding an incremental integer to it (I am not sure if that's a great idea :thinking_face:)
+- So think about how you change it every time you resubmit to ERC and make your style of versioning. :thinking_face:
+- I use _'vx.y.m.d'_ e.g. _'v0.23.3.4'_ but then I can only have 1 version a day, so now I am thinking of adding an incremental integer to it.
 
 ### After ECR registry test (generally not required)
 1. Generally successfully tested plugins just work. However, in case they are failing in the scheduled jobs after running for a while or after successfully running in the above tests, do the following.
