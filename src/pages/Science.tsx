@@ -37,67 +37,67 @@ export default function Science() {
         <div className="flex flex-col md:flex-row flex-wrap justify-between gap-10">
           <LinkCard
             title="Wildfire Science"
-            link="science/wildfire-science"
+            link="/science/wildfire-science"
             src={require('@site/static/img/science/wildfire-icon-1.jpg').default}
           />
           <LinkCard
             title="Snowflake Classification"
-            link="science/snowflake"
+            link="/science/snowflake"
             src={require('@site/static/img/science/snowflake-icon.jpg').default}
           />
           <LinkCard
             title="Water Segmentation"
-            link="science/water-segmentation"
+            link="/science/water-segmentation"
             src={require('@site/static/img/science/water_seg-icon.jpg').default}
           />
           <LinkCard
             title="Monitoring Biodiversity Using Acoustic Data"
-            link="science/monitoring-biodiversity"
+            link="/science/monitoring-biodiversity"
             src={require('@site/static/img/science/bar-lt_panel-2048x689-2.jpg').default}
           />
           <LinkCard
             title="Water Level Detection"
-            link="science/water-level-detection"
+            link="/science/water-level-detection"
             src={require('@site/static/img/science/water_level-icon.jpg').default}
           />
           <LinkCard
             title="Vehicle Tracking"
-            link="science/vehicle-tracking"
+            link="/science/vehicle-tracking"
             src={require('@site/static/img/science/vehicle_track-icon.jpg').default}
           />
           <LinkCard
             title="Characterizing Clouds"
-            link="science/characterizing-clouds"
+            link="/science/characterizing-clouds"
             src={require('@site/static/img/science/cloud-icon.jpg').default}
           />
           <LinkCard
             title="Lightning Science"
-            link="science/lightning-science"
+            link="/science/lightning-science"
             src={require('@site/static/img/science/lightning-icon2-1.jpg').default}
           />
           <LinkCard
             title="Bandwidth Aware Learning"
-            link="science/bandwidth-aware-learning"
+            link="/science/bandwidth-aware-learning"
             src={require('@site/static/img/science/bandwidth-icon.png').default}
           />
           <LinkCard
             title="Social Distancing"
-            link="science/social-distancing"
+            link="/science/social-distancing"
             src={require('@site/static/img/science/social_distance-icon.jpg').default}
           />
           <LinkCard
             title="Nowcasting Weather"
-            link="science/nowcasting-weather"
+            link="/science/nowcasting-weather"
             src={require('@site/static/img/science/nowcasting-icon.jpg').default}
           />
           <LinkCard
             title="Integrating Chameleon"
-            link="science/integrating-chameleon"
+            link="/science/integrating-chameleon"
             src={require('@site/static/img/science/chameleon_integration-icon.jpg').default}
           />
           <LinkCard
             title="Traffic State Estimation"
-            link="science/traffic-state-estimation"
+            link="/science/traffic-state-estimation"
             src="https://ecr.sagecontinuum.org/api/meta-files/seonghapark/traffic-state/0.1.1/ecr-science-image.jpg"
           />
         </div>

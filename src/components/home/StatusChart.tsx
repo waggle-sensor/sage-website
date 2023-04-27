@@ -72,7 +72,7 @@ function Map(props: MapProps) {
     const delaunay = Delaunay.from(nodes, d => d.gps_lon, d => d.gps_lat)
 
     select(ref.current).append('defs').append('style')
-      .text(`circle.highlighted { stroke: ${colorScheme[0]}; fill: ${colorScheme[0]}; }`)
+      .text(`circle.highlighted { stroke: #000; fill: #000; }`)
 
     svg.selectAll('g').remove()
 
@@ -86,7 +86,8 @@ function Map(props: MapProps) {
       .attr('class', 'node')
       .attr('transform', d => `translate( ${projection([d.gps_lon, d.gps_lat]).join(',')} )`)
       .attr('r', 5)
-      .attr('fill', color || 'rgb(0, 58, 29)')
+      .attr('fill', colorScheme[0])
+      .attr('fill-opacity', 0.65)
       .attr('cursor', 'pointer')
       .on('click', (_, d) => {
         window.open(`https://portal.sagecontinuum.org/node/${d.name}`)
