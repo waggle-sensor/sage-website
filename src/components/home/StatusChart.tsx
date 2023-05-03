@@ -88,7 +88,6 @@ function Map(props: MapProps) {
 
     const svg = select(ref.current)
     const projection = geoAlbersUsa().scale(1300).translate([487.5, 305])
-    const delaunay = Delaunay.from(nodes, d => d.gps_lon, d => d.gps_lat)
 
     select(ref.current).append('defs').append('style')
       .text(`circle.highlighted { stroke: rgba(0, 0, 0); fill: rgba(0, 0, 0); }`)
@@ -97,9 +96,13 @@ function Map(props: MapProps) {
 
     const g = svg.append('g')
 
-    const r = 6, opacity = .7, rHover = 8
+    const r = 6,
+      hoverR = 8,
+      opacity = .7
 
     const shownNodes = nodes.filter(o => !notShownVSNs.includes(o.vsn))
+    const delaunay = Delaunay.from(shownNodes, d => d.gps_lon, d => d.gps_lat)
+
     const points = g
       .selectAll('g')
       .data(shownNodes)
@@ -144,7 +147,7 @@ function Map(props: MapProps) {
         .on('click', (_, d) => window.open(`${config.portal}/node/${d.name}`))
         .on('mouseenter', function(_, d) {
           select(this)
-            .attr('r', rHover)
+            .attr('r', hoverR)
             .classed('highlighted', true)
 
           onHover(d)
@@ -184,10 +187,10 @@ function Map(props: MapProps) {
       points.classed('highlighted', (_, j) => i === j)
       select(points.nodes()[i])
         .raise()
-        .attr('r', rHover)
+        .attr('r', hoverR)
         .attr('fill-opacity', 1.0)
 
-      onHover(nodes[i])
+      onHover(shownNodes[i])
     }).on('mouseleave', () => {
       clearHoverStyle()
       onHover(null)
