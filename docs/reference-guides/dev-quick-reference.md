@@ -347,7 +347,18 @@ image-sampl: 4, 9, 14, etc.
 
 
 ### Debugging failed jobs
-Do you know how to identify why a job is failing using this code? By specifying the plugin name and node, the code will print out the reasons for job failure within the last 60 minutes.
+Do you know how to identify why a job is failing
+
+1. :sparkles: When the job failures are seen as `red` markers on your [job page](https://portal.sagecontinuum.org/jobs/my-jobs), you can click them to see the error.
+![click on red markers](https://i.imgur.com/xPXERPX.png)
+
+![](https://i.imgur.com/GmStINF.png)
+
+
+2. Or detail errors can be found using using `sage_data_client`
+- Requirements: `sage_data_client` and [utils.py](https://github.com/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/utils.py)
+- By specifying the plugin name and node, the following code will print out the reasons for job failure within the last 60 minutes.
+
 
 ```python=
 from utils import *
@@ -360,12 +371,6 @@ for _, p in df[df["plugin_name"].str.contains(myplugin)].iterrows():
     print(p["error_log"])
 ```
 
-https://github.com/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/utils.py
-
-:sparkles: When the job failures are seen as `red` markers on your [job page](https://portal.sagecontinuum.org/jobs/my-jobs), you can click them to see the error.
-![click on red markers](https://i.imgur.com/xPXERPX.png)
-
-![](https://i.imgur.com/GmStINF.png)
 
 
 ## Downloading the data
