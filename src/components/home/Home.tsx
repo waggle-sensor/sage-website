@@ -151,7 +151,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <h2 className="text-purple font-bold mt-16">AI/ML Status</h2>
+          <h2 className="text-purple font-bold mt-16 self-center">AI/ML Status</h2>
           <StatusChart />
 
         </Section>

@@ -1,16 +1,35 @@
 import React, { useEffect, useRef, useState } from 'react'
 
+import * as topojson from 'topojson'
 import { geoPath, geoAlbersUsa } from 'd3-geo'
 import { select, pointer } from 'd3-selection'
 import { Delaunay } from 'd3-delaunay'
 import { schemeCategory10 as colorScheme } from 'd3-scale-chromatic'
-import * as topojson from 'topojson'
-
 import { groupBy, uniq } from 'lodash'
 
 import us from '@site/static/geo/states-albers-10m.json'
 
 import JobMetrics from './JobMetrics'
+
+import config from '../../config'
+
+
+const notShown = {
+  Scotland: ['W06B'],
+  Australia: [
+    'W04B',
+    'W04C',
+    'W04D',
+    'W04E',
+    'W04F',
+    'W050',
+    'W052',
+    'W053',
+    'W054'
+  ]
+}
+
+const notShownVSNs = [].concat(...Object.values(notShown))
 
 
 // the bare min Job type; todo(nc): import client/component lib?
@@ -54,13 +73,13 @@ type MapProps = {
   title: string
   nodes: Node[]
   onHover: (node: Node) => void
-  color?: string
+  // color?: string // todo: add hover on metrics?
 }
 
 
 
 function Map(props: MapProps) {
-  const {title, nodes, onHover, color} = props
+  const {title, nodes, onHover} = props
 
   const ref = useRef()
 
@@ -72,45 +91,119 @@ function Map(props: MapProps) {
     const delaunay = Delaunay.from(nodes, d => d.gps_lon, d => d.gps_lat)
 
     select(ref.current).append('defs').append('style')
-      .text(`circle.highlighted { stroke: #000; fill: #000; }`)
+      .text(`circle.highlighted { stroke: rgba(0, 0, 0); fill: rgba(0, 0, 0); }`)
 
     svg.selectAll('g').remove()
 
     const g = svg.append('g')
 
+    const r = 6, opacity = .7, rHover = 8
+
+    const shownNodes = nodes.filter(o => !notShownVSNs.includes(o.vsn))
     const points = g
       .selectAll('g')
-      .data(nodes)
+      .data(shownNodes)
       .enter()
       .append('circle')
       .attr('class', 'node')
       .attr('transform', d => `translate( ${projection([d.gps_lon, d.gps_lat]).join(',')} )`)
-      .attr('r', 5)
+      .attr('r', r)
       .attr('fill', colorScheme[0])
-      .attr('fill-opacity', 0.65)
+      .attr('fill-opacity', opacity)
       .attr('cursor', 'pointer')
-      .on('click', (_, d) => {
-        window.open(`https://portal.sagecontinuum.org/node/${d.name}`)
-      })
+      .on('click', (_, d) => window.open(`${config.portal}/node/${d.name}`))
 
-    svg.on('pointermove', event => {
-      const p = projection.invert(pointer(event))
-      const i = delaunay.find(...p)
-      svg.selectAll('.node').attr('r', 5)
-      points.classed('highlighted', (_, j) => i === j)
-      select(points.nodes()[i]).raise().attr('r', 7)
-      onHover(nodes[i])
-    }).on('mouseleave', () => {
-      onHover(null)
-      svg.selectAll('.node').attr('r', 5)
-      points.classed('highlighted', false)
+    const xStart = 625, yStart = 580, pad = 1
+
+    // render "not shown" / international key
+    const intlKey = svg.append('g')
+      .attr('class', 'not-shown-key')
+      .attr('pointer-events', 'bounding-box')
+
+    intlKey.append('text')
+      .text('International:')
+      .attr('x', xStart - 105)
+      .attr('y', yStart)
+      .attr('font-weight', '600')
+      .attr('fill', '#666')
+
+    Object.values(notShown).forEach((vsns, k) => {
+      const r2 = r
+
+      intlKey.selectAll('g')
+        .data(nodes.filter(o => vsns.includes(o.vsn)))
+        .enter()
+        .append('circle')
+        .attr('class', 'not-shown-node')
+        .attr('cx', (d, i) => xStart + i * (r2 * 2 + pad))
+        .attr('cy', (d, i) => yStart + (k * 20) + 25 )
+        .attr('r', r2)
+        .attr('fill', colorScheme[0])
+        .attr('fill-opacity', opacity)
+        .attr('cursor', 'pointer')
+        .on('click', (_, d) => window.open(`${config.portal}/node/${d.name}`))
+        .on('mouseenter', function(_, d) {
+          select(this)
+            .attr('r', rHover)
+            .classed('highlighted', true)
+
+          onHover(d)
+        })
+        .on('mouseleave', function() {
+          select(this)
+            .attr('r', r)
+            .classed('highlighted', false)
+        })
+
+      intlKey.append('text')
+        .text(Object.keys(notShown)[k])
+        .attr('class', 'other-nodes')
+        .attr('x', xStart - (r2 * 2) + 2)
+        .attr('y', yStart + (k * 20) + 26 )
+        .attr('dominant-baseline', 'middle')
+        .attr('text-anchor', 'end')
+        .attr('font-weight', '600')
+        .attr('fill', '#666')
     })
 
-  }, [ref, color])
+    svg.on('pointermove', event => {
+      clearHoverStyle()
+
+      const ele = event.target
+      const onIntlKey = ele.classList.contains('not-shown-key') ||
+        ele.closest('.not-shown-key')
+
+      if (onIntlKey)
+        return
+
+      svg.selectAll('.node').attr('r', r).attr('fill-opacity', opacity)
+
+      const p = projection.invert(pointer(event))
+      const i = delaunay.find(...p)
+
+      points.classed('highlighted', (_, j) => i === j)
+      select(points.nodes()[i])
+        .raise()
+        .attr('r', rHover)
+        .attr('fill-opacity', 1.0)
+
+      onHover(nodes[i])
+    }).on('mouseleave', () => {
+      clearHoverStyle()
+      onHover(null)
+    })
+
+    const clearHoverStyle = () => {
+      svg.selectAll('.node').attr('r', r).attr('fill-opacity', opacity)
+      points.classed('highlighted', false)
+    }
+  }, [ref])
+
 
   useEffect(() => {
     const svg = select(ref.current)
     svg.selectAll('.title').remove()
+
     svg.append('text')
       .text(title)
       .attr('class', 'title')
@@ -126,10 +219,11 @@ function Map(props: MapProps) {
 
   return (
     <svg viewBox="0 0 959 650" width="100%" height="100%" ref={ref}>
-      <path fill="#ddd" d={path(topojson.feature(us, us.objects.nation))}></path>
+      <path fill="#eee" d={path(topojson.feature(us, us.objects.nation))} stroke="#aaa" strokeWidth="1"></path>
       <path
         fill="none"
-        stroke="#fff"
+        stroke="#aaa"
+        strokeWidth="1"
         strokeLinejoin="round"
         strokeLinecap="round"
         d={path(topojson.mesh(us, us.objects.states, (a, b) => a !== b))}>
@@ -146,10 +240,17 @@ function getNodes() : Promise<Node[]> {
   return Promise.all([p1, p2])
     .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
     .then(([manifests, meta]) => {
-      const sageProject = meta.filter(obj => obj.project.toLowerCase() == 'sage')
-        .map(obj => obj.vsn)
+      const sageMetas = meta.filter(obj => obj.project.toLowerCase() == 'sage')
+      const sageVSNs = sageMetas.map(obj => obj.vsn)
 
-      const nodes = manifests.filter(node => sageProject.includes(node.vsn))
+      let nodes = manifests
+        .filter(node => sageVSNs.includes(node.vsn))
+
+      // join in focus?
+      nodes = nodes.map(obj => ({
+        ...obj,
+        focus: sageMetas.find(o => o.vsn == obj.vsn)?.focus
+      }))
 
       return nodes
     })
@@ -321,12 +422,18 @@ export default function StatusChart() {
     // setAppsOnNode(appList)
   }
 
-  const nodesWithGps = (visibleNodes || []).filter(obj => obj.gps_lon && obj.gps_lat)
+  const nodesWithGps = (visibleNodes || []).filter(obj =>
+    (obj.gps_lon && obj.gps_lat) || notShownVSNs.includes(obj.vsn)
+  )
   const nodeCount = (visibleNodes || []).length
 
+
+  if (error)
+    return <p>{error}</p>
+
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="md:w-7/12">
+    <div className="flex flex-col md:flex-row md:justify-center">
+      <div className="md:w-9/12 max-w-3xl">
         {visibleNodes && apps &&
           <Map
             title={
@@ -338,13 +445,9 @@ export default function StatusChart() {
             // color={colorScheme[apps.findIndex(obj => obj.appName == hoverID) % 8] || null }
           />
         }
-
-        {error &&
-          <p>{error}</p>
-        }
       </div>
 
-      <div className="md:w-5/12">
+      <div className="md:w-3/12 flex mt-12 md:ml-12">
         {nodes && jobs && apps && dataCounts &&
           <JobMetrics
             node={node?.vsn}

@@ -18,23 +18,23 @@ export default function JobMetrics(props: Props) {
   const {node, nodes, jobs, apps, records} = props
 
   return (
-    <div className="ml-10">
+    <div className="flex flex-wrap justify-between md:justify-start md:flex-col text-gray-700">
       <div className="mb-4">
         <div className="flex items-center gap-2 text-2xl"><HubIcon />{node ? 'Node' : 'Nodes'}</div>
-        <b className="text-5xl ml-6">{node ? node : nodes.toLocaleString()}</b>
+        <b className="text-5xl ml-8">{node ? node : nodes.toLocaleString()}</b>
       </div>
 
       {jobs > 0 &&
         <div className="mb-4">
           <div className="flex items-center gap-2 text-2xl"><ScheduleIcon />Active Jobs</div>
-          <b className="text-5xl ml-6">{jobs.toLocaleString()}</b>
+          <b className="text-5xl ml-8">{jobs.toLocaleString()}</b>
         </div>
       }
 
       {apps > 0 &&
         <div className="mb-4">
           <div className="flex items-center gap-2 text-2xl"><Apps />Recent Apps</div>
-          <b className="text-5xl ml-6">{apps.toLocaleString()}</b>
+          <b className="text-5xl ml-8">{apps.toLocaleString()}</b>
         </div>
       }
 
@@ -48,7 +48,7 @@ export default function JobMetrics(props: Props) {
             {/* use approx char?
               <span style={{fontFamily: 'Courier'}} className="text-4xl">≈</span>
             */}
-            <b className="text-5xl ml-6">{records.toLocaleString()}</b>
+            <b className="text-5xl ml-8">{records.toLocaleString()}</b>
             <div className="text-md text-gray-500 ml-8">Records in the last 24 hours<sup>*</sup></div>
           </div>
         </div>
