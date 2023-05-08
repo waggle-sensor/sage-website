@@ -139,7 +139,7 @@ function Map(props: MapProps) {
         .append('circle')
         .attr('class', 'not-shown-node')
         .attr('cx', (d, i) => xStart + i * (r2 * 2 + pad))
-        .attr('cy', (d, i) => yStart + (k * 20) + 25 )
+        .attr('cy', () => yStart + (k * 20) + 25 )
         .attr('r', r2)
         .attr('fill', colorScheme[0])
         .attr('fill-opacity', opacity)
