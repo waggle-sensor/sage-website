@@ -88,7 +88,7 @@ module.exports = {
       contextualSearch: false, // mostly for versioned docs
       appId: 'XYV3A23P29',
       searchParameters: {},    // Optional: Algolia search parameters
-      apiKey: '8dd26cf6515c47eade5695acecd06671',
+      apiKey: '6e6879ba82bb9efece5580e945bd09ca',
     },
     colorMode: {
       disableSwitch: true
