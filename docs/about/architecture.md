@@ -131,7 +131,7 @@ The technical capabilities of these nodes consists of:
 - optional [Stevenson Shield](https://en.wikipedia.org/wiki/Stevenson_screen) housing a RPi 4 w/ environmental sensors & microphone
 - optional 2nd NVidia Xavier NX ARM64 [Edge Processor](https://github.com/waggle-sensor/edgeprocessor)
 
-> Manual: https://docs.waggle-edge.ai/docs/about/resources/wsn-manual
+> Node installation manual: [https://sagecontinuum.org/docs/installation-manuals/wsn-manual](/docs/installation-manuals/wsn-manual)
 
 > Details & source code: https://github.com/waggle-sensor/wild-waggle-node
 
