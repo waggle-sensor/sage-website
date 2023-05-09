@@ -15,6 +15,12 @@ module.exports = {
   trailingSlash: false,
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
+    announcementBar: {
+      content: '<b>ℹ️ The Sage portal and services will be intermittently offline from Tuesday, May 9th to Friday, May 12th as Argonne performs upgrades to one of its data centers. ℹ️</b>',
+      isCloseable: false,
+      textColor: 'rgb(1, 67, 97)',
+      backgroundColor: 'rgb(229, 246, 253)'
+    },
     navbar: {
       title: 'Sage',
       logo: {
