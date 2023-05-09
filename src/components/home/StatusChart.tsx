@@ -114,7 +114,7 @@ function Map(props: MapProps) {
       .attr('fill', colorScheme[0])
       .attr('fill-opacity', opacity)
       .attr('cursor', 'pointer')
-      .on('click', (_, d) => window.open(`${config.portal}/node/${d.name}`))
+      .on('click', (_, d) => window.open(`${config.portal}/node/${d.vsn}`))
 
     const xStart = 625, yStart = 580, pad = 1
 
@@ -144,7 +144,7 @@ function Map(props: MapProps) {
         .attr('fill', colorScheme[0])
         .attr('fill-opacity', opacity)
         .attr('cursor', 'pointer')
-        .on('click', (_, d) => window.open(`${config.portal}/node/${d.name}`))
+        .on('click', (_, d) => window.open(`${config.portal}/node/${d.vsn}`))
         .on('mouseenter', function(_, d) {
           select(this)
             .attr('r', hoverR)
