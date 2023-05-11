@@ -79,9 +79,10 @@ const scienceTexts = [
 
 
 export const Section = (props) =>
-  <section className={`mx-auto py-16 h-full w-[90%] ${props.className || ''}` }>
+  <section className={`md:mx-auto px-10 py-16 max-w-screen-2xl ${props.className || ''}` }>
     {props.children}
   </section>
+
 
 
 type DevTools = 'client' | 'api' | 'ui' | 'template'
@@ -99,26 +100,28 @@ export default function Home() {
 
   return (
     <Root>
-      <div className="banner flex flex-col md:flex-row justify-between items-center h-[400px] p-[40px]">
-        <div className="flex flex-col justify-between md:mx-10 self-start md:self-center">
-          <div className="text-[#f9f9f9] text-4xl md:text-6xl">
-            AI @ the Edge<br/>
-            for <span className="text-emerald-200">
-              <TypeWriter texts={scienceTexts} />
-            </span>
+      <div className="banner h-[400px]">
+        <Section className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col justify-between self-start md:self-center">
+            <div className="text-[#f9f9f9] text-4xl md:text-6xl">
+              AI @ the Edge<br/>
+              for <span className="text-emerald-200">
+                <TypeWriter texts={scienceTexts} />
+              </span>
+            </div>
+
+            <div className="hidden lg:block text-xl w-3/4 leading-relaxed mt-4 text-[#f9f9f9]">
+              A new kind of national-scale cyberinfrastructure
+              to enable AI at the Edge for science.
+            </div>
           </div>
 
-          <div className="hidden lg:block text-xl w-3/4 leading-relaxed mt-4 text-[#f9f9f9]">
-            A new kind of national-scale cyberinfrastructure
-            to enable AI at the Edge for science.
+          <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center">
+            <h3 className="text-slate-300">Getting Started</h3>
+            <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow /></a>
+            <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow /></a>
           </div>
-        </div>
-
-        <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center">
-          <h3 className="text-slate-300">Getting Started</h3>
-          <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow /></a>
-          <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow /></a>
-        </div>
+        </Section>
       </div>
 
       <div className="bg-white">
@@ -152,7 +155,10 @@ export default function Home() {
           </div>
 
           <h2 className="text-purple font-bold mt-16 self-center">AI/ML Status</h2>
-          <StatusChart />
+          {config.downtime ?
+            'The node status view is currently unavailable due to scheduled downtime.' :
+            <StatusChart />
+          }
 
         </Section>
       </div>
