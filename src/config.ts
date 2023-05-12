@@ -1,5 +1,5 @@
 const config = {
-  downtime: true, // if true, the homepage node status will say there is "scheduled downtime"
+  downtime: false, // if true, "scheduled downtime" is shown for the node status on the homepage
   docs: '/docs',
   portal: 'https://portal.sagecontinuum.org',
   waggleOrg: 'https://github.com/waggle-sensor'
