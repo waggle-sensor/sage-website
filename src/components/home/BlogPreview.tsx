@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
+const PREVIEW_COUNT = 3
+const SKIP_LIST = ['Pedestrian Count for Crosswalk Violations']
 
 
 /**
@@ -28,10 +30,11 @@ export default function BlogPreview() {
         let data
         try {
           data = [...items].map(ele => {
-            const url = ele.querySelectorAll('[itemprop=url')[0].href
+            const url = ele.querySelectorAll('[itemprop=url]')[0].href
+
             return {
-              headline: ele.querySelectorAll('[itemprop=headline')[0].innerText,
-              articleBody: ele.querySelectorAll('[itemprop=articleBody')[0].innerText,
+              headline: ele.querySelectorAll('[itemprop=headline]')[0].innerText,
+              articleBody: ele.querySelectorAll('[itemprop=articleBody]')[0].innerHTML,
               url: url.slice(url.indexOf('/', 8)) // strip domain
             }
           })
@@ -45,20 +48,30 @@ export default function BlogPreview() {
 
   return (
     <Root>
-      {(data || []).map(meta => {
-        const {headline, articleBody, url} = meta
+      {(data || [])
+        .filter(obj => !SKIP_LIST.includes(obj.headline))
+        .slice(0, PREVIEW_COUNT)
+        .map(meta => {
+          const {headline, articleBody, url} = meta
 
-        return (
-          <div key={headline}>
-            <h3><Link to={url}>{headline}</Link></h3>
-            <p>{articleBody} <Link to={url}>Read more...</Link></p>
-          </div>
-        )
-      })}
+          return (
+            <article key={headline}>
+              <h3><Link to={url}>{headline}</Link></h3>
+              <div dangerouslySetInnerHTML={{__html: articleBody}}></div>
+              <Link to={url}>Read more...</Link>
+            </article>
+          )
+        })}
     </Root>
   )
 }
 
 const Root = styled.div`
+  article {
+    margin-bottom: 2rem;
 
+    p{
+      margin-bottom: 0;
+    }
+  }
 `

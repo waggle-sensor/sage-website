@@ -117,9 +117,13 @@ module.exports = {
             'https://github.com/waggle-sensor/sage-website/edit/main/',
         },
         blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/waggle-sensor/sage-website/edit/main/',
+          editUrl: 'https://github.com/waggle-sensor/sage-website/edit/main/',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Posts',
+          readingTime: ({content, frontMatter, defaultReadingTime}) =>
+            frontMatter.hide_reading_time ?
+              undefined :
+              defaultReadingTime({content}),
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
