@@ -10,7 +10,7 @@ Now that we've finished [preparing our code](creating-an-edge-app) and [testing 
 
 Before publishing an app to the [Edge Code Repository](/docs/about/architecture#edge-code-repository-ecr), we need to add a few packaging items to it.
 
-First, update the homepage in your `sage.yaml` to match your repo and verify that it matches the following:
+First, update the homepage in your `sage.yaml` to point to your `app-tutorial` Github repo and verify that it matches the following:
 
 ```yaml
 name: "App tutorial"
