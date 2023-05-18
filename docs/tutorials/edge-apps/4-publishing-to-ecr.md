@@ -10,17 +10,17 @@ Now that we've finished [preparing our code](creating-an-edge-app) and [testing 
 
 Before publishing an app to the [Edge Code Repository](/docs/about/architecture#edge-code-repository-ecr), we need to add a few packaging items to it.
 
-First, add the following `sage.yaml` file to your repo and fill in your own app details:
+First, update the homepage in your `sage.yaml` to point to your `app-tutorial` Github repo and verify that it matches the following:
 
 ```yaml
-name: ""
-description: ""
+name: "App tutorial"
+description: "My really amazing app!"
 keywords: ""
-authors: "Your Name <your.email@somewhere.org>"
+authors: "Your name"
 collaborators: ""
 funding: ""
 license: ""
-homepage: "https://github.com/waggle-sensor/edge-app-template"
+homepage: "https://github.com/username/app-tutorial"
 source:
   architectures:
     - "linux/amd64"
