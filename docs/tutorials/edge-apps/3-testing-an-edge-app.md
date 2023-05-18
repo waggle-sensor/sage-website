@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Part 3: Testing an edge app
 
-In the [last part](creating-an-edge-app), we took a code snippit and iterated on it until it was ready for the edge. By the end, we had basic camera access and publishing working!
+In the [previous part](creating-an-edge-app), we took a code snippit and iterated on it until it was ready for the edge. By the end, we had basic camera access and publishing working!
 
 Now, we're ready to start testing it on a development node and describing our build steps.
 
@@ -14,20 +14,11 @@ The first thing we need to do is get access to a development node. Unfortunately
 
 For now, please [contact us](/docs/contact-us) to request access to a development node and we'll work with you to setup access.
 
-## Organizing our app
+## Creating a repo for our app
 
 Before connecting to our node, let's take a moment to organize our code into a repo we will later use on the node.
 
-Go ahead and [generate a new repo from our edge app template](https://github.com/waggle-sensor/edge-app-template/generate). We will use repository name `app-tutorial` for this tutorial. (_You'll need to be signed in to Github to do this._)
-
-This will provide you a new repo with the following files:
-
-* [main.py](https://github.com/waggle-sensor/edge-app-template/blob/main/main.py): Main code.
-* [requirements.txt](https://github.com/waggle-sensor/edge-app-template/blob/main/requirements.txt): Python dependencies.
-* [Dockerfile](https://github.com/waggle-sensor/edge-app-template/blob/main/Dockerfile): App build instructions.
-* [sage.yaml](https://github.com/waggle-sensor/edge-app-template/blob/main/sage.yaml): App metadata template.
-
-If you made any changes to your `main.py` from part 2, feel free to commit and push any of your own changes, otherwise we will use the example from the template for the rest of the tutorial.
+Go ahead and create a new Github repo named `app-tutorial` and commit the files from [previous part](creating-an-edge-app).
 
 ## Building our app
 

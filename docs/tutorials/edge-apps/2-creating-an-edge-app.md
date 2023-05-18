@@ -22,7 +22,7 @@ Second, **develop and test** is where you begin to integrate your initial code w
 
 Finally, **deploy and iterate** is where you schedule your application for deployment and look at the results.
 
-## Preparing an example for the edge
+## A driving example
 
 In order to illustrate progress through each of these stages, we'll start with a concrete code example and iterate on it over the next few sections.
 
@@ -52,22 +52,59 @@ if __name__ == "__main__":
     main()
 ```
 
-In order to follow along, create an empty `main.py` file and copy and paste the code snippits as we progress through the tutorial.
+## Bootstraping our app from a template
 
-This code above is a great start but needs a few improvements before it's ready for the edge. We'll work through these over the next few sections.
+We'll start our by using a cookiecutter template to bootstrap our app.
 
-### Installing pywaggle
+First, ensure cookiecutter is installed:
 
-The first step in preparing our example for the edge is to install [pywaggle](https://github.com/waggle-sensor/pywaggle) in your local development environment.
+```sh
+pip3 install cookiecutter
+```
+
+Now, run the following command:
+
+```sh
+cookiecutter gh:waggle-sensor/cookiecutter-sage-app
+```
+
+You should be prompted to fill in the following fields:
+
+```txt
+name [My Amazing App]: App tutorial
+repo [app_tutorial]: 
+description [My really amazing app!]: 
+author [My name]: Your name
+version [0.1.0]: 
+Select template:
+1 - vision
+2 - usbserial_sensor
+3 - minimal
+4 - tutorial
+Choose from 1, 2, 3, 4 [1]: 4
+```
+
+If this succeeds, a new `app_tutorial` directory will be created with the following files:
+
+| Name | Description |
+|------|-------------|
+| main.py | Main code |
+| requirements.txt | Code dependencies |
+| Dockerfile | App build instructions |
+| sage.yaml | App metadata |
+
+### Installing the dependencies
+
+The first step in preparing our example for the edge is to install [pywaggle](https://github.com/waggle-sensor/pywaggle) in our local development environment.
 
 pywaggle is our Python SDK which provides edge apps access to devices (ex. cameras and microphones) and messaging within a node.
 
 ![Accessing Devices](../images/access_to_sensors.svg)
 
-For this tutorial, we'll install the latest version of pywaggle with all optional dependencies in our local development environment using:
+For this tutorial, we'll install the latest version of the requirements included in the template:
 
 ```sh
-pip3 install --upgrade 'pywaggle[all]'
+pip3 install --upgrade --requirement requirements.txt
 ```
 
 ### Accessing a camera
