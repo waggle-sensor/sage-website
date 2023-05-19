@@ -71,8 +71,8 @@ cookiecutter gh:waggle-sensor/cookiecutter-sage-app
 You should be prompted to fill in the following fields:
 
 ```txt
-name [My Amazing App]: App tutorial
-repo [app_tutorial]: 
+name [My Amazing App]: App Tutorial
+repo [app-tutorial]: 
 description [My really amazing app!]: 
 author [My name]: Your name
 version [0.1.0]: 
@@ -84,7 +84,7 @@ Select template:
 Choose from 1, 2, 3, 4 [1]: 4
 ```
 
-If this succeeds, a new `app_tutorial` directory will be created with the following files:
+If this succeeds, a new `app-tutorial` directory will be created with the following files:
 
 | Name | Description |
 |------|-------------|
