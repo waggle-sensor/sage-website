@@ -13,7 +13,6 @@ Before publishing an app to the [Edge Code Repository](/docs/about/architecture#
 First, update the homepage in your `sage.yaml` to point to your `app-tutorial` Github repo and verify that it matches the following:
 
 ```yaml
-# App Tutorial
 name: "app-tutorial"
 version: "0.1.0"
 description: "My really amazing app!"

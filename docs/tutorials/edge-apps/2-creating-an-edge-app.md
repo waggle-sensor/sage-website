@@ -71,8 +71,7 @@ cookiecutter gh:waggle-sensor/cookiecutter-sage-app
 You should be prompted to fill in the following fields:
 
 ```txt
-name [My Amazing App]: App Tutorial
-repo [app-tutorial]: 
+name []: app-tutorial
 description [My really amazing app!]: 
 author [My name]: Your name
 version [0.1.0]: 
