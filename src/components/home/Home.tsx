@@ -7,7 +7,7 @@ import Arrow from '@mui/icons-material/PlayCircleOutlineRounded'
 import LaunchRounded from '@mui/icons-material/LaunchRounded'
 
 import CodeWindow from './CodeWindow'
-import BlogPreview from './BlogPreview'
+import NewsPreview from './NewsPreview'
 import TypeWriter from './TypeWriter'
 import TwitterSkeleton from './TwitterSkeleton'
 import StatusChart from './StatusChart'
@@ -169,7 +169,7 @@ export default function Home() {
             <h2 className="p-4 m-0">News and Events</h2>
             <hr className="m-0"/>
             <div className="p-4">
-              <BlogPreview />
+              <NewsPreview />
             </div>
           </div>
           <div className="bg-white shadow-sm rounded-xl md:w-1/3 h-[600px]">

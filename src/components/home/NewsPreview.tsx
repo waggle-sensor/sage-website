@@ -13,14 +13,14 @@ const SKIP_LIST = ['Pedestrian Count for Crosswalk Violations']
  * Note docusaurus is following the schema.org format https://schema.org/BlogPosting
  */
 
-export default function BlogPreview() {
+export default function NewsPreview() {
 
   const [data, setData] = useState()
   // const {siteConfig} = useDocusaurusContext()
 
   useEffect(() => {
     // fetch blog preview from prod site
-    fetch('https://sagecontinuum.org/' + 'blog')
+    fetch('https://sagecontinuum.org/' + 'news')
       .then(res => res.text())
       .then(content => {
         const parser = new DOMParser()
@@ -53,12 +53,15 @@ export default function BlogPreview() {
         .slice(0, PREVIEW_COUNT)
         .map(meta => {
           const {headline, articleBody, url} = meta
+          const hasReadMoreLink = articleBody.toLowerCase().includes('read more')
 
           return (
             <article key={headline}>
               <h3><Link to={url}>{headline}</Link></h3>
               <div dangerouslySetInnerHTML={{__html: articleBody}}></div>
-              <Link to={url}>Read more...</Link>
+              {!hasReadMoreLink &&
+                <Link to={url}>Read more...</Link>
+              }
             </article>
           )
         })}

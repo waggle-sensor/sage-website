@@ -33,7 +33,7 @@ module.exports = {
           label: 'Science',
           position: 'left'
         }, {
-          to: '/blog',
+          to: '/news',
           label: 'News',
           position: 'left'
         }, {
@@ -117,6 +117,8 @@ module.exports = {
             'https://github.com/waggle-sensor/sage-website/edit/main/',
         },
         blog: {
+          path: 'news',
+          routeBasePath: 'news',
           editUrl: 'https://github.com/waggle-sensor/sage-website/edit/main/',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
