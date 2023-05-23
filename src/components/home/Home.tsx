@@ -100,9 +100,9 @@ export default function Home() {
 
   return (
     <Root>
-      <div className="banner h-[400px]">
-        <Section className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-col justify-between self-start md:self-center">
+      <div className="banner h-[400px] md:pt-6">
+        <Section className="flex flex-col justify-between md:flex-row">
+          <div className="flex flex-col justify-between self-start md:self-center md:mr-20">
             <div className="text-[#f9f9f9] text-4xl md:text-6xl">
               AI @ the Edge<br/>
               for <span className="text-emerald-200">
@@ -116,7 +116,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col md:ml-20 md:mr-40 self-start md:self-center">
+
+          <div className="flex flex-col mt-12 md:m-0 md:mr-40 md:self-center">
             <h3 className="text-slate-300">Getting Started</h3>
             <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow /></a>
             <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow /></a>
