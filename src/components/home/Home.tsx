@@ -166,7 +166,11 @@ export default function Home() {
       <div className="bg-[#e7ebf0]"> {/* (bg color matches portal) */}
         <Section className="flex flex-col md:flex-row gap-2">
           <div className="bg-white shadow-sm rounded-xl md:w-2/3 h-[600px] overflow-y-scroll">
-            <h2 className="p-4 m-0">News and Events</h2>
+            <Link to="/news" className="hover:decoration-black">
+              <h2 className="p-4 pb-3 m-0 flex justify-between items-center">
+                News and Events
+              </h2>
+            </Link>
             <hr className="m-0"/>
             <div className="p-4">
               <NewsPreview />
