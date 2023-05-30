@@ -100,6 +100,11 @@ export default function Science() {
             link="/science/traffic-state-estimation"
             src="https://ecr.sagecontinuum.org/api/meta-files/seonghapark/traffic-state/0.1.1/ecr-science-image.jpg"
           />
+          <LinkCard
+            title="Scalable Edge Computing at APS"
+            link="/science/scalable-ci-in-aps"
+            src={require('@site/static/img/science/scalable-ci-in-aps-icon.png').default}
+          />
         </div>
       </Root>
     </Layout>
