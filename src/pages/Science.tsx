@@ -34,7 +34,7 @@ export default function Science() {
     <Layout title="Science Projects" description="Sage Science Projects">
       <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-10">
         <h1>Science Projects</h1>
-        <div className="flex flex-col md:flex-row flex-wrap justify-between gap-10">
+        <div className="flex flex-col md:flex-row flex-wrap gap-10">
           <LinkCard
             title="Wildfire Science"
             link="/science/wildfire-science"
