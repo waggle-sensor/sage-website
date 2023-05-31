@@ -160,6 +160,17 @@ module.exports = {
         trackingID: 'G-NMP80C7S04',
         anonymizeIP: true,
       }
-    ]
+    ],
+    /* todo?: post science as blog entries for front matter and blog author meta?
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'sage-science',
+        routeBasePath: 'science',
+        path: './science',
+        blogListComponent: '__todo__'
+      },
+    ],
+    */
   ]
 }
