@@ -36,7 +36,7 @@ function Footer() {
 
           <div className="md:w-1/2 flex justify-between mt-12 md:mt-0">
             <div>
-              <h4><a href="about" className="text-neutral-200 hover:text-neutral-100">About</a></h4>
+              <h4><a href="/about" className="text-neutral-200 hover:text-neutral-100">About</a></h4>
               <ul>
                 <li><Link to="/science">Science</Link></li>
                 <li><Link to="/news">News</Link></li>
@@ -54,9 +54,9 @@ function Footer() {
               </ul>
             </div>
             <div>
-              <h4><Link to={`docs/contact-us`} className="text-neutral-200 hover:text-neutral-300">Contact</Link></h4>
+              <h4><Link to={`/docs/contact-us`} className="text-neutral-200 hover:text-neutral-300">Contact</Link></h4>
               <ul>
-                <li><Link to={`docs/contact-us`}>Contact Us</Link></li>
+                <li><Link to={`/docs/contact-us`}>Contact Us</Link></li>
               </ul>
               <div className="flex">
                 <IconButton href="https://github.com/waggle-sensor" target="_blank">
