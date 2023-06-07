@@ -466,3 +466,34 @@ writer.close()
 - [SAGE Examples](https://github.com/sagecontinuum/sage-data-client/tree/main/examples)
 - [CROCUS Cookbooks](https://crocus-urban.github.io/instrument-cookbooks/README.html)
 
+
+## Miscellaneous
+### Find PT Mobotix thermal camera ip on the node
+Login to the node where the PTmobotix camera is connected.
+1. run `nmap -sP 10.31.81.1/24`
+
+```
+Nmap scan report for ws-nxcore-000048B02D3AF49F (10.31.81.1)
+Host is up (0.0012s latency).
+Nmap scan report for switch (10.31.81.2)
+Host is up (0.0058s latency).
+Nmap scan report for ws-rpi (10.31.81.4)
+Host is up (0.00081s latency).
+Nmap scan report for 10.31.81.10
+Host is up (0.0010s latency).
+Nmap scan report for 10.31.81.15
+Host is up (0.00092s latency).
+Nmap scan report for 10.31.81.17
+Host is up (0.0014s latency).
+Nmap done: 256 IP addresses (6 hosts up) scanned in 2.42 seconds
+```
+
+2. From the output run following command for each `cam_IP`
+`curl -u admin:wagglesage  -X POST  http://cam_IP/control/rcontrol?action=putrs232&rs232outtext=%FF%01%00%0F%00%00%10`
+
+e.g.
+`curl -u admin:wagglesage  -X POST  http://10.31.81.15/control/rcontrol?action=putrs232&rs232outtext=%FF%01%00%0F%00%00%10`
+
+3. The ip for which output is `OK` is the Mobotix.
+
+
