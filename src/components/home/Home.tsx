@@ -56,15 +56,16 @@ const appTemplateSnippet =
 cookiecutter gh:waggle-sensor/cookiecutter-sage-app
 
 ...
-name [My Amazing App]: image_classification
-repo: https://github.com/geeklair/img_class.git
-author [My name]: geeklair
-version [0.1.0]: 0.2.0
+name []: app-tutorial
+description [My really amazing app!]:
+author [My name]: Your name
+version [0.1.0]:
 Select template:
 1 - vision
 2 - usbserial_sensor
 3 - minimal
-Choose from 1, 2, 3 [1]: 1
+4 - tutorial
+Choose from 1, 2, 3, 4 [1]: 4
 `
 
 
@@ -204,14 +205,14 @@ export default function Home() {
                 </div>
                 <span className="text-slate-200">Easily analyze data in Pandas with the Sage Data Client</span>
               </a>
-              <a className="sci-item group" onMouseOver={() => setDevHover('api')}  href={`/docs/tutorials/accessing-data#http-api`} target="_blank" rel="noreferrer">
+              <a className="sci-item group" onMouseOver={() => setDevHover('api')}  href="/docs/tutorials/accessing-data#http-api" target="_blank" rel="noreferrer">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>HTTP APIs</h3>
                   <div className="invisible group-hover:visible"><LaunchRounded /></div>
                 </div>
                 <span className="text-slate-200">Access and update data via web APIs</span>
               </a>
-              <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="https://github.com/waggle-sensor/cookiecutter-sage-app" target="_blank" rel="noreferrer">
+              <a className="sci-item group" onMouseOver={() => setDevHover('template')} href="/docs/tutorials/edge-apps/creating-an-edge-app#bootstraping-our-app-from-a-template" target="_blank" rel="noreferrer">
                 <div className="flex justify-between [&>*]:text-slate-200">
                   <h3>Developer Templates</h3>
                   <div className="invisible group-hover:visible"><LaunchRounded /></div>

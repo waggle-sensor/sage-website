@@ -52,7 +52,7 @@ if __name__ == "__main__":
     main()
 ```
 
-## Bootstraping our app from a template
+## Bootstrapping our app from a template
 
 We'll start our by using a cookiecutter template to bootstrap our app.
 
@@ -72,9 +72,9 @@ You should be prompted to fill in the following fields:
 
 ```txt
 name []: app-tutorial
-description [My really amazing app!]: 
+description [My really amazing app!]:
 author [My name]: Your name
-version [0.1.0]: 
+version [0.1.0]:
 Select template:
 1 - vision
 2 - usbserial_sensor
