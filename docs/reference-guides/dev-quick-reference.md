@@ -136,7 +136,9 @@ You should see the following message,
 5.  Execute the command with input arguments. `sudo pluginctl run -n <some-unique-name> <1x.xx.xx.x:5000/local/my-plugin-name> -- -i top_camera`.
 7.  IF you need GPU, use the selector `sudo pluginctl run -n <some-unique-name> <1x.xx.xx.x:5000/local/my-plugin-name> -- -i top_camera`.
 8. :exclamation: `--` is a separator. After the `--` all arguments are for your entrypoint i.e. app.py.
-9. To check running plugins, execute `sudo pluginctl ps`. To stop the plugin, execute `sudo pluginctl rm` cloud-motion.
+9. To check running plugins, execute `sudo pluginctl ps`.
+10. To stop the plugin, execute `sudo pluginctl rm cloud-motion`.
+11. To check the log `pluginctl logs cloud-motion`
 :warning:Do not forget to stop the plugins after testing or it will run forever.
 
 ### Testing USBSerial devices
@@ -174,7 +176,7 @@ Follow this [tutorial](https://github.com/waggle-sensor/edge-scheduler/blob/main
 If the plugin fails instantyly and your are not able to get inside the container use following commands 
 
 ```
-$ sudo pluginctl deploy --name getincmv --entrypoint /bin/bash 10.31.81.1:5000/local/plugin-cmv-fftpc -- -c 'while true; do sleep 1; done'
+sudo pluginctl deploy --name getincmv --entrypoint /bin/bash 10.31.81.1:5000/local/plugin-cmv-fftpc -- -c 'while true; do sleep 1; done'
 ```
 __Output__
 ``` Launched the plugin getincmv successfully
