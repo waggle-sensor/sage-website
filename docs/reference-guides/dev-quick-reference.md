@@ -155,10 +155,10 @@ Steps for working with a USB serial device
 :warning: Re/Check that you are using the correct USB port for the device if getting empty output or _folder not found_ error.
 
 
-### 2. Check if it worked
+### 2. Check if it worked?
 Login to the Sage portal and follow the instructions from the section [See Your Data on Sage Portal](https://hackmd.io/iKUbbfZ7RYGbXT_tnBd1vg?both#See-Your-Data-on-Sage-Portal)
 
-### 3. Troubleshooting failed plugin
+### 3. Check why it failed?
 When you encounter a failing/long pending job with an error, you can use the following steps to help you diagnose the issue:
 
 1. First check the Dockerfile **entrypoint**.
@@ -168,6 +168,24 @@ When you encounter a failing/long pending job with an error, you can use the fol
 5. This information can help you identify any issues with the pod itself, such as issues with its configuration or resources.
 
 By following these steps, you can better understand why the job is failing and take steps to resolve the issue.
+
+### 4. Troubleshooting inside the container using pluginctl
+Follow this [tutorial](https://github.com/waggle-sensor/edge-scheduler/blob/main/docs/pluginctl/tutorial_getintoplugin.md) to get in a running container to troubleshoot the issue.
+If the plugin fails instantyly and your are not able to get inside the container use following commands 
+
+```
+$ sudo pluginctl deploy --name getincmv --entrypoint /bin/bash 10.31.81.1:5000/local/plugin-cmv-fftpc -- -c 'while true; do sleep 1; done'
+```
+__Output__
+``` Launched the plugin getincmv successfully
+You may check the log: pluginctl logs getincmv
+To terminate the job: pluginctl rm getincmv
+```
+then do `sudo pluginctl exec -ti getincmv -- /bin/bash` to enter the container.
+
+
+
+
 
 
 ## Edge Code Repository
