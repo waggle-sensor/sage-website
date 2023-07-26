@@ -56,10 +56,10 @@ if __name__ == "__main__":
 
 We'll start our by using a cookiecutter template to bootstrap our app.
 
-First, ensure cookiecutter is installed:
+First, ensure the latest cookiecutter is installed:
 
 ```sh
-pip3 install cookiecutter
+pip3 install --upgrade cookiecutter
 ```
 
 Now, run the following command:
