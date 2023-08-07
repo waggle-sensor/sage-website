@@ -12,3 +12,5 @@ Prior to the Hackathon, we request that you do a few things:
 1. Start assembling the people on your team likely to participate.
 2. Ensure they have accounts in the [Sage Portal](https://portal.sagecontinuum.org/).
 3. Start working through the [Edge apps tutorial](https://sagecontinuum.org/docs/tutorials/edge-apps/intro-to-edge-apps) in the Sage docs.
+
+During the Hackathon, we spend some time reviewing how to use the portal and parts of the Edge app tutorial but already having done some background work will allow our team to provide better support unique to your applications.
