@@ -72,7 +72,7 @@ You can do this step (_except **sage.yaml**_) after testing on the node but befo
 :bulb: Keep the same text in both files and follow the template of **ecr-science-description.md**.
 
 `ecr-meta/ecr-icon.jpg`
-: is an icon for the plugin in the Sage portal.
+: is an icon (512px x 512px or smaller) for the plugin in the Sage portal.
 
 
 `ecr-meta/ecr-science-image.jpg`
