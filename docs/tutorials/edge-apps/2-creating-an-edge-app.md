@@ -71,16 +71,16 @@ cookiecutter gh:waggle-sensor/cookiecutter-sage-app
 You should be prompted to fill in the following fields:
 
 ```txt
-name []: app-tutorial
-description [My really amazing app!]:
-author [My name]: Your name
-version [0.1.0]:
-Select template:
-1 - vision
-2 - usbserial_sensor
-3 - minimal
-4 - tutorial
-Choose from 1, 2, 3, 4 [1]: 4
+  [1/5] name (my-amazing-app-name): my-amazing-app-name
+  [2/5] description (My really amazing app!):
+  [3/5] author (My name):
+  [4/5] version (0.1.0):
+  [5/5] Select kind
+    1 - vision
+    2 - usbserial_sensor
+    3 - minimal
+    4 - tutorial                    <<< use 4 for tutorial
+    Choose from [1/2/3/4] (1): 4
 ```
 
 If this succeeds, a new `app-tutorial` directory will be created with the following files:
