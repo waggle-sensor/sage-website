@@ -4,7 +4,7 @@ sidebar_label: Hackathon
 
 # Sage Hackathon
 
-We are hosting a Hackathon for Sage in late August with _preliminary dates August 30-31_!
+We are hosting a Hackathon for Sage in late August ~~with _preliminary dates August 30-31_~~!
 
 __Update: Based on user feedback, we will run afternoon sessions on both August 30 and 31 starting at 1pm CST. We will email out an agenda and invite to Slack to participants who have signed up a few days before the event.__
 
