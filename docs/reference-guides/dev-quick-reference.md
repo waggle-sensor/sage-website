@@ -16,7 +16,7 @@ Please consult the official :green_book:[Plugin Tutorials](/docs/tutorials/edge-
 
 :point_up: Avoid making a plugin from scratch. Use another plugin or this [template](https://github.com/waggle-sensor/edge-app-template) for your first plugin or use :new: [Cookiecutter Template](https://github.com/waggle-sensor/cookiecutter-sage-app).
 
-:warning: Repository names should be all in small alphanumeric letters and `-`.
+:warning: Repository names should be all in small alphanumeric letters and `-` (Do not use `_`)
 
 
 
@@ -508,11 +508,9 @@ Host is up (0.0014s latency).
 Nmap done: 256 IP addresses (6 hosts up) scanned in 2.42 seconds
 ```
 
-2. From the output run following command for each `cam_IP`
-`curl -u admin:wagglesage  -X POST  http://cam_IP/control/rcontrol?action=putrs232&rs232outtext=%FF%01%00%0F%00%00%10`
-
+2. From the output run any command for each ip
 e.g.
-`curl -u admin:wagglesage  -X POST  http://10.31.81.15/control/rcontrol?action=putrs232&rs232outtext=%FF%01%00%0F%00%00%10`
+`curl -u admin:meinsm  -X POST  http://10.31.81.15/control/rcontrol?action=putrs232&rs232outtext=%FF%01%00%0F%00%00%10`
 
 3. The ip for which output is `OK` is the Mobotix.
 
