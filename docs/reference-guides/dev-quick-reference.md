@@ -132,9 +132,9 @@ You should see the following message,
 :::
 
 1. Then to test execute the command `sudo pluginctl build .`. This will output the plugin-image registry address at the end of the build. Example: `10.31.81.1:5000/local/my-plugin-name`
-4. To run the plugin without input argument, use `sudo pluginctl run -n <some-unique-name> <1x.xx.xx.x:5000/local/my-plugin-name>`
-5.  Execute the command with input arguments. `sudo pluginctl run -n <some-unique-name> <1x.xx.xx.x:5000/local/my-plugin-name> -- -i top_camera`.
-7.  IF you need GPU, use the selector `sudo pluginctl run -n <some-unique-name> <1x.xx.xx.x:5000/local/my-plugin-name> -- -i top_camera`.
+4. To run the plugin without input argument, use `sudo pluginctl deploy -n <some-unique-name> <10.31.81.1:5000/local/my-plugin-name>`
+5.  Execute the command with input arguments. `sudo pluginctl deploy -n <some-unique-name> <10.31.81.1:5000/local/my-plugin-name> -- -i top_camera`.
+7.  If you need GPU, use the selector `sudo pluginctl deploy -n <some-unique-name> <10.31.81.1:5000/local/my-plugin-name> -- -i top_camera`.
 8. :exclamation: `--` is a separator. After the `--` all arguments are for your entrypoint i.e. app.py.
 9. To check running plugins, execute `sudo pluginctl ps`.
 10. To stop the plugin, execute `sudo pluginctl rm cloud-motion`.
