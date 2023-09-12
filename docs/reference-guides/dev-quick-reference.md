@@ -173,7 +173,7 @@ By following these steps, you can better understand why the job is failing and t
 
 ### 4. Troubleshooting inside the container using pluginctl
 Follow this [tutorial](https://github.com/waggle-sensor/edge-scheduler/blob/main/docs/pluginctl/tutorial_getintoplugin.md) to get in a running container to troubleshoot the issue.
-If the plugin fails instantyly and your are not able to get inside the container use following commands 
+If the plugin fails instantyly and your are not able to get inside the container use following commands
 
 ```
 sudo pluginctl deploy --name getincmv --entrypoint /bin/bash 10.31.81.1:5000/local/plugin-cmv-fftpc -- -c 'while true; do sleep 1; done'
@@ -207,7 +207,7 @@ After the build process is complete, you need to **make the plugin public** to s
 :::
 
 
-:point_right: If you have skipped step [3. ECR Configs and Docs](#3-ECR-Configs-and-Docs), do it before submitting it to the ECR. Ensure that your **`ecr-meta/ecr-science-description.md`** and **`sage.yaml`** files are properly configured for this process.
+:point_right: If you have skipped step <a href="#3-ecr-configs-and-docs">3. ECR Configs and Docs</a>, do it before submitting it to the ECR. Ensure that your **`ecr-meta/ecr-science-description.md`** and **`sage.yaml`** files are properly configured for this process.
 
 #### Versioning your code
 :::danger
