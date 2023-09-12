@@ -40,7 +40,7 @@ export default function NewsPreview() {
             }
           })
         } catch (e) {
-          console.log(`Could not parse ${url}`, e)
+          console.log(`Could not parse news data`, e)
         }
 
         setData(data)
