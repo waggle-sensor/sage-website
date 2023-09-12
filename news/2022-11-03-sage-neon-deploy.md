@@ -3,7 +3,6 @@ slug: sage-neon-deploy-konza
 title: Sage Neon deployment to the Konza LTER site in Kansas
 author: Joe Swantek
 author_title: Software Engineer
-author_url: https://www.alcf.anl.gov/about/people/laura-wolf
 author_image_url: https://avatars.githubusercontent.com/u/63811401?v=4Profile_avatar_placeholder_large.png
 tags: [node, deployment]
 ---
