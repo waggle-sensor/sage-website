@@ -9,12 +9,12 @@ import LaunchRounded from '@mui/icons-material/LaunchRounded'
 import CodeWindow from './CodeWindow'
 import NewsPreview from './NewsPreview'
 import TypeWriter from './TypeWriter'
-import TwitterSkeleton from './TwitterSkeleton'
 import StatusChart from './StatusChart'
 
 import publications from '../../publications'
 
 import config from '../../config'
+import Calendar from './Calendar'
 const { portal } = config
 
 
@@ -167,10 +167,10 @@ export default function Home() {
 
       <div className="bg-[#e7ebf0]"> {/* (bg color matches portal) */}
         <Section className="flex flex-col md:flex-row gap-2">
-          <div className="bg-white shadow-sm rounded-xl md:w-2/3 h-[600px] overflow-y-scroll">
+          <div className="bg-white shadow-sm rounded-xl md:w-2/3 h-[620px] overflow-y-scroll">
             <Link to="/news" className="hover:decoration-black">
               <h2 className="p-4 pb-3 m-0 flex justify-between items-center">
-                News and Events
+                News
               </h2>
             </Link>
             <hr className="m-0"/>
@@ -178,16 +178,14 @@ export default function Home() {
               <NewsPreview />
             </div>
           </div>
-          <div className="bg-white shadow-sm rounded-xl md:w-1/3 h-[600px]">
-            <a
-              className="twitter-timeline hover:no-underline"
-              href="https://twitter.com/sagecontinuum?ref_src=twsrc%5Etfw"
-              data-height="600"
-            >
-              <div className="h-[600px] overflow-hidden">
-                <TwitterSkeleton />
-              </div>
-            </a>
+          <div className="bg-white shadow-sm rounded-xl md:w-1/3 h-[620px]">
+            <h2 className="p-4 pb-3 m-0 flex justify-between items-center">
+              Events
+            </h2>
+            <hr className="m-0"/>
+            <div className="px-4 py-8">
+              <Calendar />
+            </div>
           </div>
         </Section>
       </div>
