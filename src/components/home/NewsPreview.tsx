@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+
 
 const PREVIEW_COUNT = 3
-const SKIP_LIST = ['Pedestrian Count for Crosswalk Violations']
+const SKIP_LIST = []
 
 
 /**
- * BlogPreview parses the articles from production site (or whatever is provided in /docusaurus.config.js)
- * and renders the article body (up until <!--truncate-->), with links to articles
+ * NewsPreview parses the articles from production site (or whatever is provided in /docusaurus.config.js)
+ * and renders the article body (up until <!--truncate-->), with links to articles.
  *
  * Note docusaurus is following the schema.org format https://schema.org/BlogPosting
  */
@@ -48,7 +48,7 @@ export default function NewsPreview() {
   }, [])
 
   return (
-    <Root>
+    <>
       {(data || [])
         .filter(obj => !SKIP_LIST.includes(obj.headline))
         .slice(0, PREVIEW_COUNT)
@@ -57,7 +57,7 @@ export default function NewsPreview() {
           const hasReadMoreLink = articleBody.toLowerCase().includes('read more')
 
           return (
-            <article key={headline}>
+            <article key={headline} className="mb-8 last:mb-0">
               <span className="text-gray-500 font-bold text-sm">{datePublished}</span>
               <h3 className="mb-2"><Link to={url}>{headline}</Link></h3>
               <div dangerouslySetInnerHTML={{__html: articleBody}}></div>
@@ -67,16 +67,7 @@ export default function NewsPreview() {
             </article>
           )
         })}
-    </Root>
+    </>
   )
 }
 
-const Root = styled.div`
-  article {
-    margin-bottom: 2rem;
-
-    p{
-      margin-bottom: 0;
-    }
-  }
-`
