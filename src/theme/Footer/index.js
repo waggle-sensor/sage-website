@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { IconButton } from '@mui/material'
 import GitHub from '@mui/icons-material/GitHub'
 import Twitter from '@mui/icons-material/Twitter'
+import YouTube from '@mui/icons-material/YouTube'
 import NULogo from '@site/static/img/northwestern-university.svg'
 import ANLLogo from '@site/static/img/anl-logo.png'
 import NSFLogo from '@site/static/img/NSF_Official_logo.svg'
@@ -61,6 +62,9 @@ function Footer() {
               <div className="flex">
                 <IconButton href="https://github.com/waggle-sensor" target="_blank">
                   <GitHub className="text-neutral-200" />
+                </IconButton>
+                <IconButton href="https://www.youtube.com/@sagecontinuum8206" target="_blank">
+                  <YouTube className="text-neutral-200" />
                 </IconButton>
                 <IconButton href="https://twitter.com/sagecontinuum" target="_blank">
                   <Twitter className="text-neutral-200" />
