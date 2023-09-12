@@ -14,9 +14,10 @@
 
 ## Local Development
 
-Clone this repo.
+Requires [node.js](https://nodejs.org) (v18.17.1+)
 
 Install deps:
+
 ```console
 npm install
 ```
