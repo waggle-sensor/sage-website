@@ -51,7 +51,7 @@ export default function Calendar() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetchEvents(calID)
+    fetchEvents()
       .then(events => {
         // sort and limit events
         events.sort(
@@ -72,6 +72,11 @@ export default function Calendar() {
 
   return (
     <>
+      {events?.length == 0 &&
+        <p className="text-gray-500">
+          Please check back later for upcoming Sage/Waggle workshops, hackathons, presentations, and more!
+        </p>
+      }
       {events && (
         <ul className="px-0 list-none">
           {events.map((event, i) => {
