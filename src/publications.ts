@@ -17,10 +17,14 @@ export type Publication = {
 
 
 const publications : Publication[] = [{
-  title: 'ARMing the Edge: Using Edge Computing and Machine Learning to Improve ARM Doppler Lidar Measurements',
-  authors: 'Jackson, R., Collis, S., Beckman, P., Ferrier. N., Sankaran, R., Kim, Y., Park, S., Shakarami, S., and Newsom, R.',
-  publication: '(under review)',
+  title: 'ARMing the Edge: Designing Edge Computing–Capable Machine Learning Algorithms to Target ARM Doppler Lidar Processing',
+  authors: 'Jackson, Robert C., Bhupendra A. Raut, Dario Dematties, Scott M. Collis, Nicola Ferrier, Pete Beckman, Rajesh Sankaran, Yongho Kim, Seongha Park, Sean Shahkarami, and Rob Newsom',
+  publication: 'Artificial Intelligence for the Earth Systems',
+  volume: 2,
+  number: 4,
+  pages: '220062',
   year: 2023,
+  href: 'https://doi.org/10.1175/AIES-D-22-0062.1',
   image: require('@site/static/img/home/featured-science/armDoppler.png').default,
   id: 'armDoppler'
 }, {
