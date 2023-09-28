@@ -155,6 +155,22 @@ module.exports = {
         ],
       },
     ], [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'partners',
+        path: 'partners',
+        routeBasePath: 'partners',
+        editUrl:
+        'https://github.com/waggle-sensor/sage-website/edit/main/',
+
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: 'Partner User Stories',
+        blogListComponent: '@theme/partners/PartnerListPage',
+        blogPostComponent: '@theme/partners/PartnerPostPage',
+        blogTagsListComponent: '@theme/partners/PartnerTagsListPage',
+        blogTagsPostsComponent: '@theme/partners/PartnerTagsPostsPage',
+      },
+    ], [
       '@docusaurus/plugin-google-analytics',
       {
         trackingID: 'G-NMP80C7S04',
@@ -166,8 +182,8 @@ module.exports = {
       '@docusaurus/plugin-content-blog',
       {
         id: 'sage-science',
-        routeBasePath: 'science',
         path: './science',
+        routeBasePath: 'science',
         blogListComponent: '__todo__'
       },
     ],
