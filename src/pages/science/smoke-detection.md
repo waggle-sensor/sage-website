@@ -1,6 +1,6 @@
 # Wildfire classifier
 
-<p align="center"> <img src="wildfire.jpg" width="500"> </p>
+<p align="center"> <img src="imgs/smoke_wildfire.jpg" width="500"> </p>
 
 Forest fires are a major problem, and have detrimental effects on the environment. Current solutions to detecting forest fires are not efficient enough, and other machine learning models have far too long computational speeds and poor accuracies. This study is a continuation of the work done by UCSD and their SmokeyNet deep learning architecture for smoke detection[1]. We compared performance of deep learning models, in order to find the best model for this issue, and to find if a simple model can compare to a complex model. The models are: VGG16, UCSD SmokeyNet, Resnet18, Resnet34, and Resnet50.
 
