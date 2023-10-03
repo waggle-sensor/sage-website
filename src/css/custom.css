@@ -44,6 +44,19 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/**
+ * markdown (mdx) overrides
+ */
+
+[class*=mdxPageWrapper] p > img {
+  max-width: 45%;
+  justify-self: center;
+}
+
+[class*=mdxPageWrapper] p > img:only-child {
+  max-width: 100%;
+}
+
 
 /**
  * navbar
