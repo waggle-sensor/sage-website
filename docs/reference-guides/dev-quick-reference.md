@@ -171,22 +171,20 @@ When you encounter a failing/long pending job with an error, you can use the fol
 
 By following these steps, you can better understand why the job is failing and take steps to resolve the issue.
 
+
 ### 4. Troubleshooting inside the container using pluginctl
-Follow this [tutorial](https://github.com/waggle-sensor/edge-scheduler/blob/main/docs/pluginctl/tutorial_getintoplugin.md) to get in a running container to troubleshoot the issue.
-If the plugin fails instantyly and your are not able to get inside the container use following commands
+Follow this [tutorial](https://github.com/waggle-sensor/edge-scheduler/blob/main/docs/pluginctl/tutorial_getintoplugin.md) to get in an already running container to troubleshoot the issue.
+If the plugin fails instantly and your are not able to get inside the container use following commands to override the entrypoint
 
+1. First Deploy with Custom Entrypoint `--entrypoint /bin/bash `:
 ```
-sudo pluginctl deploy --name getincmv --entrypoint /bin/bash 10.31.81.1:5000/local/plugin-cmv-fftpc -- -c 'while true; do sleep 1; done'
+sudo pluginctl deploy -n testnc --entrypoint /bin/bash 10.31.81.1:5000/local/plugin-mobotix-scan -- -c 'while true; do date; sleep 1; done'
 ```
-__Output__
-``` Launched the plugin getincmv successfully
-You may check the log: pluginctl logs getincmv
-To terminate the job: pluginctl rm getincmv
-```
-then do `sudo pluginctl exec -ti getincmv -- /bin/bash` to enter the container.
+Note the `-c 'while true; do date; sleep 1; done'` instead of your usual plugin arguments.
+Now if you do `sudo pluginctl logs testnc` you will see the logs i.e. date.
 
-
-
+2. Access the Plugin Container:
+```sudo pluginctl exec -ti testnc -- /bin/bash```
 
 
 
