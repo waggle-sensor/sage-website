@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import Arrow from '@mui/icons-material/PlayCircleOutlineRounded'
 import LaunchRounded from '@mui/icons-material/LaunchRounded'
+import NewsIcon from '@mui/icons-material/FeedOutlined'
 
 import CodeWindow from './CodeWindow'
 import NewsPreview from './NewsPreview'
@@ -169,8 +170,8 @@ export default function Home() {
         <Section className="flex flex-col md:flex-row gap-2">
           <div className="bg-white shadow-sm rounded-xl md:w-2/3 h-[620px] overflow-y-scroll">
             <Link to="/news" className="hover:decoration-black">
-              <h2 className="p-4 pb-3 m-0 flex justify-between items-center">
-                News
+              <h2 className="p-4 pb-3 m-0 flex items-center">
+                <NewsIcon />&nbsp;News
               </h2>
             </Link>
             <hr className="m-0"/>
