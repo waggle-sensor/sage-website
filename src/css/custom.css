@@ -44,6 +44,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+
 /**
  * markdown (mdx) overrides
  */
@@ -55,6 +56,15 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 [class*=mdxPageWrapper] p > img:only-child {
   max-width: 100%;
+}
+
+
+/**
+ * blog
+ */
+
+html.plugin-blog h2 {
+    font-size: 2rem;
 }
 
 
