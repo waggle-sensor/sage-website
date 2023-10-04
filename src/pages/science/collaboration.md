@@ -6,6 +6,7 @@ Inspired by compelling results after applying a self-supervised machine learning
 
 
 ![Zones](imgs/Zones.png)
+
 **Fig:1** _The feature vectors trained with DINO in PCS space._
 
 
