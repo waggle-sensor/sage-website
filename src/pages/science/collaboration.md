@@ -5,20 +5,20 @@ Clouds have long fascinated humans because of their complex and diverse nature. 
 Inspired by compelling results after applying a self-supervised machine learning model (called DINO) to bird sound analysis, our team explored the possibility of utilizing similar techniques to study cloud images (referring to it as ClouDINO). Encouraging early results prompted us to seek further validation by leveraging data from the Atmospheric Radiation Measurement (ARM) User Facility at the Department of Energy's Southern Great Plains (SGP) atmospheric observatory.
 
 
-![Zones](https://github.com/RBhupi/sage-website/blob/main/src/pages/science/imgs/Zones.png)
+![Zones](imgs/Zones.png)
 **Fig:1** _The feature vectors trained with DINO in PCS space._
 
 
 We used a self-supervised learning model capable of autonomously extracting prominent features from ground-based sky camera images. Using a joint embedding architecture with Vision Transformers, our model learned to autonomously segment cloudy images and classify them based on their properties such as coverage, diurnal variation, and cloud base height. Notably, the self-supervised model even showed potential for semantic segmentation without the need for labeled data which we would like to explore further. The results were comparable to the other studies by our team using Lidar data. This made our results more robust due to intercomparison from the different perspectives.
 
-![Clusters_Labelled](https://github.com/RBhupi/sage-website/blob/main/src/pages/science/imgs/Clusters_Labelled.png)
+![Clusters_Labelled](imgs/Clusters_Labelled.png)
 
 **Fig:2** _K-means clusters of the above feature vectors._
 
 
 One particular impact of our work will be on the incorporation of edge computing via SAGE nodes, enabling self-supervised learning to occur at the edge itself. This real-time data processing will remove the need of transmitting large data to the cloud, and it can enable sensor configuration in response to changing conditions and opening new avenues for application, putting privacy at the peak priority.
 
-![instruments2](https://github.com/RBhupi/sage-website/blob/main/src/pages/science/imgs/instruments2.jpg)
+![instruments2](imgs/instruments2.jpg)
 **Fig:3** _Sage node at the ARM User Facility at Southern Great Plains (SGP) atmospheric observatory._
 
 As we published our findings, we reflected on the knowledge and experience acquired during this period. Dario Dematties, a machine learning expert, expanded his understanding of clouds, while Bhupendra Raut, a meteorologist, delved deeper into the intricacies of advanced machine learning models. The journey not only was intellectually stimulating but also filled with joy and team spirit. This work is an example of the power of blending expertise from various fields to gain deeper insights into the natural world.
