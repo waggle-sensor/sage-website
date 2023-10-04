@@ -18,7 +18,9 @@ We used a self-supervised learning model capable of autonomously extracting prom
 
 One particular impact of our work will be on the incorporation of edge computing via SAGE nodes, enabling self-supervised learning to occur at the edge itself. This real-time data processing will remove the need of transmitting large data to the cloud, and it can enable sensor configuration in response to changing conditions and opening new avenues for application, putting privacy at the peak priority.
 
+
 ![instruments2](imgs/instruments2.jpg)
+
 **Fig:3** _Sage node at the ARM User Facility at Southern Great Plains (SGP) atmospheric observatory._
 
 As we published our findings, we reflected on the knowledge and experience acquired during this period. Dario Dematties, a machine learning expert, expanded his understanding of clouds, while Bhupendra Raut, a meteorologist, delved deeper into the intricacies of advanced machine learning models. The journey not only was intellectually stimulating but also filled with joy and team spirit. This work is an example of the power of blending expertise from various fields to gain deeper insights into the natural world.
