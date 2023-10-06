@@ -108,7 +108,7 @@ export default function Science() {
           <LinkCard
             title="Exploration Through Collaboration"
             link="/science/collaboration"
-            src={require('@site/static/img/science/collaboration-icon.png').default}
+            src={require('@site/static/img/science/collaboration-icon.jpg').default}
           />
         </div>
       </Root>
