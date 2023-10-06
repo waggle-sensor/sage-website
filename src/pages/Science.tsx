@@ -105,6 +105,11 @@ export default function Science() {
             link="/science/scalable-ci-in-aps"
             src={require('@site/static/img/science/scalable-ci-in-aps-icon.png').default}
           />
+          <LinkCard
+            title="Exploration Through Collaboration"
+            link="/science/collaboration"
+            src={require('@site/static/img/science/collaboration-icon.png').default}
+          />
         </div>
       </Root>
     </Layout>
