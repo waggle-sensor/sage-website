@@ -10,14 +10,14 @@ Inspired by compelling results after applying a self-supervised machine learning
 **Fig:1** _The feature vectors trained with DINO in PCS space._
 
 
-We used a self-supervised learning model capable of autonomously extracting prominent features from ground-based sky camera images. Using a joint embedding architecture with Vision Transformers, our model learned to autonomously segment cloudy images and classify them based on their properties such as coverage, diurnal variation, and cloud base height. Notably, the self-supervised model even showed potential for semantic segmentation without the need for labeled data which we would like to explore further. The results were comparable to the other studies by our team using Lidar data. This made our results more robust due to intercomparison from the different perspectives.
+We used a self-supervised learning model capable of autonomously extracting prominent features from ground-based sky camera images. Using a joint embedding architecture with Vision Transformers, our model learned to autonomously segment cloudy images and classify them based on their properties such as coverage, diurnal variation, and cloud base height. Notably, the self-supervised model even showed potential for semantic segmentation without the need for labeled data which we would like to explore further. The results were comparable to the other studies of our team lead by Bobby Jackson, an atmospheric scientist and instrument specialist at Argonne, who primarily utilized Doppler Lidar data. This made our results more robust due to intercomparison from the different perspectives. Seongha Park's previous work in solar energy prediction not only complemented our results but also greatly boosted our validation efforts.
 
 ![Clusters_Labelled](imgs/Clusters_Labelled.png)
 
 **Fig:2** _K-means clusters of the above feature vectors._
 
 
-One particular impact of our work will be on the incorporation of edge computing via SAGE nodes, enabling self-supervised learning to occur at the edge itself. This real-time data processing will remove the need of transmitting large data to the cloud, and it can enable sensor configuration in response to changing conditions and opening new avenues for application, putting privacy at the peak priority.
+One particular impact of our work will be on the incorporation of edge computing via SAGE nodes, enabling self-supervised learning to occur at the edge itself. This real-time data processing will remove the need of transmitting large data to the cloud, and it can enable sensor configuration in response to changing conditions and opening new avenues for application, putting privacy at the peak priority. We are testing our ideas at the edge thanks to the constant support provided by the Waggle cyber infrastructure team.
 
 
 ![instruments2](imgs/instruments2.jpg)
