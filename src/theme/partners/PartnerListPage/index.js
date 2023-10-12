@@ -9,7 +9,7 @@ import {
 import BlogLayout from '@theme/BlogLayout';
 import BlogListPaginator from '../BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
-import BlogPostItems from '@theme/BlogPostItems';
+import PartnerPostItems from '../PartnerPostItems';
 function BlogListPageMetadata(props) {
   const {metadata} = props;
   const {
@@ -25,11 +25,12 @@ function BlogListPageMetadata(props) {
     </>
   );
 }
+
 function BlogListPageContent(props) {
   const {metadata, items, sidebar} = props;
   return (
     <BlogLayout sidebar={sidebar}>
-      <BlogPostItems items={items} />
+      <PartnerPostItems items={items} />
       <BlogListPaginator metadata={metadata} />
     </BlogLayout>
   );

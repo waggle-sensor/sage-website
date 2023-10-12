@@ -19,22 +19,25 @@ const shortUrl = (url: string) =>
 export default function CustomPartnerSidebar() {
   const {metadata} = useBlogPost();
   const {frontMatter} = metadata;
-  const {project_url, partner_tags} = frontMatter;
+  const {project_id, partner_tags} = frontMatter;
+
+  const partner = partners.find(obj => obj.id == project_id)
+  const {url} = partner || {}
 
   return (
     <div className="ml-8 my-8">
-      {project_url &&
+      {url &&
         <div className="mb-12">
-          <h3>Project Website</h3>
-          <a href={project_url} target="_blank" rel="noreferrer" className="whitespace-no-wrap">
-            {shortUrl(project_url)}
+          <h3>Website</h3>
+          <a href={url} target="_blank" rel="noreferrer" className="whitespace-no-wrap">
+            {shortUrl(url)}
           </a>
         </div>
       }
 
       {partner_tags?.length > 0 &&
         <div className="mb-12">
-          <h3>Partners</h3>
+          <h3>Project Partners</h3>
           <ul className="list-none p-0">
             {partner_tags.map(tag => {
               const {name, url, logo} = findInfo(tag) || {}

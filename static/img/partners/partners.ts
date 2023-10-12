@@ -66,6 +66,11 @@ const partners: Partner[] = [{
   name: 'City of Chicago',
   url: 'https://www.chicago.gov',
   logo: 'img/partners/city-of-chicago.png'
+}, {
+  id: 'uic',
+  name: 'University of Illinois Chicago',
+  url: 'https://www.uic.edu',
+  logo: 'img/partners/uic.png'
 }]
 
 export default partners

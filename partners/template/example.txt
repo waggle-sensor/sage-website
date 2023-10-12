@@ -1,7 +1,6 @@
 ---
 title: Name of Institution
-project_url: <project_url>
-project_logo: <project_logo>
+project_id: <project_id>
 partner_tags: []
 tags: []
 ---

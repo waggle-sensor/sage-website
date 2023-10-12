@@ -10,3 +10,8 @@
     font-size: 2rem;
   }
 }
+
+/* override: first header margin in partner stories */
+h2:first-child {
+  margin: 0;
+}

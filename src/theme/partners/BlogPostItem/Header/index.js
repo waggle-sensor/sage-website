@@ -5,8 +5,8 @@ import BlogPostItemHeaderAuthors from '@theme/BlogPostItem/Header/Authors';
 export default function BlogPostItemHeader() {
   return (
     <header>
-      <BlogPostItemHeaderTitle />
       <BlogPostItemHeaderInfo />
+      <BlogPostItemHeaderTitle />
       <BlogPostItemHeaderAuthors />
     </header>
   );

@@ -1,7 +1,6 @@
 ---
 title: University of Hawaii
-project_url: https://www.hawaii.edu/
-project_logo: img/partners/uh.png
+project_id: uh
 partner_tags: [NSF]
 tags: [wildfire, climate science]
 ---
@@ -11,6 +10,8 @@ tags: [wildfire, climate science]
 NSF abstract:
 
 On Aug 8, 2023, Lahaina faced a massive fire, exacerbated by regional drought, high temperatures, and winds influenced by Hurricane Dora. This project combines University of Hawaii's Climate Mesonet system with Northwestern University's Sage Artificial Intelligence-enhanced instrument platform to build a multi-hazard monitoring and detection station for natural disasters such as fires, high winds, and floods. The system is being deployed as near as possible to the burn site in Lahaina/Maui, to gather data vital to the recovery effort.
+
+<!-- truncate -->
 
 The work is being conducted by a team with over 80 years of experience in research, development and deployment of scientific instrumentation and cyber-infrastructure used by government agencies, businesses and the general public. The project integrates cutting edge climate science with cutting-edge computer science approaches for enhanced instrument design, gathers essential climate and pollutant data to aid clean-up activities in Lahaina, and obtains performance and reliability data, guiding both instrument enhancements and Lahaina's recovery planning.
 
