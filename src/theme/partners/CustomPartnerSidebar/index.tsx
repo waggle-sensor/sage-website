@@ -1,8 +1,8 @@
 import React from 'react';
 import {useBlogPost} from '@docusaurus/theme-common/internal';
 import partners from '@site/static/img/partners/partners';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
+import { PartnerFrontMatter } from '../partner';
 
 const findInfo = (tag: string) =>
   partners.find(({id, name}) => {
@@ -19,7 +19,7 @@ const shortUrl = (url: string) =>
 export default function CustomPartnerSidebar() {
   const {metadata} = useBlogPost();
   const {frontMatter} = metadata;
-  const {project_id, partner_tags} = frontMatter;
+  const {project_id, partner_tags} = frontMatter as PartnerFrontMatter;
 
   const partner = partners.find(obj => obj.id == project_id)
   const {url} = partner || {}
@@ -41,15 +41,15 @@ export default function CustomPartnerSidebar() {
           <ul className="list-none p-0">
             {partner_tags.map(tag => {
               const {name, url, logo} = findInfo(tag) || {}
-              const imgSrc = useBaseUrl(logo)
+              const img = require(`@site/static/${logo}`).default
 
               let item;
               if (logo && url)
-                item = <a href={url} target="_blank" rel="noreferrer">
-                  <img src={imgSrc} className="max-w-[200px]" />
+                item = <a href={img} target="_blank" rel="noreferrer">
+                  <img src={img} className="max-w-[200px]" />
                 </a>
               else if (logo && !url)
-                item = <img src={imgSrc} className="max-w-[200px]" />
+                item = <img src={img} className="max-w-[200px]" />
               else if (!logo && url)
                 item = <a href={url} target="_blank" rel="noreferrer">{name || tag}</a>
               else
