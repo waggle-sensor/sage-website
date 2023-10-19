@@ -8,10 +8,10 @@ import {
   usePluralForm,
 } from '@docusaurus/theme-common';
 import Link from '@docusaurus/Link';
-import BlogLayout from '@theme/BlogLayout';
+import BlogLayout from '@theme/partners/BlogLayout';
 import BlogListPaginator from '@theme/BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
-import BlogPostItems from '@theme/BlogPostItems';
+import BlogPostItems from '@theme/partners/PartnerPostItems';
 // Very simple pluralization: probably good enough for now
 function useBlogPostsPlural() {
   const {selectMessage} = usePluralForm();
@@ -22,8 +22,8 @@ function useBlogPostsPlural() {
         {
           id: 'theme.blog.post.plurals',
           description:
-            'Pluralized label for "{count} posts". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: 'One post|{count} posts',
+            'Pluralized label for "{count} partnerships. Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
+          message: 'One partnership|{count} partnerships',
         },
         {count},
       ),
@@ -56,13 +56,13 @@ function BlogTagsPostsPageContent({tag, items, sidebar, listMetadata}) {
       <header className="margin-bottom--xl">
         <h1>{title}</h1>
 
-        <Link href={tag.allTagsPath}>
+        {/* <Link href={tag.allTagsPath}>
           <Translate
             id="theme.tags.tagsPageLink"
             description="The label of the link targeting the tag list page">
             View All Tags
           </Translate>
-        </Link>
+        </Link> */}
       </header>
       <BlogPostItems items={items} />
       <BlogListPaginator metadata={listMetadata} />

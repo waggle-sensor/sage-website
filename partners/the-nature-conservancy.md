@@ -2,10 +2,10 @@
 title: The Nature Conservancy
 project_id: the-nature-conservancy
 partner_tags: []
-tags: [wildlife, environmental science]
+tags: [wildlife monitoring, environmental science]
 ---
 
-## Sage Collaborates with The Nature Conservancy
+## Emiquon uses Solar-Powered Sage Nodes to Study Wildlife
 
 <!-- Todo: write a more detailed intro about the partnership.  Then, share this recent story. -->
 In collaboration with [The Nature Conservancy](https://www.nature.org/), two Sage nodes were deployed at the [Emiquon Preserve](https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/emiquon/) to monitor wildlife and understand conditions of the local environment. The Sage nodes [W020](https://portal.sagecontinuum.org/node/W020) and [W01B](https://portal.sagecontinuum.org/node/W01B) are equipped with both stationary and pan-tilt-zoom-able cameras and meteorological sensors including dust and weather sensors. The Sage node [W01B](https://portal.sagecontinuum.org/node/W01B) is the first field-deployed node powered by renewable energy from eight solar panels.

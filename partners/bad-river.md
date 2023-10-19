@@ -1,7 +1,7 @@
 ---
-title: Bad River / Ojibwe
+title: Bad River
 project_id: badriver
-tags: [tag1, tag2]
+tags: [agriculture science, environmental science]
 ---
 
 ## Monitoring the Sustainability of Wild Rice Agriculture using AI

@@ -1,8 +1,9 @@
 import React from 'react';
 import {useBlogPost} from '@docusaurus/theme-common/internal';
-import partners from '@site/static/img/partners/partners';
+import partners from '@site/partners/partners';
 
 import { PartnerFrontMatter } from '../partner';
+
 
 const findInfo = (tag: string) =>
   partners.find(({id, name}) => {
@@ -11,8 +12,9 @@ const findInfo = (tag: string) =>
     return tag.match(idRe) || tag.match(nameRe);
   })
 
-const shortUrl = (url: string) =>
-  `${url.slice(0, 23)}...`
+
+const shortUrl = (url: string, len = 28) =>
+  url.length > len ? `${url.slice(0, len)}...` : url
 
 
 
@@ -29,7 +31,7 @@ export default function CustomPartnerSidebar() {
       {url &&
         <div className="mb-12">
           <h3>Website</h3>
-          <a href={url} target="_blank" rel="noreferrer" className="whitespace-no-wrap">
+          <a href={url} target="_blank" rel="noreferrer" className="whitespace-nowrap">
             {shortUrl(url)}
           </a>
         </div>
@@ -37,7 +39,7 @@ export default function CustomPartnerSidebar() {
 
       {partner_tags?.length > 0 &&
         <div className="mb-12">
-          <h3>Project Partners</h3>
+          <h3>Partners</h3>
           <ul className="list-none p-0">
             {partner_tags.map(tag => {
               const {name, url, logo} = findInfo(tag) || {}
@@ -45,7 +47,7 @@ export default function CustomPartnerSidebar() {
 
               let item;
               if (logo && url)
-                item = <a href={img} target="_blank" rel="noreferrer">
+                item = <a href={url} target="_blank" rel="noreferrer">
                   <img src={img} className="max-w-[200px]" />
                 </a>
               else if (logo && !url)

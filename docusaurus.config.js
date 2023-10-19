@@ -160,9 +160,7 @@ module.exports = {
         id: 'partners',
         path: 'partners',
         routeBasePath: 'partners',
-        editUrl:
-        'https://github.com/waggle-sensor/sage-website/edit/main/',
-
+        editUrl: 'https://github.com/waggle-sensor/sage-website/edit/main/',
         blogSidebarCount: 'ALL',
         blogSidebarTitle: 'Partner User Stories',
         blogListComponent: '@theme/partners/PartnerListPage',

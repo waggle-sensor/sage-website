@@ -2,7 +2,7 @@
 title: Scripps Institution of Oceanography
 project_id: scripps
 partner_tags: [usdc, nsf]
-tags: [ocean, climate]
+tags: [oceanography, climate science]
 ---
 
 ## Scripps uses Sage to Find Solutions to Environmental Challenges

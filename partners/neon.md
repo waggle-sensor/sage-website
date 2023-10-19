@@ -1,8 +1,8 @@
 ---
-title: NEON
+title: National Ecological Observatory Network
 project_id: neon
 partner_tags: []
-tags: []
+tags: [ecology, environmental science]
 ---
 
 ## Sage and Neon
