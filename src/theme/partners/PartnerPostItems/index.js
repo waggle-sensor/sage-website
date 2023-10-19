@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import {BlogPostProvider} from '@docusaurus/theme-common/internal';
+import { BlogPostProvider } from '@docusaurus/theme-common/internal';
 
 import { useLocation } from '@docusaurus/router';
 import styled from 'styled-components';
 import partners from '@site/partners/partners';
 import Arrow from '@mui/icons-material/PlayCircleOutlineRounded';
 
-import { uniqBy } from 'lodash'
+import { uniqBy, countBy, sortBy } from 'lodash';
+import CustomInlineTagList from '../CustomInlineTagList';
 import CustomTagList from '../CustomTagList';
 
 // make entire area a link, overriding docusaurus styling
@@ -26,13 +27,13 @@ const Section = styled(Link)`
 
 export default function BlogPostItems({items}) {
   const location = useLocation()
-
   const listingByTag = location.pathname.split('/')[2] == 'tags'
 
-  const tags = uniqBy(
-    items.reduce((acc, {content}) => [...acc, ...content.metadata.tags], []),
-    'label'
-  )
+  // get all unique tags, count and sort them
+  const allTags = items.reduce((acc, {content}) => [...acc, ...content.metadata.tags], [])
+  const counts = countBy(allTags, 'label')
+  let tags = uniqBy(allTags.map(obj => ({...obj, count: counts[obj.label]})), 'label')
+  tags = sortBy(tags, 'count').reverse()
 
   return (
     <div className="flex">
@@ -57,7 +58,7 @@ export default function BlogPostItems({items}) {
                   <BlogPostContent />
 
                   <div className="flex items-start justify-between">
-                    <CustomTagList tags={tags} />
+                    <CustomInlineTagList tags={tags} />
                     <span className="flex items-center gap-1 read-more">
                       Read more <Arrow />
                     </span>
@@ -72,7 +73,7 @@ export default function BlogPostItems({items}) {
         })}
       </div>
 
-      <div className="lg:w-3/12 mx-12 hidden lg:flex">
+      <div className="lg:w-3/12 mx-12 hidden lg:flex sticky top-[calc(60px+2rem)] h-full">
         {!listingByTag &&
           <div className="flex flex-col">
             <h3>Science Tags</h3>

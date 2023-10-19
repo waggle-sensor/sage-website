@@ -1,36 +1,21 @@
 import React from 'react'
-import Link from '@docusaurus/Link'
-
-
-type Tag = {
-  label: string
-  permalink: string
-}
+import Tag from '@theme/Tag';
+import type {TagsListItem} from '@docusaurus/utils';
 
 type Props = {
-  tags: Tag[]
+  tags: TagsListItem[]
 }
 
 
-// todo: using hardcoded theme class names here could be an issue.
-// swizzle tag components instead?
 export default function CustomTagList(props: Props) {
   const {tags} = props
 
   return (
-    <ul className="padding--none">
-      {tags?.map(({label, permalink}) => {
+    <ul className="flex flex-col list-none p-0 ml-2 gap-2">
+      {tags?.map(({label, permalink, count}) => {
         return (
-          <li
-            className="tag_node_modules-@docusaurus-theme-classic-lib-theme-TagsListInline-styles-module"
-            key={label}
-          >
-            <Link
-              className="tag_node_modules-@docusaurus-theme-classic-lib-theme-Tag-styles-module tagRegular_node_modules-@docusaurus-theme-classic-lib-theme-Tag-styles-module whitespace-nowrap"
-              to={permalink}
-            >
-              {label}
-            </Link>
+          <li key={label} className="whitespace-nowrap flex">
+            <Tag label={label} permalink={permalink} count={count} />
           </li>
         )
       })}
