@@ -210,7 +210,7 @@ include information about:
 
 include information about:
 - [ ] keeping track of devices, keys, and connections
-- [ ] how it does this aka talking to server and listening for messages
+- [ ] how it does this aka talking to server, listening for messages, and uploading to cloud
 
 ### Lorawan Listener Plugin
 
