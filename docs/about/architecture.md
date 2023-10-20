@@ -177,3 +177,45 @@ Plugins are the user-developed modules that the cyberinfrastructure is designed 
 ### Science Goals
 
 A "science goal" is a rule-set for how and when [plugins](#what-is-a-plugin) are run on edge nodes. These science goals are created by scientist to accomplish a science objective through the execution of [plugins](#what-is-a-plugin) in a specific manner. Goals are created, in a human language, and managed within the Beehive [Edge Scheduler](#edge-scheduler-es). It is then the cyberinfrastucture responsibility to deploy the science goals to the edge nodes and execute the goal's [plugins](#what-is-a-plugins). The [tutorial](../tutorials/schedule-jobs.md) walks through running a science goal.
+
+## LoRaWAN
+
+introduction text
+
+![Figure 9: WES Lorawan Architecture](./images/arch_wes_lorawan.svg)
+
+### What is LoRaWAN?
+
+include information about:
+- [ ] basic intro to LoRaWAN
+- [ ] LoRaWAN in the world of IOT
+- [ ] why use LoRaWAN?
+- [ ] more?
+
+>Note: link to repitable resources for more information
+
+### Chirpstack
+
+include information about:
+- [ ] udp packet forwader
+- [ ] chirpstack gateway bridge
+- [ ] mqtt broker *maybe
+- [ ] chirpstack server
+    - [ ] redis (device-sessions, metrics and cache)
+    - [ ] postgreSQL (persistent data-storage, tenants, apps, devices etc.)
+
+>Note: try to link chirpstack documentation as much as possible
+
+### Tracker
+
+include information about:
+- [ ] keeping track of devices, keys, and connections
+- [ ] how it does this aka talking to server and listening for messages
+
+### Lorawan Listener Plugin
+
+include information about:
+- [ ] small introduction to plugin. what does it do?
+- [ ] link to tutorial page on how to connect a lorawan device
+
+>Note: link to plugin
