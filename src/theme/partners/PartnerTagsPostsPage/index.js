@@ -1,13 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
-import Translate, {translate} from '@docusaurus/Translate';
+import {translate} from '@docusaurus/Translate';
 import {
   PageMetadata,
   HtmlClassNameProvider,
   ThemeClassNames,
   usePluralForm,
 } from '@docusaurus/theme-common';
-import Link from '@docusaurus/Link';
 import BlogLayout from '@theme/partners/BlogLayout';
 import BlogListPaginator from '@theme/BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
