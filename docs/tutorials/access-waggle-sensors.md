@@ -16,37 +16,36 @@ _NOTE: not all Waggle nodes have the same set of sensors, and the sensor configu
 <table className="full-width">
   <tbody>
     <tr>
-      <td><a href="https://portal.sagecontinuum.org/sensors/bme680">BME680</a></td>
+      <td><a href="https://portal.sagecontinuum.org/sensors/BME680">BME680</a></td>
       <td>temperature, humidity, pressure, and gas</td>
       <td>
-        <a href="https://portal.sagecontinuum.org/query-browser?type=names&names=env.temperature&window=h">preview</a>
+        <a href="https://portal.sagecontinuum.org/query-browser?type=names&names=env.temperature">preview</a>
       </td>
     </tr>
     <tr>
-      <td><a href="https://portal.sagecontinuum.org/sensors/rg-15">RG-15</a></td>
+      <td><a href="https://portal.sagecontinuum.org/sensors/RG-15">RG-15</a></td>
       <td>rainfall</td>
       <td><a href="https://portal.sagecontinuum.org/query-browser?apps=.*plugin-raingauge.*&window=h">preview</a></td>
     </tr>
     <tr>
-      <td><a href="https://portal.sagecontinuum.org/sensors/ml1-ws-ip54">ETS ML1-WS</a></td>
+      <td><a href="https://portal.sagecontinuum.org/sensors/ML1-WS%20IP54">ETS ML1-WS</a></td>
       <td>20-16 kHz microphone recording sound</td>
-      <td><a href="https://portal.sagecontinuum.org/query-browser?type=audio&tasks=audiosampler&window=h">preview</a></td>
+      <td rowSpan="5"></td>      
     </tr>
     <tr>
-      <td><a href="https://portal.sagecontinuum.org/sensors/xnv-8080r">XNV-8080R</a></td>
+      <td><a href="https://portal.sagecontinuum.org/sensors/XNV-8080R">XNV-8080R</a></td>
       <td>5 MP camera with 92.1 degree horizontal and 67.2 degree vertical angle view</td>
-      <td rowSpan="4"><a href="https://portal.sagecontinuum.org/query-browser?type=images&tasks=imagesampler-.*&window=h&mimeType=image">preview</a></td>
     </tr>
       <tr>
-      <td><a href="https://portal.sagecontinuum.org/sensors/xnv-8082r">XNV-8082R</a></td>
+      <td><a href="https://portal.sagecontinuum.org/sensors/XNV-8082R">XNV-8082R</a></td>
       <td>6 MP camera with 114 degree horizontal and 62 degree vertical angle view</td>
     </tr>
       <tr>
-      <td><a href="https://portal.sagecontinuum.org/sensors/xnf-8010rv">XNF-8010RV</a></td>
+      <td><a href="https://portal.sagecontinuum.org/sensors/XNF-8010RV">XNF-8010RV</a></td>
       <td>6 MP fisheye camera with 192 degree horizontal and vertical angle view</td>
     </tr>
     <tr>
-      <td><a href="https://portal.sagecontinuum.org/sensors/xnv-8081z">XNV-8081Z</a></td>
+      <td><a href="https://portal.sagecontinuum.org/sensors/XNV-8081Z">XNV-8081Z</a></td>
       <td>5 MP digital pan-tilt-rotate-zoom camera</td>
     </tr>
   </tbody>
