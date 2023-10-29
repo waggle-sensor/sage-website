@@ -1,8 +1,8 @@
 ---
-title: CROCUS
+title: Community Research on Climate and Urban Science
 project_id: crocus
 partner_tags: []
-tags: []
+tags: [climate science, urban science, education]
 ---
 
 ## CROCUS uses Sage

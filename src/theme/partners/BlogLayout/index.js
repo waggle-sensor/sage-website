@@ -2,7 +2,6 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import BlogSidebar from '@theme/BlogSidebar';
-import CustomPartnerSidebar from '../CustomPartnerSidebar';
 
 export default function BlogLayout(props) {
   const {sidebar, children, ...layoutProps} = props;
@@ -15,16 +14,13 @@ export default function BlogLayout(props) {
           <BlogSidebar sidebar={sidebar} />
           <main
             className={clsx('col', {
-              'col--7': hasSidebar,
+              'col--9': hasSidebar,
               'col--9 col--offset-1': !hasSidebar,
             })}
             itemScope
             itemType="http://schema.org/Blog">
             {children}
           </main>
-
-          {/* no toc, instead show a sidebar of meta */}
-          <div className="col col--2"><CustomPartnerSidebar /></div>
         </div>
       </div>
     </Layout>

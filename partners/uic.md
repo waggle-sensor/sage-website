@@ -2,7 +2,7 @@
 title: University of Illinois at Chicago
 project_id: uic
 partner_tags: []
-tags: []
+tags: [education, public health]
 ---
 
 ## UIC uses Sage to Study Transportation Safety

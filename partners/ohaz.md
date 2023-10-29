@@ -1,8 +1,8 @@
 ---
-title: OHAZ
+title: Oregon Hazards Lab
 project_id: ohaz
 partner_tags: [ALERT Wildfire, ShakeAlert, PNSN]
-tags: [wildfire, seismic]
+tags: [wildfire science, seismology]
 ---
 
 ## Using Sage to Monitor Seismic Activity and Wildfires

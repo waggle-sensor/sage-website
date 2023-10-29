@@ -6,7 +6,7 @@ import {
   HtmlClassNameProvider,
   ThemeClassNames,
 } from '@docusaurus/theme-common';
-import BlogLayout from '@theme/BlogLayout';
+import BlogLayout from '../BlogLayout';
 import BlogListPaginator from '../BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
 import PartnerPostItems from '../PartnerPostItems';

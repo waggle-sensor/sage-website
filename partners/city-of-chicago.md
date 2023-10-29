@@ -2,7 +2,7 @@
 title: City of Chicago
 project_id: city-of-chicago
 partner_tags: []
-tags: []
+tags: [urban science, public health]
 ---
 
 ## The City of Chicago and Sage...

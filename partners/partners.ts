@@ -28,7 +28,7 @@ const partners: Partner[] = [{
   logo: 'img/partners/ShakeAlert.png'
 }, {
   id: 'ohaz',
-  name: 'OHAZ',
+  name: 'Oregon Hazards Lab',
   url: 'https://ohaz.uoregon.edu',
   logo: 'img/partners/ohaz.png'
 }, {

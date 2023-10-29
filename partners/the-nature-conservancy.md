@@ -2,18 +2,19 @@
 title: The Nature Conservancy
 project_id: the-nature-conservancy
 partner_tags: []
-tags: []
+tags: [wildlife monitoring, environmental science]
 ---
 
-## Sage Collaborates with The Nature Conservancy
+## Emiquon uses Solar-Powered Sage Nodes to Study Wildlife
 
-<!-- need an intro -->
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<!-- Todo: write a more detailed intro about the partnership.  Then, share this recent story. -->
+In collaboration with [The Nature Conservancy](https://www.nature.org/), two Sage nodes were deployed at the [Emiquon Preserve](https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/emiquon/) to monitor wildlife and understand conditions of the local environment. The Sage nodes [W020](https://portal.sagecontinuum.org/node/W020) and [W01B](https://portal.sagecontinuum.org/node/W01B) are equipped with both stationary and pan-tilt-zoom-able cameras and meteorological sensors including dust and weather sensors. The Sage node [W01B](https://portal.sagecontinuum.org/node/W01B) is the first field-deployed node powered by renewable energy from eight solar panels.
+
+<!-- truncate -->
 
 ![butterfly](img/tower-butterfly.jpg)
 A butterfly came and landed on the tower during Sage node and sensor installation
 
-<!-- truncate -->
 ![w020](img/tower-w020.jpg)
 
 A Sage node, equipped with cameras, microphone, and meteorological sensors, was strapped on a 15 m tall tower. 2 pan-tilt-zoom cameras providing visible and infrared images will be looking at wildlife and the preserve to monitor the environment. The sky-facing fisheye camera provides complete sky view that will allow to analyze clouds and local weather condition. The dust sensor will measure quality of the atmosphere. The full list of sensors can be found [here](https://portal.sagecontinuum.org/node/W01B?tab=sensors).

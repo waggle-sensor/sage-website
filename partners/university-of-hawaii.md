@@ -2,7 +2,7 @@
 title: University of Hawaii
 project_id: uh
 partner_tags: [NSF]
-tags: [wildfire, climate science]
+tags: [wildfire science, climate science, education, public health]
 ---
 
 ##  Integrating Cutting-Edge Climate Science for Lahaina's Recovery
