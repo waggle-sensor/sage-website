@@ -10,6 +10,8 @@ tags: [Hawaii, Blog Post, social science, environment]
 
 My name is Joann Lenart and I am a current senior at Northwestern University. As a social scientist-- majoring in Political Science and Legal Studies while also conducting research regarding environmental justice within Indigenous groups-- I joined a research trip to Hawaii that was primarily focused on building sensors and using codes and AI to track everything from birds sounds to heat sensing. It seems out of my wheel-house but it was also an eye-opening experience to see how we can bridge the social sciences with computer science.
 
+<!--truncate-->
+
 While in Hawaii, I observed some societal patterns and themes that were interesting to me. One of the first examples was at the airport. Directions and announcements were first stated in Native Hawaiian, then in English. Having done research with Indigenous groups in the past, this small detail has a broader impact regarding their status in the state. 
 
 Additionally, the environmental laws passed in Hawaii are noticeable and prevalent in a positive way. To enter national parks, shoes need to be scrubbed to prevent invasives. Plastic bags are banned and the single-use cups and utensils are all eco friendly. Certain chemicals are banned from sunscreens. These laws work here but they are not seen on the mainland. It appears the key for these environmental laws to pass and function is the need from citizens to also want to help the environment. Helping the environment is a collective effort and there must be motivation from both parties to combat the effects of climate change.  
