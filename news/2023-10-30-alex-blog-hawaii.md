@@ -1,8 +1,8 @@
 ---
-title: Alex Hawaii Blog Post
+title: The Waikalua Loko Fish Pond
 author: Alex Arnold
 author_title: Undergraduate student, Northwestern University
-author_url: https://github.com/aarnol
+author_url: https://www.linkedin.com/in/alex-arnold-6b168a1a7/
 author_image_url: https://avatars.githubusercontent.com/u/114937598?s=400&u=3cc10cf57e285dd0d8b32dae2646dc6ae71ff14b&v=4
 tags: [Hawaii, Node deployment, Fish ponds]
 ---
