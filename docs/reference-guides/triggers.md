@@ -9,7 +9,7 @@ This page describes a couple examples of triggers within Sage.
 
 ## Cloud-to-Edge Examples
 
-Cloud-to-edge triggers are programs running in the cloud which monitor events and then, in response, change some behavior on the nodes.
+Cloud-to-edge triggers are programs running in the cloud which monitor events or external data sources and then, in response, change some behavior on the nodes.
 
 ### [Severe Weather Trigger](https://github.com/waggle-sensor/severe-weather-trigger-example)
 
@@ -21,7 +21,7 @@ This example looks at results from the smoke detector job and modify its own sch
 
 ## Edge-to-Cloud Examples
 
-Edge-to-cloud triggers are programs which use data published from the nodes and perform some action.
+Edge-to-cloud triggers are programs which monitor data published from the nodes and use it, potentially along with additional data sources, to perform some computation or actions.
 
 ### [Sage Data Client Batch Trigger](https://github.com/sagecontinuum/sage-data-client/blob/main/examples/trigger-batch.py)
 
