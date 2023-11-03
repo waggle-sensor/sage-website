@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Trigger Examples
 
-This page describes a couple examples of triggers within Sage.
+This page provides a few examples of triggers within Sage. Triggers are programs which generally use data and events from the edge or cloud to automatically drive or notify other behavior in the system.
 
 ## Cloud-to-Edge Examples
 
