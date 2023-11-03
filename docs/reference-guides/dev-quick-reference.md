@@ -258,8 +258,9 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 
 :green_book: Check [sesctl docs](https://github.com/waggle-sensor/edge-scheduler/tree/main/docs/sesctl) for command line tool.
 
-1. :point_up: Do not use capital letters/dots in the job name.
-2. :point_up: make the plugin `public` in the Sage app portal.
+
+1. :point_up: Do not use `_`, upper case letters or `.` in the job name. Use only lowercase letters, numbers and `-`. 
+2. :point_up: Ensure that the plugin is set to 'public' in the Sage app portal.
 
 
 ### `job.yaml` example for USB device
