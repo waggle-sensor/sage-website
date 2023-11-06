@@ -44,13 +44,15 @@ module.exports = {
           to: '/team',
           label: 'Team',
           position: 'left'
-        },
-        {
+        }, {/*
+          to: '/photos',
+          label: 'Photos',
+          position: 'left'
+        */}, {
           to: '/docs/about/overview',
           position: 'left',
           label: 'Docs'
-        },
-        {
+        }, {
           type: 'dropdown',
           position: 'right',
           className: 'header-github-link',
@@ -107,6 +109,12 @@ module.exports = {
     }
     */
   },
+  scripts: [
+    {
+      src: 'https://apis.google.com/js/api.js',
+      async: true,
+    },
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
