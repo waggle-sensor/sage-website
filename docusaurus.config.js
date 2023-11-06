@@ -44,11 +44,11 @@ module.exports = {
           to: '/team',
           label: 'Team',
           position: 'left'
-        }, {/*
+        }, /* {
           to: '/photos',
           label: 'Photos',
           position: 'left'
-        */}, {
+        },*/ {
           to: '/docs/about/overview',
           position: 'left',
           label: 'Docs'
