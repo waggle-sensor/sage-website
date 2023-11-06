@@ -15,18 +15,7 @@ import config from '../../config'
 
 
 const notShown = {
-  Scotland: ['W06B'],
-  Australia: [
-    'W04B',
-    'W04C',
-    'W04D',
-    'W04E',
-    'W04F',
-    'W050',
-    'W052',
-    'W053',
-    'W054'
-  ]
+  'Scotland': ['W06B']
 }
 
 const notShownVSNs = [].concat(...Object.values(notShown))

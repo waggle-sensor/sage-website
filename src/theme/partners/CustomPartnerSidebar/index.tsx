@@ -26,8 +26,10 @@ export default function CustomPartnerSidebar() {
   const partner = partners.find(obj => obj.id == project_id)
   const {url} = partner || {}
 
+
   return (
     <div className="ml-8 my-8">
+
       {url &&
         <div className="mb-12">
           <h3>Website</h3>
