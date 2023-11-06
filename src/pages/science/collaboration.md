@@ -1,4 +1,4 @@
-# Unleashing the Power of Collaboration 
+# Unleashing the Power of Collaboration
 
 Clouds have long fascinated humans because of their complex and diverse nature. To gain a deeper understanding of these atmospheric phenomena, a multidisciplinary team of computer scientists, meteorologists, and machine learning experts from Northwestern-Argonne Institute of Science and Engineering (NAISE) collaborated on the National Science Foundation (NSF)-supported SAGE project. The project's goal was to develop new edge computing technologies that would allow scientists to collect and analyze large amounts of data from advanced sensors in real time.
 
@@ -29,7 +29,7 @@ As we published our findings, we reflected on the knowledge and experience acqui
 Looking ahead, we plan to utilize more SAGE data with advanced machine learning techniques. By harnessing multiple sources of  diverse data from the NSF NEON, the DOE ARM and CROCUS projects we can adapt our model's architecture to capture the complexities of weather and climate processes. Our collaborative project exemplifies the power of multidisciplinary teamwork and the potential of edge computing in advancing earth science.
 
 
-## Featured works: 
+## Featured works
 [1] Dematties et al. (2023) - Self-Supervised Approach for Cloud Image Analysis in Artificial Intelligence for the Earth Systems, 2(2), p.220063.
 
 [2] Jackson et al. (2023) - ARMing the Edge: Designing Edge Computing-Capable Machine Learning Algorithms for ARM Doppler Lidar Processing in Artificial Intelligence for Earth Systems, doi.org/10.1175/AIES-D-22-0062.1.

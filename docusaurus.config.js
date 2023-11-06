@@ -30,7 +30,7 @@ module.exports = {
           label: 'About',
         }, {
           to: '/science',
-          label: 'Science',
+          label: 'AI/Science',
           position: 'left'
         }, {
           to: '/news',
