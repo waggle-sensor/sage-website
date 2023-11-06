@@ -31,10 +31,56 @@ export function LinkCard(props: LinkCardProps) {
 
 export default function Science() {
   return (
-    <Layout title="Science Projects" description="Sage Science Projects">
+    <Layout title="AI/Science" description="Sage AI and Science Projects">
       <Root className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-10">
-        <h1>Science Projects</h1>
-        <div className="flex flex-col md:flex-row flex-wrap gap-10">
+        <h1>AI/Science</h1>
+
+        <h2>Recent Projects</h2>
+        <div className="flex flex-col md:flex-row flex-wrap gap-10 my-10">
+          <LinkCard
+            title="Exploration Through Collaboration"
+            link="/science/collaboration"
+            src={require('@site/static/img/science/collaboration-icon.jpg').default}
+          />
+          <LinkCard
+            title="Solar Irradiance Estimation"
+            link="/science/solar-irradiance-estimation"
+            src={require('@site/static/img/science/solar-irradiance.jpg').default}
+          />
+          <LinkCard
+            title="Smoke Detection"
+            link="/science/smoke-detection"
+            src={require('@site/static/img/science/smoke-detection.png').default}
+          />
+          <LinkCard
+            title="Rideshare Detection"
+            link="/science/rideshare-detection"
+            src={require('@site/static/img/science/rideshare-detection.png').default}
+          />
+          <LinkCard
+            title="Lighning Detector"
+            link="/science/lightning-detector"
+            src={require('@site/static/img/science/lightning-detector.jpg').default}
+          />
+          <LinkCard
+            title="Snow Classfication"
+            link="/science/snow-detection"
+            src={require('@site/static/img/science/snow-detection.jpg').default}
+          />
+          <LinkCard
+            title="Scalable Edge Computing at APS"
+            link="/science/scalable-ci-in-aps"
+            src={require('@site/static/img/science/scalable-ci-in-aps-icon.png').default}
+          />
+          <LinkCard
+            title="Traffic State Estimation"
+            link="/science/traffic-state-estimation"
+            src={require('@site/static/img/science/traffic-state-est.png').default}
+          />
+        </div>
+
+        <h2>Other Featured Projects</h2>
+        <div className="flex flex-col md:flex-row flex-wrap gap-10 my-10">
           <LinkCard
             title="Wildfire Science"
             link="/science/wildfire-science"
@@ -95,21 +141,6 @@ export default function Science() {
             link="/science/integrating-chameleon"
             src={require('@site/static/img/science/chameleon_integration-icon.jpg').default}
           />
-          <LinkCard
-            title="Traffic State Estimation"
-            link="/science/traffic-state-estimation"
-            src="https://ecr.sagecontinuum.org/api/meta-files/seonghapark/traffic-state/0.1.1/ecr-science-image.jpg"
-          />
-          <LinkCard
-            title="Scalable Edge Computing at APS"
-            link="/science/scalable-ci-in-aps"
-            src={require('@site/static/img/science/scalable-ci-in-aps-icon.png').default}
-          />
-          <LinkCard
-            title="Exploration Through Collaboration"
-            link="/science/collaboration"
-            src={require('@site/static/img/science/collaboration-icon.jpg').default}
-          />
         </div>
       </Root>
     </Layout>
@@ -129,7 +160,7 @@ const Root = styled.div`
   }
 
   .card:hover h3 {
-    color: rgb(0, 128, 199);
+    color: rgb(121, 208, 255);
     text-decoration: underline;
   }
 `
