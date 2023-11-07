@@ -13,21 +13,17 @@ export default function Photos() {
   return (
     <Layout
       title="Photo Gallery"
-      description="Photos of Node deployements, student activities, and more"
+      description="Photos of Node deployments, student activities, and more"
     >
       <div className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-10">
-        <div className="flex">
-          <div>
-            <h1>
-              {collection ?
-                <><a href="/photos">Photos</a> / {collection}</> :
-                'Photo Galleries'
-              }
-            </h1>
-            <div>
-              <PhotoIndex driveFolderID="1zGnN-9HC_g180EimPgoBu9x5zYqpnKvQ" />
-            </div>
-          </div>
+        <h1>
+          {collection ?
+            <><a href="/photos">Photos</a> / {collection}</> :
+            'Photo Galleries'
+          }
+        </h1>
+        <div>
+          <PhotoIndex driveFolderID="1zGnN-9HC_g180EimPgoBu9x5zYqpnKvQ" />
         </div>
       </div>
     </Layout>

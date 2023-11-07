@@ -68,7 +68,7 @@ export default function Science() {
             src={require('@site/static/img/science/snow-detection.jpg').default}
           />
           <LinkCard
-            title="Scalable Edge Computing at APS"
+            title="Scalable AI@Edge computing at Argonne APS"
             link="/science/scalable-ci-in-aps"
             src={require('@site/static/img/science/scalable-ci-in-aps-icon.png').default}
           />

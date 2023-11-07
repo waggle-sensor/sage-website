@@ -1,4 +1,4 @@
-# Wildfire classifier
+# Wildfire Classifier
 
 ![](imgs/smoke_wildfire.jpg)
 

@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { Link, useLocation } from 'react-router-dom'
 
-
 import Card from '@mui/material/Card'
 
 
@@ -46,18 +45,19 @@ type LinkCardProps = {
   title: string
   src: string
   link: string
+  alt?: string
   description?: string
 }
 
 export function LinkCard(props: LinkCardProps) {
-  const {title, src, link} = props
+  const {title, src, link, alt} = props
   return (
     <Card
       className="card z-0 relative"
       component={Link}
       to={link}
     >
-      <img src={src} className="max-w-[256px] md:max-w-[220px] md:max-h-[220px]" />
+      <img src={src} alt={alt} className="max-w-[256px] md:max-w-[220px] md:max-h-[220px]" />
       <h3 className="text-white absolute left-4 bottom-0 z-10">{title}</h3>
     </Card>
   )
@@ -87,7 +87,6 @@ export default function FileIndex(props: Props) {
         })
 
         const files = await listAllFiles(gapi, folderId)
-        console.log('files', files)
 
         setFiles(files)
       }
@@ -97,18 +96,19 @@ export default function FileIndex(props: Props) {
 
 
   return (
-    <Root className="flex flex-wrap gap-2">
+    <Root className="flex flex-wrap gap-2 mx-auto">
       {!collection && files &&
         Object.keys(files).map(folderName => {
           const filesByName = files[folderName]
-          const {id} = Object.values(filesByName)[0]
+          const {id, name} = Object.values(filesByName)[0]
 
           return (
             <LinkCard
               key={id}
               title={folderName}
               link={`/photos?collection=${folderName}`}
-              src={`https://drive.google.com/uc?export=view&id=${id}`}
+              src={`https://drive.google.com/thumbnail?id=${id}`}
+              alt={name}
             />
           )
         })
@@ -116,9 +116,9 @@ export default function FileIndex(props: Props) {
 
       {collection && files &&
         <div className="flex flex-wrap gap-2">
-          {Object.values(files[collection]).map(({id}) =>
-            <img key={id} src={`https://drive.google.com/uc?export=view&id=${id}`} />)
-          }
+          {Object.values(files[collection]).map(({id, name}) =>
+            <img key={id} src={`https://drive.google.com/thumbnail?id=${id}`} alt={name} />
+          )}
         </div>
       }
     </Root>
