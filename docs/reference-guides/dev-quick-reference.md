@@ -513,4 +513,22 @@ e.g.
 
 3. The ip for which output is `OK` is the Mobotix.
 
+### SSH 'Broken Pipe' Issue and Solution
+A 'Broken pipe' occurs when the SSH session to waggle-dev-node is inactive for longer than 10/15 minutes, resulting in a closed connection.
 
+```
+client_loop: send disconnect: Broken pipe
+Connection to waggle-dev-node-w021 closed by remote host.
+Connection to waggle-dev-node-w021 closed.
+```
+
+
+##### Solution
+To prevent the SSH session from timing out and to maintain the connection, the following configuration options can be added to the SSH config file:
+```ssh
+# Keep the SSH connection alive by sending a message to the server every 60 seconds
+Host *
+  TCPKeepAlive yes
+  ServerAliveInterval 60
+  ServerAliveCountMax 999
+```
