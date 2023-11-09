@@ -1,3 +1,9 @@
+
+/**
+ * A basic gapi image photo gallery listing which could potentially
+ * be used in MDX files as <PhotoGallery driveFolderID={...} />
+ */
+
 import React, {useEffect, useState} from 'react'
 
 
@@ -21,7 +27,7 @@ export default function PhotoGallery(props: Props) {
         })
 
         const request = await gapi.client.drive.files.list({
-          'q': '\'' + folderId + '\' in parents',
+          'q': `'${folderId}' in parents`,
           'fields': 'nextPageToken, files(id, name)'
         })
 

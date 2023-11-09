@@ -1,8 +1,25 @@
+/**
+ * A basic photo gallery which pulls from google drive where photos
+ * are organized into directories.
+ */
+
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useHistory } from 'react-router-dom'
 
-import Card from '@mui/material/Card'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import Dialog from '@mui/material/Dialog'
+import DialogTitle from '@mui/material/DialogTitle'
+import DialogActions from '@mui/material/DialogActions'
+import DialogContent from '@mui/material/DialogContent'
+import Button from '@mui/material/Button'
+import IconButton from '@mui/material/IconButton'
+import { useTheme } from '@mui/material/styles'
+
+import CloseIcon from '@mui/icons-material/Close'
+
+import LinkCard from './ImageLinkCard'
+import { CircularProgress } from '@mui/material'
 
 
 
@@ -41,29 +58,6 @@ async function listAllFiles(gapi, folderId) {
 
 
 
-type LinkCardProps = {
-  title: string
-  src: string
-  link: string
-  alt?: string
-  description?: string
-}
-
-export function LinkCard(props: LinkCardProps) {
-  const {title, src, link, alt} = props
-  return (
-    <Card
-      className="card z-0 relative"
-      component={Link}
-      to={link}
-    >
-      <img src={src} alt={alt} className="max-w-[256px] md:max-w-[220px] md:max-h-[220px]" />
-      <h3 className="text-white absolute left-4 bottom-0 z-10">{title}</h3>
-    </Card>
-  )
-}
-
-
 type Props = {
   driveFolderID: string
 }
@@ -71,10 +65,16 @@ type Props = {
 export default function FileIndex(props: Props) {
   const {driveFolderID} = props
 
+  const history = useHistory()
+  const theme = useTheme()
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
+
   const params = new URLSearchParams(useLocation().search)
   const collection = params.get('collection')
+  const imgNum = parseInt(params.get('img')) || null // photos are 1-indexed
 
   const [files, setFiles] = useState<string[]>()
+
 
   useEffect(() => {
     function listIndex(folderId) {
@@ -91,8 +91,19 @@ export default function FileIndex(props: Props) {
         setFiles(files)
       }
     }
+
     listIndex(driveFolderID)
-  }, [collection, driveFolderID])
+
+  }, [driveFolderID])
+
+
+  const getImages = () => {
+    return Object.values(files[collection])
+  }
+
+  const handleClose = () => {
+    history.replace(`/photos?collection=${collection}`)
+  }
 
 
   return (
@@ -116,11 +127,65 @@ export default function FileIndex(props: Props) {
 
       {collection && files &&
         <div className="flex flex-wrap gap-2">
-          {Object.values(files[collection]).map(({id, name}) =>
-            <img key={id} src={`https://drive.google.com/thumbnail?id=${id}`} alt={name} />
-          )}
+          {getImages().map(({id, name}, i) => {
+            return (
+              <Link to={`/photos?collection=${collection}&img=${i + 1}`} key={id}>
+                <img src={`https://drive.google.com/thumbnail?id=${id}`} alt={name} />
+              </Link>
+            )
+          })}
         </div>
       }
+
+
+      <Dialog
+        fullScreen={fullScreen}
+        open={!!imgNum}
+        onClose={handleClose}
+        aria-labelledby="photo-title"
+      >
+        <DialogTitle id="photo-title" className="mr-12">
+          {collection} | Photo {imgNum}
+        </DialogTitle>
+
+        <div className="absolute right-4 top-3">
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>
+        </div>
+
+        {collection && files && imgNum ?
+          <>
+            <DialogContent>
+              <img src={`https://drive.google.com/uc?export=view&id=${getImages()[imgNum - 1].id}`} />
+            </DialogContent>
+            <DialogActions>
+              <Button
+                disabled={imgNum <= 1}
+                component={Link}
+                to={`/photos?collection=${collection}&img=${imgNum - 1}`}
+                replace autoFocus disableRipple
+              >
+                Prev
+              </Button>
+              <Button
+                disabled={imgNum > getImages().length - 1 }
+                component={Link}
+                to={`/photos?collection=${collection}&img=${imgNum + 1}`}
+                replace autoFocus disableRipple
+              >
+                Next
+              </Button>
+            </DialogActions>
+          </> :
+          <div className="mx-auto">
+            <CircularProgress />
+          </div>
+        }
+      </Dialog>
     </Root>
   )
 }
@@ -129,20 +194,5 @@ export default function FileIndex(props: Props) {
 const Root = styled.div`
   img {
     max-height: 200px;
-  }
-
-  .card::after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    margin-top: -110px;
-    height: 110px;
-    width: 100%;
-    content: '';
-  }
-
-  .card:hover h3 {
-    color: rgb(0, 128, 199);
-    text-decoration: underline;
   }
 `

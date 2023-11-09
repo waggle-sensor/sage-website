@@ -109,12 +109,9 @@ module.exports = {
     }
     */
   },
-  scripts: [
-    {
-      src: 'https://apis.google.com/js/api.js',
-      async: true,
-    },
-  ],
+  scripts: [{
+    src: 'https://apis.google.com/js/api.js'
+  }],
   presets: [
     [
       '@docusaurus/preset-classic',

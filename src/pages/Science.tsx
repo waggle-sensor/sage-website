@@ -1,32 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Layout from '@theme/Layout'
-import Card from '@mui/material/Card'
+import LinkCard from '../components/ImageLinkCard'
 
-
-type LinkCardProps = {
-  title: string
-  src: string
-  link: string
-  description?: string
-}
-
-
-export function LinkCard(props: LinkCardProps) {
-  const {title, src, link} = props
-  return (
-    <Card
-      className="card z-0 relative"
-      component={Link}
-      to={link}
-    >
-      <img src={src} className="max-w-[256px] md:max-w-[220px] md:max-h-[220px]" />
-      <h3 className="text-white absolute left-4 bottom-0 z-10">{title}</h3>
-    </Card>
-  )
-}
 
 
 export default function Science() {
@@ -149,20 +126,6 @@ export default function Science() {
 
 
 const Root = styled.div`
-  .card::after {
-    display: block;
-    position: relative;
-    background-image: linear-gradient(to bottom, transparent 0%, black 100%);
-    margin-top: -110px;
-    height: 110px;
-    width: 100%;
-    content: '';
-  }
-
-  .card:hover h3 {
-    color: rgb(121, 208, 255);
-    text-decoration: underline;
-  }
 `
 
 

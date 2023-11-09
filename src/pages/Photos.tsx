@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '@theme/Layout'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
 import PhotoIndex from '../components/PhotoIndex'
 
@@ -18,7 +18,7 @@ export default function Photos() {
       <div className="md:max-w-screen-md lg:max-w-screen-lg mx-auto my-10">
         <h1>
           {collection ?
-            <><a href="/photos">Photos</a> / {collection}</> :
+            <><Link to="/photos">Photos</Link> / {collection}</> :
             'Photo Galleries'
           }
         </h1>
