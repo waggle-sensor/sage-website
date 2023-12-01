@@ -13,6 +13,7 @@ Sage’s name is inspired by nature: the perennial flowering plant. But it also 
 
 Sage test nodes will be deployed in environmental locations in California, Colorado, and Kansas and in urban settings in Illinois and Texas. The project will build on the open source technology platform used in the Array of Things project, which has deployed more than 100 sensors with edge computing capabilities within Chicago.
 
+![High level overview of Sage](./images/sage-flow.png)
 
 ## Reusable Cyberinfrastructure
 The research team that includes the University of Chicago, George Mason University, the University of California San Diego, Northern Illinois University, the University of Utah, the Lincoln Park Zoo, and collaborators at Argonne National Laboratory will design and build reusable software components and cyberinfrastructure services to support the new scientific measurement functions. These measures will range from in-situ analysis of high-bandwidth sensor data streams to adaptive system behaviors, such as adjusting the sampling rates and directional settings of LIDAR instruments or high-resolution cameras to capture events in more detail.  While the traditional method of reducing data volume on remote NEON towers works well for steady state conditions, Sage will provide the ability to detect ecosystem changes of interest at continental scale, allowing scientists to apply more sophisticated analytics in the field, capturing much greater detail on these changes.
