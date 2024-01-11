@@ -8,9 +8,9 @@ tags: [Sage, Nodes, Testbed, Sensors, Instruments, Development, Community]
 
 The Sage team is very excited to kick off 2024 by announcing our new Sage Testbed!
 
-<!--truncate-->
-
 ![Photo of the Sage Testbed](./img/sage-testbed/wide.jpg)
+
+<!--truncate-->
 
 One of the big challenges for Sage users has been bridging the gap between local development and production deployment.
 
