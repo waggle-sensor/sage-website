@@ -17,6 +17,8 @@ Local development is fantastic for prototyping ideas quickly and intially sketch
 
 In order to make this process easier, the team has made a concerted effort to build a testbed at Argonne National Lab consisting of 16 Wild Sage Nodes and 14 Sage Blades, along with many of our sensors such as PTZ and thermal cameras, with the explicit intent that these will be made widely available to the community for development access.
 
+Further, since the testbed is maintained here at Argonne in a more maintainance ready environment, we can better support users interested trying more cutting-edge or low level experiments on devices.
+
 If you are interested in getting access to the testbed, please visit the [Access Creds](https://portal.sagecontinuum.org/account/access) section of the Sage Portal and request dev access to the Sage Testbed.
 
 ![Testbed](./img/sage-testbed/wide.jpg)
