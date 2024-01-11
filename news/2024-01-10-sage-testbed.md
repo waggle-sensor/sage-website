@@ -1,10 +1,8 @@
 ---
 title: Announcing the Sage Testbed
-hide_reading_time: true
 date: 2024-01-10
 author: Sean Shahkarami
 tags: [Sage, Nodes, Testbed, Sensors, Instruments, Development, Community]
-draft: true
 ---
 
 The Sage team is very excited to kick off 2024 by announcing our new Sage Testbed!
