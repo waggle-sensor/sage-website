@@ -20,6 +20,6 @@ In response to this challenge, the team has dedicated a focused effort on buildi
 
 Further, since the testbed is maintained here at Argonne in a more maintainance friendly environment, we can better support users interested trying more cutting-edge or low level experiments on devices.
 
-Does this sounds exciting to you? If so, visit the [Node Credentials](https://portal.sagecontinuum.org/account/access) section of the Sage Portal and request dev access to the Sage Testbed to get started.
+Does this sounds exciting to you? If so, visit the [Access Credentials](https://portal.sagecontinuum.org/account/access) section of the Sage Portal and request dev access to the Sage Testbed to get started.
 
 ![Photo of the Sage Testbed at dusk](./img/sage-testbed/sunset.jpg)
