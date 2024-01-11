@@ -14,7 +14,7 @@ The Sage team is thrilled to kick off 2024 by introducing our new Sage Testbed!
 
 For Sage users, one of the major challenges is bridging the gap between local development and production deployment.
 
-While local development is fantastic for prototyping ideas quickly, it often lacks the nuance and intricacy of real hardware, particularly when it comes to sensors and instruments. Further, specific technical hurdles with tools like Docker or Rancher Desktop limit Mac or Windows users from integrating some sensors with their own machine.
+While local development is fantastic for prototyping ideas quickly, it often lacks the nuance and intricacy of real hardware, particularly when it comes to sensors and instruments. Further, specific technical hurdles with tools like Docker or Rancher Desktop limit Mac or Windows users from integrating some sensors with their own machine for development and testing.
 
 In response to this challenge, the team has dedicated a focused effort on building out a comprehensive testbed at Argonne National Lab. This testbed consists of 16 Wild Sage Nodes and 14 Sage Blades, along with a range of sensors such as PTZ and thermal cameras, with the explicit intent of being made widely available to the community for development access.
 
