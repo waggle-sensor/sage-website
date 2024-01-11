@@ -12,7 +12,7 @@ The Sage team is thrilled to kick off 2024 by introducing our new Sage Testbed!
 
 <!--truncate-->
 
-For Sage users, one of the major challenges is bridging the gap between local development and production deployment.
+For Sage users, one of the major challenges is bridging the gap between local development and real production deployment.
 
 While local development is fantastic for prototyping ideas quickly, it often lacks the nuance and intricacy of real hardware, particularly when it comes to sensors and instruments. Further, specific technical hurdles with tools like Docker or Rancher Desktop limit Mac or Windows users from integrating some sensors with their own machine for development and testing.
 
