@@ -2,6 +2,7 @@
 title: Announcing the Sage Testbed
 date: 2024-01-10
 author: Sean Shahkarami
+author_url: http://github.com/seanshahkarami
 tags: [Sage, Nodes, Testbed, Sensors, Instruments, Development, Community]
 ---
 
@@ -9,7 +10,7 @@ The Sage team is very excited to kick off 2024 by announcing our new Sage Testbe
 
 <!--truncate-->
 
-![Testbed](./img/sage-testbed/wide.jpg)
+![Photo of the Sage Testbed](./img/sage-testbed/wide.jpg)
 
 One of the big challenges for Sage users has been bridging the gap between local development and production deployment.
 
@@ -21,4 +22,4 @@ Further, since the testbed is maintained here at Argonne in a more maintainance 
 
 If sounds exciting and you would like to get access to the testbed, please visit the [Access Creds](https://portal.sagecontinuum.org/account/access) section of the Sage Portal and request dev access to the Sage Testbed.
 
-![Testbed](./img/sage-testbed/sunset.jpg)
+![Photo of the Sage Testbed at dusk](./img/sage-testbed/sunset.jpg)
