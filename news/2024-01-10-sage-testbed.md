@@ -19,7 +19,7 @@ In order to make this process easier, the team has made a concerted effort to bu
 
 Further, since the testbed is maintained here at Argonne in a more maintainance ready environment, we can better support users interested trying more cutting-edge or low level experiments on devices.
 
-If you are interested in getting access to the testbed, please visit the [Access Creds](https://portal.sagecontinuum.org/account/access) section of the Sage Portal and request dev access to the Sage Testbed.
+If sounds exciting and you would like to get access to the testbed, please visit the [Access Creds](https://portal.sagecontinuum.org/account/access) section of the Sage Portal and request dev access to the Sage Testbed.
 
 ![Testbed](./img/sage-testbed/wide.jpg)
 
