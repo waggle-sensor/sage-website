@@ -229,3 +229,28 @@ The Tracker is a service designed to record the connectivity of LoRaWAN devices 
 
 ### Lorawan Listener Plugin
 The LoRaWAN Listener is a plugin designed to publish measurements collected from LoRaWAN devices. It simplifies the process of extracting and publishing valuable data from these devices. For more information about the plugin view the plugin page [here](https://portal.sagecontinuum.org/apps/app/flozano/lorawan-listener). 
+
+### Lorawan Device Compatibility
+
+The Wild Sage Node is designed to support a wide range of Lorawan devices, ensuring flexibility and adaptability for various applications. If you are wondering which Lorawan devices can be connected to a Wild Sage Node, the device must have the following tech specs:
+
+- designed for US915 (902–928 MHz) frequency region.
+- compatible with Lorawan Mac versions 1.0.0 - 1.1.0
+- compatible with Chirpstack's Lorawan Network Server
+- The device supports Over-The-Air Activation (OTAA) or Activation By Personalization (ABP)
+- The device has a Lorawan device class of A, B, or C
+
+It is important to note that all channels within the US915 frequency band are enabled in a Wild Sage Node. If you wish to learn more about our Lorawan Gateway, please visit our [portal](https://portal.sagecontinuum.org/sensors/). For inquiries about supporting Lorawan regions other than US915, please [Contact Us](../contact-us.md).
+
+#### Device Examples
+
+Whether you are designing your own Lorawan sensor, looking for a Lorawan data logger, or seeking an off-the-shelf Lorawan device the Wild Sage Node will support it, we have examples for you:
+
+- **Designing your own Lorawan sensor?**
+  - [Arduino MKR WAN 1310](https://docs.arduino.cc/hardware/mkr-wan-1310/)
+
+- **Looking for a Lorawan data logger?**
+  - [ICT International MFR Node](https://ictinternational.com/product/mfr-node/)
+
+- **Looking for an off-the-shelf Lorawan device?**
+  - [ICT International SFM1X Sap Flow Meter](https://ictinternational.com/product/sfm1x-sap-flow-meter/)
