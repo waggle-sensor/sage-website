@@ -254,3 +254,8 @@ Whether you are designing your own Lorawan sensor, looking for a Lorawan data lo
 
 - **Looking for an off-the-shelf Lorawan device?**
   - [ICT International SFM1X Sap Flow Meter](https://ictinternational.com/product/sfm1x-sap-flow-meter/)
+
+- **Seeking Lorawan device manufacturers?**
+  - [ICT International](https://ictinternational.com/)
+  - [RAKwireless](https://www.rakwireless.com/en-us)
+  - [The Things Network Device Marketplace](https://www.thethingsnetwork.org/marketplace/products/devices)
