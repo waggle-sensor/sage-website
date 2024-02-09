@@ -433,52 +433,67 @@ In addition, you can data visualize as a time series and select multiple variabl
 
 The `sage_data_client` provides `query()` function which takes the parameters:
 
-`start`: The start time of the query as a string.
-`end`: The end time of the query as a string.
-`filter`: A dictionary with key-value pairs to apply filter. The function returns a Pandas DataFrame object. [Check more examples](https://github.com/RBhupi/sage-data-client/tree/main/examples).
-
-```python=
+```python
 import sage_data_client
-import urllib
-import tempfile
-from IPython.display import Image
-import imageio as io
-import os
-
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw
+import pandas as pd
 
 df = sage_data_client.query(
-    start="2023-02-10T12:00:00Z",
-    end="2023-02-22T23:00:00.000Z",
+    start="2023-01-08T00:00:09Z",  # Start time in "YYYY-MM-DDTHH:MM:SSZ" or "YYYYMMDD-HH:MM:SS" format
+    end="2024-01-08T23:23:24Z",    # End time in the same format as start time
     filter={
-        "plugin": "registry.sagecontinuum.org/theone/imagesampler.*",
-        "vsn": "W084",
-        "job": "imagesampler-top"
+        "plugin": ".*mobotix-scan.*",  # Regex for filtering by plugin name
+        "vsn": "W056",                # Specific node identifier
+        "name": "upload",             # Specific data field
+        "filename": ".*_position1.nc" # Regex for filtering filenames
     }
-).sort_values('timestamp')
+)
 
-with io.get_writer('taft.mp4', fps=5) as writer:
-    for i in df.index:
-        uurl = df.value[i]
-        timestamp = df.timestamp[i]
-        try:
-            tempf = tempfile.NamedTemporaryFile()
-            urllib.request.urlretrieve(uurl, tempf.name)
+df.sort_values('timestamp')
+df
+```
 
-            img = Image.open(tempf.name)
-            draw = ImageDraw.Draw(img)
-            font = ImageFont.truetype("SFNS.ttf", 64)
-            draw.text((800, 1800),timestamp.strftime('TAFT Waggle Node 84 %y-%m-%d %H:%M Z'),(255,255,255),font=font)
-            img.save(tempf.name + '.jpg')
+### Filter Criteria
+- `start` and `end`: Time should be specified in UTC, using the format `YYYY-MM-DDTHH:MM:SSZ` or `YYYYMMDD-HH:MM:SS`.
+- `filter`: A dictionary for additional filtering criteria. Each key is a column name in the `df`.
+- Use regular expressions (denoted as `.*pattern.*`) for flexible matching within text fields like `plugin` or `filename`.
 
-            image = io.imread(tempf.name + '.jpg')
-            writer.append_data(image)
-        except urllib.error.HTTPError:
-            print('Image skipped ' + uurl)
 
-writer.close()
+### Downloading Files
+Use additional pandas operations on `df` to to include only the records of interest and download the files using a function like the one provided below, which gets the URLs in the `value` column, using authentication.
+
+```python
+import requests
+import os
+from requests.auth import HTTPBasicAuth
+
+uname = 'username'
+upass = 'token_as_password'
+
+def download_files(df, download_path, uname, upass):
+   # check download directory
+   if not os.path.exists(download_path):
+      os.makedirs(download_path)
+   
+   for index, row in df.iterrows():
+      # 'value' column has url
+      url = row['value']
+   
+      filename = url.split('/')[-1] 
+   
+      # Download using credentials
+      response = requests.get(url, auth=HTTPBasicAuth(uname, upass))
+      if response.status_code == 200:
+         # make the downloads path
+         file_path = os.path.join(download_path, filename)
+         # Write a new file
+         with open(file_path, 'wb') as file:
+         file.write(response.content)
+         print(f"Downloaded {filename} to {file_path}")
+      else:
+         print(f"Failed to download {url}, status code: {response.status_code}")
+
+# usage
+download_files(df, '/Users/bhupendra/projects/epcape_pier/data/downloaded/nc_pos1', uname, upass)
 ```
 
 ### More data analysis resources
