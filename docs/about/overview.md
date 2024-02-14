@@ -16,6 +16,8 @@ Partners are deploying testbeds in Australia, Japan, UK, and Taiwan, providing s
 
 The data from sensors and applications is hosted in the cloud to facilitate easy data analysis.
 
+![High level overview of Sage](./images/sage-flow.png)
+
 ## Who are the users?
 
 The most common users have included:
@@ -24,7 +26,6 @@ The most common users have included:
 - Users interested in sensor and application-produced datasets.
 - Cyberinfrastructure researchers interested in platform research.
 - Domain scientists interested in adding new sensors and deploying nodes to answer specific science questions.
-
 
 ## How do I use the platform?
 

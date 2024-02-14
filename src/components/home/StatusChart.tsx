@@ -89,7 +89,10 @@ function Map(props: MapProps) {
       hoverR = 8,
       opacity = .7
 
-    const shownNodes = nodes.filter(o => !notShownVSNs.includes(o.vsn))
+    // skip nodes outside of the 50 states (unless marked as notShown)
+    const shownNodes = nodes.filter(o =>
+      !notShownVSNs.includes(o.vsn) && projection([o.gps_lon, o.gps_lat])
+    )
     const delaunay = Delaunay.from(shownNodes, d => d.gps_lon, d => d.gps_lat)
 
     const points = g
@@ -98,7 +101,7 @@ function Map(props: MapProps) {
       .enter()
       .append('circle')
       .attr('class', 'node')
-      .attr('transform', d => `translate( ${projection([d.gps_lon, d.gps_lat]).join(',')} )`)
+      .attr('transform', d => `translate(${projection([d.gps_lon, d.gps_lat]).join(',')} )`)
       .attr('r', r)
       .attr('fill', colorScheme[0])
       .attr('fill-opacity', opacity)
