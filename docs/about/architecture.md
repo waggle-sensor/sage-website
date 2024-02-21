@@ -259,3 +259,4 @@ Whether you are designing your own Lorawan sensor, looking for a Lorawan data lo
   - [ICT International](https://ictinternational.com/)
   - [RAKwireless](https://www.rakwireless.com/en-us)
   - [The Things Network Device Marketplace](https://www.thethingsnetwork.org/marketplace/products/devices)
+  - [DecentLab](https://www.decentlab.com)
