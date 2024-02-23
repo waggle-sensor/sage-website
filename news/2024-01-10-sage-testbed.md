@@ -8,7 +8,7 @@ tags: [Sage, Nodes, Testbed, Sensors, Instruments, Development, Community]
 
 The Sage team is thrilled to kick off 2024 by introducing our new Sage Testbed!
 
-![Photo of the Sage Testbed](./img/sage-testbed/nodes.jpg)
+![Photo of the Sage Testbed](./img/sage-testbed/sage-testbed.png)
 
 <!--truncate-->
 
@@ -16,7 +16,7 @@ For Sage users, one of the major challenges is bridging the gap between local de
 
 While local development is fantastic for prototyping ideas quickly, it often lacks the nuance and intricacy of real hardware, particularly when it comes to sensors and instruments. Further, specific technical hurdles with tools like Docker or Rancher Desktop prevent Mac or Windows users from even integrating certain sensors with their own machine for development and testing.
 
-In response to this challenge, the team has dedicated a focused effort on building out a comprehensive testbed at Argonne National Lab. This testbed consists of 16 Wild Sage Nodes and 14 Sage Blades, along with a range of sensors such as PTZ and thermal cameras, with the explicit intent of being made widely available to the community for development access.
+In response to this challenge, the team has dedicated a focused effort on building out a comprehensive testbed at Argonne National Lab. This testbed consists of 16 Wild Sage Nodes and 14 Sage Blades which all have access to a range of sensors such as PTZ and thermal cameras, with the explicit intent of being made widely available to the community for development access.
 
 Further, since the testbed is maintained here at Argonne in a more maintainance friendly environment, we can better support users interested trying more cutting-edge or low level experiments on devices.
 
