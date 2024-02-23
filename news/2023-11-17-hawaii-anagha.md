@@ -13,6 +13,7 @@ Hello! I’m Anagha - a Computer Science & Statistics major at the University of
 
 This past month, I traveled to Hilo, Hawai'i with the Sage team to install the latest node W097 near Volcanoes National Park. This was a truly unique experience and taught me the value of collaboration among scientists and communities to reach goals.
 
+<!--truncate-->
 
 ## Background Context & Preparation 
 
