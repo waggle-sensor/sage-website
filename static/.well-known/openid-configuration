@@ -1,0 +1,4 @@
+{
+    "issuer": "https://sagecontinuum.org",
+    "jwks_uri": "https://sagecontinuum.org/.well-known/jwks.json"
+}
