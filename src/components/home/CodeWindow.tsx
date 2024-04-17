@@ -1,7 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-import Highlight, { defaultProps } from 'prism-react-renderer'
+import { Highlight, themes } from 'prism-react-renderer'
 
 
 type Props = {
@@ -47,7 +46,7 @@ export default function CodeWindow(props: Props) {
           }
         </div>
         {code &&
-          <Highlight {...defaultProps} language={language} code={code}>
+          <Highlight theme={themes.github} language={language} code={code}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <pre className={className} style={style}>
                 {tokens.map((line, i) => (

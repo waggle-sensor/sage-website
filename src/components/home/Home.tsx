@@ -82,8 +82,7 @@ const scienceTexts = [
   'Climate Research',
   'Wildfire Detection',
   'Health & Safety',
-  'Weather Prediction',
-  'Scientific Research',
+  'Science',
   'Discovery'
 ]
 

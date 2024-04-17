@@ -14,7 +14,7 @@
 
 ## Local Development
 
-Requires [node.js](https://nodejs.org) (v18.17.1+)
+Requires [node.js](https://nodejs.org) (v20.12.2+)
 
 Install deps:
 

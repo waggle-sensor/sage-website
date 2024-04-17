@@ -122,7 +122,7 @@ html[data-theme='dark'] .navbar__link--active  {
   }
 }
 
-div[class^=searchBox] {
+div[class^=navbarSearchContainer] {
   position: absolute;
   right: 140px;
 }

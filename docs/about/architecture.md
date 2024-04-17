@@ -25,7 +25,7 @@ The Beekeeper is an administrative server that allows system administrators to p
 
 ### Beehive
 
-The Node <-> Beehive connection is the pipeline for the science. It is over this connection that instructions for the node will be sent, in addition to how data is published into the Beehive storage systems from applications ([plugins](#what-is-a-plugin)) running on the nodes.
+The Node-to-Beehive connection is the pipeline for the science. It is over this connection that instructions for the node will be sent, in addition to how data is published into the Beehive storage systems from applications ([plugins](#what-is-a-plugin)) running on the nodes.
 
 The overall infrastructure supports multiple Beehives, where each node is associated with a single Beehive. The set of nodes associated with a Beehive creates a "project" where each "project" is separate, having its own data store, web services, etc.
 
@@ -190,7 +190,7 @@ A "science goal" is a rule-set for how and when [plugins](#what-is-a-plugin) are
 
 The above diagram demonstrates the hardware in [Nodes](#nodes) and services in [WES](#waggle-edge-stack-wes) that enable [Nodes](#nodes) to use LoRaWAN and publish the measurements to a [Beehive](#beehive). The following sections will explain each componenent and service.
 
->source code: 
+>source code:
 > - [wes-chirpstack](https://github.com/waggle-sensor/waggle-edge-stack/tree/main/kubernetes/wes-chirpstack)
 > - [wes-chirpstack-server](https://github.com/waggle-sensor/wes-chirpstack-server)
 > - [wes-rabbitmq](https://github.com/waggle-sensor/waggle-edge-stack/blob/main/kubernetes/wes-rabbitmq.yaml)
@@ -228,7 +228,7 @@ The ChirpStack Server serves as the core component, managing device sessions, da
 The Tracker is a service designed to record the connectivity of LoRaWAN devices to the [Nodes](#nodes). This service uses the information received from the [MQTT broker](#mqtt-broker) to call [ChirpStack's gRPC API](https://www.chirpstack.io/docs/chirpstack/api/grpc.html). The information received from the API is then used to keep the Node's manifest up-to-date. Subsequently, it forwards this updated manifest to the [Beehive](#beehive). For more information, view the documentation [here](https://github.com/waggle-sensor/wes-chirpstack-device-tracker).
 
 ### Lorawan Listener Plugin
-The LoRaWAN Listener is a plugin designed to publish measurements collected from LoRaWAN devices. It simplifies the process of extracting and publishing valuable data from these devices. For more information about the plugin view the plugin page [here](https://portal.sagecontinuum.org/apps/app/flozano/lorawan-listener). 
+The LoRaWAN Listener is a plugin designed to publish measurements collected from LoRaWAN devices. It simplifies the process of extracting and publishing valuable data from these devices. For more information about the plugin view the plugin page [here](https://portal.sagecontinuum.org/apps/app/flozano/lorawan-listener).
 
 ### Lorawan Device Compatibility
 
