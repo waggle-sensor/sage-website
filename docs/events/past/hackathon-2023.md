@@ -1,8 +1,8 @@
 ---
-sidebar_label: Hackathon
+sidebar_label: August 2023 Hackathon
 ---
 
-# Sage Hackathon
+# August 2023 Sage Hackathon
 
 We are hosting a Hackathon for Sage in late August ~~with _preliminary dates August 30-31_~~!
 
