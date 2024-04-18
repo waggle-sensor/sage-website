@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 const calID = '65dcf6922cf9f84679f598865716f1fea2b7d974896c300fda9d3e26810aa1e8@group.calendar.google.com'

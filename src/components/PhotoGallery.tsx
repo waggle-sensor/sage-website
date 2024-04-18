@@ -4,7 +4,7 @@
  * be used in MDX files as <PhotoGallery driveFolderID={...} />
  */
 
-import React, {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
 
 type Props = {

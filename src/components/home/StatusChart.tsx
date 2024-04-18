@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import * as topojson from 'topojson'
 import { geoPath, geoAlbersUsa } from 'd3-geo'

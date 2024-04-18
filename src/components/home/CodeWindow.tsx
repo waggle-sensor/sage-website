@@ -46,7 +46,7 @@ export default function CodeWindow(props: Props) {
           }
         </div>
         {code &&
-          <Highlight theme={themes.github} language={language} code={code}>
+          <Highlight theme={themes.dracula} language={language} code={code}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <pre className={className} style={style}>
                 {tokens.map((line, i) => (

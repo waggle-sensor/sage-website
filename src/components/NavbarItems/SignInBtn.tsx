@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import Button from '@mui/material/Button'
 import { LoginRounded } from '@mui/icons-material'
