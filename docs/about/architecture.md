@@ -15,7 +15,7 @@ There are 2 main components of the cyberinfrastructure:
 - [Nodes](#nodes) that exist at the edge
 - The cloud that hosts services and storage systems to facilitate running [“science goals”](#science-goals) @ the edge
 
-Every edge node maintains connections to 2 core cloud components: one to a [Beehive](#beehive) and one to a [Beekeeper](#beekeper)
+Every edge node maintains connections to 2 core cloud components: one to a [Beehive](#beehive) and one to a [Beekeeper](#beekeeper)
 
 ### Beekeeper
 
@@ -45,7 +45,7 @@ Looking deeper into the Beehive infrastructure, it contains 2 main components:
 
 ![Figure 3: Beehive High-level Architecture](./images/beehive_high_01.svg)
 
-The Beehive is the “command center” for interacting with the Waggle nodes at the edge. Hosting websites and interfaces allowing scientists to create [science goals](#science-goals) to run [plugins](#what-is-a-plugins) at the edge & browse the data produced by those [plugins](#what-is-a-plugin).
+The Beehive is the “command center” for interacting with the Waggle nodes at the edge. Hosting websites and interfaces allowing scientists to create [science goals](#science-goals) to run [plugins](#what-is-a-plugin) at the edge & browse the data produced by those [plugins](#what-is-a-plugin).
 
 ![Figure 4: Beehive Infrastructure Details](./images/beehive_details_01.svg)
 
@@ -176,7 +176,7 @@ Plugins are the user-developed modules that the cyberinfrastructure is designed 
 
 ### Science Goals
 
-A "science goal" is a rule-set for how and when [plugins](#what-is-a-plugin) are run on edge nodes. These science goals are created by scientist to accomplish a science objective through the execution of [plugins](#what-is-a-plugin) in a specific manner. Goals are created, in a human language, and managed within the Beehive [Edge Scheduler](#edge-scheduler-es). It is then the cyberinfrastucture responsibility to deploy the science goals to the edge nodes and execute the goal's [plugins](#what-is-a-plugins). The [tutorial](../tutorials/schedule-jobs.md) walks through running a science goal.
+A "science goal" is a rule-set for how and when [plugins](#what-is-a-plugin) are run on edge nodes. These science goals are created by scientist to accomplish a science objective through the execution of [plugins](#what-is-a-plugin) in a specific manner. Goals are created, in a human language, and managed within the Beehive [Edge Scheduler](#edge-scheduler-es). It is then the cyberinfrastucture responsibility to deploy the science goals to the edge nodes and execute the goal's [plugins](#what-is-a-plugin). The [tutorial](../tutorials/schedule-jobs.md) walks through running a science goal.
 
 ## LoRaWAN
 

@@ -71,7 +71,7 @@ Through the use of a ground-based sensor system consisting of cameras and weathe
 ## About the author
 Hello, my name is Rick (Enrique) Nueve. I was a summer intern for the SAGE project in 2020. For the 2020-2021 year, I continued to stay on the SAGE project working in areas such as active learning on the edge and out of distribution detection. As of fall 2021, I will be a Ph.D. student in the CS Theory group at CU Boulder.
 
-## Reference
+## References
 1. Y. Wang, E. Coning, A. Harou, W. Jacobs, P. Joe, L. Nikitina, R. Roberts,J. Wang, J. Wilson, A. Atencia, B. Bica, B. Brown, S. Goodmann,A. Kann, P.-w. Li, I. Monterio, F. Schmid, A. Seed, and J. Sun,Guidelines for Nowcasting Techniques, 11 2017
 
 2. A. Kumler, Y. Xie, and Y. Zhang, “A new approach for short-term solarradiation forecasting using the estimation of cloud fraction and cloudalbedo,” 10 2018

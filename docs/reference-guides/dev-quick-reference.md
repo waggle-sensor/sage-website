@@ -61,7 +61,7 @@ Note: Variable names in `plugin.publish` should be descriptive and specific.
 : optional but the recommended file includes commands for building the Docker image, running tests, and deploying the plugin.
 
 ### 3. ECR configs and docs
-You can do this step (_except **sage.yaml**_) after testing on the node but before the [ERC submission](#Edge-code-repository). :smile:
+You can do this step (_except **sage.yaml**_) after testing on the node but before the [ERC submission](#edge-code-repository). :smile:
 
 `sage.yaml*`
 : is the configuration file useful for ECR and job submission? Most importantly it specifies the version and input arguments.
@@ -259,7 +259,7 @@ You may also have to call the `kubectl <POD>` commands as in the testing section
 :green_book: Check [sesctl docs](https://github.com/waggle-sensor/edge-scheduler/tree/main/docs/sesctl) for command line tool.
 
 
-1. :point_up: Do not use `_`, upper case letters or `.` in the job name. Use only lowercase letters, numbers and `-`. 
+1. :point_up: Do not use `_`, upper case letters or `.` in the job name. Use only lowercase letters, numbers and `-`.
 2. :point_up: Ensure that the plugin is set to 'public' in the Sage app portal.
 
 
@@ -473,13 +473,13 @@ def download_files(df, download_path, uname, upass):
    # check download directory
    if not os.path.exists(download_path):
       os.makedirs(download_path)
-   
+
    for index, row in df.iterrows():
       # 'value' column has url
       url = row['value']
-   
-      filename = url.split('/')[-1] 
-   
+
+      filename = url.split('/')[-1]
+
       # Download using credentials
       response = requests.get(url, auth=HTTPBasicAuth(uname, upass))
       if response.status_code == 200:
