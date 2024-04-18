@@ -9,8 +9,6 @@ const SKIP_LIST = []
 /**
  * NewsPreview parses the articles from production site (or whatever is provided in /docusaurus.config.js)
  * and renders the article body (up until <!--truncate-->), with links to articles.
- *
- * Note docusaurus is following the schema.org format https://schema.org/BlogPosting
  */
 
 export default function NewsPreview() {
@@ -30,17 +28,17 @@ export default function NewsPreview() {
         let data
         try {
           data = [...items].map(ele => {
-            const url = ele.querySelectorAll('[itemprop=url]')[0].href
+            const url = ele.querySelectorAll('header a')[0].href
 
             return {
-              datePublished: ele.querySelectorAll('[itemprop=datePublished]')[0].innerText,
-              headline: ele.querySelectorAll('[itemprop=headline]')[0].innerText,
-              articleBody: ele.querySelectorAll('[itemprop=articleBody]')[0].innerHTML,
+              datePublished: ele.querySelectorAll('header time')[0].innerText,
+              headline: ele.querySelectorAll('header h2')[0].innerText,
+              articleBody: ele.querySelectorAll('div.markdown')[0].innerHTML,
               url: url.slice(url.indexOf('/', 8)) // strip domain
             }
           })
         } catch (e) {
-          console.log(`Could not parse news data`, e)
+          console.log(`Could not parse news data:`, e)
         }
 
         setData(data)
