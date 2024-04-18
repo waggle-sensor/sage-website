@@ -22,7 +22,8 @@ module.exports = {
         forbid: ['>', '}'],
       },
     ],
-    '@typescript-eslint/no-var-requires': 'off'
+    '@typescript-eslint/no-var-requires': 'off',
+    'react/react-in-jsx-scope': 'off'
   },
   'globals': {
     'require': true,
