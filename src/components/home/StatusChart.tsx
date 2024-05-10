@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 import * as topojson from 'topojson'
-import { geoPath, geoAlbersUsa } from 'd3-geo'
+import us from '@site/static/geo/counties-with-pr-10m.json'
+import geoAlbersUsaPr from './geoAlbersUsaPr'
+import { geoPath } from 'd3-geo'
 import { select, pointer } from 'd3-selection'
 import { Delaunay } from 'd3-delaunay'
 import { schemeCategory10 as colorScheme } from 'd3-scale-chromatic'
 import { groupBy, uniq } from 'lodash'
-
-import us from '@site/static/geo/states-albers-10m.json'
 
 import JobMetrics from './JobMetrics'
 
@@ -72,11 +72,15 @@ function Map(props: MapProps) {
 
   const ref = useRef()
 
+  const projection = useMemo(() =>
+    geoAlbersUsaPr().scale(1300).translate([487.5, 305])
+  , [])
+
   useEffect(() => {
     if (!ref.current) return
 
+
     const svg = select(ref.current)
-    const projection = geoAlbersUsa().scale(1300).translate([487.5, 305])
 
     select(ref.current).append('defs').append('style')
       .text(`circle.highlighted { stroke: rgba(0, 0, 0); fill: rgba(0, 0, 0); }`)
@@ -209,8 +213,7 @@ function Map(props: MapProps) {
       .attr('fill', '#333')
   }, [title])
 
-
-  const path = geoPath()
+  const path = geoPath(projection)
 
   return (
     <svg viewBox="0 0 959 650" width="100%" height="100%" ref={ref}>
