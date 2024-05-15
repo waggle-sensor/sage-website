@@ -138,7 +138,7 @@ While most Waggle data is open and public - some types of data, such as raw imag
 
 Attempting to download protected files without meeting these criteria will yield a 401 Unauthorized response.
 
-If you've identified protected data you are interested in, please [contact us](/docs/contact-us) so we can help get you access. Examples of accessing protected files are provided in the [Accessing large files](#accessing-large-files-ie-training-data) section of this document.
+If you've identified protected data you are interested in, please [contact us](/docs/contact-us) so we can help get you access. 
 
 In the case of protected files, you'll need to provide authentication to your tool of choice. These will be your portal username and access token.
 
