@@ -6,53 +6,40 @@ sidebar_position: 3
 
 ![Data Movement](./images/data_movement.svg)
 
-
 Raw sensor data is collected by edge code. This edge code can either talk to sensor hardware directly or may obtain data from an abstraction layer (not show in image above). Edge code may forward unprocessed sensor data, do light processing to convert raw sensor values into final data products, or may use CPU/GPU-intensive workloads (e.g. AI application) to extract information from data-intensive sensors such as cameras, microphone or LIDAR.  
 
 Sensor data from nodes that comes in numerical or textual form (e.g. temperature) is stored natively in our time series database. Sensor data in form of large files (images, audio, movies..) is stored in the Waggle object store, but is referenced in the time series data (thus the dashed arrow in the figure above). Thus, the primary way to find all data (sensor and large files) is via the Waggle sensor query API described below.
 
 Currently the Waggle sensor database contains data such as:
 
-- relative humidity, barometric pressure, ambient temperature and gas (VOC) [BME680](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/)
-- rainfall measurements [(Hydreon RG-15)](https://sage-commons.sdsc.edu/dataset/rg-15) 
-- AI-based cloud coverage estimation from camera images
-- AI-based object counts from camera images
-- (system data of the nodes, free disk space etc.)
+- Relative humidity, barometric pressure, ambient temperature and gas (VOC) [BME680](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/).
+- Rainfall measurements [(Hydreon RG-15)](https://sage-commons.sdsc.edu/dataset/rg-15).
+- AI-based cloud coverage estimation from camera images.
+- AI-based object counts from camera images.
+- System data such as uptime, cpu and memory.
 
-Data can be accessed via "data bundles"  or the query API.
-
-## Restricted access files
-
-While almost all Waggle data is open, some types of data requires a written Data Use Agreement for access.  This includes raw image and audio data taken from certain locations. Please [contact us](/docs/contact-us) if you are interested in access. The sensor log (see Query API) contains references to both restricted and unrestricted files. Downloading restricted files without authorization will return a `401 Unauthorized`.
-
-## Data Bundles
-
-**Data Bundles** provide sensor data and associated metadata in a single, large, downloadable file.  Soon, each Data Bundle available for download will have a DOI that can be used for publication citations.
-
-Data Bundles are compiled nightly and may be downloaded in [this archive](https://web.lcrc.anl.gov/public/waggle/sagedata/SAGE-Data.tar).
+Data can be accessed in realtime via our data API or in bulk via data bundles.
 
 ## Data API
 
-The Waggle **data API** provides immediate and flexible access to sensor data via search over time and metadata tags. It is primarily intended to support exploratory and near real time use cases.
+Waggle provides a **data API** for immediate and flexible access to sensor data via search over time and metadata tags. It is primarily intended to support exploratory and near real time use cases.
 
-Due to the wide variety of possible queries, we do not attempt to provide DOIs for results from the data API. Instead, we leave it up to users to organize and curate datasets for their own applications. Long term, curated data is instead provided via **Data Bundles**.
-
-### Using the Data API
+Due to the wide variety of possible queries, we do not attempt to provide DOIs for results from the data API. Instead, we leave it up to users to organize and curate datasets for their own applications. Long term, curated data is instead provided via **data bundles**.
 
 There are two recommended approaches to working with the Data API:
 
-1. Use the [Python Sage Data Client](https://pypi.org/project/sage-data-client/).
-2. Use the HTTP API.
+1. Using the [Python Sage Data Client](https://pypi.org/project/sage-data-client/).
+2. Using the HTTP API.
 
 Each is appropriate for different use cases and integrations, but generally the following rule applies:
 
 _If you just want to get data into a Pandas dataframe for analysis and plotting, use the sage-data-client, otherwise use the HTTP API._
 
-#### Sage Data Client
+### Using Sage data client
 
-The Sage Data Client is a Python library which streamlines querying the data API and getting the results into a Pandas dataframe. For details on installation and usage, please see the [Python package](https://pypi.org/project/sage-data-client/).
+The Sage data client is a Python library which streamlines querying the data API and getting the results into a Pandas dataframe. For details on installation and usage, please see the [Python package](https://pypi.org/project/sage-data-client/).
 
-#### HTTP API
+### Using HTTP API
 
 This example shows how to retrieve data the latest data from a specific sensor (you can adjust the `start` field if you do not get any recent data):
 
@@ -76,15 +63,18 @@ Example results:
 ```
 
 :::tip
-More details on how to use the query API can be found [here](https://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md#query-api)
+More details of using the data API and the data model can be found [here](https://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md#query-api) and [here](https://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md#data-model).
 :::
 
-## Data model
+## Data bundles
 
-A detailed description of the data model can be found [here](https://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md#data-model).
+**Data bundles** provide sensor data and associated metadata in a single, large, downloadable file.  Soon, each Data Bundle available for download will have a DOI that can be used for publication citations.
 
-## Accessing large files (i.e. training data)
-Waggle collects large files for AI training purposes. These files stored in an S3 bucket hosted by the [Open Storage Network](https://www.openstoragenetwork.org/).
+Data Bundles are compiled nightly and may be downloaded in [this archive](https://web.lcrc.anl.gov/public/waggle/sagedata/SAGE-Data.tar).
+
+## Accessing file uploads
+
+User applications can upload files for AI training purposes. These files stored in an S3 bucket hosted by the [Open Storage Network](https://www.openstoragenetwork.org/).
 
 To find these files use the filter `"name":"upload"` and specify additional filters to limit search results, for example:
 
@@ -106,7 +96,6 @@ Output:
 {"timestamp":"2021-09-10T12:52:59.782262376Z","name":"upload","value":"https://storage.sagecontinuum.org/api/v1/data/sage/sage-imagesampler-left-0.2.3/000048b02d15bdc2/1631278379782262376-2021-09-10T12:52:59+0000.jpg","meta":{"job":"sage","node":"000048b02d15bdc2","plugin":"imagesampler-left:0.2.3","task":"imagesampler-left:0.2.3"}}
 {"timestamp":"2021-09-10T13:49:49.084350086Z","name":"upload","value":"https://storage.sagecontinuum.org/api/v1/data/sage/sage-imagesampler-left-0.2.3/000048b02d15bdd2/1631281789084350086-2021-09-10T13:49:48+0000.jpg","meta":{"job":"sage","node":"000048b02d15bdd2","plugin":"imagesampler-left:0.2.3","task":"imagesampler-left:0.2.3"}}
 ```
-
 
 For a quick way to only extract the urls from the json objects above, a tool like [jq](https://stedolan.github.io/jq/) can be used:
 
@@ -139,9 +128,28 @@ If many files are downloaded, it is better to preserve the directory tree struct
 wget -r -i urls.txt
 ```
 
-For access to restricted files see Section [Restricted access files](#restricted-access-files). Username and password can be specified via  `--user=<user> --password=<password>` when using `wget`, or `-u <user>:<password>` when using curl.
+### Protected data
 
+While most Waggle data is open and public - some types of data, such as raw images and audio from sensitive locations, may require additional steps:
 
+* You will need a Sage account.
+* You will need to sign our Data Use Agreement for access.
+* You will need to provide authentication to tools you are using to download files. (ex. wget, curl)
 
+Attempting to download protected files without meeting these criteria will yield a 401 Unauthorized response.
 
+If you've identified protected data you are interested in, please [contact us](/docs/contact-us) so we can help get you access. Examples of accessing protected files are provided in the [Accessing large files](#accessing-large-files-ie-training-data) section of this document.
 
+In the case of protected files, you'll need to provide authentication to your tool of choice. These will be your portal username and access token.
+
+![Access Credentials](./images/access-token.png)
+
+These can be provided to tools like wget and curl as follows:
+
+```console
+# example using wget
+wget --user=<portal-username> --password=<portal-access-token> -r -i urls.txt
+
+# example using curl
+curl -u <portal-username>:<portal-access-token> url
+```
