@@ -140,7 +140,7 @@ Attempting to download protected files without meeting these criteria will yield
 
 If you've identified protected data you are interested in, please [contact us](/docs/contact-us) so we can help get you access. 
 
-In the case of protected files, you'll need to provide authentication to your tool of choice. These will be your portal username and access token.
+In the case of protected files, you'll need to provide authentication to your tool of choice. These will be your portal username and access token which can be found in the [Access Credentials](https://portal.sagecontinuum.org/account/access) section of the site.
 
 ![Access Credentials](./images/access-token.png)
 
