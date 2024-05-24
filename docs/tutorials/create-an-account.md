@@ -7,7 +7,7 @@ sidebar_position: 1
 
 While some Sage features are open for public use, you'll need an approved account to perform tasks such as:
 
-* Get access to protected data
+* Get access to protected data.
 * Publish apps to the ECR.
 * Schedule app on nodes.
 
