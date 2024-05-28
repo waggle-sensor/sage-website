@@ -1,8 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 import Layout from '@theme/Layout'
 
-import publications, { conferenceProceedings } from '../publications'
+import publications, { conferenceProceedings, datasets } from '../publications'
 
 
 function PubRows(props) {
@@ -55,6 +54,9 @@ export default function Publications() {
 
         <h1>Publications in conference proceedings</h1>
         <PubRows publications={conferenceProceedings} />
+
+        <h1>Related datasets</h1>
+        <PubRows publications={datasets} />
       </Root>
     </Layout>
   )

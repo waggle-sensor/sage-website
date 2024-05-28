@@ -108,11 +108,12 @@ const conferenceProceedings : Publication[] = [{
   year: 2023,
   href: 'https://doi.org/10.1109/PerComWorkshops56833.2023.10150251'
 }, {
-  title: 'Towards a dynamic composability approach for using heterogeneous systems in remote sensing',
+  title: 'Towards a Dynamic Composability Approach for using Heterogeneous Systems in Remote Sensing',
   authors: 'Ilkay Altintas, Ismael Perez, Dmitry Mishin, Adrien Trouillaud, Christopher Irving, John Graham, Mahidhar Tatineni, Thomas DeFanti, Shawn Strande, Larry Smarr, and Michael Norman',
   publication: '2022 IEEE 18th International Conference on e-Science (e-Science)',
   pages: '336-345',
   year: 2022,
+  href: 'https://doi.org/10.1109/eScience55777.2022.00047'
 }, {
   title: 'Addressing the Constraints of Active Learning on the Edge',
   authors: 'Nueve, Enrique, Sean Shahkarami, Seongha Park, and Nicola Ferrier.',
@@ -128,7 +129,7 @@ const conferenceProceedings : Publication[] = [{
   year: 2021,
   href: 'https://doi.org/10.1109/SusTech51236.2021.9467444'
 }, {
-  title: 'Multiperspective automotive labeling',
+  title: 'Multiperspective Automotive Labeling',
   authors: 'Luke Jacobs, Akhil Kodumuri, Jim James, Seongha Park, and Yongho Kim',
   publication: '2020 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)',
   pages: '927-936',
