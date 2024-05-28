@@ -95,6 +95,25 @@ const publications : Publication[] = [{
 
 
 const conferenceProceedings : Publication[] = [{
+  title: 'Adversarial Predictions of Data Distributions Across Federated Internet-of-Things Devices',
+  authors: 'Samir Rajani, Dario Dematties, Nathaniel Hudson, Kyle Chard, Nicola Ferrier, Rajesh Sankaran, and Peter Beckman',
+  publication: 'The IEEE 9th World Forum on Internet of Things',
+  year: 2023,
+  href: 'https://doi.org/10.48550/arXiv.2308.14658'
+}, {
+  title:'Keynote Talk: Leveraging the Edge-Cloud Continuum to Manage the Impact of Wildfires on Air Quality',
+  authors: 'Daniel Balouek-Thomert, Ismael Perez, Sam Faulstich, Heather Holmes, Ilkay Altintas, and Manish Parashar}',
+  publication: '2023 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops)',
+  pages: '27-31',
+  year: 2023,
+  href: 'https://doi.org/10.1109/PerComWorkshops56833.2023.10150251'
+}, {
+  title: 'Towards a dynamic composability approach for using heterogeneous systems in remote sensing',
+  authors: 'Ilkay Altintas, Ismael Perez, Dmitry Mishin, Adrien Trouillaud, Christopher Irving, John Graham, Mahidhar Tatineni, Thomas DeFanti, Shawn Strande, Larry Smarr, and Michael Norman',
+  publication: '2022 IEEE 18th International Conference on e-Science (e-Science)',
+  pages: '336-345',
+  year: 2022,
+}, {
   title: 'Addressing the Constraints of Active Learning on the Edge',
   authors: 'Nueve, Enrique, Sean Shahkarami, Seongha Park, and Nicola Ferrier.',
   publication: '2021 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)',
@@ -108,9 +127,30 @@ const conferenceProceedings : Publication[] = [{
   pages: '1-7',
   year: 2021,
   href: 'https://doi.org/10.1109/SusTech51236.2021.9467444'
+}, {
+  title: 'Multiperspective automotive labeling',
+  authors: 'Luke Jacobs, Akhil Kodumuri, Jim James, Seongha Park, and Yongho Kim',
+  publication: '2020 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)',
+  pages: '927-936',
+  year: 2020,
+  href: 'https://doi.org/10.1109/IPDPSW50202.2020.00155'
 }]
 
+const datasets : Publication[] = [{
+  title: 'CROCUS Air Quality Data at Northeastern Illinois University Rooftop',
+  authors: 'Joseph O\'Brien, Gregory Anderson, Paytsar Muradyan, Matthew Tuftedal, Scott Collis, Robert Jackson, Maxwell Grover, Dario Dematties, Seongha Park, Rajesh Sankaran, Peter Beckman, Nicola Ferrier, Yongho Kim, and Sean Shahkarami',
+  publication: 'U.S. Department of Energy Office of Scientific and Technical Information',
+  year: 2024,
+  href: 'https://doi.org/10.15485/2335799'
+}, {
+  title: 'Doppler spectra from ARM Doppler Lidar during ARMing the Edge',
+  authors: 'Bhupendra Raut, Seongha Park, Dario Dematties, Scott Collis, Nicola Ferrier, Yongho Kim, Sean Shahkarami, Pete Beckman, and Rajesh Sankaran',
+  publication: 'U.S. Department of Energy Office of Scientific and Technical Information',
+  year: 2023,
+  href: 'https://doi.org/10.5439/2204486'
+}]
 
 export default publications.sort((a, b) => b.year - a.year)
 export {conferenceProceedings}
+export {datasets}
 
