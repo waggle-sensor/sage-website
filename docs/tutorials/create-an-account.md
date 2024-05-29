@@ -21,3 +21,9 @@ In this document, we'll walk though creating an account.
 4. Finally, if this is your first time signing in, you'll need to choose a username which will complete your account creation.
 
 At this point, our team will need to review and approve your account before you'll have permission to perform certain tasks. If you your account is not approved within 72 hours or you have special requirements, please [Contact us](/docs/contact-us) so that we can help perform any account configuration.
+
+# Next steps
+
+Once your account is approved, you will have scheduling access and protected data browsing in the portal for nodes we've assigned to your account.
+
+For CLI tools and SSH access to nodes, please go to __Portal → Your Account → Access Creds__ and follow the __Update SSH Public Keys__ and __Finish Setup for Node Access__ instructions.
