@@ -107,6 +107,11 @@ html[data-theme='dark'] .navbar__link--active  {
   display: flex;
 }
 
+[class^=announcementBar] {
+  font-size: 1.2em;
+  height: 40px !important;
+}
+
 
 /*
  * search
