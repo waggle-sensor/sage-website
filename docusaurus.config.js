@@ -104,13 +104,14 @@ module.exports = {
         hideable: true,
       }
     },
-    /* uncomment the following to add a banner for outages/alerts or important news, see custom.css for more styling */
+    /* uncomment the following to add a banner for outages/alerts or important news, see custom.css for more styling
     announcementBar: {
-      content: '<b>ℹ️ Due to a planned data center migration, the Sage portal, web services, and nodes may be offline for extended periods from Monday, July 8th to Friday, July 12th. ℹ️</b>',
+      content: '<b>ℹ️ Due to a planned data center migration, the Sage portal, web services, and nodes may be offline for extended periods. ℹ️</b>',
       isCloseable: false,
       textColor: 'rgb(102, 60, 0)',
       backgroundColor: 'rgb(255, 244, 229)',
     }
+    */
   },
   scripts: [{
     src: 'https://apis.google.com/js/api.js'

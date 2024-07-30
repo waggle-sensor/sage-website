@@ -175,7 +175,7 @@ export default function Home() {
 
           <h2 className="text-purple font-bold mt-16 self-center">AI/ML Status</h2>
           {config.downtime ?
-            'The node status view is currently unavailable due to scheduled downtime.' :
+            'The node status view is currently unavailable due to scheduled maintenance.' :
             <StatusChart />
           }
 

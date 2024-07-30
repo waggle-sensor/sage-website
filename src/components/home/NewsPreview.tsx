@@ -9,12 +9,14 @@ const SKIP_LIST = []
 /**
  * NewsPreview parses the articles from production site (or whatever is provided in /docusaurus.config.js)
  * and renders the article body (up until <!--truncate-->), with links to articles.
+ *
+ * Note docusaurus is following the schema.org format https://schema.org/BlogPosting
+ * todo(nc): update to use the embeded JSON from <script type="application/ld+json">
  */
 
 export default function NewsPreview() {
 
   const [data, setData] = useState()
-  // const {siteConfig} = useDocusaurusContext()
 
   useEffect(() => {
     // fetch blog preview from prod site
