@@ -63,7 +63,7 @@ Hopefully, as we improve the technology to detect these fires early on, we can s
 
 
 ![The Amazon Rainforest](./imgs/wildfire-1.jpg)
-> The Amazon Rainforest, home to many peoples and countless species. A home worth protecting.11
+> The Amazon Rainforest, home to many peoples and countless species. A home worth protecting. <sup>[[11](#references)]</sup>
 
 ## References
 1. “How Wildfires Work”. https://science.howstuffworks.com/nature/natural-disasters/wildfire.htm

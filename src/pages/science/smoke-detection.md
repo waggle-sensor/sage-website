@@ -2,7 +2,7 @@
 
 ![](imgs/smoke_wildfire.jpg)
 
-Forest fires are a major problem, and have detrimental effects on the environment. Current solutions to detecting forest fires are not efficient enough, and other machine learning models have far too long computational speeds and poor accuracies. This study is a continuation of the work done by UCSD and their SmokeyNet deep learning architecture for smoke detection[1]. We compared performance of deep learning models, in order to find the best model for this issue, and to find if a simple model can compare to a complex model. The models are: VGG16, UCSD SmokeyNet, Resnet18, Resnet34, and Resnet50.
+Forest fires are a major problem, and have detrimental effects on the environment. Current solutions to detecting forest fires are not efficient enough, and other machine learning models have far too long computational speeds and poor accuracies. This study is a continuation of the work done by UCSD and their SmokeyNet deep learning architecture for smoke detection<sup>[[1](#references)]</sup>. We compared performance of deep learning models, in order to find the best model for this issue, and to find if a simple model can compare to a complex model. The models are: VGG16, UCSD SmokeyNet, Resnet18, Resnet34, and Resnet50.
 
 ## The Data
 
@@ -36,9 +36,9 @@ The classifier was able to detect smoke patches accurately from images collected
 
 For this work, we created a large dataset and open for public for any related research for future research such as for better model creation. It is needed to explore the dataset more ways to augment the images, by scaling the contrast levels, etc, as this would be a good way to separate smoke from cloud from other. Through this experiments, we found that a simple model can be acceptably accurate and can compare to a complex model. We are hoping that this research can greatly help the fight against forest fires, in order to at one point support the problem solving of forest fires, by being able to attend to them before they get out of control.
 
-## Citations
-[1] Dewangan, A., Pande, Y., Braun, H.W., Vernon, F., Perez, I., Altintas, I., Cottrell, G.W. and Nguyen, M.H., 2022. FIgLib & SmokeyNet: Dataset and deep learning model for real-time wildland fire smoke detection. Remote Sensing, 14(4), p.1007.
+## References
+1. Dewangan, A., Pande, Y., Braun, H.W., Vernon, F., Perez, I., Altintas, I., Cottrell, G.W. and Nguyen, M.H., 2022. FIgLib & SmokeyNet: Dataset and deep learning model for real-time wildland fire smoke detection. Remote Sensing, 14(4), p.1007.
 
-[2] https://hpwren.ucsd.edu
+2. https://hpwren.ucsd.edu
 
-[3] http://vintage.winklerbros.net/swimseg.html
+3. http://vintage.winklerbros.net/swimseg.html

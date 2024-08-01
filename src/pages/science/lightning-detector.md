@@ -7,7 +7,7 @@ Additionally, the data collected by SDR is collected at about 10 MB/s making it 
 
 ## How Lightning is Created
 
-According to the article that NWS provides[1], the conditions needed to produce lightning have been known for some time. However, exactly how lightning forms has never been verified so there is room for debate. Leading theories focus around separation of electric charge and generation of an electric field within a thunderstorm. Recent studies also indicate that ice, hail, and semi-frozen water drops known as graupel are essential to lightning development. Storms that fail to produce large quantities of ice usually fail to produce lightning.
+According to the article that NWS provides<sup>[[1](#references)]</sup>, the conditions needed to produce lightning have been known for some time. However, exactly how lightning forms has never been verified so there is room for debate. Leading theories focus around separation of electric charge and generation of an electric field within a thunderstorm. Recent studies also indicate that ice, hail, and semi-frozen water drops known as graupel are essential to lightning development. Storms that fail to produce large quantities of ice usually fail to produce lightning.
 
 ### Charge Separation
 
@@ -37,6 +37,6 @@ As a preliminary result, we were able to recieve a distinguishable signal.
 
 We are expecting that we can collect sufficient positive and negative lightning data, so that we can build a process to distinguish them. Additionally, when Waggle/Sage nodes including this SDR are deployed and formed a grid, we will implement a way to triangulate the location of a lighting strike.
 
-## Citations
+## References
 
-[1] https://www.weather.gov/source/zhu/ZHU_Training_Page/lightning_stuff/lightning2/lightning_intro.html
+1. https://www.weather.gov/source/zhu/ZHU_Training_Page/lightning_stuff/lightning2/lightning_intro.html
