@@ -1,8 +1,14 @@
 # Using LIDAR to Aid Models in Solar Estimation and Sky Classification
 
-LIDAR technology, with its ability to create detailed maps of atmospheric environments, can potentially solve the issue of blockers by providing precise information about the location and height of obstructions. It proposes many benefits that can’t be offered by a regular camera, especially the fact that it provides accurate data in all different types of weather conditions including fog, rain, and low light. This information can be used to adjust solar irradiance estimates and sky predictions, making them more accurate in any setting. Current models experience difficulties in the presense of blockers and unfamiliar sky conditions. We believe LiDAR can potentially solve this issue and allow us to deploy these nodes in urban areas.
+LIDAR technology, with its ability to create detailed maps of atmospheric environments, can potentially solve the issue of blockers by providing precise information about the location and height of obstructions. It proposes many benefits that can’t be offered by a regular camera, especially the fact that it provides accurate data in all different types of weather conditions including fog, rain, and low light. This information can be used to adjust solar irradiance estimates and sky predictions, making them more accurate in any setting. Current models experience difficulties in the presense of blockers and unfamiliar sky conditions. We believed LiDAR could potentially solve this issue and allow us to deploy these nodes in urban areas.
 
 ![sky image](./imgs/lidar_sky-solar1.png)
+
+## Motivation
+The goal or purpose behind this project was to develop a machine learning model using image and LiDAR data to accurately predict sky conditions and estimate solar irradiance even in the presence of ”blockers” and unfamiliar sky conditions found commonly in urban areas. 
+
+## Methods
+The steps we took towards completing this goal primarily were building models, gathering data, and also understanding the data. We used the pretrained models from the PyTorch model library, specifically the ResNet models, and did transfer learning on these models for sky classification and solar irradiance. We gathered data for my datasets using the SAGE nodes in Illinois and understood what they meant by speaking to professionals on the topics.
 
 
 ## Problems & Results
