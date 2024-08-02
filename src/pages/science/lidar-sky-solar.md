@@ -4,6 +4,10 @@ LIDAR technology, with its ability to create detailed maps of atmospheric enviro
 
 ![sky image](./imgs/lidar_sky-solar1.png)
 
+## Motivation & Methods
+The goal or purpose behind this project was to develop a machine learning model using image and LiDAR data to accurately predict sky conditions and estimate solar irradiance even in the presence of ”blockers” and unfamiliar sky conditions found commonly in urban areas. 
+The steps we took towards completing this goal primarily were building models, gathering data, and also understanding the data. We used the pretrained models from the PyTorch model library, specifically the ResNet models, and did transfer learning on these models for sky classification and solar irradiance. We gathered data for my datasets using the SAGE nodes in Illinois and understood what they meant by speaking to professionals on the topics.
+
 
 ## Problems & Results
 A major problem occurred when we were trying to gather solar wattage data. We naturally assumed wattage and irradiance to follow similar trends, but we found they shared little correlation with each other. Wattage peaks early in the morning and is generally higher than irradiance which is very abnormal. 
@@ -49,7 +53,7 @@ Cloudy
 - LiDAR plots show some high intensity values, meaning dense cloud particles detected, at about 2,000m 
 - Average signal strength shows little peaks around 2000m, and past this height there are some very scattered cloud particles detected, creating those large oscillations
 
-Although I could not put all of the sky conditions and their observations, it is clear from these few examples that using LiDAR data helps better classify a sky condition. 2D images of the sky work in many conditions. Though, when features in the image are unrecognizable or unfamiliar to the model, LiDAR data can be used to disambiguate. 
+Although we could not put all of the sky conditions and their observations, it is clear from these few examples that using LiDAR data helps better classify a sky condition. 2D images of the sky work in many conditions. Though, when features in the image are unrecognizable or unfamiliar to the model, LiDAR data can be used to disambiguate. 
 
 ## Conclusions & Future Work
 Although a ML model was not created in these 10 weeks, based on the correlation between LiDAR data, image, and solar irradiance data, we can say that LiDAR data is very beneficial in the prediction of sky conditions and the estimation of solar irradiance. It should be used in pair to the images. In the future, we hope to convert LiDAR data into numerical values that represent sky conditions. Solving this issue will allow us to create a dataset and, subsequently, develop a model that incorporates both image and LiDAR data. This model would be able to classify sky conditions and eventually estimate solar irradiance, very accurately.
