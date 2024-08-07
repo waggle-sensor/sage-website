@@ -1,14 +1,14 @@
 # Exploration of Super Resolution Image Enhancement
 
 ## Introduction
-Super Resolution is an Image Enhancement Technique, where the goal is to take a low resolution image and increase its resolution to improve its quality. In contrary with the reverse operation called the downscaling task, where a large area of pixels is converted into a small area of pixels, Super Resolution is a difficult task to execute: there are limited pixels on the original image to work with and the model must then predict and generate artificial data to create an improved image. 
+Super Resolution is an Image Enhancement Technique, where the goal is to take a low-resolution image and increase its resolution to improve its quality. In contrast with the reverse operation called the downscaling task, where a large area of pixels is converted into a small area of pixels, Super Resolution is a difficult task to execute. There are limited pixels on the original image to work with and the model must then predict and generate artificial data to create an improved image. 
 
-<img width="95%" src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*W_ioPRwCxM464cVGvb7eGQ.png">
+<img width="95%" src="https://media.discordapp.net/attachments/492533276808970242/1270842054469091338/super_resolution.png?ex=66b52b64&is=66b3d9e4&hm=560134349b08015e57c5306acc5c4579aa3993058fd11a92adcea044a5254468&=&format=webp&quality=lossless">
 
 **This project serves to explore different types of super-resolution models and understand the feasibility of deploying such models into laboratory systems.**
 
 ## Motivation
-Super Resolution plays a critical role in various fields for restoring old images to learn more about the history of our world, analyzing satellite images to create improved maps, and analyzing microscopic organisms in medical diagnoses. As technological and scientific advancements continue to improve, there is an increase in demand for image enhancement tools: the aid of AI in enhancing images helps play a pivotal role for decreasing the costs of developing advanced microscopes, telescopes, and cameras.
+Super Resolution plays a critical role in various fields restoring old images to learn more about the history of our world, analyzing satellite images to create improved maps, and analyzing microscopic organisms in medical diagnoses. As technological and scientific advancements continue to improve, there is an increase in demand for image enhancement tools: the aid of AI in enhancing images helps play a pivotal role in decreasing the costs of developing advanced microscopes, telescopes, and cameras.
 
 ## Methods
 For this project, I explored two different types of models that have played a revolutionary role in the Super Resolution field: GAN (Generative Advertisal Network) models and Diffusion models. I specifically chose the Real-ESRGAN model and Diffusion model because they were the best models for their respective models from my research. Here is a brief list of facts about each model.
@@ -18,29 +18,37 @@ For this project, I explored two different types of models that have played a re
 - The Generator creates a fake image using noise (all at once) to fool the Discriminator
 - The Discriminator tries to guess the real image between the generated image and the actual image
 - May not produce the best results if the Discriminator or the Generator is not effective enough 
-- **Real-ESRGAN:** has a powerful Discriminator in contrary to other GAN models
+- **Real-ESRGAN:** has a powerful Discriminator contrary to other GAN models
 
-<img width="90%" src="https://media.discordapp.net/attachments/492533276808970242/1270408200029732864/gan_model.png?ex=66b39755&is=66b245d5&hm=3a84a4a103fe87f330818e449c3c85dfe15e9489471e8ac5333f0bea730406b9&=&format=webp&quality=lossless">
+<img width="90%" src="https://media.discordapp.net/attachments/492533276808970242/1270840174095499354/gan_model.png?ex=66b529a4&is=66b3d824&hm=2f5c2c4113e8671ad31055bccad6112d1c0afd82003edb5688623f2dfbe21910&=&format=webp&quality=lossless">
 
 **Diffusion Model**
+- A method that outperforms GAN models in rendering quality
 - A type of Generator
 - Adds and removes noise from the original image at a slower rate
-  - Better method than GAN Model generator since it gives model time to learn complex patterns
+  - Better method than the GAN Model generator since it gives the model time to learn complex patterns
 - Adjusts loss to make sure the image is as high quality as possible
-<img width="90%" src="https://media.discordapp.net/attachments/492533276808970242/1270410104205873152/diffusion_model.png?ex=66b3991b&is=66b2479b&hm=3fa9e53357f624cae715492e2c1a9b1884aebb7c6b0d7f8126d196c7589acdcc&=&format=webp&quality=lossless">
+
+<img width="90%" src="https://media.discordapp.net/attachments/492533276808970242/1270840622684569605/diffusion_model.png?ex=66b52a0f&is=66b3d88f&hm=7f745b2ae914cc96ec27a304cf775de83a056c23d0fd084c56165de7d80e10a3&=&format=webp&quality=lossless">
 
 - **SUPIR:**
   - There is an attached text prompt option to help guide the model to the correct output
     - Can plug in a Multi-Modal Large Language Model
   - Extremely computationally expensive, and the model is very large
 
+<img width="90%" src="https://media.discordapp.net/attachments/492533276808970242/1270845872686764042/SUPIR_arch.png?ex=66b52ef3&is=66b3dd73&hm=c5887297e4d9f98a64f2d4d8e09e53d5b98d7eadf5db5e21f7946420dd3e588a&=&format=webp&quality=lossless">
+
 ## Results
 
 Below are tables highlighting the results when using each of the models. The Numbers in the Input Image column highlight the dimensions of each image. The input images are less than 250x250 pixels in dimension and the output images are upscaled at least 4x in size to highlight the differences in generation.
 
-From the results below, it is very apparent that SUPIR produces results that are much more clear compared to Real-ESRGAN. 
+For the SUPIR model, a prompt was inserted into the Multi-Modal Large Language Model to 
+
+From the results below, it is very apparent that SUPIR produces much clearer results than Real-ESRGAN. For both images in the chart below, the trees are rendered very clearly in the SUPIR model, whereas it is more blurry in the Real-ESRGAN model. These differences can also be viewed in the background, which is noticeable in the snow, the dirt, and the ocean that were generated by both the models.
 
 <img width="80%" src="https://media.discordapp.net/attachments/492533276808970242/1270446793846554677/table2.png?ex=66b3bb47&is=66b269c7&hm=9926b9bfdee6f800d4768fb1050e8f217c6acf55c59c049e9f0188b769d59c70&=&format=webp&quality=lossless">
+
+The following chart provides the finishing blow for proving the effectiveness of the SUPIR model over the Real-ESRGAN model. Although the Real-ESRGAN model was unable to produce a realistic-looking image, the details that were provided in the SUPIR model is very apparent
 
 <img width="80%" src="https://media.discordapp.net/attachments/492533276808970242/1270446794160996505/table1.png?ex=66b3bb47&is=66b269c7&hm=aba8bbe57c52c83904d2f73d2d374b0a4e31f634db375cf415296473c1e200cb&=&format=webp&quality=lossless">
 
