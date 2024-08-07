@@ -48,21 +48,40 @@ From the results below, it is very apparent that SUPIR produces much clearer res
 
 <img width="80%" src="https://media.discordapp.net/attachments/492533276808970242/1270446793846554677/table2.png?ex=66b3bb47&is=66b269c7&hm=9926b9bfdee6f800d4768fb1050e8f217c6acf55c59c049e9f0188b769d59c70&=&format=webp&quality=lossless">
 
-The following chart provides the finishing blow for proving the effectiveness of the SUPIR model over the Real-ESRGAN model. Although the Real-ESRGAN model was unable to produce a realistic-looking image, the details that were provided in the SUPIR model is very apparent
+The following chart provides the finishing blow for proving the effectiveness of the SUPIR model over the Real-ESRGAN model. Although the Real-ESRGAN model was unable to produce a realistic-looking image, the details that were provided in the SUPIR model are very apparent, as shown in the generated quality for the mountainous background, the grassy terrain, the bus stop, the rocky road, the street lights, and the bus sign. The two generated images are as clear as light and day in terms of quality.
+
+It is however important to note the drawbacks of the SUPIR model. The same quality image is unable to be generated if a prompt is not used for the SUPIR model: a false prediction was made where the model created a hallucination and generated a plane instead of a bus stop roof. Additionally, the model is poor at generating text: there is incomprehensible text written on the plane. It is also important to highlight the amount of time it took for each model to generate each image. Because SUPIR's model is very large, it takes at least 70 seconds to generate an image compared to Real-ESRGAN's 10 seconds, which is a substantial difference in time.
 
 <img width="80%" src="https://media.discordapp.net/attachments/492533276808970242/1270446794160996505/table1.png?ex=66b3bb47&is=66b269c7&hm=aba8bbe57c52c83904d2f73d2d374b0a4e31f634db375cf415296473c1e200cb&=&format=webp&quality=lossless">
 
 ## Summary
 
+Here is a brief list of facts summarizing the advantages and disadvantages of the two models.
+
 **Advantages of Real-ESRGAN:**
 - Small model (<1 GB)
-- Requires <1 GB of VRAM
+  - Requires <1 GB of VRAM
 - Runs on CPU as well
 - Fast compute time
 - Deployable on Edge
 
+**Disadvantages of Real-ESRGAN**
+- Poor results if the image quality is too small
+- Image enhancement is not very apparent
 
+**Advantages of SUPIR:**
+- Image enhancement is much more powerful compared to Real-ESRGAN
 
+**Disadvantages of SUPIR:**
+- Extremely large model (30-40 GB)
+  - Requires 4~10 GB of VRAM
+- Requires GPU
+- Inefficient for large batch sizes
+- Poor results if no text is provided
+- Poor at rendering text
 
+## Conclusion
 
+This project explored the advantages and disadvantages of Real-ESRGAN and SUPIR and determined that it is difficult to deploy super-resolution models into the laboratory systems since current technology does not provide a proper balance between the number of computational resources, time, and quality generated. More research into the field would need to be performed for Super Resolution to serve as a viable solution to deploy on the edge.
 
+It is however important to acknowledge that the SUPIR model displays excellent insight into the potential viability of Super-Resolution, and is very feasible for deployment when a method for decreasing computational power is discovered.
