@@ -26,7 +26,14 @@ For this project, I explored two different types of models that have played a re
 - A method that outperforms GAN models in rendering quality
 - A type of Generator
 - Adds and removes noise from the original image at a slower rate
-  - Better method than the GAN Model generator since it gives the model time to learn complex patterns
+  - Better method than the GAN Model generator since it gives the model additional time to learn complex patterns
+  - Main drawback is the time complexity will be longer
+  - Process is similar to a thermodynamics problem
+    - Analogy for adding noise:
+      - Adding a drop of food coloring into a large bowl of water has a very high probability of the food coloring affecting the other water droplets
+      - Results in all the water droplets being affected by food coloring
+    - Analogy for removing noise:
+      - Slowly rewinding time and pinpointing the exact location of where the initial drop of food coloring came from starting from when the bowl is filled with food coloring water droplets 
 - Adjusts loss to make sure the image is as high quality as possible
 
 <img width="90%" src="https://media.discordapp.net/attachments/492533276808970242/1270840622684569605/diffusion_model.png?ex=66b52a0f&is=66b3d88f&hm=7f745b2ae914cc96ec27a304cf775de83a056c23d0fd084c56165de7d80e10a3&=&format=webp&quality=lossless">
