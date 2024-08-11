@@ -4,6 +4,8 @@
 Super Resolution is an Image Enhancement Technique, where the goal is to take a low-resolution image and increase its resolution to improve its quality. In contrast with the reverse operation called the downscaling task, where a large area of pixels is converted into a small area of pixels, Super Resolution is a difficult task to execute. There are limited pixels on the original image to work with and the model must then predict and generate artificial data to create an improved image. 
 
 ![super_resolution](./imgs/super_resolution.png)
+> [Credit to Christian Galea’s Towards Data Science article “Image Super-Resolution: An Overview of the Current State of Research"](https://towardsdatascience.com/image-super-resolution-an-overview-of-the-current-state-of-research-94294a77ed5a)
+
 
 **This project serves to explore different types of super-resolution models and understand the feasibility of deploying such models into laboratory systems.**
 
@@ -21,6 +23,7 @@ For this project, I explored two different types of models that have played a re
 - **Real-ESRGAN:** has a powerful Discriminator contrary to other GAN models
 
 ![gan_model](./imgs/super_resolution_gan_model.png)
+> [Credit to Caper Hansen’s IBM Developer article “Generative adversarial networks explained"](https://developer.ibm.com/articles/generative-adversarial-networks-explained/)
 
 **Diffusion Model**
 - A method that outperforms GAN models in rendering quality
@@ -37,6 +40,7 @@ For this project, I explored two different types of models that have played a re
 - Adjusts loss to make sure the image is as high quality as possible
 
 ![diffusion_model](./imgs/super_resolution_diffusion_model.png)
+> [Credit to Charlie Harris’ Medium Article “Diffusion Models in Generative Chemistry for Drug Design"](https://medium.com/@cch57/exploring-the-promise-of-generative-models-in-chemistry-an-introduction-to-diffusion-models-31530e9d1dcb)
 
 - **SUPIR:**
   - There is an attached text prompt option to help guide the model to the correct output
@@ -44,6 +48,7 @@ For this project, I explored two different types of models that have played a re
   - Extremely computationally expensive, and the model is very large
 
 ![supir_architecture](./imgs/super_resolution_supir_arch.png)
+> [Credit to XPixel Group’s Supir Research Paper](https://arxiv.org/abs/2401.13627)
 
   - *Encoder Decoder: Input and Output Source*
   - *SDXL: StableDiffusion Model*
