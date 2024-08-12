@@ -79,8 +79,8 @@ It is however important to note the drawbacks of the SUPIR model. The same quali
 Here is a brief list of facts summarizing the advantages and disadvantages of the two models.
 
 **Advantages of Real-ESRGAN:**
-- Small model (<1 GB)
-  - Requires <1 GB of VRAM
+- Small model (\<1 GB)
+  - Requires \<1 GB of VRAM
 - Runs on CPU as well
 - Fast compute time
 - Deployable on Edge
