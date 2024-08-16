@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import { BlogPostProvider } from '@docusaurus/theme-common/internal';
+import { BlogPostProvider } from '@docusaurus/plugin-content-blog/client';
 
 import { useLocation } from '@docusaurus/router';
 import styled from 'styled-components';
