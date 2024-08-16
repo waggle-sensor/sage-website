@@ -1,7 +1,7 @@
 ---
 title: Hawaii for Scientists
 hide_reading_time: true
-author: Pete Beckman
+authors: pbeckman
 tags: [interns, hawaii, science]
 slug: hawaii-intro
 ---

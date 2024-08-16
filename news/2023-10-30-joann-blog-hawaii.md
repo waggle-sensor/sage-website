@@ -1,8 +1,7 @@
 ---
 title: Joann Hawaii Blog Post
 hide_reading_time: true
-author: Joann Lenart
-author_url: https://www.linkedin.com/in/joann-lenart-121166214/
+authors: jlenart
 tags: [Hawaii, Blog Post, social science, environment]
 ---
 

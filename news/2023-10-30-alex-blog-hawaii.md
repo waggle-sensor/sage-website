@@ -1,15 +1,12 @@
 ---
 title: The Waikalua Loko Fish Pond
-author: Alex Arnold
-author_title: Undergraduate student, Northwestern University
-author_url: https://www.linkedin.com/in/alex-arnold-6b168a1a7/
-author_image_url: https://avatars.githubusercontent.com/u/114937598?s=400&u=3cc10cf57e285dd0d8b32dae2646dc6ae71ff14b&v=4
+authors: aarnold
 tags: [Hawaii, Node deployment, Fish ponds]
 ---
 
 # October 25th 2023
 ![team photo](./img/hawaii-october-2023/Group.jpg)
-Hi there! My name is Alex Arnold and I'm currently a senior at Northwestern University studying computer and cogntitive science. I worked with the team over the summer as an intern and also had the chance to help with a node deployment in Volcanos National Park in Hawai'i. 
+Hi there! My name is Alex Arnold and I'm currently a senior at Northwestern University studying computer and cogntitive science. I worked with the team over the summer as an intern and also had the chance to help with a node deployment in Volcanos National Park in Hawai'i.
 <!--truncate-->
 Today we arrived in Honolulu. We checked into our hotel right off of the famous Waikiki beach, where we saw a lot of surfers catching waves out in the water. After a nine hour flight we were incredibly hungry so Aldo and I picked up a local snack: musubi spam. It’s basically spam on top of rice and wrapped together with seaweed. Served hot, it was unexpectedly good and a pleasant surprise. After a long flight without much food it tasted incredible.
 

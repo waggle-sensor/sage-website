@@ -1,8 +1,7 @@
 ---
 title: Introducing the Sage Testbed
 date: 2024-01-10
-author: Sean Shahkarami
-author_url: http://github.com/seanshahkarami
+authors: sshahkarami
 tags: [Sage, Nodes, Testbed, Sensors, Instruments, Development, Community]
 ---
 

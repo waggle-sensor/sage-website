@@ -1,9 +1,7 @@
 ---
 title: Sage Field Experience in Hawai'i
 hide_reading_time: true
-author: Anagha Tiwari
-author_url: https://www.linkedin.com/in/anagha-tiwari1/
-author_image_url: https://raw.githubusercontent.com/AnaghaTiwari/anaghatiwari/4d94b2fe3efd3b77518ce452ee96e66f47abb54b/anagha_t.jpeg
+authors: atiwari
 tags: [students, edge applications, deployment, hawaii]
 slug: sage-hawaii
 ---

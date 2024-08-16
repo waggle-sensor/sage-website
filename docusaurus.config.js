@@ -131,6 +131,8 @@ module.exports = {
           editUrl: 'https://github.com/waggle-sensor/sage-website/edit/main/',
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
+          onInlineAuthors: 'ignore', // ignore warnings about an author not being part of authors.yml, since not necessary
+          onUntruncatedBlogPosts: 'ignore', // ignore warnings about no <!-- truncate --> marker, since some "blogs" are simply news snippets
           readingTime: ({content, frontMatter, defaultReadingTime}) =>
             frontMatter.hide_reading_time ?
               undefined :
