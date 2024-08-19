@@ -13,13 +13,13 @@ Edge computing is an approach to performing computations at the source of data c
 ## Data
 In order to perform nowcasting of net radiation, two kinds of data were collected and used: weather sensor data and ground-based camera image data. Both of these data sources were collected through the Waggle edge computing framework. In particular, the data used in the model was collected by using a Waggle node<sup>[[4](#references)]</sup> configured with weather sensors and cameras and was located on the Argonne National Laboratory campus in Lemont, Illinois (Lat: 41.701538, Long: -87.994742). The used weather measurements are shown in the table below.
 
-![data](imgs/nowcasting-weather-1.png)
+![data](../imgs/nowcasting-weather-1.png)
 
 The ground-based camera data came from three different cameras: a sky-facing RGB camera, a horizon-facing RGB camera, and a horizon-facing forward-looking infrared (FLIR) camera. Each of these cameras has a particular motivation for its use. With the FLIR camera, which records temperature, information such as the height of the clouds in an image can be gained, which is an insightful indicator of current and future weather activity. By having both RGB cameras, information such as cloud and snow coverage is provided to the model. Moreover, since net outgoing longwave radiation is influenced by cloud-related properties such as height and optical thickness, having the three cameras allows our data to capture both of these cloud-related properties<sup>[[4](#references)]</sup>. Through the cameras and weather sensors, a rich source of information was collected for the task of nowcasting net radiation. Examples of images from the cameras are shown below.
 
-![data](imgs/nowcasting-weather-2.jpg)
-![data](imgs/nowcasting-weather-3.jpg)
-![data](imgs/nowcasting-weather-4.jpg)
+![data](../imgs/nowcasting-weather-2.jpg)
+![data](../imgs/nowcasting-weather-3.jpg)
+![data](../imgs/nowcasting-weather-4.jpg)
 
 ## Model and experiments
 In order to gauge the data’s ability to be used for the task of nowcasting net radiation, a series of deep learning models were developed, trained, and tested using different combinations of the data. A series of experiments were conducted to compare the performance of nowcasting net radiation using deep learning with different variations of the collected data. As an overview, three experiments will be discussed in this post.
@@ -37,7 +37,7 @@ In order to counter this large number of parameters, the model was designed to f
 
 For the second experiment, the fourth input took in a limited number of variables from the fore-mentioned table: average net radiation, day of the month, month, hour, and minute were fed into a GRU. The GRU’s output was concatenated with the Convolutional LSTM layer’s output, which was then fed into a dense layer with a linear activation function to perform nowcasting of future net radiation. This side information was fed into the model in order to give context to the input image sequences. A diagram of WeatherNet is shown below.
 
-![data](imgs/nowcasting-weather-5.jpg)
+![data](../imgs/nowcasting-weather-5.jpg)
 
 
 The third experiment also used WeatherNet to perform nowcasting of net radiation. However, it took in the image sequences from the ground-based camera system and all of the variables mentioned in the table of weather measurements.
@@ -45,7 +45,7 @@ The third experiment also used WeatherNet to perform nowcasting of net radiation
 ## Results
 For Experiments I–III, the maximum nowcast R2 value was from Experiment I with a 15-minute horizon, producing an R2 of 0.8782. The minimum nowcast R2 was from Experiment III with a 90-minute horizon, producing an R2 of 0.6332. On average, the model’s R2 values stayed above 0.7 for all of the experiments up to a one-hour horizon. Past the one-hour horizon, however, R2 began to drop. The overall results from Experiments I–III can be viewed in table below.
 
-![data](imgs/nowcasting-weather-6.png)
+![data](../imgs/nowcasting-weather-6.png)
 
 
 It was observed that E2’s model, which had image data, had a higher R2 value than that of E1’s and E3’s model for 60- and 90-minute horizons.
@@ -55,13 +55,13 @@ Although the results show the potential of using ground-based sensor data for no
 
 I hypothesize that the improper predictions for the jumps in the data were due to the models not being trained on summer data. For this example prediction shown in the figure below, our model was trained on data from February to the second week of June 2020 and then performed predictions for the last two weeks of June. To further this research, it would be beneficial to collect at least a year’s worth of data and use said data to train the models and then evaluate their predictions. Doing so would allow insight into whether the model’s inability to predict jumps is due to a shortcoming of the limited data, the data itself, the model’s capabilities, or possibly something different altogether.
 
-![data](imgs/nowcasting-weather-7.png)
+![data](../imgs/nowcasting-weather-7.png)
 
 
 ## Performance on Waggle
 To test the efficiency of running WeatherNet on the edge, experiments I-III were tested on an edge node. The node that was used for benchmarking had an Nvidia-AGX-Xavier, a microcomputer designed for machine learning on edge devices. The Nvidia-AGX-Xavier has a peak compute for the GPU of 32 teraops, making this an ideal machine for deep learning over an edge computing framework. As shown from the table below, WeatherNet was easily able to run on an Nvidia-AGX-Xavier.
 
-![data](imgs/nowcasting-weather-8.png)
+![data](../imgs/nowcasting-weather-8.png)
 
 > “Values measured at time of highest GPU usage”
 

@@ -33,7 +33,7 @@ export default {
           position: 'left',
           label: 'About',
         }, {
-          to: '/science',
+          to: '/science/category/recent-projects',
           label: 'AI/Science',
           position: 'left'
         }, {
@@ -169,7 +169,18 @@ export default {
           return postcssOptions
         },
       }
-    }, [
+    },    [
+      '@docusaurus/plugin-content-docs',
+      {
+        sidebarPath: require.resolve('./sidebars.js'),
+        id: 'science',
+        path: 'science',
+        routeBasePath: 'science',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+        // ... other options
+      },
+    ], [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [

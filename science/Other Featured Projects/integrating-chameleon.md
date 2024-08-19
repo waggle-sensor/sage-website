@@ -15,11 +15,11 @@ With this image, the Sage team created a customizable, innovative, and user frie
 That’s where the Chameleon platform comes in. Chameleon is a testbed of computational resources that are made available for the scientific community for running experiments. Chameleon has hardware available for Sage users at three different locations:CHI@UC, CHI@TACC, KVM@TACC. The CHI@UC and CHI@TACC site are both bare-metal sites, so only physical hardware is available. While the KVM@TACC site, is a virtual machine site. Users simply have to, create a reservation on the Chameleon, launch an instance, and attach an ip address to their instance. After doing these three steps, users are ready to start using there very own Chameleon machine.
 
 
-![creating chameleon instance](./imgs//integrating-chameleon-1.png)
-![creating chameleon instance 2](./imgs//integrating-chameleon-2.png)
+![creating chameleon instance](../imgs//integrating-chameleon-1.png)
+![creating chameleon instance 2](../imgs//integrating-chameleon-2.png)
 > Creating a reservation and instance taken from Chameleon.<sup>[[1](#references)]</sup>
 
-![allocating ips](./imgs//integrating-chameleon-3.png)
+![allocating ips](../imgs//integrating-chameleon-3.png)
 > Allocating floating ip.<sup>[[1](#references)]</sup>
 
 
@@ -40,7 +40,7 @@ In order to streamline the launching of virtual-waggle, the feature of running a
 
 Another feature that I spent time on was a prototype deployment method of launching multiple instances of virtual-waggle in a controlled setting. A use case for this deployment, is if a teacher wanted his/her students to all have an instance of virtual-waggle, he/she would just have to run a simple command to launch multiple instances of virtual-waggle. This command would create n-specified instances and pull all the necessary docker containers from DockerHub to run virtual-waggle. I worked on a prototype [microk8s](https://microk8s.io) deployment that can accomplish this fact. Micork8 is a light weight Kubernetes deployment method designed for IoT and edge devises. Though it is just a prototype, it is a feature that Sage is working on and will make possible in the future.
 
-![microk8 deployment](./imgs/integrating-chameleon-4.png)
+![microk8 deployment](../imgs/integrating-chameleon-4.png)
 > This is an abstract way of representing the multi scale microk8 deployment of Virtual-Waggle.<sup>[[2](#references)]</sup>
 
 <a href="https://github.com/waggle-sensor/edge-plugins">Sage Edge Plugins</a> is another feature that’s included within the Sage image. This repository is helpful for people who wish to create their own plugins to use on the edge. Sage provides useful tools for building and training machine learning algorithms. Users are provided an easy way to faciliate the creation of edge-plugins.
@@ -49,14 +49,14 @@ Access to the <a href="https://github.com/waggle-sensor/beehive-server">Beehive<
 
 Additionally, using GitHub Actions, I streamlined the the process of creating this Image, so future developers working with/for Sage can spin up a new image by a simple <code>git push</code>.
 
-![sage platform overview](./imgs/integrating-chameleon-5.png)
+![sage platform overview](../imgs/integrating-chameleon-5.png)
 > Overview of the Sage platform.<sup>[[3](#references)]</sup>
 
 ### Versions of Image
 
 Sage recognizes that users have all different sets of needs when running neural networks. That’s why users will have options to use different specialized versions/flavors of the Chameleon-Sage image. There are currently three different types of Chameleon-Sage images all available on the Chameleon catalog.
 
-![chameleon sage image](./imgs//integrating-chameleon-6.png)
+![chameleon sage image](../imgs//integrating-chameleon-6.png)
 > Snapshot of Sage image on Chameleon.<sup>[[1](#references)]</sup>
 
 Sage-VirtualWaggle-Ubuntu18.04 – This is the standard Chameleon-Sage image that is available at all three Chameleon sites. This image includes all of the previously stated features and runs with Ubuntu 18.04.

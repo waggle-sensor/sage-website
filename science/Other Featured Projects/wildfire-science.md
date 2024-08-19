@@ -2,6 +2,7 @@
 
 by Aristana Scourtas
 
+
 Hi friendly reader! My name is Aristana Scourtas, and I’m currently pursuing my MS in Artificial Intelligence at Northwestern University. I have two years of industry software experience and a dream to apply my computing skills to environmental and climate change-related issues. This summer I’m committed to finding novel solutions to an old problem — early detection of wildfires.
 
 ## Fire moves fast
@@ -62,7 +63,7 @@ This work doesn’t come a moment too soon, as wildfires are increasing in inten
 Hopefully, as we improve the technology to detect these fires early on, we can save lives and ecosystems!
 
 
-![The Amazon Rainforest](./imgs/wildfire-1.jpg)
+![The Amazon Rainforest](../imgs/wildfire-1.jpg)
 > The Amazon Rainforest, home to many peoples and countless species. A home worth protecting. <sup>[[11](#references)]</sup>
 
 ## References
