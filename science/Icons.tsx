@@ -1,4 +1,13 @@
-const images = {
+type Images ={
+  [file_name_without_suffix: string]: string // for now use path to science icon in /static/
+}
+
+const images: Images = {
+  'lidar-sky-solar': '/img/science/lidar-sky-solar-icon.png',
+  'resource-management': '/img/science/resource-management-icon.png',
+  'super-resolution': '/img/science/super-resolution.png',
+  'sound-separation': '/img/science/sound-separation.png',
+  'finding-events': '/img/science/finding-events.png',
   'collaboration': '/img/science/collaboration-icon.jpg',
   'solar-irradiance-estimation': '/img/science/solar-irradiance.jpg',
   'smoke-detection': '/img/science/smoke-detection.png',

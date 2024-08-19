@@ -1,4 +1,8 @@
-# Scalable AI@Edge computing in X-ray beamline experiments
+---
+sidebar_label: AI@Edge for X-ray Beamline Experiments
+---
+
+# Scalable AI@Edge Computing in X-ray Beamline Experiments
 
 Can Edge Computing Be Used in X-Ray Beamline Experiments to Process a High-Volume and Fast Data Stream and Help Scientists Make Real-Time Decisions for Experiments?
 

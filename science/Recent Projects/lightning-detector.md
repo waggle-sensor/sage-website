@@ -1,3 +1,7 @@
+---
+sidebar_label: Lightning Detection w/ Software Defined Radio
+---
+
 # Lightning Detection with Software Defined Radio
 
 Lightning causes significant damage, starts wildfires, and poses a threat to human safety. Lightning strike releases a large pulse of electromagnetic energy that can be detected and recorded with software-defined radio (SDR). These recordings can be used to:
