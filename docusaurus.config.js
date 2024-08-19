@@ -1,9 +1,12 @@
-const {themes} = require('prism-react-renderer')
+import { themes } from 'prism-react-renderer'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+
 const lightTheme = themes.github
 const darkTheme = themes.dracula
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+export default {
   title: 'Sage',
   tagline: 'AI at the Edge',
   url: 'https://waggle-sensor.github.io',
@@ -113,6 +116,15 @@ module.exports = {
     }
     */
   },
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
   scripts: [{
     src: 'https://apis.google.com/js/api.js'
   }],
@@ -124,6 +136,8 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/waggle-sensor/sage-website/edit/main/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex]
         },
         blog: {
           path: 'news',
