@@ -188,6 +188,10 @@ export default {
             to: '/docs/tutorials/accessing-data',
             from: ['/data', '/docs/data']  // obscure fix for /data/ vs /data redirect(?)
           },
+          {
+            to: '/science/category/recent-projects',
+            from: ['/science']  // obscure fix for /data/ vs /data redirect(?)
+          },
         ],
       },
     ], [

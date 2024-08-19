@@ -15,11 +15,11 @@ With this image, the Sage team created a customizable, innovative, and user frie
 That’s where the Chameleon platform comes in. Chameleon is a testbed of computational resources that are made available for the scientific community for running experiments. Chameleon has hardware available for Sage users at three different locations:CHI@UC, CHI@TACC, KVM@TACC. The CHI@UC and CHI@TACC site are both bare-metal sites, so only physical hardware is available. While the KVM@TACC site, is a virtual machine site. Users simply have to, create a reservation on the Chameleon, launch an instance, and attach an ip address to their instance. After doing these three steps, users are ready to start using there very own Chameleon machine.
 
 
-![creating chameleon instance](../imgs//integrating-chameleon-1.png)
-![creating chameleon instance 2](../imgs//integrating-chameleon-2.png)
+![creating chameleon instance](../imgs/integrating-chameleon-1.png)
+![creating chameleon instance 2](../imgs/integrating-chameleon-2.png)
 > Creating a reservation and instance taken from Chameleon.<sup>[[1](#references)]</sup>
 
-![allocating ips](../imgs//integrating-chameleon-3.png)
+![allocating ips](../imgs/integrating-chameleon-3.png)
 > Allocating floating ip.<sup>[[1](#references)]</sup>
 
 
@@ -56,7 +56,7 @@ Additionally, using GitHub Actions, I streamlined the the process of creating th
 
 Sage recognizes that users have all different sets of needs when running neural networks. That’s why users will have options to use different specialized versions/flavors of the Chameleon-Sage image. There are currently three different types of Chameleon-Sage images all available on the Chameleon catalog.
 
-![chameleon sage image](../imgs//integrating-chameleon-6.png)
+![chameleon sage image](../imgs/integrating-chameleon-6.png)
 > Snapshot of Sage image on Chameleon.<sup>[[1](#references)]</sup>
 
 Sage-VirtualWaggle-Ubuntu18.04 – This is the standard Chameleon-Sage image that is available at all three Chameleon sites. This image includes all of the previously stated features and runs with Ubuntu 18.04.
