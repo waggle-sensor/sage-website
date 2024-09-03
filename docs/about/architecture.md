@@ -230,6 +230,18 @@ The Tracker is a service designed to record the connectivity of LoRaWAN devices 
 ### Lorawan Listener Plugin
 The LoRaWAN Listener is a plugin designed to publish measurements collected from LoRaWAN devices. It simplifies the process of extracting and publishing valuable data from these devices. For more information about the plugin view the plugin page [here](https://portal.sagecontinuum.org/apps/app/flozano/lorawan-listener).
 
+### Lorawan Device Profile Templates
+
+[Device Profile Templates](https://www.chirpstack.io/docs/chirpstack/use/device-profile-templates.html#device-profile-templates) simplify the process of onboarding devices to a Node's ChirpStack server. You can create a device template directly through the Node's ChirpStack server UI or by contributing to our [Device Repository](https://github.com/waggle-sensor/wes-lorawan-device-templates?tab=readme-ov-file#waggle-device-repository-for-lorawan). 
+
+The Device Repository is a key resource that contains information about various LoRaWAN end devices, making it easier to catalog and onboard these devices to our Nodes' ChirpStack servers. We encourage you to contribute details about your devices to help other Sage users efficiently connect their devices. Once your device is added to our repository, it becomes available across all Nodes, streamlining the workflow for anyone who wants to connect a similar Lorawan device to a Node.
+
+>NOTE: Node's sync with our Device Repository every hour.
+
+If you prefer to keep your device configuration private, you can still add it directly to a Node's ChirpStack server using the UI. In this case, the configuration will remain exclusive to that particular Node.
+
+> For more information and tutorials on how to add a device, visit: [wes-lorawan-device-templates](https://github.com/waggle-sensor/wes-lorawan-device-templates?tab=readme-ov-file#waggle-device-repository-for-lorawan)
+
 ### Lorawan Device Compatibility
 
 The Wild Sage Node is designed to support a wide range of Lorawan devices, ensuring flexibility and adaptability for various applications. If you are wondering which Lorawan devices can be connected to a Wild Sage Node, the device must have the following tech specs:
