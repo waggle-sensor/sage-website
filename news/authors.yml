@@ -46,6 +46,11 @@ pbeckman:
   name: Pete Beckman
   title: Director
 
+gemblerz:
+  name: Yongho Kim
+  image_url: https://www.anl.gov/sites/www/files/styles/profile_teaser_square_350px/public/Kim-Yongho-Photo-Small-210x210.jpg?itok=fby9X02h
+  socials:
+    github: gemblerz
 
 # ---- student blog oauthors ----
 acabrera:
