@@ -17,6 +17,15 @@ export type Publication = {
 
 
 const publications : Publication[] = [{
+  title: 'Acoustic fingerprints in Nature: A Self-Supervised Learning Approach for Ecosystem Activity Monitoring',
+  authors: 'Dario Dematties, Samir Rajani, Rajesh Sankaran, Sean Shahkarami, Bhupendra Raut, Scott Collis, Pete Beckman, Nicola Ferrier',
+  publication: 'Ecological Informatics',
+  volume: 83,
+  pages: '102823',
+  year: 2024,
+  href: 'https://doi.org/10.1016/j.ecoinf.2024.102823'
+},
+{
   title: 'ARMing the Edge: Designing Edge Computing–Capable Machine Learning Algorithms to Target ARM Doppler Lidar Processing',
   authors: 'Jackson, Robert C., Bhupendra A. Raut, Dario Dematties, Scott M. Collis, Nicola Ferrier, Pete Beckman, Rajesh Sankaran, Yongho Kim, Seongha Park, Sean Shahkarami, and Rob Newsom',
   publication: 'Artificial Intelligence for the Earth Systems',
@@ -58,6 +67,15 @@ const publications : Publication[] = [{
   href: 'https://doi.org/10.3390/atmos12030395',
   image: require('@site/static/img/home/featured-science/solarIrradiance.png').default,
   id: 'solarIrradiance'
+}, {
+  title: 'Networked Sensing for Radiation Detection, Localization, and Tracking',
+  authors: 'RJ Cooper, N Abgrall, G Aversano, MS Bandstra, D Hellfeld, TH Joshi, V Negut, BJ Quiter, E Rofors, M Salathe, K Vetter, P Beckman, C Catlett, N Ferrier, Y Kim, R Sankaran, S Shahkarami, S Amitkumar, E Ayton, J Kim, S Volkova',
+  publication: 'Journal of Physics: Conference Series',
+  volume: 2586,
+  number: 1,
+  pages: '12125',
+  year: 2023,
+  href: 'https://doi.org/10.1088/1742-6596/2586/1/012125',
 }, {
   title: 'Goal-driven Scheduling Model in Edge Computing for Smart City Applications',
   authors: 'Kim, Yongho, Seongha Park, Sean Shahkarami, Rajesh Sankaran, Nicola Ferrier, and Pete Beckman.',
