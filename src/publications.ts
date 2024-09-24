@@ -17,7 +17,7 @@ export type Publication = {
 
 
 const publications : Publication[] = [{
-  title: 'Acoustic fingerprints in Nature: A Self-Supervised Learning Approach for Ecosystem Activity Monitoring',
+  title: 'Acoustic Fingerprints in Nature: A Self-Supervised Learning Approach for Ecosystem Activity Monitoring',
   authors: 'Dario Dematties, Samir Rajani, Rajesh Sankaran, Sean Shahkarami, Bhupendra Raut, Scott Collis, Pete Beckman, Nicola Ferrier',
   publication: 'Ecological Informatics',
   volume: 83,
