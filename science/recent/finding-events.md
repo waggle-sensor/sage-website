@@ -1,9 +1,9 @@
 ---
-sidebar_label: Finding Events in Real-Time
+sidebar_label: Finding Events in Real Time
 sidebar_position: 1
 ---
 
-# Creating a System to Find Events in Real-Time
+# Creating a System to Find Events in Real Time
 
 
 Across the United States and the world, the distributed network of Sage nodes captures over 2500 images per day. These nodes have the potential of capturing photos with important features such as smoke, wildlife, and emergencies. Each image contains unique characteristics which, until now, were hard to look for without manually searching through the Sage database. With both the images and users in mind, this project has two goals: harness the power of machine learning to describe photos as they are taken, and build a user-friendly system to allow others to find what they are looking for within our database.
