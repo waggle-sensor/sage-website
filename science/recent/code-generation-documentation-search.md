@@ -7,7 +7,7 @@ keywords:
 sidebar_position: 0
 ---
 
-# Code Generation and Documentation Search using Language Model
+# Code Generation and Documentation Search using Large Language Model
 
 Author: Aldo Malaquias Cabrera, Summer 2024
 
