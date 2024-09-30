@@ -21,7 +21,8 @@ Manual augmentation used Llama3 and RAG used Llama3.1 as generative models.
 ## Manual Augmentation
 Manual augmentation is the technique of providing context to the model before asking a question. This can occur in two ways: conversation style, feeding and re-enforcing the model with text interactions, and providing all context and instructions at the same when asking a question. Our work includes both approaches and even demonstrates that both methods are sometimes required to achieve acceptable results.
 
-**Baseline Tests**
+#### Baseline Tests
+
 Firstly, it was important to establish a baseline to understand Llama3's extent of familiarity with the Sage project. The following are the baseline results:
 
 |![baseline](../imgs/baseline.png)|
@@ -40,7 +41,8 @@ Even when provided large amounts of context, Sage's [about section](https://sage
 |:--:|
 |*Providing Sage About Context*|
 
-**Code Generation**
+#### Code Generation
+
 Therefore, we provided the model its first snippets of code, the camera Waggle imports. Llama3 was then instructed to generate code to capture a snapshot from the camera:
 
 ```python
@@ -138,7 +140,8 @@ Take a look at the model's descriptions of Sage and Waggle with only 17 lines of
 |:--:|
 |*Descriptions of Sage and Waggle*|
 
-**Importance of Context Size**
+#### Importance of Context Size
+
 It was clear that code snippets were essential for accurate code generation and inference, but the length of those snippets mattered as well. Too much context overwhelmed the model, resulting in overly complicated and incorrect code. We asked the model to generate similar plugins as above, but this time we provided the entire [writing-a-plugin](https://github.com/waggle-sensor/pywaggle/blob/main/docs/writing-a-plugin.md) markdown file (2481 words, 18500 characters). It resulted in the code below when it could've been generated in just 15 lines:
 
 ```python
@@ -185,7 +188,8 @@ if __name__ == "__main__":
 
 Consequently, it was essential to consider the amount of context provided. While a few lines of code produced reasonable results, excessive information can mislead the model. This is why RAG systems are so effective: they retrieve manageable chunks of information.
 
-**Importance of Relevant Context**
+#### Importance of Relevant Context
+
 Providing meaningful context was also crucial. This became clear when we generated code to query data collected by a Wild Sage Node. We supplied the model with code snippets from the Sage Data Client (SDC) API, including SDC filtering variables. However, since SDC metadata tends to be noisy and large, the model generated code with traces of this noisy metadata when given all the filters, resulting in incorrect output:
 
 ```python
@@ -259,7 +263,8 @@ While the model couldn't answer Sage questions consistently at any moment, it co
 
 To address those limitations, we turned to Retrieval-Augmented Generation (RAG) as a solution. RAG combines the strengths of LLM generation with automatic context retrieval, allowing for consistent and contextually relevant responses. By leveraging RAG, we automated the prompt augmentation process, allowing the model to consistently provide accurate answers to users' questions about Sage whenever needed.
 
-**Basic RAG**
+#### Basic RAG
+
 1. Setup:
    1. Data ingestion.
    2. Encode data (embedding) with embedding model/
@@ -285,7 +290,8 @@ We documented a basic version of this process using cosine similarity and the mx
 |:--:|
 |*Basic RAG Context Retrieval*|
 
-**Langchain RAG**
+#### Langchain RAG
+
 It was evident that RAG mirrored the prompt augmentation process of manual augmentation while providing a framework to automate this process, ensuring consistent results without the need for human intervention. 
 
 The next step was to enhance our basic RAG system by:
@@ -301,7 +307,8 @@ To address these challenges, we turned to Langchain. Its API allowed us to effic
 
 The remaining steps were easily implemented with Langchain, enabling us to complete our RAG pipeline.
 
-**RAG Accuracy**
+#### RAG Accuracy
+
 Our interactions with the system revealed several key findings:
 1. The retrieval process, which encodes user queries and applies similarity functions, effectively ensured that relevant context was always retrieved.
 2. The retriever enhanced the precision of RAG by selecting only the top-$k$ contexts, preventing the model from being overwhelmed by excessive information and addressing the issue of context size.
@@ -312,7 +319,8 @@ Because of these factors, the model experienced low hallucination rates, as ever
 
 We also found that RAG maintained consistent accuracy across various combinations of embedding models and vector databases. Notably, there was no difference in the retrieved contexts when using any combination of jina-v2, mxbai-embed-large, Chroma, and FAISS.
 
-**RAG Speed**
+#### RAG Speed
+
 With these accuracy metrics established, it was crucial to evaluate RAG's speed to ensure efficient responses. RAG is a scalable system capable of referencing vast amounts of external information. However, it's limited by the computational costs and the LLMs context window size. While RAG can retrieve extensive information, an LLM can only recall its window size for generation. In our case, window size wasn't an issue since our system dealt with undemanding questions that required only $k<15$ for accurate responses, but it’s still worth noting.
 
 Therefore, we focused on the computational costs, encoding time and generation time. We conducted tests on the following:
@@ -346,7 +354,8 @@ For generation time, we observed:
 4. With a few exceptions, each question consistently ranked similarly in generation time relative to others (e.g., the "Sage and Waggle infrastructure" question was consistently among the top two for generation time, while the "Why is the sky blue?" question was consistently at the bottom).
 5. These results indicate that increasing $k$ has a minimal effect on generation time for any type of question.
 
-**Suggestions for Optimizing RAG**
+#### Suggestions for Optimizing RAG
+
 Consequently, we provide the following suggestions for optimizing RAG:
 * Always augment your prompt:
   * Include a set of directives in your enhanced prompt that specify generation instructions, such as how to handle irrelevant user queries.
