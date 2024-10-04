@@ -3,6 +3,7 @@ type Images ={
 }
 
 const images: Images = {
+  'llm-generation': '/img/science/llm-generation.png',
   'autonomous-camera-control': '/img/science/autonomous-camera-control.jpg',
   'lidar-sky-solar': '/img/science/lidar-sky-solar-icon.png',
   'resource-management': '/img/science/resource-management-icon.png',
