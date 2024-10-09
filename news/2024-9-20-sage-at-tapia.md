@@ -13,6 +13,6 @@ Sponsored by [Sage NDC-C](https://nairrpilot.org/projects/demo/sage), we present
 Interested in running the Jupyter notebooks we demonstrated in the presentation?  Check them out here:
 
 - [geospatial mapping notebook](https://github.com/sagecontinuum/sage-data-client/blob/main/examples/contrib/geospatial_mapping_example_v2.ipynb) [![open in google colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sagecontinuum/sage-data-client/blob/main/examples/contrib/geospatial_mapping_example_v2.ipynb)
-- [node performance ploting notebook](https://github.com/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/analyze_node_performance.ipynb) [![open in google colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/analyze_node_performance.ipynb)
+- [node performance plotting notebook](https://github.com/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/analyze_node_performance.ipynb) [![open in google colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/analyze_node_performance.ipynb)
 
 ![tapia presenters](img/tapia2024/tapia-presenters.jpg)
