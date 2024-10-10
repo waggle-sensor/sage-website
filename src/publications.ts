@@ -107,7 +107,7 @@ const publications : Publication[] = [{
   authors: 'Pete Beckman, Jack Dongarra, Nicola Ferrier, Geoffrey Fox, Terry Moore, Dan Reed, and Micah Beck.',
   publication: 'Fog Computing: Theory and Practice (A. Y. Zomaya, A. Abbas, and S. U. Khan, eds.), John Wiley & Sons, Hoboken, NJ.',
   year: 2020,
-  href: 'https://doi.org/10.1109/MCSE.2021.3139405'
+  href: 'https://doi.org/10.1002/9781119551713.ch7'
 }]
 
 
