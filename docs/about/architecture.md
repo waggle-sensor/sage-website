@@ -252,7 +252,7 @@ The Wild Sage Node is designed to support a wide range of Lorawan devices, ensur
 - The device supports Over-The-Air Activation (OTAA) or Activation By Personalization (ABP)
 - The device has a Lorawan device class of A, B, or C
 
-It is important to note that all channels within the US915 frequency band are enabled in a Wild Sage Node. If you wish to learn more about our Lorawan Gateway, please visit our [portal](https://portal.sagecontinuum.org/sensors/). For inquiries about supporting Lorawan regions other than US915, please [Contact Us](../contact-us.md).
+It is important to note that our Wild Sage Nodes use US915 sub band 2(903.9-905.3 MHz). If you wish to learn more about our Lorawan Gateway, please visit our [portal](https://portal.sagecontinuum.org/sensors/). For inquiries about supporting Lorawan regions other than US915, please [Contact Us](../contact-us.md).
 
 #### Device Examples
 
