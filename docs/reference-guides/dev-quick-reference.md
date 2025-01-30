@@ -61,7 +61,7 @@ Note: Variable names in `plugin.publish` should be descriptive and specific.
 : optional but the recommended file includes commands for building the Docker image, running tests, and deploying the plugin.
 
 ### 3. ECR configs and docs
-You can do this step (_except **sage.yaml**_) after testing on the node but before the [ERC submission](#edge-code-repository). :smile:
+You can do this step (_except **sage.yaml**_) after testing on the node but before the [ECR submission](#edge-code-repository). :smile:
 
 `sage.yaml*`
 : is the configuration file useful for ECR and job submission? Most importantly it specifies the version and input arguments.
@@ -211,7 +211,7 @@ After the build process is complete, you need to **make the plugin public** to s
 :::danger
 You can not resubmit the plugin to ECR with the same version number again.
 :::
-- So think about how you change it every time you resubmit to ERC and make your style of versioning. :thinking_face:
+- So think about how you change it every time you resubmit to ECR and make your style of versioning. :thinking_face:
 - I use _'vx.y.m.d'_ e.g. _'v0.23.3.4'_ but then I can only have 1 version a day, so now I am thinking of adding an incremental integer to it.
 
 ### After ECR registry test (generally not required)
