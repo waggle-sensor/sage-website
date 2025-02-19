@@ -78,9 +78,10 @@ Choose from 1, 2, 3, 4 [1]: 4
 
 
 const scienceTexts = [
-  'Climate Research',
   'Wildfire Detection',
   'Health & Safety',
+  'Intelligent Agriculture',
+  'Understanding Wildlife',
   'Science',
   'Discovery'
 ]
