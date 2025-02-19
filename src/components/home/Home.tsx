@@ -198,7 +198,7 @@ export default function Home() {
           </div>
           <div className="bg-white shadow-sm rounded-xl md:w-1/3 h-[620px]">
             <h2 className="flex items-center gap-2 p-4 pb-3 m-0">
-              <EventsIcon />Events
+              <EventsIcon />Events & Training
             </h2>
             <hr className="m-0"/>
             <div className="px-4 py-8">
