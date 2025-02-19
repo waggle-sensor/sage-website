@@ -232,26 +232,8 @@ function Map(props: MapProps) {
 
 
 function getNodes() : Promise<Node[]> {
-  const p1 = fetch('https://auth.sagecontinuum.org/manifests')
-  const p2 = fetch('https://api.sagecontinuum.org/production')
-
-  return Promise.all([p1, p2])
-    .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
-    .then(([manifests, meta]) => {
-      const sageMetas = meta.filter(obj => obj.project.toLowerCase() == 'sage')
-      const sageVSNs = sageMetas.map(obj => obj.vsn)
-
-      let nodes = manifests
-        .filter(node => sageVSNs.includes(node.vsn))
-
-      // join in focus?
-      nodes = nodes.map(obj => ({
-        ...obj,
-        focus: sageMetas.find(o => o.vsn == obj.vsn)?.focus
-      }))
-
-      return nodes
-    })
+  return fetch('https://auth.sagecontinuum.org/api/v-beta/nodes/?project__name=sage')
+    .then(res => res.json())
 }
 
 
