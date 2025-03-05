@@ -169,7 +169,7 @@ export default {
           return postcssOptions
         },
       }
-    },    [
+    }, [
       '@docusaurus/plugin-content-docs',
       {
         sidebarPath: require.resolve('./sidebars.js'),
@@ -179,6 +179,14 @@ export default {
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
         // ... other options
+      },
+    ], [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'team-grande',
+        path: 'team-grande',
+        routeBasePath: 'team-grande',
+        breadcrumbs: false
       },
     ], [
       '@docusaurus/plugin-client-redirects',
