@@ -183,9 +183,9 @@ export default {
     ], [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'team-grande',
-        path: 'team-grande',
-        routeBasePath: 'team-grande',
+        id: 'team-v2',
+        path: 'team-v2',
+        routeBasePath: 'team-v2',
         breadcrumbs: false
       },
     ], [
@@ -198,7 +198,7 @@ export default {
           },
           {
             to: '/science/category/recent-projects',
-            from: ['/science']  // obscure fix for /data/ vs /data redirect(?)
+            from: ['/science']
           },
         ],
       },
