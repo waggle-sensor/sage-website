@@ -12,8 +12,8 @@
         <id>https://waggle-sensor.github.io/news/2024/9/20/sage-at-tapia</id>
         <link href="https://waggle-sensor.github.io/news/2024/9/20/sage-at-tapia"/>
         <updated>2024-09-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Sponsored by Sage NDC-C, we presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See the presentation slides). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!]]></summary>
-        <content type="html"><![CDATA[<p>Sponsored by <a href="https://nairrpilot.org/projects/demo/sage" target="_blank" rel="noopener noreferrer">Sage NDC-C</a>, we presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See <a href="https://waggle-sensor.github.io/assets/files/TAPIA-sep-2024-827cd409c6c7d38235a805e8815c3286.pdf" target="_blank">the presentation slides</a>). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!</p>
+        <summary type="html"><![CDATA[On Sep 20th, 2024, the Sage team presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See the presentation slides). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!]]></summary>
+        <content type="html"><![CDATA[<p>On Sep 20th, 2024, the Sage team presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See <a href="https://waggle-sensor.github.io/assets/files/TAPIA-sep-2024-827cd409c6c7d38235a805e8815c3286.pdf" target="_blank">the presentation slides</a>). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!</p>
 <p>Interested in running the Jupyter notebooks we demonstrated in the presentation?  Check them out here:</p>
 <ul>
 <li><a href="https://github.com/sagecontinuum/sage-data-client/blob/main/examples/contrib/geospatial_mapping_example_v2.ipynb" target="_blank" rel="noopener noreferrer">geospatial mapping notebook</a> <a href="https://colab.research.google.com/github/sagecontinuum/sage-data-client/blob/main/examples/contrib/geospatial_mapping_example_v2.ipynb" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" src="https://colab.research.google.com/assets/colab-badge.svg" alt="open in google colab" class="img_ev3q"></a></li>
@@ -29,22 +29,6 @@
         <category label="AI@Edge" term="AI@Edge"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Sage Field Experience in Hawai'i]]></title>
-        <id>https://waggle-sensor.github.io/news/sage-hawaii</id>
-        <link href="https://waggle-sensor.github.io/news/sage-hawaii"/>
-        <updated>2024-03-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Sponsored by NAISE, the primary goal for the SAGE visit in Hawai’i was centered around experiential learning. Engaging directly with the local communities and university scientists on the island, we learned about traditional aquaculture farming practices, successfully deployed a Wild Sage Node in Pāhoa for climate research, surveyed future deployment areas needed to fulfill data needs in Lahaina, and more. This immersive field experience combined scientific exploration with community, highlighting the critical importance of conducting science that drives actionable impact and social change.]]></summary>
-        <content type="html"><![CDATA[<p>Sponsored by <a href="https://naise.northwestern.edu/" target="_blank" rel="noopener noreferrer">NAISE</a>, the primary goal for the SAGE visit in Hawai’i was centered around experiential learning. Engaging directly with the local communities and university scientists on the island, we learned about traditional aquaculture farming practices, successfully deployed a <a href="https://portal.sagecontinuum.org/node/W097" target="_blank" rel="noopener noreferrer">Wild Sage Node</a> in Pāhoa for climate research, surveyed future deployment areas needed to fulfill data needs in Lahaina, and more. This immersive field experience combined scientific exploration with community, highlighting the critical importance of conducting science that drives actionable impact and social change.</p>
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/i5z6yxM3ch4?si=dTDc1eiqEqNNvSu9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>]]></content>
-        <author>
-            <name>Anagha Tiwari</name>
-        </author>
-        <category label="students" term="students"/>
-        <category label="edge applications" term="edge applications"/>
-        <category label="deployment" term="deployment"/>
-        <category label="hawaii" term="hawaii"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Introducing the Sage Testbed]]></title>
         <id>https://waggle-sensor.github.io/news/2024/01/10/sage-testbed</id>
         <link href="https://waggle-sensor.github.io/news/2024/01/10/sage-testbed"/>
@@ -54,7 +38,7 @@
 <p><img decoding="async" loading="lazy" alt="Photo of the Sage Testbed" src="https://waggle-sensor.github.io/assets/images/sage-testbed-efe1490dbaa91af190bcc1d63c781469.png" width="2560" height="682" class="img_ev3q"></p>
 <p>For Sage users, one of the major challenges is bridging the gap between local development and real production deployment.</p>
 <p>While local development is fantastic for prototyping ideas quickly, it often lacks the nuance and intricacy of real hardware, particularly when it comes to sensors and instruments. Further, specific technical hurdles with tools like Docker or Rancher Desktop prevent Mac or Windows users from even integrating certain sensors with their own machine for development and testing.</p>
-<p>In response to this challenge, the team has dedicated a focused effort on building out a comprehensive testbed.  This testbed, funded by the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935984" target="_blank" rel="noopener noreferrer">NSF Sage project</a>, consists of 16 Wild Sage Nodes and 14 Sage Blades which all have access to a range of sensors such as PTZ and thermal cameras, with the explicit intent of being made widely available to the community for development access.</p>
+<p>In response to this challenge, the team has dedicated a focused effort on building out a comprehensive testbed.  This testbed consists of 16 Wild Sage Nodes and 14 Sage Blades which all have access to a range of sensors such as PTZ and thermal cameras, with the explicit intent of being made widely available to the community for development access.</p>
 <p>The Northwestern University Sage Testebed is hosted at a testing site on the Argonne National Laboratory campus.  Because it is easily accessible and maintained, we can better support users interested trying more cutting-edge or low level experiments on devices.</p>
 <p>Does this sound interesting to you? If so, visit the <a href="https://portal.sagecontinuum.org/account/access" target="_blank" rel="noopener noreferrer">Access Credentials</a> section of the Sage Portal and request dev access to the Sage Testbed to get started.</p>
 <p><img decoding="async" loading="lazy" alt="Photo of the Sage Testbed at dusk" src="https://waggle-sensor.github.io/assets/images/sunset-7138ea94daf66e95572a09378ca3b9d4.jpg" width="4032" height="3024" class="img_ev3q"></p>]]></content>
@@ -70,142 +54,6 @@
         <category label="Community" term="Community"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Deployment Success at Hawaii]]></title>
-        <id>https://waggle-sensor.github.io/news/2023/11/17/hawaii-anagha</id>
-        <link href="https://waggle-sensor.github.io/news/2023/11/17/hawaii-anagha"/>
-        <updated>2023-11-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Hello! I’m Anagha - a Computer Science & Statistics major at the University of Illinois at Urbana Champaign. This past summer, I had the unique opportunity to work as a research intern for the Sage team to create a rideshare vehicle detection algorithm and app.]]></summary>
-        <content type="html"><![CDATA[<p>Hello! I’m Anagha - a Computer Science &amp; Statistics major at the University of Illinois at Urbana Champaign. This past summer, I had the unique opportunity to work as a research intern for the Sage team to create a rideshare vehicle detection algorithm and app.</p>
-<p>This past month, I traveled to Hilo, Hawai'i with the Sage team to install the latest node W097 near Volcanoes National Park. This was a truly unique experience and taught me the value of collaboration among scientists and communities to reach goals.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="background-context--preparation">Background Context &amp; Preparation<a href="https://waggle-sensor.github.io/news/2023/11/17/hawaii-anagha#background-context--preparation" class="hash-link" aria-label="Direct link to Background Context &amp; Preparation" title="Direct link to Background Context &amp; Preparation">​</a></h2>
-<p>On 10/26, the team met at the University of Hawaiʻi at Mānoa with scientists <a href="https://geography.manoa.hawaii.edu/thomas-giambelluca/" target="_blank" rel="noopener noreferrer">Thomas Giambelluca</a>, <a href="https://www.wrrc.hawaii.edu/person/han-tseng/" target="_blank" rel="noopener noreferrer">Han Tseng</a>, and <a href="https://www.linkedin.com/in/dylan-giardina-747a56188/" target="_blank" rel="noopener noreferrer">Dylan Giardina</a>. We were all excited to begin preparation and unpacked the shipments for deployment. The interns helped with transporting materials and installing stainless steel equipment into the node; Raj worked with Han to explain the input-ouputs and wiring for installment; and the rest of us helped pack other equipment and ropes for an efficient deployment experience on the tower. With all hands on deck, we finished the deployment procedures swiftly and ended the day with some delicious food from a local Hawaiian eatery!</p>
-<p><img decoding="async" loading="lazy" src="https://raw.githubusercontent.com/AnaghaTiwari/anaghatiwari/gh-pages/sage/IMG_5176.jpeg" alt="" class="img_ev3q">
-<em>Setup and preparation for deployment at the University of Hawaii @ Manoa</em></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="d-day-the-deployment">D-Day: The Deployment<a href="https://waggle-sensor.github.io/news/2023/11/17/hawaii-anagha#d-day-the-deployment" class="hash-link" aria-label="Direct link to D-Day: The Deployment" title="Direct link to D-Day: The Deployment">​</a></h2>
-<p>At 7:00 AM in the morning, the team drove to Volcanoes National Park with the hiking equipment and sensor parts in hand, ready to mount the 80-foot tower! <a href="https://manoa.hawaii.edu/cinema/staff-member/jason-leigh/" target="_blank" rel="noopener noreferrer">Jason Leigh</a> and <a href="https://www.ryanctheriot.com/" target="_blank" rel="noopener noreferrer">Ryan Theriot</a> flew down from the <a href="https://www.lavaflow.info/" target="_blank" rel="noopener noreferrer">Lava Lab</a> to the site to assist with the installation procedure. With over 11 people on-site, we all got our hard-hats on, geared up with equipment, and got the exciting momentum running for the mission ahead of us!</p>
-<p>The video footage below exhibits some of the challenges we faced, and how teamwork was absolutely essential for installation on quite a tall tower with dense canopy, fragile equipment, and limited time. The interns were handling the ropes; Raj was directing the installation; Han, Dylan, and Tom were the tower climbers; Jason, Ryan, and I were recording video footage of the experience; and Pete was overseeing the climbers at the top. Every individual, every effort, every responsibility was integral to the deployment experience, and after 10 hours of dedication, we successfully installed the Wild Sage node and were even able to see live audio and image feedback!</p>
-<p>The node is installed at approximately 80 feet high and includes equipment such as Lorowan, a rain gauge, gps, and high-accuracy cameras for audio, imaging, and sensor capabilities. Edge apps on these sensors will collect data and analytics on air quality, pollution levels, cloud cover, diversity monitors, solar irradiance levels, and more. We hope to provide this data to local Hawaiian communities and to the national parks to assess the impact of wildfires, volcanic eruptions, and diversity in plant and animal species in the surrounding area.</p>
-<iframe title="Sage: AI @ Edge" src="https://www.youtube.com/embed/8mH26pUrn74" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="400" allowfullscreen="" id="fitvid61143"></iframe>
-<figcaption><em><p>The thick canopy and tower height presented challenges in hauling the node to the top - teamwork, patience, and clear communication made it possible!</p></em></figcaption>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="relationships-and-collaborations-for-current-and-future">Relationships and Collaborations for Current and Future<a href="https://waggle-sensor.github.io/news/2023/11/17/hawaii-anagha#relationships-and-collaborations-for-current-and-future" class="hash-link" aria-label="Direct link to Relationships and Collaborations for Current and Future" title="Direct link to Relationships and Collaborations for Current and Future">​</a></h2>
-<p>I believe that the foundations for such a monumental and successful deployment are the relationships and collaborations Sage developed and nurtured with individuals and organizations in Hawaii.</p>
-<p>Such collaborations, especially when interdisciplinary and geographically diverse, can be multifaceted and often complex. Relationships between scientists, their scientific domain, and their research can be varied yet unique. The field trip to Hawaii represents key interactions and collaborations between scientists, where diverse scientific domains such as edge computing, computer science, and the climate sciences can be integrated to pursue groundbreaking research goals.</p>
-<p>The foundational relationships between universities, scientists, and the Sage team in Hawaii are key for future relationships and deployments that encourage the pursuit of science and research. For instance, Han, Tom, and Dylan were all key scientists to the installation success because of their contagious passion for science and research, their willingness to support the Hawaiian communities through providing accessible environmental data, and their hard work during deployment.</p>
-<p>Sage sensors and edge computing act as vital segways where data collection benefits climate scientists and provides a unique insight into the Hawaiian culture and environment. Through the beauty of teamwork and collaboration, science can be transformed into a catalyst for transformational feedback and change.</p>
-<p><img decoding="async" loading="lazy" src="https://github.com/AnaghaTiwari/anaghatiwari/blob/gh-pages/sage/IMG_6575.JPEG?raw=true" alt="" class="img_ev3q">
-<em>Mission Success! From left to right: Anagha, Pete, Joann, Raj, Aldo, Alex, Dylan, Tom, Han</em></p>]]></content>
-        <author>
-            <name>Anagha Tiwari</name>
-        </author>
-        <category label="node deployment" term="node deployment"/>
-        <category label="hawaii" term="hawaii"/>
-        <category label="collaborations" term="collaborations"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Serving the Hawaiian Community with Sage Nodes]]></title>
-        <id>https://waggle-sensor.github.io/news/2023/10/31/Hawaiian-Community</id>
-        <link href="https://waggle-sensor.github.io/news/2023/10/31/Hawaiian-Community"/>
-        <updated>2023-10-31T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Hello, my name is Aldo. I study computer science at the University of Chicago, and I've worked with Argonne National Laboratory since June 2021. My research involves wireless sensors and integrating the Sage infrastructure with low-cost nodes.]]></summary>
-        <content type="html"><![CDATA[<p>Hello, my name is Aldo. I study computer science at the University of Chicago, and I've worked with Argonne National Laboratory since June 2021. My research involves wireless sensors and integrating the Sage infrastructure with low-cost nodes.</p>
-<p>There aren't many employers that fly out their interns to tropical islands. But that's why Argonne National Lab is so incredible! This last week, I learned what it means to be a computer scientist that helps people. My biggest dilemma with applying to graduate school has been figuring out how I'd positively impact people's lives with my research. Argonne allowed me to see exactly that on this trip. I saw how lab work leads to applicable instrumentation, which allows different scientists to answer their research questions to help people. And it was incredible to see people so passionate about their work.
-<img decoding="async" loading="lazy" alt="working on node in jungle" src="https://waggle-sensor.github.io/assets/images/jungle-7768cab4eeeaeb4fd97d756242bf5e4d.png" width="4032" height="3024" class="img_ev3q"></p>
-<p>Meeting Derek Esibill and his son Kai in O'ahu taught me that science is beautiful. It was clear from the beginning they both care deeply about Hawaiian culture and its people. Derek's research aims to restore the traditional ways of aquaculture to support the growing needs of Hawaii. He uses sensors to track the flow of fish and to study the composition of the pond water. We visited the pond to explore how Sage can introduce wireless sensors to facilitate the process of data gathering. I saw how my research on wireless sensors could help other scientists to answer questions relating to food sustainability. To me, that means a lot because it revealed to me how remote lab research translates directly to helping people across the world. And in return, hopefully, restore the tradition of cultivating food in Hawaii.
-<img decoding="async" loading="lazy" alt="fishpond in O&amp;#39;ahu" src="https://waggle-sensor.github.io/assets/images/pond-310e13f213a17f9f18b5d26a800513bf.png" width="3024" height="4032" class="img_ev3q"></p>
-<p>Another insightful moment was when we went up to the water tower in Lahaina. As a computer scientist, you don't learn about the social aspect of using your research for the betterment of society, so before the trip, I saw computer science research unrelated to social impact. The Sage project is special because apart from the interdisciplinary work to answer climate and ecological questions, the scientists on the team also care about the people they work to help. For example, it's important to make scientific data and discovery more digestible for the people in Lahaina to provide insight to their questions, and computer science visualization techniques do exactly that. It's also important to be sensible to community needs with the research questions to ask and prioritize. Again, I saw how my research could help on-the-field scientists surveil the land and skies with greater efficiency, allowing for quicker answers to pending questions.
-<img decoding="async" loading="lazy" alt="sliding sands hike crater" src="https://waggle-sensor.github.io/assets/images/crater-90020a67c6704eadfe50e2f2fd03a3bc.png" width="4032" height="3024" class="img_ev3q"></p>
-<p>I'm forever thankful for this opportunity to not only hike above the clouds and swim in the Pacific Ocean but to meet scientists and understand their motivation behind discovery. Their insights helped me understand that computer science can directly help people through collaboration with other scientists and providing better data collection. I know now that lab work doesn't have to stay just in the lab but can be used in real-life situations to help people, as long as there's an understanding between the scientists and communities. Thank you again to all the team members from Illinois and Hawaii for sharing their experiences.</p>]]></content>
-        <author>
-            <name>Aldo Malaquias Cabrera</name>
-        </author>
-        <category label="Hawaii" term="Hawaii"/>
-        <category label="Node deployment" term="Node deployment"/>
-        <category label="Students" term="Students"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Waikalua Loko Fish Pond]]></title>
-        <id>https://waggle-sensor.github.io/news/2023/10/30/alex-blog-hawaii</id>
-        <link href="https://waggle-sensor.github.io/news/2023/10/30/alex-blog-hawaii"/>
-        <updated>2023-10-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[team photo]]></summary>
-        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="team photo" src="https://waggle-sensor.github.io/assets/images/Group-e92c68e79f4c89b44d41bd9190d33cf0.jpg" width="4032" height="3024" class="img_ev3q">
-Hi there! My name is Alex Arnold and I'm currently a senior at Northwestern University studying computer and cogntitive science. I worked with the team over the summer as an intern and also had the chance to help with a node deployment in Volcanos National Park in Hawai'i.</p>
-<p>Today we arrived in Honolulu. We checked into our hotel right off of the famous Waikiki beach, where we saw a lot of surfers catching waves out in the water. After a nine hour flight we were incredibly hungry so Aldo and I picked up a local snack: musubi spam. It’s basically spam on top of rice and wrapped together with seaweed. Served hot, it was unexpectedly good and a pleasant surprise. After a long flight without much food it tasted incredible.</p>
-<p>After taking a short break, we headed out to the restored indigenous fish pond Waikalua Loko, which is run by the Pacific American Foundation (PAF). We crossed through a tunnel under the mountains that divide Oahu to get to the northern side of the island. We saw beautifulk views as the sun set over the mountains. We then met Dr. Derek Esibill from Windward Community College. He is working on restoring a pond that can be used to sustainably harvest fish from the bay. His work is also through a cultural lens and makes sure to incorporate education about Hawaiian culture and practices.</p>
-<p><img decoding="async" loading="lazy" alt="Fish pond" src="https://waggle-sensor.github.io/assets/images/fire-9425ab686c26fdb2bf16d5a3446a23cb.jpg" width="5712" height="4284" class="img_ev3q"></p>
-<p>The pond is full of brackish water due to the combination of water coming in from the ocean and from a stream coming down the mountains. The two combine to make a hospitable environment for the fish to come in as youths through gates with wooden slats and fatten up. These fish are then unable to escape making them easy picking for fishermen. This method was used by the indigenous peoples of Hawai'i to sustainably feed the island. Each rock surrounding the pond was taken and placed intentionally by hand. At first glance it may seem that they made the walls too short since the ocean water spills over into the pond, but in actuality the ocean has risen due to climate change over the years. While most of the rocks are originally, these walls have been reinforced to combat the rising sea levels.</p>
-<p>There used to be hundreds of these ponds, but most of them were filled in and now host fish inside of a Costco instead of the water. This particular pond also isn’t quite ready yet. A sewage treatment plant used to dump human waste into the water (remnants of which only disappeared less than two years ago) and now invasive mangrove trees have disrupted the sediments. Luckily, is working on restoring the pond and in the meantime he’s growing fish in tanks to “seed” other ponds in the area.
-<img decoding="async" loading="lazy" alt="Pond node" src="https://waggle-sensor.github.io/assets/images/node-75e4fff71b8cd223127eeac8b66f305a.jpg" width="3024" height="4032" class="img_ev3q"></p>
-<p>There’s currently a Sage node (W071) set up right above the fish tanks that we saw in action. It’s monitoring the air quality levels and environmental data right now, but there’s a lot more the team is wanting to do with it. Computer vision and remote sensors could replace a lot of the work needed to monitor the water conditions in each tank. Currently somebody has to go out and measure the water conditions, and automating that process would make the work much easier. A node could also be used to monitor the water level and flow of the pond with nothing but an image, and more work needs to be done to create robust models that can predict that better than the current sensors can.</p>
-<p>After we left the fish pond we all went out to dinner and learned about what other foods we should try. Derek’s son Kai (our honorary guide and recommended Poi and Lau Lau) and tried to stay up to combat jet lag. By the time we got back to our hotel we were all exhausted, but we made one more trip to the beach to take in the ocean to relax before turning in for he night.</p>]]></content>
-        <author>
-            <name>Alex Arnold</name>
-        </author>
-        <category label="Hawaii" term="Hawaii"/>
-        <category label="Node deployment" term="Node deployment"/>
-        <category label="Fish ponds" term="Fish ponds"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Joann Hawaii Blog Post]]></title>
-        <id>https://waggle-sensor.github.io/news/2023/10/30/joann-blog-hawaii</id>
-        <link href="https://waggle-sensor.github.io/news/2023/10/30/joann-blog-hawaii"/>
-        <updated>2023-10-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[My name is Joann Lenart and I am a current senior at Northwestern University. As a social scientist-- majoring in Political Science and Legal Studies while also conducting research regarding environmental justice within Indigenous groups-- I joined a research trip to Hawaii that was primarily focused on building sensors and using codes and AI to track everything from birds sounds to heat sensing. It seems out of my wheel-house but it was also an eye-opening experience to see how we can bridge the social sciences with computer science.]]></summary>
-        <content type="html"><![CDATA[<p>My name is Joann Lenart and I am a current senior at Northwestern University. As a social scientist-- majoring in Political Science and Legal Studies while also conducting research regarding environmental justice within Indigenous groups-- I joined a research trip to Hawaii that was primarily focused on building sensors and using codes and AI to track everything from birds sounds to heat sensing. It seems out of my wheel-house but it was also an eye-opening experience to see how we can bridge the social sciences with computer science.</p>
-<p>While in Hawaii, I observed some societal patterns and themes that were interesting to me. One of the first examples was at the airport. Directions and announcements were first stated in Native Hawaiian, then in English. Having done research with Indigenous groups in the past, this small detail has a broader impact regarding their status in the state.</p>
-<p>Additionally, the environmental laws passed in Hawaii are noticeable and prevalent in a positive way. To enter national parks, shoes need to be scrubbed to prevent invasives. Plastic bags are banned and the single-use cups and utensils are all eco friendly. Certain chemicals are banned from sunscreens. These laws work here but they are not seen on the mainland. It appears the key for these environmental laws to pass and function is the need from citizens to also want to help the environment. Helping the environment is a collective effort and there must be motivation from both parties to combat the effects of climate change.</p>
-<p>On Day 6 of the trip, the research team went to a water treatment plant to survey the area since a new Sage Node will eventually be installed there on a weather tower. The tower overlooked the town of Lahaina which unfortunately was devastated by the wildfires earlier in August. This node will be used to detect smoke and track temperatures to see which area is most vulnerable to wildfires to try to prevent another disaster from occurring. The community members are still recovering and are still terrified months after this devastation. Once the sage node is up, the team will work with the local community by creating a dashboard with accessible information such as if the air quality is healthy. Additionally, after discussing with Chris, a hydrologist, about this data, there is potential to give this data to the government and council in charge to decide what policies to pass and to use this data in court cases to pass climate legislation and advance environmental justice. It is about being transparent and having the local community involved.</p>
-<p>Despite not being a computer scientist, there are many areas where the social sciences can be bridged with the computer sciences. It is about how you use the data collected with the community groups most impacted. On paper I may have been an outlier with my background, but during discussions with many other scientists and researchers, it did not feel as if there was a gap between our research. Many computer scientists want to bring in social sciences to their work and be more than just programmers. There is work to be done between these fields but it will bring in many benefits later on.</p>
-<p>This was an amazing opportunity and I am very grateful to have gone :)</p>]]></content>
-        <author>
-            <name>Joann Lenart</name>
-        </author>
-        <category label="Hawaii" term="Hawaii"/>
-        <category label="Blog Post" term="Blog Post"/>
-        <category label="social science" term="social science"/>
-        <category label="environment" term="environment"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hawaii for Scientists]]></title>
-        <id>https://waggle-sensor.github.io/news/hawaii-intro</id>
-        <link href="https://waggle-sensor.github.io/news/hawaii-intro"/>
-        <updated>2023-10-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The Sage project combines advanced cyberinfrastructure, artificial intelligence (AI), and sensors to create intelligent, autonomous, new instruments to help us explore and understand climate change, natural hazards, urban landscapes, and the biosphere.  The Sage team has deployed more than 100 nodes across the United States – but this installation was special…. Sponsored by NAISE, our goal was more than simply connecting an NVIDIA Jetson GPU, infrared camera, and anemometer to build a Wild Sage Node and create a secure infrastructure for scientific discovery – we were also intent on experiential learning -- from carrying scientific equipment (watch video) through the dense forest of Volcanos National Park to learning about the restoration of a 400 year old pond.  Together with a team of students from Northwestern University, University of Chicago, and University of Illinois, we set out to learn and contribute – Science!   Hawaii is beautiful, but Science is our goal.  Enjoy the reports that will show up here.]]></summary>
-        <content type="html"><![CDATA[<p>The Sage project combines advanced cyberinfrastructure, artificial intelligence (AI), and sensors to create intelligent, autonomous, new instruments to help us explore and understand climate change, natural hazards, urban landscapes, and the biosphere.  The Sage team has <a href="https://portal.sagecontinuum.org/" target="_blank" rel="noopener noreferrer">deployed more than 100 nodes</a> across the United States – but this installation was special…. Sponsored by <a href="https://naise.northwestern.edu/" target="_blank" rel="noopener noreferrer">NAISE</a>, our goal was more than simply connecting an NVIDIA Jetson GPU, infrared camera, and anemometer to build a Wild Sage Node and create a secure infrastructure for scientific discovery – we were also intent on experiential learning -- from carrying scientific equipment <a href="https://leopardshark.com/tmp/carry_480.mov" target="_blank" rel="noopener noreferrer">(watch video)</a> through the dense forest of Volcanos National Park to learning about the restoration of a 400 year old pond.  Together with a team of students from Northwestern University, University of Chicago, and University of Illinois, we set out to learn and contribute – Science!   Hawaii is beautiful, but Science is our goal.  Enjoy the reports that will show up here.</p>
-<p><img decoding="async" loading="lazy" alt="The Team" src="https://waggle-sensor.github.io/assets/images/team-hawaii-4c9b65236c6ea758c1f6f691b04878d5.png" width="1280" height="960" class="img_ev3q"></p>]]></content>
-        <author>
-            <name>Pete Beckman</name>
-        </author>
-        <category label="interns" term="interns"/>
-        <category label="hawaii" term="hawaii"/>
-        <category label="science" term="science"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Summer Interns Develop Next Generation Edge Applications for Sage]]></title>
-        <id>https://waggle-sensor.github.io/news/summer-interns</id>
-        <link href="https://waggle-sensor.github.io/news/summer-interns"/>
-        <updated>2023-10-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The summer 2023 intern projects were filled with exciting and impactful science that truly pushed the boundaries of edge computing. This standout work includes using AI for: snow detection on the Bad River, utilizing image super-resolution, estimating solar irradiance, automating rideshare vehicle detection, lightning detection with software defined radio, smoke & wildfire detection, and building an API for Waggle infrastructure. The interns came together from a wide variety of STEM backgrounds, experiences, and universities to bring new insights into the novel applications they developed. Each intern left with a deeper understanding of various fundamental concepts of Sage - software-defined sensor networks, edge computing, and machine learning.]]></summary>
-        <content type="html"><![CDATA[<p>The summer 2023 intern projects were filled with exciting and impactful science that truly pushed the boundaries of edge computing. This standout work includes using AI for: snow detection on the Bad River, utilizing image super-resolution, estimating solar irradiance, automating rideshare vehicle detection, lightning detection with software defined radio, smoke &amp; wildfire detection, and building an API for Waggle infrastructure. The interns came together from a wide variety of STEM backgrounds, experiences, and universities to bring new insights into the novel applications they developed. Each intern left with a deeper understanding of various fundamental concepts of Sage - software-defined sensor networks, edge computing, and machine learning.</p>
-<iframe title="Sage: AI @ Edge" src="https://www.youtube.com/embed/C0YgakZoXNA?si=lwxbNWnU7q3zz9YZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="400" allowfullscreen="" id="fitvid61143"></iframe>]]></content>
-        <author>
-            <name>Anagha Tiwari</name>
-        </author>
-        <category label="interns" term="interns"/>
-        <category label="edge applications" term="edge applications"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tower installation with Sage nodes in Emiquon Preserve]]></title>
-        <id>https://waggle-sensor.github.io/news/2023/10/04/emiquon-preserve</id>
-        <link href="https://waggle-sensor.github.io/news/2023/10/04/emiquon-preserve"/>
-        <updated>2023-10-04T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In collaboration with The Nature Conservancy, two Sage nodes were deployed at the Emiquon Preserve to monitor wildlife and understand conditions of the local environment. The Sage nodes W020 and W01B are equipped with both stationary and pan-tilt-zoom-able cameras and meteorological sensors including dust and weather sensors. The Sage node W01B is the first field-deployed node powered by renewable energy from eight solar panels.]]></summary>
-        <content type="html"><![CDATA[<p>In collaboration with <a href="https://www.nature.org/" target="_blank" rel="noopener noreferrer">The Nature Conservancy</a>, two Sage nodes were deployed at the <a href="https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/emiquon/" target="_blank" rel="noopener noreferrer">Emiquon Preserve</a> to monitor wildlife and understand conditions of the local environment. The Sage nodes <a href="https://portal.sagecontinuum.org/node/W020" target="_blank" rel="noopener noreferrer">W020</a> and <a href="https://portal.sagecontinuum.org/node/W01B" target="_blank" rel="noopener noreferrer">W01B</a> are equipped with both stationary and pan-tilt-zoom-able cameras and meteorological sensors including dust and weather sensors. The Sage node <a href="https://portal.sagecontinuum.org/node/W01B" target="_blank" rel="noopener noreferrer">W01B</a> is the first field-deployed node powered by renewable energy from eight solar panels.</p>]]></content>
-        <category label="wildlife" term="wildlife"/>
-        <category label="environmental science" term="environmental science"/>
-        <category label="solar-powered" term="solar-powered"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Scalable AI@Edge at Argonne's Advanced Photon Source]]></title>
         <id>https://waggle-sensor.github.io/news/2023/05/31/scalable-ci-in-aps</id>
         <link href="https://waggle-sensor.github.io/news/2023/05/31/scalable-ci-in-aps"/>
@@ -217,38 +65,6 @@ Hi there! My name is Alex Arnold and I'm currently a senior at Northwestern Univ
         <category label="computational science" term="computational science"/>
         <category label="Argonne APS" term="Argonne APS"/>
         <category label="Sage science" term="Sage science"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sage's Scott Collis and Waggle in the News]]></title>
-        <id>https://waggle-sensor.github.io/news/2023/05/05/neiu-crocus-deploy</id>
-        <link href="https://waggle-sensor.github.io/news/2023/05/05/neiu-crocus-deploy"/>
-        <updated>2023-05-05T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Sage's Scott Collis and Argonne researchers deploy Waggle nodes to study the impacts of climate change in Chicago.  Read more at Argonne National Laboratory's Press Release]]></summary>
-        <content type="html"><![CDATA[<p>Sage's Scott Collis and Argonne researchers deploy Waggle nodes to study the impacts of climate change in Chicago.  Read more at <a href="https://www.anl.gov/article/new-tools-to-combat-chicagos-changing-climate" target="_blank" rel="noopener noreferrer">Argonne National Laboratory's Press Release</a></p>]]></content>
-        <category label="Waggle" term="Waggle"/>
-        <category label="Climate Science" term="Climate Science"/>
-        <category label="in the news" term="in the news"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sage Neon deployment to the Konza LTER site in Kansas]]></title>
-        <id>https://waggle-sensor.github.io/news/sage-neon-deploy-konza</id>
-        <link href="https://waggle-sensor.github.io/news/sage-neon-deploy-konza"/>
-        <updated>2022-11-03T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[In April 2022, 4 Sage nodes (3 Wild Sage Nodes and 1 Blade Node) were deployed with an array of sensors (thermographic camera, air quality sensor, etc.) to collect data to better our understanding of smoke and wildfire detection.]]></summary>
-        <content type="html"><![CDATA[<p>In April 2022, 4 Sage nodes (3 <a href="https://waggle-sensor.github.io/docs/about/architecture#wild-sage-node-wild-waggle-node" target="_blank" rel="noopener">Wild Sage Nodes</a> and 1 <a href="https://waggle-sensor.github.io/docs/about/architecture#blade-node" target="_blank" rel="noopener">Blade Node</a>) were deployed with an array of sensors (thermographic camera, air quality sensor, etc.) to collect data to better our understanding of smoke and wildfire detection.</p>
-<iframe title="Sage NEON deployment to the Konza LTER site in Kansas." src="https://www.youtube.com/embed/GF0jbkMPlTc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="400" allowfullscreen="" id="fitvid61143"></iframe>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="thermal-imaging-was-used-to-understand-how-air-temperature-can-be-used-to-detect-smoke-and-the-early-warning-signs-of-fire">Thermal imaging was used to understand how air temperature can be used to detect smoke and the early warning signs of fire.<a href="https://waggle-sensor.github.io/news/sage-neon-deploy-konza#thermal-imaging-was-used-to-understand-how-air-temperature-can-be-used-to-detect-smoke-and-the-early-warning-signs-of-fire" class="hash-link" aria-label="Direct link to Thermal imaging was used to understand how air temperature can be used to detect smoke and the early warning signs of fire." title="Direct link to Thermal imaging was used to understand how air temperature can be used to detect smoke and the early warning signs of fire.">​</a></h4>
-<p><img decoding="async" loading="lazy" alt="Deployed MDP tower" src="https://waggle-sensor.github.io/assets/images/during-burn-6440dc213607053302387a10754c0dc8.png" width="2048" height="1152" class="img_ev3q">
-Deployed MDP tower hosting Sage nodes in the middle of the controlled burn</p>
-<p><img decoding="async" loading="lazy" alt="thermal images" src="https://waggle-sensor.github.io/assets/images/thermal-img-06f0724228ea1b42117453e79dba2365.png" width="1580" height="889" class="img_ev3q">
-</p><figcaption>Thermal images showing the detected increase in air temperature</figcaption><p></p>
-<p><img decoding="async" loading="lazy" alt="dashboard" src="https://waggle-sensor.github.io/assets/images/konza-dash-49ae19ad78e439033af060ad7bad8dd8.png" width="1065" height="1469" class="img_ev3q">
-</p><figcaption>Sage portal website showing data, image and audio feeds from Sage nodes</figcaption><p></p>]]></content>
-        <author>
-            <name>Joe Swantek</name>
-        </author>
-        <category label="node" term="node"/>
-        <category label="deployment" term="deployment"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Pedestrian Count for Crosswalk Violations]]></title>
@@ -314,100 +130,5 @@ Future Works</p>
         </author>
         <category label="AI applications" term="AI applications"/>
         <category label="NIU" term="NIU"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Argonne's Big Data Camp Goes Virtual]]></title>
-        <id>https://waggle-sensor.github.io/news/big-data</id>
-        <link href="https://waggle-sensor.github.io/news/big-data"/>
-        <updated>2020-09-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[For five days last July, fourteen high school students attended a virtual coding camp sponsored by Argonne National Laboratory’s Educational Programs and Outreach and the Argonne Leadership Computing Facility (ALCF), co-taught by laboratory scientists and informal learning educators, and focused on learning techniques for probing and analyzing massive scientific datasets.]]></summary>
-        <content type="html"><![CDATA[<p>For five days last July, fourteen high school students attended a virtual coding camp sponsored by Argonne National Laboratory’s Educational Programs and Outreach and the Argonne Leadership Computing Facility (ALCF), co-taught by laboratory scientists and informal learning educators, and focused on learning techniques for probing and analyzing massive scientific datasets.</p>
-<p>And while the COVID-19 pandemic fundamentally changed how these students met, worked, and collaborated over the course of the week, they, and their instructors, found new and creative methods to explore the fascinating world of data science.</p>
-<p>Argonne’s Big Data Camp is the most recent addition to a growing number of STEM camps for middle school and high school students, offered by the laboratory’s education and outreach department, and aimed at teaching computer science skills and computational thinking. The curriculums are developed and taught by Argonne Educational Programs staff and Argonne scientists. The Big Data Camp curriculum targets juniors and seniors who have programming experience.</p>
-<p>“We teach students how researchers produce and process data to better understand a whole range of complex problems from the urgent, like those posed by the current pandemic, to the theoretical, such as the nature of dark matter,” said Michael E. Papka, Argonne senior scientist and camp instructor, who also helped establish the Big Data Camp three years ago. “We build on their existing programming knowledge and introduced them to some of the same techniques researchers use at the lab to interrogate data and gain new insights.”</p>
-<p>Campers learned some of the history of data science, such as how physician John Snow first studied patterns in data to map the spread of cholera in mid-nineteenth century Britain, and identified the source of the outbreak. Today’s scientific experimental facilities generate datasets that are vastly larger, and the camp covered contemporary search and analysis techniques such as data visualization methods.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a-toolkit-for-accessing-exploring-and-sharing-data">A toolkit for accessing, exploring, and sharing data<a href="https://waggle-sensor.github.io/news/big-data#a-toolkit-for-accessing-exploring-and-sharing-data" class="hash-link" aria-label="Direct link to A toolkit for accessing, exploring, and sharing data" title="Direct link to A toolkit for accessing, exploring, and sharing data">​</a></h3>
-<p>For one task, students accessed and explored massive datasets generated by the University of Chicago’s Array of Things (AoT) project, which employs a vast network of computer-embedded ‘intelligent’ sensors located throughout Chicago to monitor various activities, such as traffic hotspots, and environmental conditions, such as air quality. The AoT project, and its follow-on Software-Defined Sensor Network (SAGE) project, also funded by the National Science Foundation (NSF), will deploy sensor nodes that support machine learning frameworks in three environmental testbeds and one additional urban testbed in the U.S., and in four other countries, to provide even more data—all of which will be open and hosted in the cloud.</p>
-<p>To bring order to the massive, amorphous datasets generated by the AoT project, the campers used the open-source web application Jupyter to create documents that contain live code, equations, narrative text, and visualizations—all the essential tools that allowed the campers to analyze the data, but also to share what they learned and communicate it.</p>
-<p>Later in the week, the campers worked together in small groups to first design a problem and then apply their newly learned programming knowledge and analysis techniques.</p>
-<p>“Creating their own project allowed them to see the potential challenges in solving big data problems,” said Janet Knowles, a member of ALCF’s visualization team who mentored one of the groups. “I was there to provide guidance, but the kids had to come up with an interesting project with a useful solution.”</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pivoting-for-the-pandemic">Pivoting for the pandemic<a href="https://waggle-sensor.github.io/news/big-data#pivoting-for-the-pandemic" class="hash-link" aria-label="Direct link to Pivoting for the pandemic" title="Direct link to Pivoting for the pandemic">​</a></h3>
-<p>By late March, shortly after schools were required to move instruction online because of the COVID-19 pandemic, the organizing team that included Papka, visualization specialists Joe Insley and Silvio Rizzo, operations specialist Ti Leggett, and Argonne Learning Center Lead John Domyancich, needed a strategy to adapt the camp’s hands-on, largely group-oriented lesson plan to a fully-remote experience. They saw several challenges, starting with how to provide students with resources capable of supporting the large data processing needs of the camp, and considered possible workarounds—but never once did they consider cancelling the course.</p>
-<p>The team assembled a toolkit that everyone could use to access datasets and to collaborate in live active sessions. Firstly, the campers needed significant data storage and processing power—nearly all of these datasets involved were large: too large to e-mail, and certainly too large for campers to store or process locally. Second, the campers would be working on a variety of devices, from tablets to desktop computers. Lastly, the campers would need a persistent resource for the entire week. The team worked with the developers of Chameleon, a cloud infrastructure service that typically supports the NSF research community, to stand-up a virtual server that could be configured to meet all of the needs of the camp. “Chameleon gave us a powerful computing backend, which the students could access and fully utilize from any device,” said Papka.</p>
-<p>Participants of the 2020 Big Data Camp seemed to take all the changes in stride. “I learned a lot about data visualization that I hope to apply to projects in the future,” said one camper at the conclusion of the course. “Thanks for making Big Data Camp possible and for turning it into such a wonderful online learning experience,” said another.</p>
-<p>“The feedback we received from the campers is part of a conversation we’re having now about ways to adapt the camp’s curriculum and develop learning environments to make it accessible to a larger group of students,” said Domyancich.</p>
-<p>Big Data Camp volunteer instructors and mentors for 2020 included ALCF staff members Michael E. Papka, Joe Insley, Silvio Rizzi, Janet Knowles, Ti Leggett, and Katherine Riley; Argonne Mathematics and Computer Science Director Valerie Taylor; Argonne nuclear engineering postdoctoral student Aaron Oaks; Northern Illinois University Assistant Professor David Koop; former Deputy Associate Laboratory Director for Computing, Environment and Life Sciences Robin Graham; and Argonne Educational Programs and Outreach staff members Kelly Sturner and John Domyancich.</p>
-<p>The ALCF is a U.S. Department of Energy (DOE) Office of Science User Facility.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="about-argonne">About Argonne<a href="https://waggle-sensor.github.io/news/big-data#about-argonne" class="hash-link" aria-label="Direct link to About Argonne" title="Direct link to About Argonne">​</a></h3>
-<p>Argonne National Laboratory seeks solutions to pressing national problems in science and technology. The nation’s first national laboratory, Argonne conducts leading-edge basic and applied scientific research in virtually every scientific discipline. Argonne researchers work closely with researchers from hundreds of companies, universities, and federal, state and municipal agencies to help them solve their specific problems, advance America’s scientific leadership and prepare the nation for a better future. With employees from more than 60nations, Argonne is managed by UChicago Argonne, LLC for the U.S. Department of Energy’s Office of Science.</p>
-<p>The U.S. Department of Energy’s Office of Science is the single largest supporter of basic research in the physical sciences in the United States and is working to address some of the most pressing challenges of our time. For more information, visit <a href="https://energy.gov/%E2%80%8Bs%E2%80%8Bc%E2%80%8Bience" target="_blank" rel="noopener noreferrer">https://​ener​gy​.gov/​s​c​ience</a>.</p>]]></content>
-        <author>
-            <name>Laura Wolf</name>
-            <uri>https://www.alcf.anl.gov/about/people/laura-wolf</uri>
-        </author>
-        <category label="education" term="education"/>
-        <category label="big data" term="big data"/>
-        <category label="ALCF" term="ALCF"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Derecho Talk with Scott Collis]]></title>
-        <id>https://waggle-sensor.github.io/news/2020/08/12/derecho-talk-with-scott-collis</id>
-        <link href="https://waggle-sensor.github.io/news/2020/08/12/derecho-talk-with-scott-collis"/>
-        <updated>2020-08-12T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Scott Collis, one of the leaders of the Sage project was on local public television August 12th to discuss the devastating derecho storms that hit the Chicago area.]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://www.anl.gov/profile/scott-m-collis" target="_blank" rel="noopener noreferrer">Scott Collis</a>, one of the leaders of the Sage project was on local public television August 12th to discuss the devastating derecho storms that hit the Chicago area.</p>
-<p>You can catch the story here: <a href="http://web.archive.org/web/20221128121458/https://www.pbs.org/video/august-11-2020-full-show-vwotwj/" target="_blank" rel="noopener noreferrer">Chicago Tonight, PBS, Aug 11th, 2020</a></p>
-<p>Scott’s explanation of the storm start at about minute 19:00</p>]]></content>
-        <category label="talks/presentations" term="talks/presentations"/>
-        <category label="in the news" term="in the news"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lighting the Way with Software-Defined Radios]]></title>
-        <id>https://waggle-sensor.github.io/news/2020/08/07/lightning-the-way-with-software-defined-radios</id>
-        <link href="https://waggle-sensor.github.io/news/2020/08/07/lightning-the-way-with-software-defined-radios"/>
-        <updated>2020-08-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Scott Collis and Jim Olds have been exploring how software-defined radios could be used to improved lightning detection.   They have been tinkering at home with several technologies and their hackery was picked up by a few websites:]]></summary>
-        <content type="html"><![CDATA[<p>Scott Collis and Jim Olds have been exploring how software-defined radios could be used to improved lightning detection.   They have been tinkering at home with several technologies and their hackery was picked up by a few websites:</p>
-<p><a href="http://web.archive.org/web/20221128111739/https://www.rtl-sdr.com/analyzing-lightning-discharges-with-an-rtl-sdr-and-the-sage-network/" target="_blank" rel="noopener noreferrer">Analyzing Lightning Discharges with an RTL-SDR and the Sage Network</a></p>
-<p><a href="http://web.archive.org/web/20221128111739/https://hackaday.com/2020/08/07/lightning-analysis-with-your-sdr/" target="_blank" rel="noopener noreferrer">Lightning Analysis With Your SDR</a></p>]]></content>
-        <author>
-            <name>Scott Collis</name>
-            <uri>https://www.anl.gov/profile/scott-m-collis</uri>
-        </author>
-        <category label="in the news" term="in the news"/>
-        <category label="lightning detection" term="lightning detection"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020 Sage Community Workshop]]></title>
-        <id>https://waggle-sensor.github.io/news/2020/07/29/sage-community-workshop</id>
-        <link href="https://waggle-sensor.github.io/news/2020/07/29/sage-community-workshop"/>
-        <updated>2020-07-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Workshop Explores Potential of ‘Smart Sensors’ for Environmental Monitoring]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="workshop-explores-potential-of-smart-sensors-for-environmental-monitoring"><a href="https://www.mccormick.northwestern.edu/news/articles/2020/05/workshop-explores-potential-of-smart-sensors-for-environmental-monitoring.html" target="_blank" rel="noopener noreferrer">Workshop Explores Potential of ‘Smart Sensors’ for Environmental Monitoring</a><a href="https://waggle-sensor.github.io/news/2020/07/29/sage-community-workshop#workshop-explores-potential-of-smart-sensors-for-environmental-monitoring" class="hash-link" aria-label="Direct link to workshop-explores-potential-of-smart-sensors-for-environmental-monitoring" title="Direct link to workshop-explores-potential-of-smart-sensors-for-environmental-monitoring">​</a></h2>
-<p>Held on the May 11-12, the virtual workshop brought together researchers and scientists to discuss progress on a Northwestern-led project, called SAGE, to develop machine learning-based sensors for environmental monitoring.  <a href="https://www.mccormick.northwestern.edu/news/articles/2020/05/workshop-explores-potential-of-smart-sensors-for-environmental-monitoring.html" target="_blank" rel="noopener noreferrer">Read more at NAISE...</a></p>
-<p>Included here is the agenda of the workshop with links to the presentation slides:</p>
-<p><a href="https://waggle-sensor.github.io/assets/files/2020-sage-community-workshop-467a825038b56fb2f5d9ed431257c42e.pdf" target="_blank">View the Sage Community Workshop Agenda</a></p>]]></content>
-        <category label="workshop" term="workshop"/>
-        <category label="NAISE" term="NAISE"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[World Watchers]]></title>
-        <id>https://waggle-sensor.github.io/news/2020/07/28/world-watchers</id>
-        <link href="https://waggle-sensor.github.io/news/2020/07/28/world-watchers"/>
-        <updated>2020-07-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Led by investigators at the Northwestern-Argonne Institute of Science and Engineering, researchers are designing a smart new way to monitor our surroundings, from natural ecosystems to urban infrastructure.  Read more at NAISE Research News...]]></summary>
-        <content type="html"><![CDATA[<p>Led by investigators at the Northwestern-Argonne Institute of Science and Engineering, researchers are designing a smart new way to monitor our surroundings, from natural ecosystems to urban infrastructure.  <a href="https://www.research.northwestern.edu/world-watchers/" target="_blank" rel="noopener noreferrer">Read more at NAISE Research News...</a></p>]]></content>
-        <category label="in the news" term="in the news"/>
-        <category label="NAISE" term="NAISE"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2019 Sage AI@Edge Science Workshop]]></title>
-        <id>https://waggle-sensor.github.io/news/2020/07/27/sage-ai-at-edge-workshop</id>
-        <link href="https://waggle-sensor.github.io/news/2020/07/27/sage-ai-at-edge-workshop"/>
-        <updated>2020-07-27T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[View the Full Summary and Agenda]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://waggle-sensor.github.io/assets/files/2019-Sage-AI-at-the-EdgeScienceWorkshop-12f730aedff534088fb2a890cf9ce73b.pdf" target="_blank">View the Full Summary and Agenda</a></p>]]></content>
-        <category label="workshop" term="workshop"/>
-        <category label="NAISE" term="NAISE"/>
     </entry>
 </feed>
