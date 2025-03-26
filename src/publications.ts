@@ -156,12 +156,6 @@ const conferenceProceedings : Publication[] = [{
 }]
 
 const datasets : Publication[] = [{
-  title: 'CROCUS Air Quality Data at Northeastern Illinois University Rooftop',
-  authors: 'Joseph O\'Brien, Gregory Anderson, Paytsar Muradyan, Matthew Tuftedal, Scott Collis, Robert Jackson, Maxwell Grover, Dario Dematties, Seongha Park, Rajesh Sankaran, Peter Beckman, Nicola Ferrier, Yongho Kim, and Sean Shahkarami',
-  publication: 'U.S. Department of Energy Office of Scientific and Technical Information',
-  year: 2024,
-  href: 'https://doi.org/10.15485/2335799'
-}, {
   title: 'Doppler spectra from ARM Doppler Lidar during ARMing the Edge',
   authors: 'Bhupendra Raut, Seongha Park, Dario Dematties, Scott Collis, Nicola Ferrier, Yongho Kim, Sean Shahkarami, Pete Beckman, and Rajesh Sankaran',
   publication: 'U.S. Department of Energy Office of Scientific and Technical Information',

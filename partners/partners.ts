@@ -47,11 +47,6 @@ const partners: Partner[] = [{
   url: 'https://www.ucsd.edu/',
   logo: 'img/partners/ucsd.png'
 }, {
-  id: 'crocus',
-  name: 'Community Research on Climate and Urban Science',
-  url: 'https://crocus-urban.org/',
-  logo: 'img/partners/crocus.png'
-}, {
   id: 'the-nature-conservancy',
   name: 'The Nature Conservancy',
   url: 'https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/emiquon/',

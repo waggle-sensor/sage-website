@@ -29,24 +29,12 @@ export default {
       },
       items: [
         {
-          to: '/about',
-          position: 'left',
-          label: 'About',
-        }, {
           to: '/science/category/recent-projects',
-          label: 'AI/Science',
-          position: 'left'
-        }, {
-          to: '/news',
-          label: 'News',
+          label: 'AI & Science',
           position: 'left'
         }, {
           to: '/publications',
           label: 'Publications',
-          position: 'left'
-        }, {
-          to: '/team',
-          label: 'Team',
           position: 'left'
         }, /* {
           to: '/photos',

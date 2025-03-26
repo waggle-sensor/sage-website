@@ -8,7 +8,7 @@ tags: [tapia conference, students, sage, AI@Edge]
 # Sage at TAPIA 2024
 
 
-Sponsored by [Sage NDC-C](https://nairrpilot.org/projects/demo/sage), we presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See [the presentation slides](workshop-pdfs/TAPIA-sep-2024.pdf)). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!
+On Sep 20th, 2024, the Sage team presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See [the presentation slides](workshop-pdfs/TAPIA-sep-2024.pdf)). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!
 
 Interested in running the Jupyter notebooks we demonstrated in the presentation?  Check them out here:
 
