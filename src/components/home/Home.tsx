@@ -19,7 +19,7 @@ import NewsPreview from './NewsPreview'
 import TypeWriter from './TypeWriter'
 import StatusChart from './StatusChart'
 
-import publications from '../../publications'
+import publications, { type Publication } from '../../publications'
 
 import config from '../../config'
 import Calendar from './Calendar'
@@ -93,19 +93,17 @@ export const Section = (props) =>
   </section>
 
 
+const getRecentPubs = () =>
+  publications
+    .filter(pub => pub.image && pub.id)
+    .slice(0, MaxNumOfPublications)
+
 
 type DevTools = 'client' | 'api' | 'ui' | 'template'
-type FeaturedSci = 'cloudMotion' | 'armDoppler' | 'selfSupervised' | 'solarRadiance'
 
 export default function Home() {
   const [devHover, setDevHover] = useState<DevTools>('client')
-  const [sciHover, setSciHover] = useState<FeaturedSci>('cloudMotion')
-
-
-  const getRecentPubs = () =>
-    publications
-      .filter(pub => pub.image && pub.id)
-      .slice(0, MaxNumOfPublications)
+  const [sciHover, setSciHover] = useState<string>(getRecentPubs().find(pub => pub.defaultImage).id)
 
   return (
     <Root>

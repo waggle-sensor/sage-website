@@ -40,9 +40,8 @@ function Footer() {
               <h4><a href="/about" className="text-neutral-200 hover:text-neutral-100">About</a></h4>
               <ul>
                 <li><Link to="/science/category/recent-projects">Science</Link></li>
-                <li><Link to="/news">News</Link></li>
                 <li><Link to="/about">Publications</Link></li>
-                <li><Link to="/docs/about/overview">Docs</Link></li>
+                <li><Link to="/docs/about/overview">Documentation</Link></li>
               </ul>
             </div>
             <div>
