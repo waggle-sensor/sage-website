@@ -17,12 +17,14 @@ Since 2021, Sage has been included in a wide range of advanced wildfire research
 
 
 <div className="mb-8">
-  <img
-    src={Neon}
-    alt="SAGE/NEON rapid deployment burn image](images/fire/during_burn.png"
-    className="float-right ml-8 mb-2"
-    style={{maxWidth: '325px'}}
-  />
+  <a href="https://www.youtube.com/watch?v=GF0jbkMPlTc" target="_blank">
+    <img
+      src={Neon}
+      alt="SAGE/NEON rapid deployment burn image](images/fire/during_burn.png"
+      className="float-right ml-8 mb-2"
+      style={{maxWidth: '325px'}}
+    />
+  </a>
   <!-- style attribute overrides docsuaurus styling; todo: fix -->
 
   ### NSF RAPID
@@ -36,16 +38,18 @@ Since 2021, Sage has been included in a wide range of advanced wildfire research
 
 
 <div className="mb-8">
-  <img
-    src={Wifire}
-    alt="wildfire smoke detection app image"
-    className="float-left mr-4"
-    style={{maxWidth: '250px'}}
-  />
+  <a href="https://portal.sagecontinuum.org/apps/app/iperezx/wildfire-smoke-detection" target="_blank">
+    <img
+      src={Wifire}
+      alt="wildfire smoke detection app image"
+      className="float-left mr-4"
+      style={{maxWidth: '250px'}}
+    />
+  </a>
 
   ### AI for Wildfire Smoke Detection
   <p>
-    The Sage cyberinfrastructure has hosted several groups building novel wildfire detection algorithms.  One of the first was developed by UCSD staff,  [and is documented](https://portal.sagecontinuum.org/apps/app/iperezx/wildfire-smoke-detection) in the Edge Code Repository.  By deploying the AI model into the Sage cyberinfrastructure, Sage nodes across the West can identify smoke in real time camera data.  Since then, students have built on the work and several new approaches have been developed, including using LLMs, deployed at the edge, to identify fire, smoke, and volcanic eruptions in Hawaiʻi.  They are also available from the Sage Portal.
+    The Sage cyberinfrastructure has hosted several groups building novel wildfire detection algorithms.  One of the first was developed by UCSD staff, [and is documented](https://portal.sagecontinuum.org/apps/app/iperezx/wildfire-smoke-detection) in the Edge Code Repository.  By deploying the AI model into the Sage cyberinfrastructure, Sage nodes across the West can identify smoke in real time camera data.  Since then, students have built on the work and several new approaches have been developed, including using LLMs, deployed at the edge, to identify fire, smoke, and volcanic eruptions in Hawaiʻi.  They are also available from the Sage Portal.
   </p>
   <div className="clear-both"></div>
 </div>
@@ -105,9 +109,10 @@ There are several ways to use Sage:
 
 Sage nodes are already deployed in key fire-prone regions, including California, Oregon, and Colorado.
 
-![Map of Sage nodes](images/fire/map.png)
+<a href="https://portal.sagecontinuum.org/nodes" target="_blank">![Map of Sage nodes](images/fire/map.png)</a>
 
-See the [Sage Portal](https://portal.sagecontinuum.org/nodes) for a full map.
+
+> See the [Sage Portal](https://portal.sagecontinuum.org/nodes) for a full map.
 
 Sage is NSF cyberinfrastructure. Students and scientists can apply for user accounts, and begin developing AI-enabled applications that can run at the edge, within the Sage cyberinfrastructure.
 
