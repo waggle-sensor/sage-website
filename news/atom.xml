@@ -15,7 +15,7 @@
         <summary type="html"><![CDATA[KONZA prescribed burn, thermal cameras of fire, and volcanic activity]]></summary>
         <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="KONZA prescribed burn, thermal cameras of fire, and volcanic activity" src="https://waggle-sensor.github.io/assets/images/fire-84465072c5f644d335a2a2cdabedc771.png" width="2000" height="376" class="img_ev3q"></p>
 <p>Sage is a cutting-edge cyberinfrastructure testbed funded by the NSF Office of Advanced Cyberinfrastructure to support AI research. Sage provides real-time environmental monitoring and AI-enabled edge computing at a national scale. By bringing advanced AI to the edge, where data is collected, full-resolution analysis, dynamic automation, and immediate actionable responses can be computed. Each Sage node includes a GPU and AI-optimized software stack connected to instruments such as infrared cameras, RGB cameras, LIDAR, and traditional sensors for air quality and wind, as well as LoRaWAN connected sensors for low-bandwidth measurements such as soil moisture. With over <strong>100 Sage nodes deployed across 17 states</strong>, including fire-prone regions in the Western U.S., the platform supports rapid-response science and sustained observation of ecological systems, agriculture, urban environments, and weather-related hazards.</p>
-<p><strong>Read more <a href="https://waggle-sensor.github.io/fire">Sage Cyberinfrastructure in Support of AI for Fire Science</a>.</strong></p>]]></content>
+<p><strong>Read more at <a href="https://waggle-sensor.github.io/fire">Sage Cyberinfrastructure in Support of AI for Fire Science</a>.</strong></p>]]></content>
         <author>
             <name>Pete Beckman</name>
         </author>
