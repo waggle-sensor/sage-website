@@ -2,11 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://waggle-sensor.github.io/news</id>
     <title>Sage Blog</title>
-    <updated>2024-09-20T00:00:00.000Z</updated>
+    <updated>2025-04-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://waggle-sensor.github.io/news"/>
     <subtitle>Sage Blog</subtitle>
     <icon>https://waggle-sensor.github.io/img/sage-favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Sage Cyberinfrastructure in Support of AI for Fire Science]]></title>
+        <id>https://waggle-sensor.github.io/news/2025/04/18/fire-science</id>
+        <link href="https://waggle-sensor.github.io/news/2025/04/18/fire-science"/>
+        <updated>2025-04-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Sage is a cutting-edge cyberinfrastructure testbed funded by the NSF Office of Advanced Cyberinfrastructure to support AI research. Sage provides real-time environmental monitoring and AI-enabled edge computing at a national scale. By bringing advanced AI to the edge, where data is collected, full-resolution analysis, dynamic automation, and immediate actionable responses can be computed. Each Sage node includes a GPU and AI-optimized software stack connected to instruments such as infrared cameras, RGB cameras, LIDAR, and traditional sensors for air quality and wind, as well as LoRaWAN connected sensors for low-bandwidth measurements such as soil moisture. With over 100 Sage nodes deployed across 17 states, including fire-prone regions in the Western U.S., the platform supports rapid-response science and sustained observation of ecological systems, agriculture, urban environments, and weather-related hazards.]]></summary>
+        <content type="html"><![CDATA[<p>Sage is a cutting-edge cyberinfrastructure testbed funded by the NSF Office of Advanced Cyberinfrastructure to support AI research. Sage provides real-time environmental monitoring and AI-enabled edge computing at a national scale. By bringing advanced AI to the edge, where data is collected, full-resolution analysis, dynamic automation, and immediate actionable responses can be computed. Each Sage node includes a GPU and AI-optimized software stack connected to instruments such as infrared cameras, RGB cameras, LIDAR, and traditional sensors for air quality and wind, as well as LoRaWAN connected sensors for low-bandwidth measurements such as soil moisture. With over <strong>100 Sage nodes deployed across 17 states</strong>, including fire-prone regions in the Western U.S., the platform supports rapid-response science and sustained observation of ecological systems, agriculture, urban environments, and weather-related hazards.</p>
+<p><strong>Read more</strong> at <strong><a href="https://waggle-sensor.github.io/fire">Sage Cyberinfrastructure in Support of AI for Fire Science</a>.</strong></p>
+<p><img decoding="async" loading="lazy" alt="KONZA prescribed burn, thermal cameras of fire, and volcanic activity" src="https://waggle-sensor.github.io/assets/images/fire-84465072c5f644d335a2a2cdabedc771.png" width="2000" height="376" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Pete Beckman</name>
+        </author>
+        <category label="Fire Science" term="Fire Science"/>
+        <category label="Wildfire Detection" term="Wildfire Detection"/>
+        <category label="Wildfire Prediction" term="Wildfire Prediction"/>
+        <category label="Sensor Integration" term="Sensor Integration"/>
+        <category label="Hazard AI" term="Hazard AI"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Sage at TAPIA 2024]]></title>
         <id>https://waggle-sensor.github.io/news/2024/9/20/sage-at-tapia</id>
