@@ -30,19 +30,19 @@ export default {
       items: [
         {
           to: '/science/category/recent-projects',
-          label: 'AI & Science',
-          position: 'left'
+          label: 'AI & Science'
+        }, {
+          to: '/news',
+          label: 'News'
         }, {
           to: '/publications',
-          label: 'Publications',
-          position: 'left'
+          label: 'Publications'
         }, /* {
           to: '/photos',
           label: 'Photos',
           position: 'left'
         },*/ {
           to: '/docs/about/overview',
-          position: 'left',
           label: 'Docs'
         }, {
           type: 'dropdown',
@@ -95,6 +95,17 @@ export default {
         hideable: true,
       }
     },
+    blog: {
+      sidebar: {
+        groupByYear: false // Disable year grouping
+      }
+    },
+    /*
+    announcementBar: {
+      content: '<b><a href="/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
+      isCloseable: true,
+    }
+    */
     /* uncomment the following to add a banner for outages/alerts or important news, see custom.css for more styling
     announcementBar: {
       content: '<b>ℹ️ Due to a planned data center migration, the Sage portal, web services, and nodes may be offline for extended periods. ℹ️</b>',

@@ -116,7 +116,7 @@ Sage nodes are already deployed in key fire-prone regions, including California,
 
 Sage is NSF cyberinfrastructure. Students and scientists can apply for user accounts, and begin developing AI-enabled applications that can run at the edge, within the Sage cyberinfrastructure.
 
-Sage is a novel cyberinfrastructure, and deploying AI models and tuning GPU codes for edge environments takes time and training.  Please contact us to help you get started and help explore what is feasible with today’s Sage nodes, and what might be possible as next-gen Sage Grande nodes come online.
+Sage is a novel cyberinfrastructure, and deploying AI models and tuning GPU codes for edge environments takes time and training.  Please [contact us](/docs/contact-us) to help you get started and help explore what is feasible with today’s Sage nodes, and what might be possible as next-gen Sage Grande nodes come online.
 
 #### 2. Explore new AI models and edge-HPC workflows
 
@@ -128,5 +128,5 @@ New areas for AI models might include lightning and ignition detection using sof
 
 As part of SGT, the Sage team is preparing future deployments of next-generation GPUs to support larger and faster AI models.  Teams can work with SGT to explore new locations, new instruments, and sensors that advance fire science.
 
-Please contact the Sage team to discuss how your project might deploy Sage nodes and how new instruments or HPC models might be linked to real-time Sage data.
+Please [contact the Sage team](/docs/contact-us) to discuss how your project might deploy Sage nodes and how new instruments or HPC models might be linked to real-time Sage data.
 
