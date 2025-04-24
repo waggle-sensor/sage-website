@@ -100,12 +100,12 @@ export default {
         groupByYear: false // Disable year grouping
       }
     },
-    /*
     announcementBar: {
       content: '<b><a href="/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
       isCloseable: true,
-    }
-    */
+      textColor: 'rgb(1, 67, 97)',
+      backgroundColor: 'rgb(229, 246, 253)',
+    },
     /* uncomment the following to add a banner for outages/alerts or important news, see custom.css for more styling
     announcementBar: {
       content: '<b>ℹ️ Due to a planned data center migration, the Sage portal, web services, and nodes may be offline for extended periods. ℹ️</b>',
@@ -153,6 +153,10 @@ export default {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-HT12937E9K',
+          anonymizeIP: true,
         },
       },
     ]
@@ -207,12 +211,6 @@ export default {
         blogTagsListComponent: '@theme/partners/PartnerTagsListPage',
         blogTagsPostsComponent: '@theme/partners/PartnerTagsPostsPage',
       },
-    ], [
-      '@docusaurus/plugin-google-analytics',
-      {
-        trackingID: 'G-NMP80C7S04',
-        anonymizeIP: true,
-      }
     ],
     /* todo?: post science as blog entries for front matter and blog author meta?
     [

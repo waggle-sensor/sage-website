@@ -2,7 +2,7 @@
 title: Sage at TAPIA 2024
 hide_reading_time: true
 authors: gemblerz
-tags: [tapia conference, students, sage, AI@Edge]
+tags: [tapia, conference, students, sage, AI@Edge]
 ---
 
 # Sage at TAPIA 2024
