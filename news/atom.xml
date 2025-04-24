@@ -41,7 +41,8 @@
         <author>
             <name>Yongho Kim</name>
         </author>
-        <category label="tapia conference" term="tapia conference"/>
+        <category label="tapia" term="tapia"/>
+        <category label="conference" term="conference"/>
         <category label="students" term="students"/>
         <category label="sage" term="sage"/>
         <category label="AI@Edge" term="AI@Edge"/>
