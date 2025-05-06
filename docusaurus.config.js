@@ -103,8 +103,8 @@ export default {
     announcementBar: {
       content: '<b><a href="/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
       isCloseable: true,
-      textColor: 'rgb(1, 67, 97)',
-      backgroundColor: 'rgb(229, 246, 253)',
+      textColor: 'rgb(102, 60, 0)',
+      backgroundColor: 'rgb(255, 244, 229)',
     },
     /* uncomment the following to add a banner for outages/alerts or important news, see custom.css for more styling
     announcementBar: {
@@ -113,6 +113,9 @@ export default {
       textColor: 'rgb(102, 60, 0)',
       backgroundColor: 'rgb(255, 244, 229)',
     }
+    // info colors:
+    //   textColor: 'rgb(1, 67, 97)',
+    //   backgroundColor: 'rgb(229, 246, 253)',
     */
   },
   stylesheets: [

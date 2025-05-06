@@ -109,7 +109,7 @@ export default function Home() {
     <Root>
       <div className="banner h-[400px] md:pt-6">
         <Section className="flex flex-col justify-between md:flex-row">
-          <div className="flex flex-col justify-between self-start md:self-center md:mr-20">
+          <div className="flex flex-col justify-between self-start md:self-center md:mr-4">
             <div className="text-[#f9f9f9] text-4xl md:text-6xl">
               AI @ the Edge<br/>
               for <span className="text-emerald-200">
@@ -124,10 +124,10 @@ export default function Home() {
           </div>
 
 
-          <div className="flex flex-col mt-12 md:m-0 md:mr-40 md:self-center">
+          <div className="flex flex-col mt-12 md:m-0 md:mr-16 md:self-center">
             <h3 className="text-slate-300">Getting Started</h3>
-            <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow /></a>
-            <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow /></a>
+            <a href="docs/about/overview" className="focused-link gap-1 text-nowrap">Documentation <Arrow /></a>
+            <a href={`${portal}/all-nodes`} className="focused-link gap-1 text-nowrap">Browse the Portal<Arrow /></a>
           </div>
         </Section>
       </div>
