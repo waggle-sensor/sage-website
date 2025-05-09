@@ -194,14 +194,3 @@ html[data-theme="dark"] .header-github-link:before {
   position: absolute;
   right: 475px;
 }
-
-/* todo(nc): should be part of tailwind */
-.float-right { float: right; }
-.float-left { float: left; }
-
-.clear-start { clear: inline-start; }
-.clear-end { clear: inline-end; }
-.clear-left { clear: left; }
-.clear-right { clear: right; }
-.clear-both { clear: both; }
-.clear-none { clear: none; }
