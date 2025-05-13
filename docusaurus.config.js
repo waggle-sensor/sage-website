@@ -34,7 +34,7 @@ export default {
           position: 'left',
           items: [
             {
-              label: 'About',
+              label: 'About Sage Grande',
               to: '/about'
             },
             {
@@ -190,7 +190,7 @@ export default {
           return postcssOptions
         },
       }
-    },    [
+    }, [
       '@docusaurus/plugin-content-docs',
       {
         sidebarPath: require.resolve('./sidebars.js'),
@@ -202,6 +202,14 @@ export default {
         // ... other options
       },
     ], [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'team',
+        path: 'team',
+        routeBasePath: 'team',
+        breadcrumbs: false
+      },
+    ], [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
@@ -211,7 +219,7 @@ export default {
           },
           {
             to: '/science/category/recent-projects',
-            from: ['/science']  // obscure fix for /data/ vs /data redirect(?)
+            from: ['/science']
           },
         ],
       },
