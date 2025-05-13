@@ -16,24 +16,20 @@ Sage nodes have been integrated into existing major scientific infrastructure ne
 Since 2021, Sage has been included in a wide range of advanced wildfire research through collaborations with NSF-funded projects and regional partners:
 
 
+### NSF RAPID
 <div className="mb-8">
   <a href="https://www.youtube.com/watch?v=GF0jbkMPlTc" target="_blank">
     <img
       src={Neon}
       alt="SAGE/NEON rapid deployment burn image](images/fire/during_burn.png"
-      className="float-right ml-8 mb-2"
-      style={{maxWidth: '325px'}}
+      className="md:float-right md:max-w-xs md:ml-8 md:mb-2"
     />
   </a>
-  <!-- style attribute overrides docsuaurus styling; todo: fix -->
 
-  ### NSF RAPID
   #### Critical Wildfire Monitoring Utilizing the NEON Mobile Deployment Platform (MDP) with SAGE Cyberinfrastructure
-  <p>
-    Led by Colorado State University, a rapid deployment during the 2022 burn season combined NEON’s Mobile Deployment Platform with Sage nodes and real-time modeling tools from WIFIRE. This experiment is documented and the data available in a [data commons](https://wifire-data.sdsc.edu/fi/dataset/neon-mdp-sage-wifire-bp3d-konza-prairie-burn-experiment).  It demonstrated multimodal data capture—including video, weather, and smoke detection—across a prescribed burn landscape of the Konza prairie.
-    ([See video](https://www.youtube.com/watch?v=GF0jbkMPlTc))
-  </p>
-  <div className="clear-both"></div>
+
+  Led by Colorado State University, a rapid deployment during the 2022 burn season combined NEON’s Mobile Deployment Platform with Sage nodes and real-time modeling tools from WIFIRE. This experiment is documented and the data available in a [data commons](https://wifire-data.sdsc.edu/fi/dataset/neon-mdp-sage-wifire-bp3d-konza-prairie-burn-experiment).  It demonstrated multimodal data capture—including video, weather, and smoke detection—across a prescribed burn landscape of the Konza prairie.
+  ([See video](https://www.youtube.com/watch?v=GF0jbkMPlTc))
 </div>
 
 
@@ -42,64 +38,54 @@ Since 2021, Sage has been included in a wide range of advanced wildfire research
     <img
       src={Wifire}
       alt="wildfire smoke detection app image"
-      className="float-left mr-4"
-      style={{maxWidth: '250px'}}
+      className="md:float-right md:max-w-xs md:ml-8 md:mb-2"
     />
   </a>
 
   ### AI for Wildfire Smoke Detection
-  <p>
-    The Sage cyberinfrastructure has hosted several groups building novel wildfire detection algorithms.  One of the first was developed by UCSD staff, [and is documented](https://portal.sagecontinuum.org/apps/app/iperezx/wildfire-smoke-detection) in the Edge Code Repository.  By deploying the AI model into the Sage cyberinfrastructure, Sage nodes across the West can identify smoke in real time camera data.  Since then, students have built on the work and several new approaches have been developed, including using LLMs, deployed at the edge, to identify fire, smoke, and volcanic eruptions in Hawaiʻi.  They are also available from the Sage Portal.
-  </p>
-  <div className="clear-both"></div>
+
+  The Sage cyberinfrastructure has hosted several groups building novel wildfire detection algorithms.  One of the first was developed by UCSD staff, [and is documented](https://portal.sagecontinuum.org/apps/app/iperezx/wildfire-smoke-detection) in the Edge Code Repository.  By deploying the AI model into the Sage cyberinfrastructure, Sage nodes across the West can identify smoke in real time camera data.  Since then, students have built on the work and several new approaches have been developed, including using LLMs, deployed at the edge, to identify fire, smoke, and volcanic eruptions in Hawaiʻi.  They are also available from the Sage Portal.
+</div>
+
+
+### OHAZ
+<div className="mb-8">
+  At the University of Oregon, the Oregon Hazards Lab is [deploying Sage nodes](https://ohaz.uoregon.edu/sage/) at sites that complement statewide monitoring and alerting for earthquakes and wildfires.  These nodes provide additional sensing capabilities that can be used in combination with other data to detect multi-hazards and/or study ecosystem response to extreme events.
+
+  <div className="flex">
+    <img
+      src={OhazRight}
+      alt="OHAZ thermal camera"
+      className="max-w-[50%]"
+    />
+    <img
+      src={OhazLeft}
+      alt="OHAZ camera"
+      className="max-w-[50%]"
+    />
+  </div>
 </div>
 
 
 <div className="mb-8">
   <img
-    src={OhazRight}
-    alt="OHAZ thermal camera"
-    className="float-right mb-2"
-    style={{maxWidth: '200px'}}
-  />
-  <img
-    src={OhazLeft}
-    alt="OHAZ camera"
-    className="float-right ml-8 mb-2"
-    style={{maxWidth: '200px'}}
-  />
-
-  ### OHAZ
-  <p>
-    At the University of Oregon, the Oregon Hazards Lab is [deploying Sage nodes](https://ohaz.uoregon.edu/sage/) at sites that complement statewide monitoring and alerting for earthquakes and wildfires.  These nodes provide additional sensing capabilities that can be used in combination with other data to detect multi-hazards and/or study ecosystem response to extreme events.
-  </p>
-  <div className="clear-both"></div>
-</div>
-
-
-<div>
-  <img
     src={Lava}
     alt="volcano eruption"
-    className="float-left mr-4 mb-2"
-    style={{maxWidth: '275px'}}
+    className="md:float-right md:max-w-xs md:ml-8 md:mt-2"
   />
 
   ### Hawai‘i Mesonet and LAVA Lab Collaboration
-  <p>
-    In collaboration with the University of Hawaii (UH), Sage nodes were deployed in Lahaina to explore an AI-enabled multi-hazard monitoring and detection system.  Sage nodes and education programs are advancing wildfire risk prediction, community engagement, and AI-supported environmental sensing. See: [https://www.fema.gov/case-study/wildfire-aftermath-prompts-mitigation-project-aid-recovery](https://www.fema.gov/case-study/wildfire-aftermath-prompts-mitigation-project-aid-recovery)
-  </p>
-  <p>
-    Leveraging the Sage node deployed in Hawaiʻi Volcanoes National Park, the UH team has also spearheaded the use of LLMs within the Sage cyberinfrastructure, exploring how real-time analysis of data can be used to identify fires and volcanic eruptions.
-  </p>
-  <div className="clear-both"></div>
+
+  In collaboration with the University of Hawaii (UH), Sage nodes were deployed in Lahaina to explore an AI-enabled multi-hazard monitoring and detection system.  Sage nodes and education programs are advancing wildfire risk prediction, community engagement, and AI-supported environmental sensing. See: [https://www.fema.gov/case-study/wildfire-aftermath-prompts-mitigation-project-aid-recovery](https://www.fema.gov/case-study/wildfire-aftermath-prompts-mitigation-project-aid-recovery)
+
+  Leveraging the Sage node deployed in Hawaiʻi Volcanoes National Park, the UH team has also spearheaded the use of LLMs within the Sage cyberinfrastructure, exploring how real-time analysis of data can be used to identify fires and volcanic eruptions.
+
 </div>
-<br/>
 
 
 ## The Sage Grande Testbed has just Launched!
 
-Sage has been around since 2019\. As an NSF MSRI-1 project (\#1935984), it built the nation’s first distributed, edge computing resource for AI and intelligent sensing.  In 2023, Sage began exploring how a national-scale testbed could provide AI as an open research resource (\# 2331263\) and became a [NAIRR Pilot Demonstration](https://nairrpilot.org/projects/demo/sage). In early 2025, NSF funded the Sage Grande Testbed (SGT) as a five-year project (\# 2436842\) to build out the Sage cyberinfrastructure with 300 next-generation nodes, the integration of advanced LLMs for the edge, and new end-to-end workflows.
+Sage has been around since 2019\. As an NSF MSRI-1 project ([#1935984](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1935984)), it built the nation’s first distributed, edge computing resource for AI and intelligent sensing.  In 2023, Sage began exploring how a national-scale testbed could provide AI as an open research resource ([#2331263](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2331263)) and became a [NAIRR Pilot Demonstration](https://nairrpilot.org/projects/demo/sage). In early 2025, NSF funded the Sage Grande Testbed (SGT) as a five-year project ([#2436842](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2436842&HistoricalAwards=false)) to build out the Sage infrastructure with 300 next-generation nodes, the integration of advanced LLMs for the edge, and new end-to-end workflows.
 
 ### Using Sage Grande Testbed for Wildfire Science
 
