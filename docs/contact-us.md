@@ -29,5 +29,5 @@ We encourage developers and users to start a new topic or issue on the Waggle se
 
 ## <SlackIcon className="w-[30px]" /> Join us on Slack
 
-Request an invitation to the Sage Community Slack slack workspace via email: support@waggle-edge.ai.
+Request an invitation to the Sage Community Slack workspace via email: support@waggle-edge.ai.
 
