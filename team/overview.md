@@ -8,7 +8,8 @@ breadcrumbs: False
 
 Sage brings together experts from institutions across the country.
 
-- [Leadership](./leadership)
-- [Collaborators](./collaborators)
+- [Leadership](/team/leadership)
+- [Team Members](/team/team-members) | Cyberinfrastructure, Research, and Hardware Platform
+- [Collaborators](/team/collaborators)
 
 
