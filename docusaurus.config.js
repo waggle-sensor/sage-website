@@ -29,6 +29,20 @@ export default {
       },
       items: [
         {
+          label: 'About',
+          to: '/about',
+          position: 'left',
+          items: [
+            {
+              label: 'About',
+              to: '/about'
+            },
+            {
+              label: 'Photos',
+              to: '/photos'
+            }
+          ],
+        }, {
           to: '/science/category/recent-projects',
           label: 'AI & Science'
         }, {
@@ -215,6 +229,7 @@ export default {
         blogTagsPostsComponent: '@theme/partners/PartnerTagsPostsPage',
       },
     ],
+
     /* todo?: post science as blog entries for front matter and blog author meta?
     [
       '@docusaurus/plugin-content-blog',

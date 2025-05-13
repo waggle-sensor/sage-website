@@ -15,14 +15,14 @@ const Timeline = () => {
             rel="noopener noreferrer"
           >
             #1935984
-          </a>)
-          , Sage built the nation’s first distributed, edge computing resource for AI and intelligent sensing.
+          </a>),
+          Sage built the nation’s first distributed, edge computing resource for AI and intelligent sensing.
         </>
       ),
     },
     {
       date: '2023',
-      label: 'Testbed Exploration',
+      label: 'AI Cyberinfrastructure Exploration',
       title: 'NAIRR Pilot Demonstration',
       description: () => (
         <>
@@ -47,7 +47,7 @@ const Timeline = () => {
     },
     {
       date: '2025',
-      label: 'The Next Generation',
+      label: 'A National AI Testbed',
       title: 'Sage Grande Testbed (SGT)',
       description: () => (
         <>
@@ -58,8 +58,7 @@ const Timeline = () => {
             rel="noopener noreferrer"
           >
             #2436842
-          </a>)
-          , to build out the Sage cyberinfrastructure with 300 next-generation nodes, the integration of advanced large language models (LLMs) for the edge, and new end-to-end workflows.
+          </a>) to build out the Sage infrastructure for artificial intelligence, the integration of advanced large language models (LLMs) for the edge, and new end-to-end workflows.
         </>
       ),
     },
@@ -71,20 +70,20 @@ const Timeline = () => {
         <div className="flex flex-col justify-center divide-y divide-slate-200">
           <div className="w-full max-w-3xl mx-auto relative -my-6">
             {/* Vertical timeline line */}
-            <div className="absolute left-2 sm:left-[6.5rem] w-0.5 bg-indigo-600 h-full"></div>
+            <div className="absolute left-2 sm:left-[6.5rem] w-0.5 bg-slate-300 h-full"></div>
             {events.map((event, index) => (
               <div key={index} className="relative pl-8 sm:pl-32 py-6 group">
-                <div className="font-medium text-md text-indigo-500 mb-1 sm:mb-0">
+                <div className="font-medium text-md text-[#3d33ab] mb-1 sm:mb-0">
                   {event.label}
                 </div>
                 <div className="flex flex-col sm:flex-row items-start mb-1">
                   {/* Dot container—centered on the line with white padding */}
                   <div className="absolute left-2 sm:left-[6.5rem] -ml-[11px]">
                     <div className="w-6 h-6 flex items-center justify-center rounded-full bg-white">
-                      <div className="w-3 h-3 bg-indigo-600 rounded-full"></div>
+                      <div className="w-3 h-3 bg-[#3d33ab] rounded-full"></div>
                     </div>
                   </div>
-                  <time className="sm:absolute left-0 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+                  <time className="sm:absolute left-0 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-700 bg-emerald-100 rounded-full">
                     {event.date}
                   </time>
                   <div className="text-xl font-bold text-slate-900">
