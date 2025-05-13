@@ -25,7 +25,7 @@ function Footer() {
             <NSFLogo className="max-w-[100px] md:max-w-[150px]"/>
             <div>
               This material is based upon work supported by
-              the National Science Foundation under Grant No. OAC-1935984.
+              the National Science Foundation under Grant Nos. 1935984, 2331263, and 2436842.
               <br/>
               <small className="text-neutral-500">
                 Any opinions, findings, and conclusions or recommendations expressed in this material

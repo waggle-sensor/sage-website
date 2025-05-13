@@ -63,6 +63,7 @@ export default {
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
+          to: 'https://github.com/waggle-sensor',
           items: [
             {
               label: 'Sage GitHub',
