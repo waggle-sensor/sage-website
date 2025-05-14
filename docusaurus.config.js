@@ -38,6 +38,10 @@ export default {
               to: '/about'
             },
             {
+              label: 'Team',
+              to: '/team/leadership'
+            },
+            {
               label: 'Photos',
               to: '/photos'
             }

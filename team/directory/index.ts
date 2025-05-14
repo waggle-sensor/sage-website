@@ -6,7 +6,6 @@ const team : TeamMember[] = [{
   image: require('@site/static/img/team/pete_beckman.jpg').default,
   institution: 'Northwestern University / ANL',
   title: 'Director',
-  href: 'https://www.anl.gov/profile/pete-beckman',
   teams: 'leadership'
 }, {
   name: 'Nicola Ferrier',
@@ -33,7 +32,7 @@ const team : TeamMember[] = [{
   image: require('@site/static/img/team/Eugene_Kelly-1-1024x1024.jpg').default,
   institution: 'Colorado State University',
   title: 'Bio / Ecology (NEON)',
-  href: 'https://soilcrop.agsci.colostate.edu/faculty-2/kelly-eugene/',
+  href: 'https://broadn.colostate.edu/eugene-kelly-bio/',
   teams: 'leadership'
 },  {
   name: 'Ilkay Altintas',
@@ -66,13 +65,13 @@ const team : TeamMember[] = [{
 }, {
   name: 'Sean Shahkarami',
   image: require('@site/static/img/team/seanshahkarami.jpg').default,
-  institution: 'Northwestern University / Argonne',
+  institution: 'Northwestern University / ANL',
   title: 'Software Engineer Lead',
   teams: ['leadership', 'ci']
 }, {
   name: 'Neal Conrad',
   image: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
-  institution: 'Argonne / Northwestern University',
+  institution: 'ANL / Northwestern University',
   title: 'Principal Specialist, Research Software Engineering',
   href: 'https://www.anl.gov/profile/neal-conrad',
   teams: ['leadership', 'ci'],
