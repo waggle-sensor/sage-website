@@ -57,7 +57,7 @@ We merge the results from both search types by calculating a weighted score base
 
 ### Step 5: Reranking with ms-marco-MiniLM-L6-v2
 
-Now we pass all those results through a **reranker** — a small but powerful transformer model trained on the MS MARCO dataset. It re-evaluates how well each result matches the original query, using a deeper level of semantic understanding, and reorders them accordingly.
+Now we pass all those results through a **reranker** — a small but powerful transformer model trained on the [MS MARCO](https://github.com/microsoft/MSMARCO-Passage-Ranking) dataset. It re-evaluates how well each result matches the original query, using a deeper level of semantic understanding, and reorders them accordingly.
 
 This is the finishing touch that helps boost the most relevant images to the top.
 
@@ -76,4 +76,4 @@ As our object database continues to grow, the challenge of finding the right ima
 
 If you’re working on something similar or curious to dive deeper, feel free to reach out.
 
-[Browse the project code on GitHub](https://github.com/your-username/sage-image-search)
+[Browse the project code on GitHub](https://github.com/waggle-sensor/sage-vectordb-example/tree/main/HybridSearch_example)
