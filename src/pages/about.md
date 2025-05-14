@@ -92,7 +92,7 @@ The Sage team looks forward to helping you use the Sage Grande Testbed for AI-en
 
 ## Learn More
 
-* **Project Website**: [sagecontinuum.org](https://sagecontinuum.org/)
+* **Project Website: [sagecontinuum.org](/)**
 * **[Live Data and Apps (Sage Portal)](https://portal.sagecontinuum.org/)**
 * **[Sage GitHub](https://github.com/waggle-sensor)**
 * **[Contact us](/docs/contact-us)**

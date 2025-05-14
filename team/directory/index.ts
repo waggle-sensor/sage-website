@@ -145,7 +145,9 @@ const team : TeamMember[] = [{
 
 
 const getTeam = (kind: Team) =>
-  team.filter(obj => obj.teams == kind || obj.teams.includes(kind))
+  team.filter(obj =>
+    obj.teams == kind || (Array.isArray(obj.teams) && obj.teams.find(v => v == kind))
+  )
 
 
 

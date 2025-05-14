@@ -8,19 +8,37 @@ const TeamCard = (props: TeamMember) => {
   const { name, image, institution, title, href } = props;
 
   return (
-    <div className="flex flex-row m-5">
-      <div className="card z-0 w-[256px] md:w-[160px] md:h-[160px]">
+    <div className="flex flex-row w-full h-full">
+      <div className="flex-shrink-0 w-40 h-40 bg-gray-100 rounded-lg overflow-hidden mr-4">
         {href ?
-          <a href={href}>
-            <img src={image} />
+          <a href={href} className="card block w-full h-full flex items-center justify-center">
+            <img
+              src={image}
+              className="max-w-full max-h-full object-contain"
+              style={{ maxWidth: '160px', maxHeight: '160px' }}
+              alt={name}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = 'https://via.placeholder.com/160?text=No+Image';
+              }}
+            />
           </a> :
-          <img src={image} />
+          <img
+            src={image}
+            className="card max-w-full max-h-full object-contain"
+            style={{ maxWidth: '160px', maxHeight: '160px' }}
+            alt={name}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'https://via.placeholder.com/160?text=No+Image';
+            }}
+          />
         }
       </div>
-      <div className="m-0 py-2 px-4 w-[275px] max-w-[275px]">
-        <h3>{href ? <a href={href}>{name}</a> : name}</h3>
-        <div>{institution}</div>
-        <div><i>{title}</i></div>
+      <div className="flex-1 min-w-0">
+        <h3 className="text-lg font-medium text-gray-900">{href ? <a href={href} className="hover:text-blue-600">{name}</a> : name}</h3>
+        <div className="text-gray-600">{institution}</div>
+        <div className="text-gray-500 italic">{title}</div>
       </div>
     </div>
   )
@@ -38,19 +56,29 @@ export default function Team(props: Props) {
   const { data: team } = props
 
   return (
-    <Root>
-      <div className="flex flex-wrap -m-5">
-        {team.map((person) => (
-          <LinkCard key={person.name} {...person} />
-        ))}
+    <Root className="w-full">
+      <div className="w-full">
+        <div className="flex flex-wrap -mx-4">
+          {team.map((person) => (
+            <div key={person.name} className="w-full md:w-1/2 px-4 mb-8">
+              <LinkCard {...person}/>
+            </div>
+          ))}
+        </div>
       </div>
     </Root>
   )
 }
 
-
 const Root = styled.div`
-  a:hover h3 {
+  width: 100%;
+  max-width: 100%;
+
+  a {
+    transition: color 0.2s ease-in-out;
+  }
+
+  h3 a:hover {
     color: rgb(0, 128, 199);
     text-decoration: underline;
   }

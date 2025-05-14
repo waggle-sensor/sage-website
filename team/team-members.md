@@ -8,7 +8,7 @@ import {getTeam} from './directory';
 
 # Team Members
 
-## Cyberinfrastructure Team
+## Cyberinfrastructure
 
 <Team data={getTeam('ci')} />
 

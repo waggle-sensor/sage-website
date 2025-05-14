@@ -4,7 +4,7 @@ import ImageSearchVideo from './Image_Search.mp4'
 
 In the age of AI-powered tools, searching through thousands of images shouldn't just be about basic metadata. What if you could search by meaning? That’s exactly what this project aims to do: combine the best of **semantic understanding** and **keyword precision** into one powerful **hybrid image search engine** to help you find relevant image series for your project.
 
-<video width="700" height="400" controls>
+<video className="w-full h-auto" controls>
   <source src={ImageSearchVideo} type="video/mp4" />
 </video>
 

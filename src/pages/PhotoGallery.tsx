@@ -78,7 +78,7 @@ const Gallery = (props: Props) => {
         {viewMore &&
           <Link to={viewMore} className="text-[#ddd5ff] hover:text-white font-semibold">
             <Box className="flex w-full rounded-lg shadow-md bg-[#4c3e84] h-48 justify-center items-center">
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 p-4">
                 See more photos <ArrowCircleRightOutlined />
               </span>
             </Box>

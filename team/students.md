@@ -16,7 +16,7 @@ breadcrumbs: False
 - Yufeng Luo (University of Wyoming)
 
 
-<img alt="2023 student and group photo" src={require('./student-photos/2023.png').default} />
+![2022 student and group photo](./student-photos/2023.png)
 
 ### 2022
 ![2022 student and group photo](./student-photos/2022.png)
