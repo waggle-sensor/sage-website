@@ -272,3 +272,9 @@ Whether you are designing your own Lorawan sensor, looking for a Lorawan data lo
   - [RAKwireless](https://www.rakwireless.com/en-us)
   - [The Things Network Device Marketplace](https://www.thethingsnetwork.org/marketplace/products/devices)
   - [DecentLab](https://www.decentlab.com)
+
+### My Gateway Map
+
+Here is the map showing gateway locations:
+
+<iframe src="/lorawan_packet_map.html" width="100%" height="600px" style={{border: "none"}} />
