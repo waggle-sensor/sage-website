@@ -4,7 +4,7 @@ import type { Team, TeamMember } from './directory'
 const team : TeamMember[] = [{
   name: 'Pete Beckman',
   image: require('@site/static/img/team/pete_beckman.jpg').default,
-  institution: 'Northwestern University / ANL',
+  institution: 'Northwestern University',
   title: 'Director',
   teams: 'leadership'
 }, {
