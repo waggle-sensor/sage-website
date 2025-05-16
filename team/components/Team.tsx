@@ -9,12 +9,12 @@ const TeamCard = (props: TeamMember) => {
 
   return (
     <div className="flex flex-row w-full h-full">
-      <div className="flex-shrink-0 w-40 h-40 bg-gray-100 rounded-lg overflow-hidden mr-4">
+      <div className="rounded-full bg-gray-100 rounded-lg overflow-hidden mr-4">
         {href ?
-          <a href={href} className="card block w-full h-full flex items-center justify-center">
+          <a href={href} className="block flex items-center justify-center">
             <img
               src={image}
-              className="max-w-full max-h-full object-contain"
+              className="object-none rounded-md "
               style={{ maxWidth: '160px', maxHeight: '160px' }}
               alt={name}
               onError={(e) => {
@@ -25,7 +25,7 @@ const TeamCard = (props: TeamMember) => {
           </a> :
           <img
             src={image}
-            className="card max-w-full max-h-full object-contain"
+            className="object-none rounded-md "
             style={{ maxWidth: '160px', maxHeight: '160px' }}
             alt={name}
             onError={(e) => {
