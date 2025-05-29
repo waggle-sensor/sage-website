@@ -8,12 +8,33 @@ const team : TeamMember[] = [{
   title: 'Director',
   teams: 'leadership'
 }, {
+  name: 'Eugene Kelly',
+  image: require('@site/static/img/team/Eugene_Kelly-1-1024x1024.jpg').default,
+  institution: 'Colorado State University',
+  title: 'Bio / Ecology (NEON)',
+  href: 'https://broadn.colostate.edu/eugene-kelly-bio/',
+  teams: 'leadership'
+}, {
   name: 'Nicola Ferrier',
   image: require('@site/static/img/team/nicola_ferrier.jpg').default,
   institution: 'Northwestern University / ANL',
   title: 'Deputy Director / ML@Edge',
   href: 'https://www.anl.gov/profile/nicola-j-ferrier',
   teams: 'leadership'
+}, {
+  name: 'Ilkay Altintas',
+  image: require('@site/static/img/team/ilkay_altintas.jpg').default,
+  institution: 'Univ. of California-San Diego / SDSC',
+  title: 'Cyberinfrastructure / Data Architect',
+  href: 'https://words.sdsc.edu/ilkay/',
+  teams: 'leadership'
+}, {
+  name: 'Rajesh Sankaran',
+  image: require('@site/static/img/team/raj_sankaran-1.jpg').default,
+  institution: 'Northwestern University / ANL',
+  title: 'Chief Platform Architect',
+  href: 'https://www.anl.gov/profile/rajesh-sankaran',
+  teams: ['leadership', 'platform']
 }, {
   name: 'Daniel Reed',
   image: require('@site/static/img/team/dan_reed-2.jpg').default,
@@ -28,26 +49,12 @@ const team : TeamMember[] = [{
   title: 'Risk Management',
   teams: 'leadership'
 }, {
-  name: 'Eugene Kelly',
-  image: require('@site/static/img/team/Eugene_Kelly-1-1024x1024.jpg').default,
-  institution: 'Colorado State University',
-  title: 'Bio / Ecology (NEON)',
-  href: 'https://broadn.colostate.edu/eugene-kelly-bio/',
+  name: 'Jason Leigh',
+  image: require('@site/static/img/team/jason-leigh.jpg').default,
+  institution: 'University of Hawai\'i at Mānoa',
+  title: 'Advanced Visualization & Applications',
+  href: 'https://jasonleigh.me',
   teams: 'leadership'
-},  {
-  name: 'Ilkay Altintas',
-  image: require('@site/static/img/team/ilkay_altintas.jpg').default,
-  institution: 'Univ. of California-San Diego / SDSC',
-  title: 'Cyberinfrastructure / Data Architect',
-  href: 'https://words.sdsc.edu/ilkay/',
-  teams: 'leadership'
-}, {
-  name: 'Rajesh Sankaran',
-  image: require('@site/static/img/team/raj_sankaran-1.jpg').default,
-  institution: 'Northwestern University / ANL',
-  title: 'Chief Platform Architect',
-  href: 'https://www.anl.gov/profile/rajesh-sankaran',
-  teams: ['leadership', 'platform']
 }, {
   name: 'Valerie Taylor',
   image: require('@site/static/img/team/valerie-taylor.jpg').default,
@@ -78,6 +85,13 @@ const team : TeamMember[] = [{
 },
 
 {
+  name: 'Charlie Catlett',
+  image: require('@site/static/img/team/charlie_catlett-3.jpg').default,
+  institution: 'Univ. of Illinois Chicago / ANL',
+  title: 'Urban / Chicago',
+  href: null,
+  teams: 'collab'
+}, {
   name: 'Scott Collis',
   image: require('@site/static/img/team/scott_collis.jpeg').default,
   institution: 'Northwestern University / ANL',
@@ -85,17 +99,24 @@ const team : TeamMember[] = [{
   href: 'https://www.anl.gov/profile/scott-m-collis',
   teams: 'collab'
 }, {
+  name: 'Thomas Giambelluca',
+  image: require('@site/static/img/team/Thomas-Giambelluca.jpeg').default,
+  institution: 'University of Hawai\'i at Mānoa',
+  title: 'Professor Emeritus, Water Resources Research Center',
+  href: 'https://www.wrrc.hawaii.edu/person/dr-thomas-giambelluca/',
+  teams: 'collab'
+}, {
+  name: 'Christopher Shuler',
+  image: require('@site/static/img/team/Chris-Shuler.jpeg').default,
+  institution: 'University of Hawai\'i at Mānoa',
+  title: 'Assistant Specialist, Water Resources Research Center',
+  href: 'https://www.wrrc.hawaii.edu/person/christopher-shuler/',
+  teams: 'collab'
+}, {
   name: 'Frank Vernon',
   image: require('@site/static/img/team/frank_vernon.png').default,
   institution: 'Univ. of California-San Diego',
   title: 'SoCal Network and Deployment',
-  href: null,
-  teams: 'collab'
-}, {
-  name: 'Charlie Catlett',
-  image: require('@site/static/img/team/charlie_catlett-3.jpg').default,
-  institution: 'Univ. of Illinois Chicago / ANL',
-  title: 'Urban / Chicago',
   href: null,
   teams: 'collab'
 },
@@ -125,7 +146,6 @@ const team : TeamMember[] = [{
 },
 
 
-
 {
   name: 'Seongha Park',
   image: require('@site/static/img/team/seongha-park.jpeg').default,
@@ -139,6 +159,13 @@ const team : TeamMember[] = [{
   institution: 'Argonne National Laboratory',
   title: 'Assistant Computer Scientist',
   href: 'https://www.anl.gov/profile/yongho-kim',
+  teams: 'ai'
+}, {
+  name: 'Christopher Lee',
+  image: require('@site/static/img/team/chris-lee.webp').default,
+  institution: 'University of Hawai\'i at Mānoa',
+  title: 'Research Assistant',
+  href: ' https://coderabbyte.github.io/',
   teams: 'ai'
 }]
 

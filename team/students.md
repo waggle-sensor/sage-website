@@ -5,6 +5,16 @@ breadcrumbs: False
 
 # Students
 
+### 2024
+
+- Ruben Abraham (University of Illinois Urbana-Champaign)
+- Chris Marshall (University of Chicago)
+- Michael Szostak (Lewis University)
+- Ryan Rearden (University of Dallas)
+- Yufeng Luo (University of Wyoming)
+- Alex Nishio (Purdue University)
+- Aldo Malaquias Cabrera (University of Chicago)
+
 ### 2023
 
 - Alex Arnold (Northwestern University)
