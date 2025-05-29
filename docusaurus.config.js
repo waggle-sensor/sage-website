@@ -45,16 +45,16 @@ export default {
             }
           ],
         }, {
-          label: 'Use Sage',
-          to: '/use-sage/fire',
+          label: 'Use Cases',
+          to: '/use-cases/fire',
           position: 'left',
           items: [
             {
               label: 'Fire Science',
-              to: '/use-sage/fire'
+              to: '/use-cases/fire'
             }, {
               label: 'Drought Mitigation and Prediction',
-              to: '/use-sage/ai-drought-mitigation'
+              to: '/use-cases/ai-drought-mitigation'
             },
           ],
         }, {
@@ -131,7 +131,7 @@ export default {
       }
     },
     announcementBar: {
-      content: '<b><a href="/use-sage/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
+      content: '<b><a href="/use-cases/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
       isCloseable: true,
       textColor: 'rgb(102, 60, 0)',
       backgroundColor: 'rgb(255, 244, 229)',
@@ -238,7 +238,7 @@ export default {
             to: '/docs/tutorials/accessing-data',
             from: ['/data', '/docs/data']  // obscure fix for /data/ vs /data redirect(?)
           }, {
-            to: '/use-sage/fire',
+            to: '/use-cases/fire',
             from: ['/fire']
           }, {
             to: '/science/category/recent-projects',
