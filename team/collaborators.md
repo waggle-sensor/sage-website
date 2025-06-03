@@ -8,10 +8,10 @@ import { getTeam } from './directory';
 
 # Collaborators
 
-<Team data={getTeam('collab')}/>
+<Team team="collab"/>
 <br/>
 
 
 # Past Collaborators
 
-<Team data={getTeam('past-collab')} />
+<Team team="past-collab" />

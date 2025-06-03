@@ -8,13 +8,6 @@ const team : TeamMember[] = [{
   title: 'Director',
   teams: 'leadership'
 }, {
-  name: 'Eugene Kelly',
-  image: require('@site/static/img/team/Eugene_Kelly-1-1024x1024.jpg').default,
-  institution: 'Colorado State University',
-  title: 'Bio / Ecology (NEON)',
-  href: 'https://broadn.colostate.edu/eugene-kelly-bio/',
-  teams: 'leadership'
-}, {
   name: 'Nicola Ferrier',
   image: require('@site/static/img/team/nicola_ferrier.jpg').default,
   institution: 'Northwestern University / ANL',
@@ -29,12 +22,26 @@ const team : TeamMember[] = [{
   href: 'https://words.sdsc.edu/ilkay/',
   teams: 'leadership'
 }, {
-  name: 'Rajesh Sankaran',
-  image: require('@site/static/img/team/raj_sankaran-1.jpg').default,
-  institution: 'Northwestern University / ANL',
-  title: 'Chief Platform Architect',
-  href: 'https://www.anl.gov/profile/rajesh-sankaran',
-  teams: ['leadership', 'platform']
+  name: 'Jason Leigh',
+  image: require('@site/static/img/team/jason-leigh.jpg').default,
+  institution: 'University of Hawai\'i at Mānoa',
+  title: 'Advanced Visualization & Applications',
+  href: 'https://jasonleigh.me',
+  teams: 'leadership'
+}, {
+  name: 'Mike Papka',
+  image: require('@site/static/img/team/mike_papka.jpg').default,
+  institution: 'University of Illinois Chicago / ANL',
+  title: 'Education and Research Testbed',
+  href: 'https://cs.uic.edu/profiles/papka-michael',
+  teams: 'leadership'
+}, {
+  name: 'Eugene Kelly',
+  image: require('@site/static/img/team/Eugene_Kelly-1-1024x1024.jpg').default,
+  institution: 'Colorado State University',
+  title: 'Bio / Ecology (NEON)',
+  href: 'https://broadn.colostate.edu/eugene-kelly-bio/',
+  teams: 'leadership'
 }, {
   name: 'Daniel Reed',
   image: require('@site/static/img/team/dan_reed-2.jpg').default,
@@ -43,18 +50,19 @@ const team : TeamMember[] = [{
   href: null,
   teams: 'leadership'
 }, {
-  name: 'Jim Olds',
-  image: require('@site/static/img/team/James-Olds-400.jpg').default,
-  institution: 'George Mason University',
-  title: 'Risk Management',
-  teams: 'leadership'
+  name: 'Rajesh Sankaran',
+  image: require('@site/static/img/team/raj_sankaran-1.jpg').default,
+  institution: 'Northwestern University / ANL',
+  title: 'Chief Platform Architect',
+  href: 'https://www.anl.gov/profile/rajesh-sankaran',
+  teams: ['leadership', 'platform']
 }, {
-  name: 'Jason Leigh',
-  image: require('@site/static/img/team/jason-leigh.jpg').default,
-  institution: 'University of Hawai\'i at Mānoa',
-  title: 'Advanced Visualization & Applications',
-  href: 'https://jasonleigh.me',
-  teams: 'leadership'
+  name: 'Douglas Toomey',
+  image: require('@site/static/img/team/doug.webp').default,
+  institution: 'University of Oregon / OHAZ',
+  title: 'Hazard Detection and Monitoring',
+  href: 'https://cas.uoregon.edu/directory/natural-sciences/all/drt',
+  teams: ['leadership']
 }, {
   name: 'Valerie Taylor',
   image: require('@site/static/img/team/valerie-taylor.jpg').default,
@@ -63,11 +71,10 @@ const team : TeamMember[] = [{
   href: 'https://www.anl.gov/profile/valerie-e-taylor',
   teams: 'leadership'
 }, {
-  name: 'Mike Papka',
-  image: require('@site/static/img/team/mike_papka.jpg').default,
-  institution: 'University of Illinois Chicago / ANL',
-  title: 'Education and Research Testbed',
-  href: 'https://cs.uic.edu/profiles/papka-michael',
+  name: 'Jim Olds',
+  image: require('@site/static/img/team/James-Olds-400.jpg').default,
+  institution: 'George Mason University',
+  title: 'Risk Management',
   teams: 'leadership'
 }, {
   name: 'Sean Shahkarami',
@@ -79,7 +86,7 @@ const team : TeamMember[] = [{
   name: 'Neal Conrad',
   image: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
   institution: 'ANL / Northwestern University',
-  title: 'Principal Specialist, Research Software Engineering',
+  title: { 'leadership': 'Operations and User Support', 'ci': 'Principal Specialist, Research Software Engineering' },
   href: 'https://www.anl.gov/profile/neal-conrad',
   teams: ['leadership', 'ci'],
 },
@@ -97,20 +104,6 @@ const team : TeamMember[] = [{
   institution: 'Northwestern University / ANL',
   title: 'Instru. Chair / Atmosphere',
   href: 'https://www.anl.gov/profile/scott-m-collis',
-  teams: 'collab'
-}, {
-  name: 'Thomas Giambelluca',
-  image: require('@site/static/img/team/Thomas-Giambelluca.jpeg').default,
-  institution: 'University of Hawai\'i at Mānoa',
-  title: 'Professor Emeritus, Water Resources Research Center',
-  href: 'https://www.wrrc.hawaii.edu/person/dr-thomas-giambelluca/',
-  teams: 'collab'
-}, {
-  name: 'Christopher Shuler',
-  image: require('@site/static/img/team/Chris-Shuler.jpeg').default,
-  institution: 'University of Hawai\'i at Mānoa',
-  title: 'Assistant Specialist, Water Resources Research Center',
-  href: 'https://www.wrrc.hawaii.edu/person/christopher-shuler/',
   teams: 'collab'
 }, {
   name: 'Frank Vernon',
@@ -143,8 +136,21 @@ const team : TeamMember[] = [{
   title: 'Software Engineer',
   // href: '',
   teams: 'ci'
+}, {
+  name: 'Alex Tuna',
+  image: require('@site/static/img/team/alex-tuna.jpg').default,
+  institution: 'UC San Diego',
+  title: 'Computational Data Scientist and Researcher',
+  href: 'https://scil.ucsd.edu/alex-tuna-phd',
+  teams: ['ci']
+}, {
+  name: 'Ismael Perez',
+  image: require('@site/static/img/team/perez.png').default,
+  institution: 'UC San Diego',
+  title: 'Computational and Data Science Research Specialist',
+  href: 'https://scil.ucsd.edu/ismael-perez',
+  teams: ['ci']
 },
-
 
 {
   name: 'Seongha Park',
@@ -162,11 +168,32 @@ const team : TeamMember[] = [{
   teams: 'ai'
 }, {
   name: 'Christopher Lee',
-  image: require('@site/static/img/team/chris-lee.webp').default,
+  image: require('@site/static/img/team/chris-lee.png').default,
   institution: 'University of Hawai\'i at Mānoa',
   title: 'Research Assistant',
   href: ' https://coderabbyte.github.io/',
   teams: 'ai'
+}, {
+  name: 'Thomas Giambelluca',
+  image: require('@site/static/img/team/Thomas-Giambelluca.jpeg').default,
+  institution: 'University of Hawai\'i at Mānoa',
+  title: 'Professor Emeritus, Water Resources Research Center',
+  href: 'https://www.wrrc.hawaii.edu/person/dr-thomas-giambelluca/',
+  teams: 'ai'
+}, {
+  name: 'Christopher Shuler',
+  image: require('@site/static/img/team/Chris-Shuler.jpeg').default,
+  institution: 'University of Hawai\'i at Mānoa',
+  title: 'Assistant Specialist, Water Resources Research Center',
+  href: 'https://www.wrrc.hawaii.edu/person/christopher-shuler/',
+  teams: 'ai'
+},
+{
+  name: 'Nick Maggio',
+  image: require('@site/static/img/team/maggio.jpeg').default,
+  institution: 'University of Oregon / OHAZ',
+  title: 'Hazard Detection and Monitoring',
+  teams: 'platform'
 }]
 
 

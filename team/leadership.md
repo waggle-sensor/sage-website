@@ -7,4 +7,4 @@ import {getTeam} from './directory';
 
 # Leadership
 
-<Team data={getTeam('leadership')} />
+<Team team="leadership" />
