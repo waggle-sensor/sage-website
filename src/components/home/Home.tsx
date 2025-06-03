@@ -23,6 +23,7 @@ import publications, { type Publication } from '../../publications'
 
 import config from '../../config'
 import Calendar from './Calendar'
+import Card from '../Card'
 const { portal } = config
 
 
@@ -135,41 +136,41 @@ export default function Home() {
       <div className="bg-white">
         <Section>
           <div className="flex flex-col md:flex-row gap-10 md:gap-4 xl:gap-10">
-            <Link to="/science/category/recent-projects" className="card">
+            <Card to="/science/category/recent-projects">
               <img src={require('@site/static/img/home/learn.jpg').default} />
               <h3 className="flex items-center gap-2">
                 <LearnIcon />Learn
               </h3>
               <p>Explore some of the <Link to="/science/category/recent-projects">science</Link> made possible with Sage</p>
-            </Link>
-            <a href={`${portal}/apps`} className="card">
+            </Card>
+            <Card href={`${portal}/apps`}>
               <img src={require('@site/static/img/home/create-app.png').default} />
               <h3 className="flex items-center gap-2">
                 <ContributeIcon />Contribute
               </h3>
               <p>Upload, build, and share <a href={`${portal}/apps`}>apps</a> for AI at the edge</p>
-            </a>
-            <a className="card" href={`${portal}/jobs`}>
+            </Card>
+            <Card href={`${portal}/jobs`}>
               <img src={require('@site/static/img/home/circuit-board.jpg').default} />
               <h3 className="flex items-center gap-2">
                 <RunIcon />Run jobs
               </h3>
               <p>Create <a href={`${portal}/create-job?tab=editor&start_with_sample=true`}>science goals</a> to run apps on nodes<br/></p>
-            </a>
-            <a href={`${portal}/data`} className="card">
+            </Card>
+            <Card href={`${portal}/data`}>
               <img src={require('@site/static/img/home/browse.png').default} />
               <h3 className="flex items-center gap-2">
                 <BrowseIcon />Browse
               </h3>
               <p>Browse <a href={`${portal}/data`}>data</a> from sensors and edge apps</p>
-            </a>
-            <Link to="docs/tutorials/accessing-data" className="card">
+            </Card>
+            <Card to="docs/tutorials/accessing-data">
               <img src={require('@site/static/img/home/wildfire.jpg').default} />
               <h3 className="flex items-center gap-2">
                 <AnalyzeIcon/>Analyze
               </h3>
               <p>Use Sage APIs to fetch, analyze, or integrate data</p>
-            </Link>
+            </Card>
           </div>
 
           <h2 className="text-purple font-bold mt-16 self-center">AI/ML Status</h2>
@@ -346,28 +347,6 @@ const Root = styled.div`
     background: radial-gradient(farthest-side ellipse at 0% 0,#87baa6 20%,#382d64);
   }
 
-  .card {
-    color: initial;
-    padding: 0;
-    background: #fff;
-    border: 1px solid #ddd;
-
-    img {
-      border-radius: 5px 5px 0 0;
-    }
-
-    p, h3 {
-      padding: 15px;
-    }
-
-    border-bottom: 3px solid #7a6bac;
-    :hover {
-      text-decoration: none;
-      border: 1px solid #7a6bac;
-      border-bottom: 3px solid ${purple};
-    }
-  }
-
   a.focused-link {
     color: #f2f2f2;
     font-size: 2em;
@@ -403,6 +382,21 @@ const Root = styled.div`
     .focused-link {
       font-size: 1.5em;
     }
+  }
+
+  /*
+   * card image styling
+   */
+  img {
+    border-radius: 15px 15px 0 0;
+  }
+
+  h3 {
+    margin: 10px 15px 15px 15px ;
+  }
+
+  p {
+    padding: 0 15px;
   }
 `
 

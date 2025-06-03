@@ -61,16 +61,15 @@ export default {
           to: '/science/category/recent-projects',
           label: 'AI & Science'
         }, {
+          to: '/labs',
+          label: 'Labs',
+        }, {
           to: '/news',
           label: 'News'
         }, {
           to: '/publications',
           label: 'Publications'
-        }, /* {
-          to: '/photos',
-          label: 'Photos',
-          position: 'left'
-        },*/ {
+        }, {
           to: '/docs/about/overview',
           label: 'Docs'
         }, {
