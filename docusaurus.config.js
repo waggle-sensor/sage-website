@@ -36,30 +36,40 @@ export default {
             {
               label: 'About Sage Grande',
               to: '/about'
-            },
-            {
+            }, {
               label: 'Team',
               to: '/team/leadership'
-            },
-            {
+            }, {
               label: 'Photos',
               to: '/photos'
             }
           ],
         }, {
+          label: 'Use Cases',
+          to: '/use-cases/fire',
+          position: 'left',
+          items: [
+            {
+              label: 'Fire Science',
+              to: '/use-cases/fire'
+            }, {
+              label: 'Drought Mitigation and Prediction',
+              to: '/use-cases/ai-drought-mitigation'
+            },
+          ],
+        }, {
           to: '/science/category/recent-projects',
           label: 'AI & Science'
+        }, {
+          to: '/labs',
+          label: 'Labs',
         }, {
           to: '/news',
           label: 'News'
         }, {
           to: '/publications',
           label: 'Publications'
-        }, /* {
-          to: '/photos',
-          label: 'Photos',
-          position: 'left'
-        },*/ {
+        }, {
           to: '/docs/about/overview',
           label: 'Docs'
         }, {
@@ -120,7 +130,7 @@ export default {
       }
     },
     announcementBar: {
-      content: '<b><a href="/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
+      content: '<b><a href="/use-cases/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
       isCloseable: true,
       textColor: 'rgb(102, 60, 0)',
       backgroundColor: 'rgb(255, 244, 229)',
@@ -136,6 +146,12 @@ export default {
     //   textColor: 'rgb(1, 67, 97)',
     //   backgroundColor: 'rgb(229, 246, 253)',
     */
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+  // In order for Mermaid code blocks in Markdown to work,
+  // you also need to enable the Remark plugin with this option
+  markdown: {
+    mermaid: true,
   },
   stylesheets: [
     {
@@ -220,8 +236,10 @@ export default {
           {
             to: '/docs/tutorials/accessing-data',
             from: ['/data', '/docs/data']  // obscure fix for /data/ vs /data redirect(?)
-          },
-          {
+          }, {
+            to: '/use-cases/fire',
+            from: ['/fire']
+          }, {
             to: '/science/category/recent-projects',
             from: ['/science']
           },

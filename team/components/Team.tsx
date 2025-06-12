@@ -1,20 +1,20 @@
 import styled from 'styled-components'
 
-import type { TeamMember } from '../directory'
+import { getTeam, type TeamMember, type Team } from '../directory'
 
 
 
-const TeamCard = (props: TeamMember) => {
-  const { name, image, institution, title, href } = props;
+const TeamCard = (props: TeamMember & {team: Team}) => {
+  const { name, image, institution, title, href, teamName } = props;
 
   return (
     <div className="flex flex-row w-full h-full">
-      <div className="flex-shrink-0 w-40 h-40 bg-gray-100 rounded-lg overflow-hidden mr-4">
+      <div className="rounded-full bg-gray-100 rounded-lg overflow-hidden mr-4">
         {href ?
-          <a href={href} className="card block w-full h-full flex items-center justify-center">
+          <a href={href} className="block flex items-center justify-center">
             <img
               src={image}
-              className="max-w-full max-h-full object-contain"
+              className="object-none rounded-md "
               style={{ maxWidth: '160px', maxHeight: '160px' }}
               alt={name}
               onError={(e) => {
@@ -25,7 +25,7 @@ const TeamCard = (props: TeamMember) => {
           </a> :
           <img
             src={image}
-            className="card max-w-full max-h-full object-contain"
+            className="object-none rounded-md "
             style={{ maxWidth: '160px', maxHeight: '160px' }}
             alt={name}
             onError={(e) => {
@@ -38,7 +38,7 @@ const TeamCard = (props: TeamMember) => {
       <div className="flex-1 min-w-0">
         <h3 className="text-lg font-medium text-gray-900">{href ? <a href={href} className="hover:text-blue-600">{name}</a> : name}</h3>
         <div className="text-gray-600">{institution}</div>
-        <div className="text-gray-500 italic">{title}</div>
+        <i className="text-gray-500">{typeof title == 'string' ? title : title[teamName]}</i>
       </div>
     </div>
   )
@@ -49,11 +49,13 @@ const LinkCard = (props: TeamMember) => {
 }
 
 type Props = {
-  data: TeamMember[]
+  team: Team
 }
 
 export default function Team(props: Props) {
-  const { data: team } = props
+  const { team: teamName } = props
+
+  const team = getTeam(teamName)
 
   return (
     <Root className="w-full">
@@ -61,7 +63,7 @@ export default function Team(props: Props) {
         <div className="flex flex-wrap -mx-4">
           {team.map((person) => (
             <div key={person.name} className="w-full md:w-1/2 px-4 mb-8">
-              <LinkCard {...person}/>
+              <LinkCard {...person} teamName={teamName} />
             </div>
           ))}
         </div>

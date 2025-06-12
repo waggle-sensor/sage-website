@@ -10,16 +10,12 @@ import {getTeam} from './directory';
 
 ## Cyberinfrastructure
 
-<Team data={getTeam('ci')} />
+<Team team="ci" />
 
 ## Research / AI Enablement
 
-<Team data={getTeam('ai')}/>
+<Team team="ai"/>
 
 ## Platform
 
-<Team data={getTeam('platform')} />
-
-## Past Members
-
-<Team data={getTeam('past-members')} />
+<Team team="platform" />

@@ -5,7 +5,7 @@ export type TeamMember = {
   name: string
   image: string
   institution: string
-  title: string
+  title: string | {[team: strimg]: string}
   teams: Team | Team[]
   href?: string
 }
