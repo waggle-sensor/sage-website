@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://waggle-sensor.github.io/news</id>
+    <title>Sage Blog</title>
+    <updated>2025-04-18T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://waggle-sensor.github.io/news"/>
+    <subtitle>Sage Blog</subtitle>
+    <icon>https://waggle-sensor.github.io/img/sage-favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Harnessing AI and Edge Computing for Fire Science]]></title>
+        <id>https://waggle-sensor.github.io/news/2025/04/18/fire-science</id>
+        <link href="https://waggle-sensor.github.io/news/2025/04/18/fire-science"/>
+        <updated>2025-04-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[KONZA prescribed burn, thermal cameras of fire, and volcanic activity]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="KONZA prescribed burn, thermal cameras of fire, and volcanic activity" src="https://waggle-sensor.github.io/assets/images/fire-e2eecb84e2d0b55de88dcc7726f84d9c.png" width="4343" height="764" class="img_ev3q"></p>
+<p>Sage is a cutting-edge cyberinfrastructure testbed funded by the NSF Office of Advanced Cyberinfrastructure to support AI research. The platform provides real-time environmental monitoring and AI-enabled edge computing at a national scale. By bringing advanced AI to the edge, where data is collected, full-resolution analysis, dynamic automation, and immediate actionable responses can be computed. Each Sage node includes a GPU and AI-optimized software stack connected to instruments such as infrared cameras, RGB cameras, LIDAR, and traditional sensors for air quality and wind, as well as LoRaWAN connected sensors for low-bandwidth measurements such as soil moisture. With over <strong>100 Sage nodes deployed across 17 states</strong>, including fire-prone regions in the Western U.S., the platform supports rapid-response science and sustained observation of ecological systems, agriculture, urban environments, and weather-related hazards.</p>
+<p><strong>Read more at <a href="https://waggle-sensor.github.io/use-cases/fire">AI for Fire Science</a>.</strong></p>]]></content>
+        <author>
+            <name>Pete Beckman</name>
+        </author>
+        <category label="Fire Science" term="Fire Science"/>
+        <category label="Wildfire Detection" term="Wildfire Detection"/>
+        <category label="Wildfire Prediction" term="Wildfire Prediction"/>
+        <category label="Sensor Integration" term="Sensor Integration"/>
+        <category label="Hazard AI" term="Hazard AI"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Sage at TAPIA 2024]]></title>
+        <id>https://waggle-sensor.github.io/news/2024/9/20/sage-at-tapia</id>
+        <link href="https://waggle-sensor.github.io/news/2024/9/20/sage-at-tapia"/>
+        <updated>2024-09-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[On Sep 20th, 2024, the Sage team presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See the presentation slides). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!]]></summary>
+        <content type="html"><![CDATA[<p>On Sep 20th, 2024, the Sage team presented the Sage edge computing platform and self-supervised learning at the edge in the TAPIA conference (See <a href="https://waggle-sensor.github.io/assets/files/TAPIA-sep-2024-827cd409c6c7d38235a805e8815c3286.pdf" target="_blank">the presentation slides</a>). During the workshop, we met many academic professors, computer scientists, and students who were passionate about engaging with us and sharing their research challenges. We look forward to future collaborations with them!</p>
+<p>Interested in running the Jupyter notebooks we demonstrated in the presentation?  Check them out here:</p>
+<ul>
+<li><a href="https://github.com/sagecontinuum/sage-data-client/blob/main/examples/contrib/geospatial_mapping_example_v2.ipynb" target="_blank" rel="noopener noreferrer">geospatial mapping notebook</a> <a href="https://colab.research.google.com/github/sagecontinuum/sage-data-client/blob/main/examples/contrib/geospatial_mapping_example_v2.ipynb" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" src="https://colab.research.google.com/assets/colab-badge.svg" alt="open in google colab" class="img_ev3q"></a></li>
+<li><a href="https://github.com/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/analyze_node_performance.ipynb" target="_blank" rel="noopener noreferrer">node performance plotting notebook</a> <a href="https://colab.research.google.com/github/waggle-sensor/edge-scheduler/blob/main/scripts/analysis/analyze_node_performance.ipynb" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" src="https://colab.research.google.com/assets/colab-badge.svg" alt="open in google colab" class="img_ev3q"></a></li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="tapia presenters" src="https://waggle-sensor.github.io/assets/images/tapia-presenters-5e533d2e749134cfa662553ab722f3e9.jpg" width="1600" height="1200" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Yongho Kim</name>
+        </author>
+        <category label="tapia" term="tapia"/>
+        <category label="conference" term="conference"/>
+        <category label="students" term="students"/>
+        <category label="sage" term="sage"/>
+        <category label="AI@Edge" term="AI@Edge"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the Sage Testbed]]></title>
+        <id>https://waggle-sensor.github.io/news/2024/01/10/sage-testbed</id>
+        <link href="https://waggle-sensor.github.io/news/2024/01/10/sage-testbed"/>
+        <updated>2024-01-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Sage team is thrilled to kick off 2024 by introducing our new Sage Testbed!]]></summary>
+        <content type="html"><![CDATA[<p>The Sage team is thrilled to kick off 2024 by introducing our new Sage Testbed!</p>
+<p><img decoding="async" loading="lazy" alt="Photo of the Sage Testbed" src="https://waggle-sensor.github.io/assets/images/sage-testbed-efe1490dbaa91af190bcc1d63c781469.png" width="2560" height="682" class="img_ev3q"></p>
+<p>For Sage users, one of the major challenges is bridging the gap between local development and real production deployment.</p>
+<p>While local development is fantastic for prototyping ideas quickly, it often lacks the nuance and intricacy of real hardware, particularly when it comes to sensors and instruments. Further, specific technical hurdles with tools like Docker or Rancher Desktop prevent Mac or Windows users from even integrating certain sensors with their own machine for development and testing.</p>
+<p>In response to this challenge, the team has dedicated a focused effort on building out a comprehensive testbed.  This testbed consists of 16 Wild Sage Nodes and 14 Sage Blades which all have access to a range of sensors such as PTZ and thermal cameras, with the explicit intent of being made widely available to the community for development access.</p>
+<p>The Northwestern University Sage Testebed is hosted at a testing site on the Argonne National Laboratory campus.  Because it is easily accessible and maintained, we can better support users interested trying more cutting-edge or low level experiments on devices.</p>
+<p>Does this sound interesting to you? If so, visit the <a href="https://portal.sagecontinuum.org/account/access" target="_blank" rel="noopener noreferrer">Access Credentials</a> section of the Sage Portal and request dev access to the Sage Testbed to get started.</p>
+<p><img decoding="async" loading="lazy" alt="Photo of the Sage Testbed at dusk" src="https://waggle-sensor.github.io/assets/images/sunset-7138ea94daf66e95572a09378ca3b9d4.jpg" width="4032" height="3024" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Sean Shahkarami</name>
+        </author>
+        <category label="Sage" term="Sage"/>
+        <category label="Nodes" term="Nodes"/>
+        <category label="Testbed" term="Testbed"/>
+        <category label="Sensors" term="Sensors"/>
+        <category label="Instruments" term="Instruments"/>
+        <category label="Development" term="Development"/>
+        <category label="Community" term="Community"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Scalable AI@Edge at Argonne's Advanced Photon Source]]></title>
+        <id>https://waggle-sensor.github.io/news/2023/05/31/scalable-ci-in-aps</id>
+        <link href="https://waggle-sensor.github.io/news/2023/05/31/scalable-ci-in-aps"/>
+        <updated>2023-05-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Earlier this year, Sage computer science researchers and computational scientists from Argonne's Advanced Photon Source (APS) collaborated to answer the question: Can edge computing be used in X-ray beamline experiments to process high-volume and fast data streams for real-time decision making?  Read more about the experiment here under Sage Science.]]></summary>
+        <content type="html"><![CDATA[<p>Earlier this year, Sage computer science researchers and computational scientists from Argonne's Advanced Photon Source (APS) collaborated to answer the question: Can edge computing be used in X-ray beamline experiments to process high-volume and fast data streams for real-time decision making?  Read more about the experiment <a href="https://waggle-sensor.github.io/science/recent/scalable-ci-in-aps">here</a> under <a href="https://waggle-sensor.github.io/science/category/recent-projects">Sage Science</a>.</p>]]></content>
+        <category label="edge computing" term="edge computing"/>
+        <category label="computer science" term="computer science"/>
+        <category label="computational science" term="computational science"/>
+        <category label="Argonne APS" term="Argonne APS"/>
+        <category label="Sage science" term="Sage science"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pedestrian Count for Crosswalk Violations]]></title>
+        <id>https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross</id>
+        <link href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross"/>
+        <updated>2021-02-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Hi, I am Pratool Bharti, an assistant professor in Computer Science department at Northern Illinois University (NIU). Before joining NIU, I worked for 2 years in a Florida based startup as a research and development manager. There, my role was to design and build computer vision and machine learning based yard management system that automatically tracks the vehicles inside a freight yard.  At NIU, I am deeply interested in solving complex real-life problems by employing computer science tools and techniques, especially artificial intelligence and computer vision. While working at Argonne National Lab in summer 2020, I worked on to design and build an AI-enabled computer vision system that counts the pedestrians who violate the crosswalk while crossing the street. The goal of this project is 3-fold; first – detect every pedestrian in the image, second – re-identify the pedestrian in successive frames to avoid their recounting, third – count the pedestrians who do not follow the crosswalk. A sample output image from the project is shown in Figure 1.]]></summary>
+        <content type="html"><![CDATA[<p>Hi, I am Pratool Bharti, an assistant professor in Computer Science department at Northern Illinois University (NIU). Before joining NIU, I worked for 2 years in a Florida based startup as a research and development manager. There, my role was to design and build computer vision and machine learning based yard management system that automatically tracks the vehicles inside a freight yard.  At NIU, I am deeply interested in solving complex real-life problems by employing computer science tools and techniques, especially artificial intelligence and computer vision. While working at Argonne National Lab in summer 2020, I worked on to design and build an AI-enabled computer vision system that counts the pedestrians who violate the crosswalk while crossing the street. The goal of this project is 3-fold; first – detect every pedestrian in the image, second – re-identify the pedestrian in successive frames to avoid their recounting, third – count the pedestrians who do not follow the crosswalk. A sample output image from the project is shown in Figure 1.</p>
+<p><img decoding="async" loading="lazy" alt="sample output image" src="https://waggle-sensor.github.io/assets/images/Figure-1-9f27127491f03a7d01c424b60e84d233.png" width="468" height="352" class="img_ev3q"></p>
+<blockquote>
+<p>Figure 1: A sample output image of pedestrian count project. Green box represents that the pedestrian has taken the crosswalk while crossing the street. White box represents that the pedestrian has not crossed the street yet.
+Motivation</p>
+</blockquote>
+<p>An accurate and clear information about pedestrian travel patterns is a critical component of transportation planning, management and safety. Sound data on pedestrian system usage is needed for traffic safety, operations, maintenance as well as system user outreach and education.  According to CDC report <sup><a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#references">[1]</a></sup>, in 2017 alone, 5977 pedestrians were killed in traffic crashes in the United States. That’s about one death every 88 minutes. The broad motivation of this study is to explore the pedestrian travel patterns to understand the contexts in which they violate the traffic rules. To do so, the immediate goal is to count the number of pedestrians who do not follow the crosswalk while crossing the street.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="data-description">Data Description<a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#data-description" class="hash-link" aria-label="Direct link to Data Description" title="Direct link to Data Description">​</a></h2>
+<p>In this study, a total of 2,580,468 images were collected by employing a vision camera embedded in an AoT (Array of Things) <sup><a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#references">[2]</a></sup> node (shown in Fig. 2). The AoT node is installed on a streetlight pole at Northern Illinois University, DeKalb, IL in front of the Computer Science building. The camera captures the image (as shown in Figure 2) at 1 Hz frequency with the resolution of 96 dpi.</p>
+<p><img decoding="async" loading="lazy" alt="aot install" src="https://waggle-sensor.github.io/assets/images/Figure-2-5ca1308b247cc81b82156b5c2741558a.jpg" width="708" height="531" class="img_ev3q"></p>
+<blockquote>
+<p>Figure 2: AoT node installed on a light pole at NIU campus
+Approach</p>
+</blockquote>
+<p>In this section, I present a brief overview of the pedestrians counting process for crosswalk violation. The complete process is divided into 3 sequential sections as shown in Figure 3. First – detect every pedestrian in the image, second – re-identify same pedestrian in successive images to avoid their recounting and third – detect when the pedestrian finished crossing the street. Each part is explained in the following sections.</p>
+<p><img decoding="async" loading="lazy" alt="workflow diagram " src="https://waggle-sensor.github.io/assets/images/Figure-3-e5e5aa279678d31c0dbb389d62b68644.png" width="1040" height="237" class="img_ev3q"></p>
+<blockquote>
+<p>Figure 3: Workflow diagram for pedestrian crosswalk violation
+Pedestrian Detection</p>
+</blockquote>
+<p>The first step is to detect every pedestrian along with their position in the image. To do so, one approach could be to train a neural network-based pedestrian detection model that identifies and locates the pedestrian in the image. However, this process would require a lot of manual image tagging without getting any new results since several popular pre-trained models are already available that can do a fine job in person detection. These pre-trained models are trained on a popular COCO dataset <sup><a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#references">[3]</a></sup> which includes more than hundred thousand images. Model accuracy is an important factor here because if it misses any pedestrian in the image then the final pedestrian counting cannot be accurate. To take it into consideration, I selected the Faster R-CNN <sup><a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#references">[4]</a></sup> based NasNet <sup><a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#references">[5]</a></sup> object detection model from the TensorFlow model zoo <sup><a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#references">[9]</a></sup>. Although NasNet model has high latency, it has very good mean average precision value to detect the objects precisely in the image. The images are input to NasNet model and store the prediction results in the XML format. A sample of image and generated XML is shown in Figure 4. XML stores each detected objects’ name and their box coordinates.</p>
+<p><img decoding="async" loading="lazy" alt="output image and xml from NasNet" src="https://waggle-sensor.github.io/assets/images/Figure-4-68dd22408d808e130e55c350da0254c2.png" width="1426" height="788" class="img_ev3q"></p>
+<blockquote>
+<p>Figure 4: Output image and XML generated from NasNet object detection model. Detected objects are boxed in the image.
+Pedestrian Re-identification (ReID)</p>
+</blockquote>
+<p>Once each pedestrian’s position is stored in the XML, the next part is to identify them in successive images to avoid their recounting. In computer vision community, this task is called pedestrian re-identification (ReID) [7]. The idea behind ReID is to find a metrics or representation of a pedestrian in the image that is invariant of different angles, distance, zoom level, etc. Neural networks-based models try to learn local regions (shoes, glasses, hair color, etc.) as well as global full body region (t-shirt and shorts color, design, etc.) features to discriminate the one pedestrian from others. At the end of training, these models aim to generate invariant multi-dimensional features of a pedestrian from different angles, distance, clothes, etc. In this study, I have leveraged a deep learning-based model deep-person-reid [7,8] to generate such features of each pedestrian detected in the frame to compare with the pedestrians from the following frames for re-identification. The model generates 1024-dimensional features for each pedestrian cropped in a rectangular box. The cosine similarity is calculated for feature vectors of one frame against successive frames. Pedestrians are considered same if they have high cosine score, hence, assigned the same pedestrian id. In other cases where cosine similarity is below a pre-defined threshold, both pedestrians are assigned different ids. Low matching score may also happen where pedestrian is partially occluded by a car or another pedestrian in next frame, the similarity score gets very low. To mitigate this issue, the algorithm compared the current frame against last 5 consecutive frames to avoid assigning new id to same pedestrian. Another challenge I faced with the threshold-based matching is when one pedestrian had high similarity scores against multiple pedestrians. To fix this issue, I employed the greedy method in which it ranks each pair according to their similarity score. Based on their ranking, the algorithm picks the top pair and assigns same id to both pedestrians, and subsequently removes other pairs where any one of the pedestrians from the top pair is present. By employing these techniques, I was able to assign unique id to distinct pedestrian.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pedestrian-count-for-crosswalk-violation">Pedestrian Count for Crosswalk Violation<a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#pedestrian-count-for-crosswalk-violation" class="hash-link" aria-label="Direct link to Pedestrian Count for Crosswalk Violation" title="Direct link to Pedestrian Count for Crosswalk Violation">​</a></h2>
+<p>Now that a unique id is assigned to each distinct pedestrian (barring any errors), the next and the final step in the pipeline is to count the number of pedestrians who have violated the crosswalk while crossing the street. The output of this step will be two metrics for any given time period – 1) number of pedestrians crossed the street and 2) number of pedestrians followed the crosswalk while crossing the street. Subtracting the 2nd metric from 1st one will give the count of crosswalk violations. To compute these metrices, it is important to locate the street and crosswalk in the image. Fortunately, in this case, camera is installed on a fixed streetlight pole which didn’t shake or vibrate significantly due to wind or heavy vehicles. Taking advantage of it, I pre-set the location of crosswalk and street in the image (as shown in Figure 1, the crosswalk is highlighted in yellow and both sides of street in red). While the pre-set of crosswalk is represented in a form of convex polygon, both sides of the street are depicted by two parallel straight lines. These representations helped to determine the location of any pedestrian with respect to the crosswalk and the street. To recall, pedestrian’s location in the image is stored as co-ordinates of 4 corners of a rectangular box. In a 2D image, it is essential to measure each pedestrian’s location by a single (x,y) co-ordinate to make a concrete decision about their position with reference to crosswalk and street. If we observe the Figure 5, the lady is walking on the pavement towards the computer science building, but her head and center of body are still in the street (due to 2D image display) while legs are on the pavement. Similar observations in multiple images made me select the legs position to represent the pedestrian’s location because when pedestrian moves, legs represent the current location in the 2D image.</p>
+<p><img decoding="async" loading="lazy" alt="an detection of crossing" src="https://waggle-sensor.github.io/assets/images/Figure-5-d13a94b38c235858951c5671ec67d3db.jpg" width="1430" height="996" class="img_ev3q"></p>
+<blockquote>
+<p>Figure 5 : Our algorithm detects that a person has crossed the street.</p>
+</blockquote>
+<p>Now that a pedestrian’s position has been established, I will briefly discuss about the simple rules to determine if a pedestrian has crossed the street and followed/ violated the crosswalk.  A pedestrian is considered to have crossed the street if they are detected on both sides of the street within a fixed time. To recall, the street has been represented by two straight lines, one for each side (as shown in red in Figure 1). The sign of these straight lines against the pedestrian’s coordinates exhibits their position relative to the street. For example, as we see in Figure 6, points A and B are in opposite sides of the straight line which can be verified by putting the value of these points coordinates in the line equation. While the value for point A is -2, for point B it is +3. Opposite signs of both points resemble that they are in opposite sides of the straight line. By similar means, we can compute if the pedestrian has been present to both sides of the street which will confirm that the pedestrian has crossed it. Additionally, to determine if the pedestrian has used the crosswalk, we can similarly verify their positions in the middle of the street. If all of their detected positions are inside the crosswalk polygon, I consider that the pedestrian has used the crosswalk. Using these 2 metrics, the count for crosswalk violations can be easily computed.</p>
+<p><img decoding="async" loading="lazy" alt="determining position" src="https://waggle-sensor.github.io/assets/images/Figure-6-b846e0c705b7777ba6b2decf07f353c2.png" width="252" height="185" class="img_ev3q"></p>
+<blockquote>
+<p>Figure 6: Determining the position of the points with respect to the straight line
+Future Works</p>
+</blockquote>
+<p>In the current study, the implemented system is able to count the pedestrians who violates the crosswalk. Currently, data processing and AI algorithms execute on a server located in computer science building where AoT node periodically stores the images. Many images are lost due to wireless nature of communication. One potential solution can be to implement the algorithms on the AoT node and only transmit the results (instead of images) to server to reduce the overhead on wireless connection significantly. Further, I would like to generalize the system for other sites as well. For that, algorithms have to identify the street and crosswalk automatically in the image.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="references">References<a href="https://waggle-sensor.github.io/news/2021/02/12/ped-count-for-cross#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References">​</a></h3>
+<ol>
+<li>A CDC Report on pedestrian Safety. (2020, March 06). Retrieved December 22, 2020, from <a href="https://www.cdc.gov/transportationsafety/pedestrian_safety/index.html" target="_blank" rel="noopener noreferrer">https://www.cdc.gov/transportationsafety/pedestrian_safety/index.html</a></li>
+<li>P. Beckman, R. Sankaran, C. Catlett, N. Ferrier, and M. Papka, “Waggle: An open sensor platform for edge computing,” in 2016 IEEE Sensors, 2016, pp. 1-3.</li>
+<li>T. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan, P. Dollár, and C. Zitnick. “Microsoft coco: Common objects in context.” In European conference on computer vision, pp. 740-755. Springer, Cham, 2014.</li>
+<li>K. He, G. Gkioxari, P. Dollár, and R. Girshick. “Mask r-cnn.” In Proceedings of the IEEE international conference on computer vision, pp. 2961-2969. 2017.</li>
+<li>B. Zoph, V. Vasudevan, J. Shlens, and Q. V. Le, “Learning transferable architectures for scalable image recognition,” in Proc. IEEE Conf. CVPR, Jun. 2017, pp. 8697–8710.</li>
+<li>L. Zheng, L. Shen, L. Tian, S. Wang, J. Wang, and Q. Tian. “Scalable person re-identification: A benchmark.” In Proceedings of the IEEE international conference on computer vision, pp. 1116-1124. 2015.</li>
+<li>K. Zhou, Y. Yang, A. Cavallaro, and T. Xiang. “Omni-scale feature learning for person re-identification.” In Proceedings of the IEEE International Conference on Computer Vision, pp. 3702-3712. 2019.</li>
+<li>K. Zhou, and T. Xiang. “Torchreid: A library for deep learning person re-identification in pytorch.” arXiv preprint arXiv:1910.10093 (2019).</li>
+<li>Tensorflow. “Tensorflow/Models.” GitHub, github.com/tensorflow/models.</li>
+</ol>]]></content>
+        <author>
+            <name>Pratool Bharti</name>
+            <uri>https://pratoolbharti.github.io/NIU/</uri>
+        </author>
+        <category label="AI applications" term="AI applications"/>
+        <category label="NIU" term="NIU"/>
+    </entry>
+</feed>

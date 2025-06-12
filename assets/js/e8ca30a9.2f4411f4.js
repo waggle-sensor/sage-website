@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[3647],{1140:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"About","slug":"/category/about","permalink":"/docs/category/about","sidebar":"tutorialSidebar","navigation":{"next":{"title":"Overview","permalink":"/docs/about/overview"}}}}')}}]);
