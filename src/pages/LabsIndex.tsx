@@ -29,7 +29,7 @@ export default function LabsIndex() {
           alt="deer detectection with PTZ camera" src={PTZYolo} />
         <div className="m-4">
           <h3>
-            <Link to="./labs/ptz-yolo-search" className="nav-link">PTZ-YOLO</Link>
+            <Link to="./labs/ptz-yolo" className="nav-link">PTZ-YOLO</Link>
           </h3>
           <p>
             This lab project is about turning Pan-Tilt-Zoom (PTZ)
