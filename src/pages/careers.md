@@ -1,6 +1,4 @@
----
-draft: true
----
+import Button from '@mui/material/Button'
 
 # Join the Sage Team
 At the frontier of AI, intelligence sensing, and cyberinfrastructure, the Sage Grande project is building
@@ -20,14 +18,22 @@ discovery, but also create learning opportunities in rural communities and urban
 
 If you’re excited about AI for good, open science, and working in an environment where your
 code might one day run on a node watching for wildfires in a remote canyon or
-tracking data in a coastal wetland—then Sage is the place for you.
+tracking data in a coastal wetland—then Sage is the place for you. Read more at [About Sage](/about).
+## Open Positions
+---
 
-## Site Reliability Engineer
+### Site Reliability Engineer
 Join the team and help manage one of the most advanced AI-enabled sensor networks
 in the world. You’ll support nearly 500 remote edge-AI systems deployed across
 the United States. This role offers hands-on experience with cutting-edge
 cloud infrastructure, Kubernetes, and edge AI, plus opportunities to grow your
-career while making a real impact. 
+career while making a real impact.
 
-[Apply Here](https://bit.ly/sage-sr-edge-platform-job)
+<Button
+  variant="contained"
+  href="https://bit.ly/sage-sr-edge-platform-job"
+  sx={{textTransform: 'none', marginBottom: 4, '&:hover': {color: '#fff', opacity: .8}}}
+>
+  <span>Apply Here</span>
+</Button>
 

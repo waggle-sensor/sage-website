@@ -13,7 +13,7 @@ type Props = {
 export default function Card(props: Props) {
   const {to, href, children} = props
   return (
-    <Root>
+    <Root className="card">
       {to &&
         <Link to={to} {...props}>
           {children}

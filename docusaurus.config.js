@@ -42,7 +42,14 @@ export default {
             }, {
               label: 'Photos',
               to: '/photos'
-            }
+            }, {
+              to: '/publications',
+              label: 'Publications'
+            }, {
+              to: '/docs/contact-us',
+              label: 'Contact Us',
+              className: 'top-divider'
+            },
           ],
         }, {
           label: 'Use Cases',
@@ -67,14 +74,13 @@ export default {
           to: '/news',
           label: 'News'
         }, {
-          to: '/publications',
-          label: 'Publications'
+          to: '/careers',
+          label: 'Careers'
         }, {
           to: '/docs/about/overview',
           label: 'Docs'
         }, {
           type: 'dropdown',
-          position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
           to: 'https://github.com/waggle-sensor',

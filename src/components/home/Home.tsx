@@ -387,16 +387,19 @@ const Root = styled.div`
   /*
    * card image styling
    */
-  img {
-    border-radius: 15px 15px 0 0;
-  }
 
-  h3 {
-    margin: 10px 15px 15px 15px ;
-  }
+  .card {
+    img {
+      border-radius: 15px 15px 0 0;
+    }
 
-  p {
-    padding: 0 15px;
+    h3 {
+      margin: 10px 15px 15px 15px ;
+    }
+
+    p {
+      padding: 0 15px;
+    }
   }
 `
 
