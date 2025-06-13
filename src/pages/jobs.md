@@ -29,5 +29,5 @@ the United States. This role offers hands-on experience with cutting-edge
 cloud infrastructure, Kubernetes, and edge AI, plus opportunities to grow your
 career while making a real impact. 
 
-Apply Here
+[Apply Here](https://bit.ly/sage-sr-edge-platform-job)
 
