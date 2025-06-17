@@ -9,13 +9,13 @@ sidebar_label: Drought Mitigation and Prediction
 The Drought Monitoring Testbed is a cutting-edge platform designed to enhance drought forecasting and mitigation capabilities across diverse land uses and systems. It integrates AI-enabled edge computing resources with specialized sensors, including soil moisture sensors, rainfall sensors, vegetation health sensors, and atmospheric and hydrological instruments. These sensors provide critical data on soil moisture levels, precipitation patterns, vegetation stress, and atmospheric conditions, all of which are essential for predicting drought onset and severity. The testbed's networking capabilities will support real-time data transmission and analysis, enabling immediate drought reporting and predictive analytics. This allows for rapid detection of drought conditions and optimized resource allocation, ensuring efficient use of water and other critical resources during droughts. By leveraging these technologies, the testbed significantly enhances drought management and agricultural planning, supporting more effective water resource management.
 
 
-### Sensors
+### Sensors <sup><small>[[1](https://blog.flux.id/en/iot-sensors-drought-monitoring/)]</small></sup>
 
 <div className="md:float-right md:max-w-xs md:ml-8">
   ![soil sensor](./images/drought/drought-1.png)
 </div>
 
-* Soil Moisture Sensors: To measure the moisture levels in the soil, which are crucial for predicting drought conditions and optimizing irrigation strategies[7](https://blog.flux.id/en/iot-sensors-drought-monitoring/).
+* Soil Moisture Sensors: To measure the moisture levels in the soil, which are crucial for predicting drought conditions and optimizing irrigation strategies.
 * Rainfall Sensors: To monitor precipitation patterns and provide real-time data on rainfall deficits, helping to predict drought onset.
 * Vegetation Health Sensors: Utilizing multispectral or hyperspectral imaging to assess vegetation stress and health, which can indicate early signs of drought.
 * Atmospheric and Hydrological Instruments: To monitor temperature, humidity, and other atmospheric conditions that contribute to drought development.
