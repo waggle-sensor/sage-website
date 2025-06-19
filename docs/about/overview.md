@@ -29,34 +29,7 @@ The most common users have included:
 
 ## How do I use the platform?
 
-This depends on your desired interaction interest.  The platform consists of edge compute applications which process data (ex. sensor readings, camera images, audio recordings, etc). These edge applications then produce their own data (ex. inferences) and upload the results to a cloud database. This cloud database can be accessed directly and/or additional compute can be performed on the cloud data.
-
-![User Interaction](./images/waggle_interact.png)
-
-The entry-point into learning about your interaction with the system might be best directed by getting answers (by following the links) to the question(s) you are most interested in.
-
-[How do I access sensors?](../tutorials/access-waggle-sensors.md)
-- Want to learn about existing, supported sensors?
-- Do you have a new sensor that you want to write an edge application for?
-
-[How do I run edge apps?](../tutorials/edge-apps/intro-to-edge-apps)
-- Want to know how to create an edge app?
-- Want to know how your edge app can get access to edge sensor data?
-- Want to share your edge app data with other edge applications?
-- Want to know how to upload data to the cloud?
-
-[How do I access and use data?](../tutorials/accessing-data.md)
-- Want to learn about how data is stored/organized?
-- Do you have data that is up in the cloud and want to know how to access it?
-
-[How do I compute in the cloud?](../tutorials/cloud-compute.md)
-- Want to know how to autonomously react to edge produced data?
-- Want to know how to trigger an HPC event?
-- Want to get a text message when your edge application does something cool?
-
-[How do I build my own device?](../tutorials/create-waggle.md)
-- Want to set up your own device for local edge app development?
-- Want to teach AI to a classroom of students?
+We recommend checking out [Getting Started](../getting-started) to choose a path of interest of based on your background and goals.
 
 ## How is the cyberinfrastructure architected?
 
