@@ -14,6 +14,8 @@ import EventsIcon from '@mui/icons-material/CalendarMonthOutlined'
 import DevIcon from '@mui/icons-material/CodeRounded'
 import SciIcon from '@mui/icons-material/ScienceOutlined'
 
+import { Button } from '@mui/material'
+
 import CodeWindow from './CodeWindow'
 import NewsPreview from './NewsPreview'
 import TypeWriter from './TypeWriter'
@@ -124,11 +126,21 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="flex flex-col gap-6 mt-12 md:m-0 md:mr-16 md:self-center">
+            <Button
+              href="docs/getting-started"
+              className="flex items-center justify-center hover:text-[#fff] gap-1 text-nowrap"
+              variant="contained"
+              size="large"
+              color="info"
+              disableRipple
+            >
+              <span className="normal-case text-2xl ">Getting Started</span> <Arrow />
+            </Button>
 
-          <div className="flex flex-col mt-12 md:m-0 md:mr-16 md:self-center">
-            <h3 className="text-slate-300">Getting Started</h3>
-            <a href="docs/about/overview" className="focused-link gap-1 text-nowrap">Documentation <Arrow /></a>
-            <a href={`${portal}/all-nodes`} className="focused-link gap-1 text-nowrap">Browse the Portal<Arrow /></a>
+            <a href={portal} className="focused-link gap-1 text-nowrap flex self-center">
+              <span className="normal-case text-xl text-[#fff] hover:underline">Browse the Portal</span> <Arrow className="text-[#fff]" />
+            </a>
           </div>
         </Section>
       </div>
