@@ -54,7 +54,7 @@ Sage is a national AI research platform that brings artificial intelligence to t
         <Step active={getUser()} expanded={getUser()}>
           <StepLabel><big>Next Steps</big></StepLabel>
           <StepContent>
-            <p>If you have already requested access, consider browsing the <b><a href="https://portal.sagecontinuum.org" target="_blank" rel="noopener noreferrer">The Portal</a></b> or taking a look behind. Please <b><a href="./contact-us">Contact us</a></b> if you haven't heard from us within 48 hours or if your request is urgent.</p>
+            <p>If you’ve already requested access, feel free to take a look below or browse <b><a href="https://portal.sagecontinuum.org" target="_blank" rel="noopener noreferrer">The Portal</a></b> while your account is being approved. Please <b><a href="./contact-us">Contact us</a></b> if you haven't heard from us within 48 hours or if your request is urgent.</p>
           </StepContent>
         </Step>
       </Stepper>
