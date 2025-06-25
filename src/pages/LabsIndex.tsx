@@ -33,7 +33,7 @@ export default function LabsIndex() {
           </h3>
           <p>
             This lab project is about turning Pan-Tilt-Zoom (PTZ)
-            cameras into smart, autonomous observers for wildlife, security,
+            cameras into smart, autonomous observers for wildlife, ecosystem hazards,
             and research. Using AI-driven object detection, it scans, zooms, and captures
             key images––eliminating constant video feeds while running autonomously at the edge.
           </p>
