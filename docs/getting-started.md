@@ -33,21 +33,21 @@ Sage is a national AI research platform that brings artificial intelligence to t
               <li>Publishing apps to <a href="https://portal.sagecontinuum.org/apps/explore" target="_blank" rel="noopener noreferrer">the ECR</a>.</li>
               <li>Node access or scheduling apps on nodes (via CLI or <a href="https://portal.sagecontinuum.org" target="_blank" rel="noopener noreferrer">The Portal</a>).</li>
             </ul>
-            <p>This will take you to the <b>Globus login page</b> where you'll need to provide your existing organization credentials (recommended). If you do not see your organization, please use an ORCID iD.</p>
-            {getUser() && <>✔️ Great! You are signed in as user <b>{getUser()}</b>. ✔️</>}
+            {!getUser() && <p>This will take you to the <b>Globus login page</b> where you'll need to provide your existing organization credentials (recommended). If you do not see your organization, please use an ORCID iD.</p>}
             {!getUser() && (
               <Button href="https://auth.sagecontinuum.org/?callback=https://sagecontinuum.org/docs/getting-started#creating-an-account" variant="contained" sx={{ width: '300px' }}>
                 <span className="normal-case text-[#fff]">Create an Account</span>
               </Button>
             )}
+            {getUser() && <>✔️ Great! You are signed in as user <b>{getUser()}</b>. ✔️</>}
           </StepContent>
         </Step>
         <Step active={getUser()} expanded={true}>
           <StepLabel><big>Do you need to request node access or access to protected data?</big></StepLabel>
           <StepContent>
-            <p>Follow the steps here to request node access, scheduling access, or protected file download access:</p>
+            {getUser() && <p>Follow the steps here to request node access, scheduling access, or protected file download access:</p>}
             <Button href="https://portal.sagecontinuum.org/account/access" target="_blank" variant="contained" disabled={!getUser()}>
-              <span className="normal-case text-[#fff]">Request Access or Join project</span>
+              <span className="normal-case text-[#fff]">Request Access or Join Project</span>
             </Button>
           </StepContent>
         </Step>
