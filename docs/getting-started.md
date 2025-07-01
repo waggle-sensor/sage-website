@@ -106,7 +106,6 @@ Select the path that best describes your role and goals:
 **Key Resources:**
 - [Sage Data Client](https://pypi.org/project/sage-data-client/)
 - [Data API Documentation](https://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md)
-- [Data Bundles](https://web.lcrc.anl.gov/public/waggle/sagedata/SAGE-Data.tar)
 
 ---
 
@@ -150,8 +149,8 @@ Select the path that best describes your role and goals:
 **Key Resources:**
 - [System Architecture](./about/architecture)
 - [WSN Manual](./installation-manuals/wsn-manual)
-- [Plugin Control Tools](./reference-guides/pluginctl)
-- [Sensor Control Tools](./reference-guides/sesctl)
+- [Plugin Control Tool](./reference-guides/pluginctl)
+- [Edge Scheduler Control Tool](./reference-guides/sesctl)
 
 ---
 
