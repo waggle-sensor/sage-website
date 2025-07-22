@@ -77,6 +77,7 @@ Whether you are designing your own Lorawan sensor, looking for a Lorawan data lo
 
 - **Designing your own Lorawan sensor?**
   - [Arduino MKR WAN 1310](https://docs.arduino.cc/hardware/mkr-wan-1310/)
+  - [RAK7434 WisNode Bridge Analog](https://docs.rakwireless.com/product-categories/wisnode/rak7432-rak7434)
 
 - **Looking for a Lorawan data logger?**
   - [ICT International MFR Node](https://ictinternational.com/product/mfr-node/)
