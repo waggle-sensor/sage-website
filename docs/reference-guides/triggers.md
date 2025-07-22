@@ -1,6 +1,6 @@
 ---
 sidebar_label: Trigger examples
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Trigger Examples
