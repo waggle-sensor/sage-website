@@ -182,93 +182,12 @@ A "science goal" is a rule-set for how and when [plugins](#what-is-a-plugin) are
 
 [The Waggle Edge Stack](#waggle-edge-stack-wes) includes the [ChirpStack software stack](#chirpstack) and other services to facilitate communication between [Nodes](#nodes) and LoRaWAN devices. This empowers [Nodes](#nodes) to effortlessly establish connections with wireless sensors, enabling your [plugins](#what-is-a-plugin) to seamlessly access and harness valuable data from these sensors.
 
->To get started using LoRaWAN, head over to the [Contact Us](../contact-us.md) page. A tutorial will be available soon showing you how to get started with LoRaWAN.
+![Figure 9: Abstracted WES Lorawan Architecture](./images/abs_arch_wes_lorawan.svg)
 
-<!--To get started with using LoRaWAN, you can follow the step-by-step instructions in the [tutorial](../tutorials/schedule-jobs.md). -->
+ The main components in our LoRaWAN implementation are the Chirpstack software stack, the lorawan listener plugin, and the LoRaWAN gateway. 
 
-![Figure 9: WES Lorawan Architecture](./images/arch_wes_lorawan.svg)
+- Chirpstack is a network server that manages LoRaWAN devices. 
+- The lorawan listener plugin publishes values sent by LoRaWAN devices to the beehive. 
+- The LoRaWAN gateway is a hardware device that receives wireless data from LoRaWAN sensors and forwards it to the node for processing.
 
-The above diagram demonstrates the hardware in [Nodes](#nodes) and services in [WES](#waggle-edge-stack-wes) that enable [Nodes](#nodes) to use LoRaWAN and publish the measurements to a [Beehive](#beehive). The following sections will explain each componenent and service.
-
->source code:
-> - [wes-chirpstack](https://github.com/waggle-sensor/waggle-edge-stack/tree/main/kubernetes/wes-chirpstack)
-> - [wes-chirpstack-server](https://github.com/waggle-sensor/wes-chirpstack-server)
-> - [wes-rabbitmq](https://github.com/waggle-sensor/waggle-edge-stack/blob/main/kubernetes/wes-rabbitmq.yaml)
-> - [Tracker](https://github.com/waggle-sensor/wes-chirpstack-device-tracker)
-> - [Lorawan Listener Plugin](https://github.com/FranciscoLozCoding/plugin-lorawan-listener)
-
-### What is LoRaWAN?
-
-LoRaWAN, short for "Long Range Wide Area Network," is a wireless communication protocol designed for low-power, long-range communication between IoT (Internet of Things) devices. It employs a low-power wide-area network (LPWAN) technology, making it ideal for connecting remote sensors and devices. For more information view the documentation [here](https://www.thethingsnetwork.org/docs/lorawan/).
-
-### Chirpstack
-
-ChirpStack is a robust and open-source LoRaWAN Network Server that enables efficient management of LoRaWAN devices, gateways, and data. Its architecture consists of several crucial components, each serving a distinct role in LoRaWAN network operations. Below, we provide a brief overview of these components along with links to ChirpStack documentation for further insights.
-
->[Chirpstack documentation](https://www.chirpstack.io/docs/index.html)
-
-#### UDP Packet Forwarder
-
-The UDP Packet Forwarder is an essential component that acts as a bridge between LoRa gateways and the [ChirpStack Network Server](#chirpstack-server). It receives incoming packets from LoRa gateways and forwards them to the [ChirpStack Gateway Bridge](#chirpstack-gateway-bridge) for further processing. To learn more about the UDP Packet Forwarder, refer to the documentation [here](https://github.com/RAKWireless/udp-packet-forwarder).
-
-#### ChirpStack Gateway Bridge
-
-The ChirpStack Gateway Bridge is responsible for translating gateway-specific protocols into a standard format for the [ChirpStack Network Server](#chirpstack-server). It connects to a [UDP Packet Forwader](#udp-packet-forwarder), ensuring that data is properly formatted and can be seamlessly processed by the network server. For in-depth information on the ChirpStack Gateway Bridge, explore the documentation [here](https://www.chirpstack.io/docs/chirpstack-gateway-bridge/index.html).
-
-#### MQTT Broker
-
-[WES](#waggle-edge-stack-wes) includes a MQTT (Message Queuing Telemetry Transport) broker to handle communication between various services. MQTT provides a lightweight and efficient messaging system. This service ensures that data flows smoothly between the network server, gateways, and applications. You can find detailed information about the MQTT broker integration in the ChirpStack documentation [here](https://www.chirpstack.io/docs/chirpstack/integrations/mqtt.html).
-
-#### ChirpStack Server
-The ChirpStack Server serves as the core component, managing device sessions, data, and application integrations. It utilizes [Redis](https://redis.io/) for device sessions, metrics, and caching, ensuring efficient data handling and retrieval. For persistent data storage, ChirpStack uses [PostgreSQL](https://www.postgresql.org/), accommodating records for tenants, applications, devices, and more. For a comprehensive understanding of the ChirpStack Server and its associated database technologies, consult the ChirpStack documentation [here](https://www.chirpstack.io/docs/chirpstack/requirements.html).
-
->NOTE: Chirpstack v4 combined the application and network server into one component.
-
-### Tracker
-The Tracker is a service designed to record the connectivity of LoRaWAN devices to the [Nodes](#nodes). This service uses the information received from the [MQTT broker](#mqtt-broker) to call [ChirpStack's gRPC API](https://www.chirpstack.io/docs/chirpstack/api/grpc.html). The information received from the API is then used to keep the Node's manifest up-to-date. Subsequently, it forwards this updated manifest to the [Beehive](#beehive). For more information, view the documentation [here](https://github.com/waggle-sensor/wes-chirpstack-device-tracker).
-
-### Lorawan Listener Plugin
-The LoRaWAN Listener is a plugin designed to publish measurements collected from LoRaWAN devices. It simplifies the process of extracting and publishing valuable data from these devices. For more information about the plugin view the plugin page [here](https://portal.sagecontinuum.org/apps/app/flozano/lorawan-listener).
-
-### Lorawan Device Profile Templates
-
-[Device Profile Templates](https://www.chirpstack.io/docs/chirpstack/use/device-profile-templates.html#device-profile-templates) simplify the process of onboarding devices to a Node's ChirpStack server. You can create a device template directly through the Node's ChirpStack server UI or by contributing to our [Device Repository](https://github.com/waggle-sensor/wes-lorawan-device-templates?tab=readme-ov-file#waggle-device-repository-for-lorawan). 
-
-The Device Repository is a key resource that contains information about various LoRaWAN end devices, making it easier to catalog and onboard these devices to our Nodes' ChirpStack servers. We encourage you to contribute details about your devices to help other Sage users efficiently connect their devices. Once your device is added to our repository, it becomes available across all Nodes, streamlining the workflow for anyone who wants to connect a similar Lorawan device to a Node.
-
->NOTE: Node's sync with our Device Repository every hour.
-
-If you prefer to keep your device configuration private, you can still add it directly to a Node's ChirpStack server using the UI. In this case, the configuration will remain exclusive to that particular Node.
-
-> For more information and tutorials on how to add a device, visit: [wes-lorawan-device-templates](https://github.com/waggle-sensor/wes-lorawan-device-templates?tab=readme-ov-file#waggle-device-repository-for-lorawan)
-
-### Lorawan Device Compatibility
-
-The Wild Sage Node is designed to support a wide range of Lorawan devices, ensuring flexibility and adaptability for various applications. If you are wondering which Lorawan devices can be connected to a Wild Sage Node, the device must have the following tech specs:
-
-- designed for US915 (902–928 MHz) frequency region.
-- compatible with Lorawan Mac versions 1.0.0 - 1.1.0
-- compatible with Chirpstack's Lorawan Network Server
-- The device supports Over-The-Air Activation (OTAA) or Activation By Personalization (ABP)
-- The device has a Lorawan device class of A, B, or C
-
-It is important to note that our Wild Sage Nodes use US915 sub band 2(903.9-905.3 MHz). If you wish to learn more about our Lorawan Gateway, please visit our [portal](https://portal.sagecontinuum.org/sensors/). For inquiries about supporting Lorawan regions other than US915, please [Contact Us](../contact-us.md).
-
-#### Device Examples
-
-Whether you are designing your own Lorawan sensor, looking for a Lorawan data logger, or seeking an off-the-shelf Lorawan device the Wild Sage Node will support it, we have examples for you:
-
-- **Designing your own Lorawan sensor?**
-  - [Arduino MKR WAN 1310](https://docs.arduino.cc/hardware/mkr-wan-1310/)
-
-- **Looking for a Lorawan data logger?**
-  - [ICT International MFR Node](https://ictinternational.com/product/mfr-node/)
-
-- **Looking for an off-the-shelf Lorawan device?**
-  - [ICT International SFM1X Sap Flow Meter](https://ictinternational.com/product/sfm1x-sap-flow-meter/)
-
-- **Seeking Lorawan device manufacturers?**
-  - [ICT International](https://ictinternational.com/)
-  - [RAKwireless](https://www.rakwireless.com/en-us)
-  - [The Things Network Device Marketplace](https://www.thethingsnetwork.org/marketplace/products/devices)
-  - [DecentLab](https://www.decentlab.com)
+To help you get started with LoRaWAN, refer to the [LoRaWAN Reference Guide](../reference-guides/LoRaWAN).
