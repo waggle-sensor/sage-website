@@ -103,7 +103,7 @@ If you prefer to keep your device configuration private, you can still add it di
 
 > For more information and tutorials on how to add a device, visit: [wes-lorawan-device-templates](https://github.com/waggle-sensor/wes-lorawan-device-templates?tab=readme-ov-file#waggle-device-repository-for-lorawan)
 
-## How to get started using LoRaWAN with Sage?
+## How to get started?
 Our [Nodes](../about/architecture.md#nodes) use [ChirpStack](https://www.chirpstack.io/docs/index.html), an open-source LoRaWAN Network Server. To register a device on the Sage network, we need two key pieces of information:
 
 1. **DevEUI (Device Extended Unique Identifier)**: 64-bit identifier
