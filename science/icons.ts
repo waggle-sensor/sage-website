@@ -18,7 +18,7 @@ const images: Images = {
   'snow-detection': '/img/science/snow-detection.jpg',
   'scalable-ci-in-aps': '/img/science/scalable-ci-in-aps-icon.png',
   'traffic-state-estimation': '/img/science/traffic-state-est.png',
-  'traffic-counter': '/img/science/traffic-cnt.png',
+  'traffic-counter': '/img/science/traffic-cnt.jpg',
   'wildfire-science': '/img/science/wildfire-icon-1.jpg',
   'snowflake': '/img/science/snowflake-icon.jpg',
   'water-segmentation': '/img/science/water_seg-icon.jpg',

@@ -25,7 +25,7 @@ See [the document](https://github.com/waggle-sensor/plugin-trafficcounter/blob/m
 
 ## Lane Matching for Counting
 
-![lane matching for vehicle counting](../imgs/traffic-counter-2.png)
+![lane matching for vehicle counting](../imgs/traffic-counter-2.jpg)
 
 The above image shows the detection and lane matching. The red dots represent vehicle's weighted centroid and are matched to the nearest lane for counting. Their counts are added up throughout the video and reported using the naming from the lane drawing. For example,
 
