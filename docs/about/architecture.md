@@ -184,10 +184,10 @@ A "science goal" is a rule-set for how and when [plugins](#what-is-a-plugin) are
 
 ![Figure 9: Abstracted WES Lorawan Architecture](./images/abs_arch_wes_lorawan.svg)
 
- The main components in our LoRaWAN implementation are the Chirpstack software stack, the lorawan listener plugin, and the LoRaWAN gateway. 
+ The main components in our LoRaWAN implementation are the Chirpstack software stack, the lorawan listener plugin, and the LoRaWAN gateway.
 
-- Chirpstack is a network server that manages LoRaWAN devices. 
-- The lorawan listener plugin publishes values sent by LoRaWAN devices to the beehive. 
+- Chirpstack is a network server that manages LoRaWAN devices.
+- The lorawan listener plugin publishes values sent by LoRaWAN devices to the beehive.
 - The LoRaWAN gateway is a hardware device that receives wireless data from LoRaWAN sensors and forwards it to the node for processing.
 
-To help you get started with LoRaWAN, refer to the [LoRaWAN Reference Guide](../reference-guides/LoRaWAN).
+To help you get started with LoRaWAN, refer to the [LoRaWAN Reference Guide](../reference-guides/lorawan).
