@@ -14,15 +14,18 @@ import EventsIcon from '@mui/icons-material/CalendarMonthOutlined'
 import DevIcon from '@mui/icons-material/CodeRounded'
 import SciIcon from '@mui/icons-material/ScienceOutlined'
 
+import { Button } from '@mui/material'
+
 import CodeWindow from './CodeWindow'
 import NewsPreview from './NewsPreview'
 import TypeWriter from './TypeWriter'
 import StatusChart from './StatusChart'
 
-import publications from '../../publications'
+import publications, { type Publication } from '../../publications'
 
 import config from '../../config'
 import Calendar from './Calendar'
+import Card from '../Card'
 const { portal } = config
 
 
@@ -93,25 +96,23 @@ export const Section = (props) =>
   </section>
 
 
+const getRecentPubs = () =>
+  publications
+    .filter(pub => pub.image && pub.id)
+    .slice(0, MaxNumOfPublications)
+
 
 type DevTools = 'client' | 'api' | 'ui' | 'template'
-type FeaturedSci = 'cloudMotion' | 'armDoppler' | 'selfSupervised' | 'solarRadiance'
 
 export default function Home() {
   const [devHover, setDevHover] = useState<DevTools>('client')
-  const [sciHover, setSciHover] = useState<FeaturedSci>('cloudMotion')
-
-
-  const getRecentPubs = () =>
-    publications
-      .filter(pub => pub.image && pub.id)
-      .slice(0, MaxNumOfPublications)
+  const [sciHover, setSciHover] = useState<string>(getRecentPubs().find(pub => pub.defaultImage).id)
 
   return (
     <Root>
       <div className="banner h-[400px] md:pt-6">
         <Section className="flex flex-col justify-between md:flex-row">
-          <div className="flex flex-col justify-between self-start md:self-center md:mr-20">
+          <div className="flex flex-col justify-between self-start md:self-center md:mr-4">
             <div className="text-[#f9f9f9] text-4xl md:text-6xl">
               AI @ the Edge<br/>
               for <span className="text-emerald-200">
@@ -121,15 +122,25 @@ export default function Home() {
 
             <div className="hidden lg:block text-xl w-3/4 leading-relaxed mt-4 text-[#f9f9f9]">
               A new kind of national-scale cyberinfrastructure
-              to enable AI at the Edge for science.
+              to enable artificial intelligence at the edge for science.
             </div>
           </div>
 
+          <div className="flex flex-col gap-6 mt-12 md:m-0 md:mr-16 md:self-center">
+            <Button
+              href="docs/getting-started"
+              className="flex items-center justify-center hover:text-[#fff] gap-1 text-nowrap"
+              variant="contained"
+              size="large"
+              color="info"
+              disableRipple
+            >
+              <span className="normal-case text-2xl ">Getting Started</span> <Arrow />
+            </Button>
 
-          <div className="flex flex-col mt-12 md:m-0 md:mr-40 md:self-center">
-            <h3 className="text-slate-300">Getting Started</h3>
-            <a href="docs/about/overview" className="focused-link gap-1">Documentation <Arrow /></a>
-            <a href={`${portal}/data`} className="focused-link gap-1">Browse Data <Arrow /></a>
+            <a href={portal} className="focused-link gap-1 text-nowrap flex self-center">
+              <span className="normal-case text-xl text-[#fff] hover:underline">Browse the Portal</span> <Arrow className="text-[#fff]" />
+            </a>
           </div>
         </Section>
       </div>
@@ -137,41 +148,41 @@ export default function Home() {
       <div className="bg-white">
         <Section>
           <div className="flex flex-col md:flex-row gap-10 md:gap-4 xl:gap-10">
-            <Link to="/science/category/recent-projects" className="card">
+            <Card to="/science/category/recent-projects">
               <img src={require('@site/static/img/home/learn.jpg').default} />
               <h3 className="flex items-center gap-2">
                 <LearnIcon />Learn
               </h3>
               <p>Explore some of the <Link to="/science/category/recent-projects">science</Link> made possible with Sage</p>
-            </Link>
-            <a href={`${portal}/apps`} className="card">
+            </Card>
+            <Card href={`${portal}/apps`}>
               <img src={require('@site/static/img/home/create-app.png').default} />
               <h3 className="flex items-center gap-2">
                 <ContributeIcon />Contribute
               </h3>
               <p>Upload, build, and share <a href={`${portal}/apps`}>apps</a> for AI at the edge</p>
-            </a>
-            <a className="card" href={`${portal}/jobs`}>
+            </Card>
+            <Card href={`${portal}/jobs`}>
               <img src={require('@site/static/img/home/circuit-board.jpg').default} />
               <h3 className="flex items-center gap-2">
                 <RunIcon />Run jobs
               </h3>
               <p>Create <a href={`${portal}/create-job?tab=editor&start_with_sample=true`}>science goals</a> to run apps on nodes<br/></p>
-            </a>
-            <a href={`${portal}/data`} className="card">
+            </Card>
+            <Card href={`${portal}/data`}>
               <img src={require('@site/static/img/home/browse.png').default} />
               <h3 className="flex items-center gap-2">
                 <BrowseIcon />Browse
               </h3>
               <p>Browse <a href={`${portal}/data`}>data</a> from sensors and edge apps</p>
-            </a>
-            <Link to="docs/tutorials/accessing-data" className="card">
+            </Card>
+            <Card to="docs/tutorials/accessing-data">
               <img src={require('@site/static/img/home/wildfire.jpg').default} />
               <h3 className="flex items-center gap-2">
                 <AnalyzeIcon/>Analyze
               </h3>
               <p>Use Sage APIs to fetch, analyze, or integrate data</p>
-            </Link>
+            </Card>
           </div>
 
           <h2 className="text-purple font-bold mt-16 self-center">AI/ML Status</h2>
@@ -348,28 +359,6 @@ const Root = styled.div`
     background: radial-gradient(farthest-side ellipse at 0% 0,#87baa6 20%,#382d64);
   }
 
-  .card {
-    color: initial;
-    padding: 0;
-    background: #fff;
-    border: 1px solid #ddd;
-
-    img {
-      border-radius: 5px 5px 0 0;
-    }
-
-    p, h3 {
-      padding: 15px;
-    }
-
-    border-bottom: 3px solid #7a6bac;
-    :hover {
-      text-decoration: none;
-      border: 1px solid #7a6bac;
-      border-bottom: 3px solid ${purple};
-    }
-  }
-
   a.focused-link {
     color: #f2f2f2;
     font-size: 2em;
@@ -404,6 +393,24 @@ const Root = styled.div`
 
     .focused-link {
       font-size: 1.5em;
+    }
+  }
+
+  /*
+   * card image styling
+   */
+
+  .card {
+    img {
+      border-radius: 15px 15px 0 0;
+    }
+
+    h3 {
+      margin: 10px 15px 15px 15px ;
+    }
+
+    p {
+      padding: 0 15px;
     }
   }
 `

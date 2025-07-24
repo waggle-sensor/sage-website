@@ -13,6 +13,7 @@ export type Publication = {
   href?: string
   image?: string
   id?: string
+  defaultImage?: boolean
 }
 
 
@@ -23,7 +24,10 @@ const publications : Publication[] = [{
   volume: 83,
   pages: '102823',
   year: 2024,
-  href: 'https://doi.org/10.1016/j.ecoinf.2024.102823'
+  href: 'https://doi.org/10.1016/j.ecoinf.2024.102823',
+  image: require('@site/static/img/home/featured-science/selfSupervisedBirds.png').default,
+  id: 'selfSupervisedBirds',
+  defaultImage: true
 },
 {
   title: 'ARMing the Edge: Designing Edge Computing–Capable Machine Learning Algorithms to Target ARM Doppler Lidar Processing',
@@ -45,8 +49,8 @@ const publications : Publication[] = [{
   pages: '1195-1209',
   year: 2023,
   href: 'https://doi.org/10.5194/amt-16-1195-2023',
-  image: require('@site/static/img/home/featured-science/cloudMotion.jpg').default,
-  id: 'cloudMotion'
+  // image: require('@site/static/img/home/featured-science/cloudMotion.jpg').default,
+  // id: 'cloudMotion'
 }, {
   title: 'Let’s Unleash the Network Judgment: A Self-Supervised Approach for Cloud Image Analysis',
   authors: 'Dematties, Dario, Bhupendra A. Raut, Seongha Park, Robert C. Jackson, Sean Shahkarami, Yongho Kim, Rajesh Sankaran, Pete Beckman, Scott M. Collis, and Nicola Ferrier.',
@@ -156,12 +160,6 @@ const conferenceProceedings : Publication[] = [{
 }]
 
 const datasets : Publication[] = [{
-  title: 'CROCUS Air Quality Data at Northeastern Illinois University Rooftop',
-  authors: 'Joseph O\'Brien, Gregory Anderson, Paytsar Muradyan, Matthew Tuftedal, Scott Collis, Robert Jackson, Maxwell Grover, Dario Dematties, Seongha Park, Rajesh Sankaran, Peter Beckman, Nicola Ferrier, Yongho Kim, and Sean Shahkarami',
-  publication: 'U.S. Department of Energy Office of Scientific and Technical Information',
-  year: 2024,
-  href: 'https://doi.org/10.15485/2335799'
-}, {
   title: 'Doppler spectra from ARM Doppler Lidar during ARMing the Edge',
   authors: 'Bhupendra Raut, Seongha Park, Dario Dematties, Scott Collis, Nicola Ferrier, Yongho Kim, Sean Shahkarami, Pete Beckman, and Rajesh Sankaran',
   publication: 'U.S. Department of Energy Office of Scientific and Technical Information',

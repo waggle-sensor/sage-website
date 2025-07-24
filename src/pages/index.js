@@ -10,10 +10,6 @@ export default function LandingPage() {
     <Layout
       title="Home"
       description="Sage website home">
-      <Head>
-        {/* eslint-disable-next-line react/no-unknown-property */}
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </Head>
       <main>
         <Home />
       </main>

@@ -25,7 +25,7 @@ function Footer() {
             <NSFLogo className="max-w-[100px] md:max-w-[150px]"/>
             <div>
               This material is based upon work supported by
-              the National Science Foundation under Grant No. OAC-1935984.
+              the National Science Foundation under Grant Nos. 1935984, 2331263, and 2436842.
               <br/>
               <small className="text-neutral-500">
                 Any opinions, findings, and conclusions or recommendations expressed in this material
@@ -40,9 +40,9 @@ function Footer() {
               <h4><a href="/about" className="text-neutral-200 hover:text-neutral-100">About</a></h4>
               <ul>
                 <li><Link to="/science/category/recent-projects">Science</Link></li>
-                <li><Link to="/news">News</Link></li>
-                <li><Link to="/about">Publications</Link></li>
-                <li><Link to="/docs/about/overview">Docs</Link></li>
+                <li><Link to="/publications">Publications</Link></li>
+                <li><Link to="/docs/about/overview">Documentation</Link></li>
+                <li><Link to="/careers">Careers</Link></li>
               </ul>
             </div>
             <div>

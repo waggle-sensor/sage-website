@@ -1,0 +1,7 @@
+import LabsIndex from './LabsIndex'
+
+# Sage Labs
+
+Sage Labs is the experimental hub of Sage, where emerging technologies in AI, edge computing, and sensor networks are tested, refined, and showcased. It serves as a beta space for pioneering projects, offering early insights that help shape future directions.
+
+<LabsIndex />

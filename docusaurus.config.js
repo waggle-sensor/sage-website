@@ -29,38 +29,61 @@ export default {
       },
       items: [
         {
+          label: 'About',
           to: '/about',
           position: 'left',
-          label: 'About',
+          items: [
+            {
+              label: 'About Sage Grande',
+              to: '/about'
+            }, {
+              label: 'Team',
+              to: '/team/leadership'
+            }, {
+              label: 'Photos',
+              to: '/photos'
+            }, {
+              to: '/publications',
+              label: 'Publications'
+            }, {
+              to: '/docs/contact-us',
+              label: 'Contact Us',
+              className: 'top-divider'
+            },
+          ],
+        }, {
+          label: 'Use Cases',
+          to: '/use-cases/fire',
+          position: 'left',
+          items: [
+            {
+              label: 'Fire Science',
+              to: '/use-cases/fire'
+            }, {
+              label: 'Drought Mitigation and Prediction',
+              to: '/use-cases/ai-drought-mitigation'
+            },
+          ],
         }, {
           to: '/science/category/recent-projects',
-          label: 'AI/Science',
-          position: 'left'
+          label: 'AI & Science'
+        }, {
+          to: '/labs',
+          label: 'Labs',
         }, {
           to: '/news',
-          label: 'News',
-          position: 'left'
+          label: 'News'
         }, {
-          to: '/publications',
-          label: 'Publications',
-          position: 'left'
+          to: '/careers',
+          label: 'Careers'
         }, {
-          to: '/team',
-          label: 'Team',
-          position: 'left'
-        }, /* {
-          to: '/photos',
-          label: 'Photos',
-          position: 'left'
-        },*/ {
           to: '/docs/about/overview',
-          position: 'left',
           label: 'Docs'
         }, {
           type: 'dropdown',
-          position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
+          to: 'https://github.com/waggle-sensor',
           items: [
             {
               label: 'Sage GitHub',
@@ -107,6 +130,17 @@ export default {
         hideable: true,
       }
     },
+    blog: {
+      sidebar: {
+        groupByYear: false // Disable year grouping
+      }
+    },
+    announcementBar: {
+      content: '<b><a href="/use-cases/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
+      isCloseable: true,
+      textColor: 'rgb(102, 60, 0)',
+      backgroundColor: 'rgb(255, 244, 229)',
+    },
     /* uncomment the following to add a banner for outages/alerts or important news, see custom.css for more styling
     announcementBar: {
       content: '<b>ℹ️ Due to a planned data center migration, the Sage portal, web services, and nodes may be offline for extended periods. ℹ️</b>',
@@ -114,7 +148,16 @@ export default {
       textColor: 'rgb(102, 60, 0)',
       backgroundColor: 'rgb(255, 244, 229)',
     }
+    // info colors:
+    //   textColor: 'rgb(1, 67, 97)',
+    //   backgroundColor: 'rgb(229, 246, 253)',
     */
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+  // In order for Mermaid code blocks in Markdown to work,
+  // you also need to enable the Remark plugin with this option
+  markdown: {
+    mermaid: true,
   },
   stylesheets: [
     {
@@ -155,6 +198,10 @@ export default {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-HT12937E9K',
+          anonymizeIP: true,
+        },
       },
     ]
   ],
@@ -169,7 +216,7 @@ export default {
           return postcssOptions
         },
       }
-    },    [
+    }, [
       '@docusaurus/plugin-content-docs',
       {
         sidebarPath: require.resolve('./sidebars.js'),
@@ -181,16 +228,26 @@ export default {
         // ... other options
       },
     ], [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'team',
+        path: 'team',
+        routeBasePath: 'team',
+        breadcrumbs: false
+      },
+    ], [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
           {
             to: '/docs/tutorials/accessing-data',
             from: ['/data', '/docs/data']  // obscure fix for /data/ vs /data redirect(?)
-          },
-          {
+          }, {
+            to: '/use-cases/fire',
+            from: ['/fire']
+          }, {
             to: '/science/category/recent-projects',
-            from: ['/science']  // obscure fix for /data/ vs /data redirect(?)
+            from: ['/science']
           },
         ],
       },
@@ -208,13 +265,8 @@ export default {
         blogTagsListComponent: '@theme/partners/PartnerTagsListPage',
         blogTagsPostsComponent: '@theme/partners/PartnerTagsPostsPage',
       },
-    ], [
-      '@docusaurus/plugin-google-analytics',
-      {
-        trackingID: 'G-NMP80C7S04',
-        anonymizeIP: true,
-      }
     ],
+
     /* todo?: post science as blog entries for front matter and blog author meta?
     [
       '@docusaurus/plugin-content-blog',

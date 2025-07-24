@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-import * as topojson from 'topojson'
+import * as topojson from 'topojson-client'
 import us from '@site/static/geo/counties-with-pr-10m.json'
 import geoAlbersUsaPr from './geoAlbersUsaPr'
 import { geoPath } from 'd3-geo'
