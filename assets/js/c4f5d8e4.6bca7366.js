@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2634],{29179:(e,s,i)=>{i.r(s),i.d(s,{default:()=>c});i(96540),i(27143);var t=i(90594),n=i(46635),r=i(74848);function c(){return(0,r.jsx)(t.A,{title:"Home",description:"Sage website home",children:(0,r.jsx)("main",{children:(0,r.jsx)(n.A,{})})})}}}]);
