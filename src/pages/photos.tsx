@@ -1,15 +1,9 @@
-import React from 'react'
 import Layout from '@theme/Layout'
-import { useLocation, Link } from 'react-router-dom'
-
 import PhotoGallery from './PhotoGallery'
 
 
 
 export default function Photos() {
-  const params = new URLSearchParams(useLocation().search)
-  const collection = params.get('collection')
-
   return (
     <Layout
       title="Photo Gallery"

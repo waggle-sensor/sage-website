@@ -21,7 +21,7 @@ import NewsPreview from './NewsPreview'
 import TypeWriter from './TypeWriter'
 import StatusChart from './StatusChart'
 
-import publications, { type Publication } from '../../publications'
+import publications from '../../publications'
 
 import config from '../../config'
 import Calendar from './Calendar'

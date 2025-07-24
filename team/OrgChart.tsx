@@ -1,39 +1,38 @@
-import React from "react";
 
 const orgData = {
-  name: "Director: Pete Beckman, NU",
-  details: "Deputy Director: Nicola Ferrier, NU <br> Exec. Director/PM: Helen Taaffe, NU <br> Risk Management: Jim Olds, GMU",
-  color: "bg-red-500 text-white",
+  name: 'Director: Pete Beckman, NU',
+  details: 'Deputy Director: Nicola Ferrier, NU <br> Exec. Director/PM: Helen Taaffe, NU <br> Risk Management: Jim Olds, GMU',
+  color: 'bg-red-500 text-white',
   children: [
     {
-      name: "Advisory Committee AC",
-      details: "Daniel Reed, chair, Bill Gropp, Others to be invited",
-      color: "bg-yellow-500 text-black",
+      name: 'Advisory Committee AC',
+      details: 'Daniel Reed, chair, Bill Gropp, Others to be invited',
+      color: 'bg-yellow-500 text-black',
     },
     {
-      name: "AI Enablement",
-      details: "N. Ferrier, NU <br> AI for Edge: J. Leigh, UH <br> AI for Data Commons: I. Altintas, UCSD & M. Parashar, Utah <br> Trustworthy AI: N. Ferrier, NU <br> AI for Earth Science: E. Kelly, CSU & D. Toomey, UO",
-      color: "bg-orange-500 text-white",
+      name: 'AI Enablement',
+      details: 'N. Ferrier, NU <br> AI for Edge: J. Leigh, UH <br> AI for Data Commons: I. Altintas, UCSD & M. Parashar, Utah <br> Trustworthy AI: N. Ferrier, NU <br> AI for Earth Science: E. Kelly, CSU & D. Toomey, UO',
+      color: 'bg-orange-500 text-white',
     },
     {
-      name: "Cyberinfrastructure",
-      details: "S. Shahkarami, NU <br> Sage Core: S. Shahkarami, NU <br> LLM Tools: N. Conrad, NU <br> Data Commons & HPC Workflows: I. Perez, UCSD <br> Cybersecurity: S. Shahkarami, NU",
-      color: "bg-blue-500 text-white",
+      name: 'Cyberinfrastructure',
+      details: 'S. Shahkarami, NU <br> Sage Core: S. Shahkarami, NU <br> LLM Tools: N. Conrad, NU <br> Data Commons & HPC Workflows: I. Perez, UCSD <br> Cybersecurity: S. Shahkarami, NU',
+      color: 'bg-blue-500 text-white',
     },
     {
-      name: "Platform Upgrades / Deployments",
-      details: "R. Sankaran, NU <br> Edge Platform: R. Sankaran, NU <br> Hardware Procurement: NU <br> Manufacturing WSN: NU <br> Science Integration w/ Existing Networks: E. Kelly, CSU",
-      color: "bg-purple-500 text-white",
+      name: 'Platform Upgrades / Deployments',
+      details: 'R. Sankaran, NU <br> Edge Platform: R. Sankaran, NU <br> Hardware Procurement: NU <br> Manufacturing WSN: NU <br> Science Integration w/ Existing Networks: E. Kelly, CSU',
+      color: 'bg-purple-500 text-white',
     },
     {
-      name: "Education & Student Training",
-      details: "M. Papka, UIC / V. Taylor, NU <br> Curriculum: V. Taylor, NU <br> Community Engagement: V. Taylor, NU <br> Indigenous Peoples: K. Marion Suiseeya, CNAIR <br> Community Engagement & Broadening Participation: NU",
-      color: "bg-green-500 text-white",
+      name: 'Education & Student Training',
+      details: 'M. Papka, UIC / V. Taylor, NU <br> Curriculum: V. Taylor, NU <br> Community Engagement: V. Taylor, NU <br> Indigenous Peoples: K. Marion Suiseeya, CNAIR <br> Community Engagement & Broadening Participation: NU',
+      color: 'bg-green-500 text-white',
     },
     {
-      name: "Operations and User Support",
-      details: "N. Conrad, NU <br> User Services: NU <br> Technical User Support: NU <br> Maintenance of Sage Grande Tested: NU <br> Training & Documentation: NU",
-      color: "bg-red-600 text-white",
+      name: 'Operations and User Support',
+      details: 'N. Conrad, NU <br> User Services: NU <br> Technical User Support: NU <br> Maintenance of Sage Grande Tested: NU <br> Training & Documentation: NU',
+      color: 'bg-red-600 text-white',
     },
   ],
 };

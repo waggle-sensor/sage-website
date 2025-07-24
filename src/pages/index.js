@@ -1,5 +1,3 @@
-import React from 'react'
-import Head from '@docusaurus/Head'
 import Layout from '@theme/Layout'
 import Home from '../components/home/Home'
 

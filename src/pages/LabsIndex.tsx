@@ -43,8 +43,6 @@ export default function LabsIndex() {
   )
 }
 
-const purple = 'rgb(78, 42, 132)'
-
 
 const Root = styled.div`
   p {
