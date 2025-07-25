@@ -180,7 +180,7 @@ A "science goal" is a rule-set for how and when [plugins](#what-is-a-plugin) are
 
 ## LoRaWAN
 
-[The Waggle Edge Stack](#waggle-edge-stack-wes) includes the [ChirpStack software stack](#chirpstack) and other services to facilitate communication between [Nodes](#nodes) and LoRaWAN devices. This empowers [Nodes](#nodes) to effortlessly establish connections with wireless sensors, enabling your [plugins](#what-is-a-plugin) to seamlessly access and harness valuable data from these sensors.
+[The Waggle Edge Stack](#waggle-edge-stack-wes) includes the [ChirpStack software stack](../reference-guides/lorawan.md#chirpstack) and other services to facilitate communication between [Nodes](#nodes) and LoRaWAN devices. This empowers [Nodes](#nodes) to effortlessly establish connections with wireless sensors, enabling your [plugins](#what-is-a-plugin) to seamlessly access and harness valuable data from these sensors.
 
 ![Figure 9: Abstracted WES Lorawan Architecture](./images/abs_arch_wes_lorawan.svg)
 
