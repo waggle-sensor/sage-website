@@ -124,7 +124,7 @@ To start using LoRaWAN with Sage, follow these steps:
 
 ## Implementation
 
-The diagram below shows the hardware in [Nodes](../about/architecture.md#nodes) and the services in [WES](../about/architecture.md#waggle-edge-stack-wes) that allow [Nodes](../about/architecture.md#nodes) to use LoRaWAN and publish measurements to a [Beehive](#beehive).
+The diagram below shows the hardware in [Nodes](../about/architecture.md#nodes) and the services in [WES](../about/architecture.md#waggle-edge-stack-wes) that allow [Nodes](../about/architecture.md#nodes) to use LoRaWAN and publish measurements to a [Beehive](../about/architecture.md#beehive).
 
 ![Figure 1: WES Lorawan Architecture](./images/arch_wes_lorawan.svg)
 
@@ -161,7 +161,7 @@ The ChirpStack Server serves as the core component, managing device sessions, da
 >NOTE: Chirpstack v4 combined the application and network server into one component.
 
 ### Tracker
-The Tracker is a service designed to record the connectivity of LoRaWAN devices to the [Nodes](../about/architecture.md#nodes). This service uses the information received from the [MQTT broker](#mqtt-broker) to call [ChirpStack's gRPC API](https://www.chirpstack.io/docs/chirpstack/api/grpc.html). The information received from the API is then used to keep the Node's manifest up-to-date. Subsequently, it forwards this updated manifest to the [Beehive](#beehive). For more information, view the documentation [here](https://github.com/waggle-sensor/wes-chirpstack-device-tracker).
+The Tracker is a service designed to record the connectivity of LoRaWAN devices to the [Nodes](../about/architecture.md#nodes). This service uses the information received from the [MQTT broker](#mqtt-broker) to call [ChirpStack's gRPC API](https://www.chirpstack.io/docs/chirpstack/api/grpc.html). The information received from the API is then used to keep the Node's manifest up-to-date. Subsequently, it forwards this updated manifest to the [Beehive](../about/architecture.md#beehive). For more information, view the documentation [here](https://github.com/waggle-sensor/wes-chirpstack-device-tracker).
 
 ### Lorawan Listener Plugin
 The LoRaWAN Listener is a plugin designed to publish measurements collected from LoRaWAN devices. It simplifies the process of extracting and publishing valuable data from these devices. For more information about the plugin view the plugin page [here](https://portal.sagecontinuum.org/apps/app/flozano/lorawan-listener).
