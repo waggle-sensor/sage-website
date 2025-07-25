@@ -206,6 +206,7 @@ export default {
     ]
   ],
   plugins: [
+    require.resolve('./ignore-html-loader'),
     async function tailwindConfigPlugin() {
       return {
         name: 'docusaurus-tailwindcss',
