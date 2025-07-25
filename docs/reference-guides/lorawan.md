@@ -124,7 +124,7 @@ To start using LoRaWAN with Sage, follow these steps:
 
 ## Implementation
 
-The diagram below shows the hardware in [Nodes](../about/architecture.md#nodes) and the services in [WES](#waggle-edge-stack-wes) that allow [Nodes](../about/architecture.md#nodes) to use LoRaWAN and publish measurements to a [Beehive](#beehive).
+The diagram below shows the hardware in [Nodes](../about/architecture.md#nodes) and the services in [WES](../about/architecture.md#waggle-edge-stack-wes) that allow [Nodes](../about/architecture.md#nodes) to use LoRaWAN and publish measurements to a [Beehive](#beehive).
 
 ![Figure 1: WES Lorawan Architecture](./images/arch_wes_lorawan.svg)
 
@@ -153,7 +153,7 @@ The ChirpStack Gateway Bridge is responsible for translating gateway-specific pr
 
 #### MQTT Broker
 
-[WES](#waggle-edge-stack-wes) includes a MQTT (Message Queuing Telemetry Transport) broker to handle communication between various services. MQTT provides a lightweight and efficient messaging system. This service ensures that data flows smoothly between the network server, gateways, and applications. You can find detailed information about the MQTT broker integration in the ChirpStack documentation [here](https://www.chirpstack.io/docs/chirpstack/integrations/mqtt.html).
+[WES](../about/architecture.md#waggle-edge-stack-wes) includes a MQTT (Message Queuing Telemetry Transport) broker to handle communication between various services. MQTT provides a lightweight and efficient messaging system. This service ensures that data flows smoothly between the network server, gateways, and applications. You can find detailed information about the MQTT broker integration in the ChirpStack documentation [here](https://www.chirpstack.io/docs/chirpstack/integrations/mqtt.html).
 
 #### ChirpStack Server
 The ChirpStack Server serves as the core component, managing device sessions, data, and application integrations. It utilizes [Redis](https://redis.io/) for device sessions, metrics, and caching, ensuring efficient data handling and retrieval. For persistent data storage, ChirpStack uses [PostgreSQL](https://www.postgresql.org/), accommodating records for tenants, applications, devices, and more. For a comprehensive understanding of the ChirpStack Server and its associated database technologies, consult the ChirpStack documentation [here](https://www.chirpstack.io/docs/chirpstack/requirements.html).
