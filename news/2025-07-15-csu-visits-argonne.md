@@ -7,7 +7,9 @@ tags: [Sage, Nodes, Soil Moisture, Drought, Graduate, Sensors, Instruments, Deve
 
 ![Photos of CSU Visit](./img/colorado-state/hairik1.png)
 
-Graduate students from Colorado State University visited Argonne National Laboratory to work with the Sage team on connecting and testing soil moisture sensors on Sage Devices. They set up both hardwired and LoRaWAN (long-range wireless) sensors, laying the groundwork for creating start-to-finish workflows that process data in real time. These workflows help researchers, ranchers, and policymakers quickly detect environmental changes, spot unusual conditions, and turn data from field devices into useful, on-the-ground insights.
+Graduate students from Colorado State University partnered with researchers at Argonne National Laboratory to test Sage Devices designed for real-time environmental monitoring. They connected soil moisture sensors using both hardwired and long-range LoRaWAN configurations, demonstrating how field-based devices can process data directly at the source. These edge-computing systems enable immediate translation of raw measurements into meaningful insights.
+
+This work is part of a broader effort to deploy an AI-enabled monitoring network across 15,000 acres at the Central Plains Experimental Range. By integrating historical datasets with live sensor inputs from soil, vegetation, and weather, the system will forecast drought, detect vegetation stress, and guide adaptive land management. The result is a scalable tool that provides ranchers, scientists, and policymakers with rapid, actionable information to support sustainable decision-making.
 
 ![Photos of CSU Sensor](./img/colorado-state/csu_sm_sensor.png)
 
