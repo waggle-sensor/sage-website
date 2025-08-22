@@ -17,8 +17,19 @@ export default {
   organizationName: 'waggle-sensor',
   projectName: 'sage-website',
   trailingSlash: false,
+  future: {
+    v4: {
+      useCssCascadeLayers: true,
+    },
+  },
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
+    // additional, custom banner above the navbar; see src/components/CustomBanner.tsx
+    noticeURL: 'https://raw.githubusercontent.com/waggle-sensor/portal-notice/main/notice.json',
+    /* notice: {
+      message: 'Some notice message here',
+      severity: 'info', // 'info', 'warning', or 'error'
+    }, */
     navbar: {
       title: 'Sage',
       logo: {
@@ -98,8 +109,6 @@ export default {
           // note: this is positioned right of search bar
           type: 'custom-signInBtn',
           position: 'right',
-          itemProp: 44,
-          anotherProp: 'xyz'
         },
       ],
     },
@@ -138,8 +147,8 @@ export default {
     announcementBar: {
       content: '<b><a href="/use-cases/fire">Call for Collaboration: Harnessing AI and Edge Computing for Fire Science</b>',
       isCloseable: true,
-      textColor: 'rgb(102, 60, 0)',
-      backgroundColor: 'rgb(255, 244, 229)',
+      textColor: 'rgb(1, 67, 97)',
+      backgroundColor: 'rgb(229, 246, 253)',
     },
     /* uncomment the following to add a banner for outages/alerts or important news, see custom.css for more styling
     announcementBar: {
