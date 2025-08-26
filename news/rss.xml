@@ -4,10 +4,29 @@
         <title>Sage Blog</title>
         <link>https://waggle-sensor.github.io/news</link>
         <description>Sage Blog</description>
-        <lastBuildDate>Fri, 18 Apr 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[CSU Visits Argonne]]></title>
+            <link>https://waggle-sensor.github.io/news/2025/07/15/csu-visits-argonne</link>
+            <guid>https://waggle-sensor.github.io/news/2025/07/15/csu-visits-argonne</guid>
+            <pubDate>Mon, 14 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Photos of CSU Visit]]></description>
+            <content:encoded><![CDATA[<div class="mb-8"><div class="md:float-right md:max-w-xs md:ml-8 md:mb-2"><p><img decoding="async" loading="lazy" alt="Photos of CSU Visit" src="https://waggle-sensor.github.io/assets/images/hairik1-798200bf6a2e13ba8488124850b70c49.png" width="1330" height="2364" class="img_ev3q"></p></div><p>Graduate students from Colorado State University partnered with researchers at Argonne National Laboratory to test Sage Devices designed for real-time environmental monitoring. They connected soil moisture sensors using both hardwired and long-range LoRaWAN configurations, demonstrating how field-based devices can process data directly at the source. These edge-computing systems enable immediate translation of raw measurements into meaningful insights.</p></div>
+<p>This work is part of a broader effort to deploy an AI-enabled monitoring network across 15,000 acres at the Central Plains Experimental Range. By integrating historical datasets with live sensor inputs from soil, vegetation, and weather, the system will forecast drought, detect vegetation stress, and guide adaptive land management. The result is a scalable tool that provides ranchers, scientists, and policymakers with rapid, actionable information to support sustainable decision-making.</p>
+<p><strong>Read more at <a href="https://waggle-sensor.github.io/use-cases/ai-drought-mitigation">AI for Drought Mitigation</a>.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Photos of CSU Sensor" src="https://waggle-sensor.github.io/assets/images/csu_sm_sensor-fad6feef6cdfc43f8724409c295a7093.png" width="2364" height="1330" class="img_ev3q"></p>]]></content:encoded>
+            <category>Nodes</category>
+            <category>Soil Moisture</category>
+            <category>Drought</category>
+            <category>Graduate</category>
+            <category>Sensors</category>
+            <category>Instruments</category>
+            <category>LoRaWAN</category>
+            <category>CSU</category>
+        </item>
         <item>
             <title><![CDATA[Harnessing AI and Edge Computing for Fire Science]]></title>
             <link>https://waggle-sensor.github.io/news/2025/04/18/fire-science</link>
