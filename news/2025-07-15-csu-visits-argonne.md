@@ -6,7 +6,7 @@ tags: [Nodes, Soil Moisture, Drought, Graduate, Sensors, Instruments, LoRaWAN, C
 ---
 
 <div className="mb-8">
-  <div className="md:float-right md:max-w-xs md:ml-8 md:mb-2 h-48 w-96 object-cover ">
+  <div className="md:float-right md:max-w-xs md:ml-8 md:mb-2">
     ![Photos of CSU Visit](./img/csu-visits-argonne-2025/hairik1.png)
   </div>
 
