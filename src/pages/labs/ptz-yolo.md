@@ -151,7 +151,7 @@ Using the scene context, the model performs phrase grounding to locate objects. 
 The system automatically centers the camera on the detected plant and zooms in to get a better view. It takes multiple candidate shots (typically 3 tries) to ensure it can send the sharpest possible image to PlantNet.
 
 **Saved Candidate Images:**
-![A list of the three candidate images saved by the system with additional zoom in each](src/pages/labs/ptz-outputs/step3-plantnet-tries.png)
+A list of the three candidate images saved by the system with additional zoom in each
 
 **Example of a Zoomed-in Shot:**
 ![A zoomed-in shot of the tree leaves](src/pages/labs/ptz-outputs/step2-zoomed_shot.png)
