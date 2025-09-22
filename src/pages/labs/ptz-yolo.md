@@ -53,7 +53,7 @@ A powerful vision-language model that enables the new "Intelligent Cascade" work
 
 The application's architecture has been redesigned from a rigid, hardcoded process to a flexible, context-aware workflow. This shift allows the camera to make smarter decisions about what is important in a scene.
 
-![Architecture diagram of the Intelligent Cascade workflow](src/pages/labs/ptz-outputs/PTZ-pipeline.png)
+![Architecture diagram of the Intelligent Cascade workflow](ptz-outputs/PTZ-pipeline.png)
 
 Here is how the new "Intelligent Cascade" operates:
 
@@ -138,10 +138,10 @@ This section shows the step-by-step output flow from the application, from initi
 The process begins with the camera taking a wide shot of the area. The Florence-2 model then generates a detailed text description of this image to establish context.
 
 **Initial Image:**
-![Initial wide shot of the scene](src/pages/labs/ptz-outputs/step1-initial_wideshot.png)
+![Initial wide shot of the scene](ptz-outputs/step1-initial_wideshot.png)
 
 **Console Log:**
-![Console log showing the generated Scene Context](src/pages/labs/ptz-outputs/step1-logs.png)
+![Console log showing the generated Scene Context](ptz-outputs/step1-logs.png)
 
 ---
 
@@ -149,10 +149,10 @@ The process begins with the camera taking a wide shot of the area. The Florence-
 Using the scene context, the model performs phrase grounding to locate objects. When it identifies an object with a plant-related label (like "trees"), it automatically triggers the species identification workflow.
 
 **Image:**
-![shot of the particular detection](src/pages/labs/ptz-outputs/step2-image_capture.png)
+![shot of the particular detection](ptz-outputs/step2-image_capture.png)
 
 **Console Log:**
-![Console log showing a plant has been detected](src/pages/labs/ptz-outputs/step2-plant_detected.png)
+![Console log showing a plant has been detected](ptz-outputs/step2-plant_detected.png)
 
 ---
 
@@ -163,17 +163,20 @@ The system automatically centers the camera on the detected plant and zooms in t
 A list of the three candidate images saved by the system with additional zoom in each
 
 **Example of a Zoomed-in Shot:**
-![A zoomed-in shot of the tree leaves](src/pages/labs/ptz-outputs/step2-zoomed_shot.png)
+![A zoomed-in shot of the tree leaves](ptz-outputs/step2-zoomed_shot.png)
 
 ---
 
 ### Step 4: Final Species Identification
 The sharpest image is sent to the PlantNet API. The final log shows the successful identification, including the scientific name, common names, and the confidence score.
+
 **Final Shot Sent:**
-![The image sent to PlantNet for analysis](src/pages/labs/ptz-outputs/step3-final_shot.png)
+
+![The image sent to PlantNet for analysis](ptz-outputs/step3-final_shot.png)
 
 **Console Log:**
-![Console log showing the final species identification results from PlantNet](src/pages/labs/ptz-outputs/step3-species_detetcted_logs.png)
+
+![Console log showing the final species identification results from PlantNet](ptz-outputs/step3-species_detetcted_logs.png)
 
 ---
 
