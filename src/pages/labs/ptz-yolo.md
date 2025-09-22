@@ -64,6 +64,15 @@ Here is how the new "Intelligent Cascade" operates:
 
 ---
 
+## Where It Runs
+
+PTZApp is containerized and ready for deployment across different platforms:
+
+-   **GPU Servers** (e.g. Dell blades) for high-throughput inference
+-   **Waggle Nodes** (Jetson Xavier or AGX Orin) for sensor-rich environments in remote areas
+
+---
+
 ## Key Features & Data Publishing
 
 ### Best-of-N Capture with a Blur Gate
