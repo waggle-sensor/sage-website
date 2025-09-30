@@ -89,15 +89,13 @@ const team : TeamMember[] = [{
   title: { 'leadership': 'Operations and User Support', 'ci': 'Principal Specialist, Research Software Engineering' },
   href: 'https://www.anl.gov/profile/neal-conrad',
   teams: ['leadership', 'ci'],
-},
-
-{
+}, {
   name: 'Charlie Catlett',
   image: require('@site/static/img/team/charlie_catlett-3.jpg').default,
-  institution: 'Univ. of Illinois Chicago / ANL',
-  title: 'Urban / Chicago',
-  href: null,
-  teams: 'collab'
+  institution: 'Argonne National Laboratory',
+  title: 'International AI Collaboration',
+  href: 'https://www.anl.gov/profile/charles-edward-catlett',
+  teams: 'leadership'
 }, {
   name: 'Scott Collis',
   image: require('@site/static/img/team/scott_collis.jpeg').default,
