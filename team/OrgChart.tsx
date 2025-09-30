@@ -6,7 +6,7 @@ const orgData = {
   children: [
     {
       name: 'Advisory Committee AC',
-      details: 'Daniel Reed, chair, Bill Gropp, Others to be invited',
+      details: 'Daniel Reed, chair, Bill Gropp, Diane Pataki, Amanda Randles, Ness Shroff',
       color: 'bg-yellow-500 text-black',
     },
     {
