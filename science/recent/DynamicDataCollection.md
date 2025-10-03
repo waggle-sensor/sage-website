@@ -1,5 +1,6 @@
 # Application-agnostic Dynamic Data Collection for AI on the Edge
 ## Introduction
+### The Motivation
 ![Deer Image](../imgs/DDCdeer.png)
 
 Consider a scientific application that uses a SAGE node to capture video in the wild in the hopes of using an AI model to identify the deer and describe what it is doing. In this application, there are large periods of inactivity when the camera captures no deer or other animals, punctuated by short periods of interest when a deer is on camera. In this way, the environment is *dynamic*. However, if SAGE naively runs this job *statically*, without any changes in response to the environment, multiple potential problems arise:
@@ -8,7 +9,8 @@ Consider a scientific application that uses a SAGE node to capture video in the 
 * If this job is being run sparsely in time, it may miss a deer sighting entirely, or to only run the job once during a sighting when it may be possible to run it multiple times.
 * On the other hand, the job cannot be run at all times, either because other scientific applications have reserved time on the SAGE node, or because resources like power are scarce and have to be appropriately rationed.
 
-All of these problems are not unique to our hypothetical deer-related application, but apply to a wide variety of tasks submitted to SAGE. Hence, we devise a **framework for dynamic data-collection strategies for AI applications on the edge**. Our framework must have the following two properties:
+### Our work
+All of the above problems are not unique to our hypothetical deer-related application, but apply to a wide variety of tasks submitted to SAGE. Hence, we devise a **framework for dynamic data-collection strategies for AI applications on the edge**. Our framework must have the following two properties:
 * **Generality:** There should be no application-specific dependencies in our framework, so that it has broad applicability for future jobs.
 * **Edge-Implementability:** The strategies that our framework covers should only have to rely on local decision-making, to ensure prompt reactions to the dynamic environment.
 
