@@ -9,6 +9,9 @@ slug: /dynamic-data-collection
 ---
 
 # Application-agnostic Dynamic Data Collection for AI on the Edge
+Henry Abrahamson, Northwestern University, Department of Electrical and Computer Engineering
+
+email: henryabrahamson2022@u.northwestern.edu
 ## Introduction
 ### Motivation
 ![deer pic](../imgs/DDCdeer.jpg)
@@ -81,13 +84,13 @@ Next, we devise a simple but real application to have the simulation generate re
 
 Using our framework, we use the Waiting Time strategy, assuming that the strategy can only transition once per minute. The passive state is the state in which only YOLO is running, with an associated cost of 1 CPU minute per minute, while the active state has both YOLO and Moondream running with an associated cost off 2 CPU minutes per minute. The Waiting Time strategy's waiting parameter is 10 minutes, since that's how long it takes for Moondream, the longer of the two jobs, to run.
 
-In this scenario, YOLO can be thought of as a tripwire: most of the time, the SAGE node runs the relatively quick YOLO job. Once YOLO detects something of interest though, the node then invokes the more expensive Moondream job. By using this dynamic strategy the node saves power in comparison to running YOLO and Moondream all the time.
+In this scenario, YOLO can be thought of as a tripwire: most of the time, the SAGE node runs the relatively quick YOLO job. Once YOLO detects something of interest though, the node then invokes the more expensive Moondream job. By using this dynamic strategy, the node saves power in comparison to running YOLO and Moondream all the time.
 
-For the environment, we collected video from one of the SAGE nodes near argonne campus, manually labelled the frames as relevant / irrelevant if there was a car in focus on the road, and loaded that data in as a Preset environment. 
+For the environment, we collected video from one of the SAGE nodes near Argonne campus, manually labelled the frames as relevant / irrelevant if there was a car in focus on the road, and loaded that data in as a Preset environment. 
 
 The results are shown in the table below. Using our dynamic strategy, we were able to get 27 runs of Moondream on relevant data, compared to 15 runs by naively running Moondream once every 10 minutes. This jump occurs because many of the events of interest lasted fewer than 10 minutes -- as such, using YOLO as a trigger allows the SAGE node to notice these short events and respond appropriately.
 
 ![sim2table](../imgs/DDCsim2results.png)
 
 ## Future Directions
-Potential directions for future work include the implementation of these strategies on a SAGE node directly, developing new environment and strategy models (of particular interest would be a trinary state strategy with states representing *passive*, *ready*, and *active*). These two thrusts would both move towards making these dynamic data collection closer to being applied in reality and hopefully more easily accessible to SAGE users. Also of interest would be obtaining theoretical guarantees of performance given a Markovian environment with bounded parameters, providing a mathematical justification for these strategies, and allowing for the development of a tool that might be able to calculate worst-case performances.
+Potential directions for future work include the implementation of these strategies on a SAGE node directly, developing new environment and strategy models; of particular interest would be a trinary state strategy with states representing *passive*, *ready*, and *active*, and a possible relaxation from finite state to a continuous state that could represent a continuous metric of risk or likelihood. These two thrusts would both move towards making these dynamic data collection closer to being applied in reality and hopefully more easily accessible to SAGE users. Also of interest would be obtaining theoretical guarantees of performance given a Markovian environment with bounded parameters, providing a mathematical justification for these strategies, and allowing for the development of a tool that might be able to calculate worst-case performances.
