@@ -173,7 +173,7 @@ const team : TeamMember[] = [{
   teams: 'ai'
 }, {
   name: 'Thomas Giambelluca',
-  image: require('@site/static/img/team/Thomas-Giambelluca.jpeg').default,
+  image: require('@site/static/img/team/Thomas-Giambelluca.png').default,
   institution: 'University of Hawai\'i at Mānoa',
   title: 'Professor Emeritus, Water Resources Research Center',
   href: 'https://www.wrrc.hawaii.edu/person/dr-thomas-giambelluca/',
@@ -192,7 +192,40 @@ const team : TeamMember[] = [{
   institution: 'University of Oregon / OHAZ',
   title: 'Hazard Detection and Monitoring',
   teams: 'platform'
+}, {
+  name: 'Daniel Reed, Chair',
+  teams: 'advisory',
+  image: null,
+  institution: null,
+  title: null
+}, {
+  name: 'Bill Gropp',
+  teams: 'advisory',
+  image: null,
+  institution: null,
+  title: null
+}, {
+  name: 'Diane Pataki',
+  teams: 'advisory',
+  image: null,
+  institution: null,
+  title: null
+}, {
+  name: 'Amanda Randles',
+  teams: 'advisory',
+  image: null,
+  institution: null,
+  title: null
+}, {
+  name: 'Ness Shroff',
+  teams: 'advisory',
+  image: null,
+  institution: null,
+  title: null
 }]
+
+
+
 
 
 const getTeam = (kind: Team) =>

@@ -1,5 +1,5 @@
 
-export type Team = 'leadership' | 'collab' | 'ci' | 'ai' | 'platform' | 'past-collab' | 'past-member'
+export type Team = 'leadership' | 'collab' | 'ci' | 'ai' | 'platform' | 'past-collab' | 'past-member' | 'advisory'
 
 export type TeamMember = {
   name: string
@@ -9,3 +9,4 @@ export type TeamMember = {
   teams: Team | Team[]
   href?: string
 }
+
