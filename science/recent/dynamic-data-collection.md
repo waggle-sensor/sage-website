@@ -8,6 +8,11 @@ sidebar_label: Application-Agnostic Dynamic Data Collection
 ---
 
 # Application-Agnostic Dynamic Data Collection for AI on the Edge
+Henry Abrahamson
+
+*Northwestern Unversity, Department of Electrical and Computer Engineering*
+
+email: henryabrahamson2022@u.northwestern.edu
 
 ## Introduction
 
