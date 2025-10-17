@@ -8,7 +8,11 @@ This article walks through this new architecture, its advanced capabilities, and
 
 ## What We're Building
 
-This application transforms a standard PTZ camera into a smart, self-directing observation system. It has evolved beyond a simple scanner to a context-aware agent. The application:
+This application transforms a standard PTZ camera into a smart, self-directing observation system. It has evolved beyond a simple scanner to a context-aware agent. 
+
+> **Note:** The PlantNet integration below is an *example use case* if you are exploring the plant detection path. It demonstrates how PTZ-YOLO’s detection and zooming capabilities can be extended for species identification and environmental analysis. It is not a required component of the PTZ-YOLO core functionality.
+
+The application:
 
 -   **Understands the scene** using a high-level captioning model.
 -   **Performs a contextual scan** to find objects relevant to the scene's description.
