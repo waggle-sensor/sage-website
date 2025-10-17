@@ -24,7 +24,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
 <script src="https://apis.google.com/js/api.js"></script><link rel="stylesheet" href="/assets/css/styles.a7dff78c.css">
-<script src="/assets/js/runtime~main.f3d37320.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.38e24d06.js" defer="defer"></script>
 <script src="/assets/js/main.6b286985.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -36,7 +36,11 @@
 <p>This article walks through this new architecture, its advanced capabilities, and how it enables more targeted and meaningful environmental monitoring.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-were-building">What We&#x27;re Building<a href="#what-were-building" class="hash-link" aria-label="Direct link to What We&#x27;re Building" title="Direct link to What We&#x27;re Building">​</a></h2>
-<p>This application transforms a standard PTZ camera into a smart, self-directing observation system. It has evolved beyond a simple scanner to a context-aware agent. The application:</p>
+<p>This application transforms a standard PTZ camera into a smart, self-directing observation system. It has evolved beyond a simple scanner to a context-aware agent.</p>
+<blockquote>
+<p><strong>Note:</strong> The PlantNet integration below is an <em>example use case</em> if you are exploring the plant detection path. It demonstrates how PTZ-YOLO’s detection and zooming capabilities can be extended for species identification and environmental analysis. It is not a required component of the PTZ-YOLO core functionality.</p>
+</blockquote>
+<p>The application:</p>
 <ul>
 <li><strong>Understands the scene</strong> using a high-level captioning model.</li>
 <li><strong>Performs a contextual scan</strong> to find objects relevant to the scene&#x27;s description.</li>
