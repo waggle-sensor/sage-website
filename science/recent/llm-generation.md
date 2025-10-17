@@ -4,7 +4,7 @@ keywords:
     - LLM
     - RAG
     - AI
-sidebar_position: 0
+sidebar_position: 2
 ---
 
 # Code Generation and Documentation Search using Large Language Model
@@ -71,9 +71,9 @@ if __name__ == '__main__':
     plugin.start()
 ```
 
-As hypothesized, no matter the length of text context, the model was unable to generate accurate code because it doesn't know the appropriate library and method calls. We proceeded to provide more code context. 
+As hypothesized, no matter the length of text context, the model was unable to generate accurate code because it doesn't know the appropriate library and method calls. We proceeded to provide more code context.
 
-We began by using code snippets to 1) test the model's ability to generate code with a few lines of code and 2) assess whether the model could link the finer details of the code to the broader context. It produced these inferences when provided 17 lines of code from Waggle's subscribing and publishing [examples](https://github.com/waggle-sensor/pywaggle/blob/main/docs/writing-a-plugin.md#4-create-mainpy-file). 
+We began by using code snippets to 1) test the model's ability to generate code with a few lines of code and 2) assess whether the model could link the finer details of the code to the broader context. It produced these inferences when provided 17 lines of code from Waggle's subscribing and publishing [examples](https://github.com/waggle-sensor/pywaggle/blob/main/docs/writing-a-plugin.md#4-create-mainpy-file).
 
 |![plugin-inferences](../imgs/llm-generation-plugin-inferences.png)|
 |:--:|
@@ -127,7 +127,7 @@ with Plugin() as plugin:
                 print("New maximum number of pedestrians detected!")
 ```
 
-The first code block is perfect, and the second has two minor errors. 
+The first code block is perfect, and the second has two minor errors.
 
 Llama3's inferences and code generation showed the following:
 * Provided robust examples of code, Llama3 can generate almost perfect code
@@ -243,7 +243,7 @@ def calculate_avg_db(audio_data):
     return 20 * np.log10(avg_power)
 ```
 
-Notice it maintained the same library and method calls from Waggle in the implementation, but it changed the main calculation function. As a result, it used the Camera() class for microphone functionalities. The model attempted to reason with the new directives by maintaining the same context as reference but superimposed its own functionalities, portraying hallucinations. 
+Notice it maintained the same library and method calls from Waggle in the implementation, but it changed the main calculation function. As a result, it used the Camera() class for microphone functionalities. The model attempted to reason with the new directives by maintaining the same context as reference but superimposed its own functionalities, portraying hallucinations.
 
 In a more extreme case, the model was told that those same plugins were instead from a website that sells shoes for a baby. When instructed to generate code, it produced this:
 
@@ -251,7 +251,7 @@ In a more extreme case, the model was told that those same plugins were instead 
 |:--:|
 |*Response to Irrelevant User Query*|
 
-These examples highlight the importance of relevant context. Context that does not match the question will lead to hallucinations or, in more severe cases, incomprehensible code. Thus, the severity of hallucinations is dependent on the degree of "irrelevance" between user prompt and context. 
+These examples highlight the importance of relevant context. Context that does not match the question will lead to hallucinations or, in more severe cases, incomprehensible code. Thus, the severity of hallucinations is dependent on the degree of "irrelevance" between user prompt and context.
 
 ## Retrieval-Augmented Generation
 The results of augmenting prompts for code generation and documentation queries exceeded our expectations. However, the process was constrained by its manual nature:
@@ -292,7 +292,7 @@ We documented a basic version of this process using cosine similarity and the mx
 
 #### Langchain RAG
 
-It was evident that RAG mirrored the prompt augmentation process of manual augmentation while providing a framework to automate this process, ensuring consistent results without the need for human intervention. 
+It was evident that RAG mirrored the prompt augmentation process of manual augmentation while providing a framework to automate this process, ensuring consistent results without the need for human intervention.
 
 The next step was to enhance our basic RAG system by:
 * Accessing any Sage repository through data ingestion.

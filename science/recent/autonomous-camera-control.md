@@ -1,6 +1,6 @@
 ---
 sidebar_label: Autonomous Camera Control
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # An Autonomous Camera Control System Inspired by Curiosity

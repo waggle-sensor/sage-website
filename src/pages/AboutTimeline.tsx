@@ -3,6 +3,24 @@ import React from 'react';
 const Timeline = () => {
   const events = [
     {
+      date: '2016',
+      label: 'Array of Things Launched',
+      title: 'NSF MSI Project',
+      description: () => (
+        <>
+          In 2016, as an NSF MSI project{' '}
+          (<a
+            href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1532133"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            #1532133
+          </a>),
+          Array of Things built the first of its kind intelligent sensor network for urban science in Chicago.
+        </>
+      ),
+    }, 
+    {
       date: '2019',
       label: 'Sage is Founded',
       title: 'NSF MSRI-1 Project',
