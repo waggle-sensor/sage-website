@@ -66,11 +66,14 @@ Example results:
 More details of using the data API and the data model can be found [here](https://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md#query-api) and [here](https://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md#data-model).
 :::
 
+<!-- hide this section until data bundles are an official product 
 ## Data bundles
 
 **Data bundles** provide sensor data and associated metadata in a single, large, downloadable file.  Soon, each Data Bundle available for download will have a DOI that can be used for publication citations.
 
 Data Bundles are compiled nightly and may be downloaded in [this archive](https://web.lcrc.anl.gov/public/waggle/sagedata/SAGE-Data.tar).
+-->
+
 
 ## Accessing file uploads
 
