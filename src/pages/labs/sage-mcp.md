@@ -1,6 +1,12 @@
+import SageMCPVideo from './sage-mcp-video.mp4'
+
 # Sage MCP: AI-Powered Edge Computing Interface
 
 In the rapidly evolving landscape of AI and edge computing, accessing complex cyberinfrastructure shouldn't require memorizing APIs or writing custom scripts. What if you could simply *ask* for what you need in plain English? That's the vision behind **SAGE MCP**, a **Model Context Protocol** server that bridges the gap between Large Language Models and the SAGE edge computing ecosystem, making advanced sensor networks accessible through natural conversation.
+
+<video className="w-full h-auto" controls>
+  <source src={SageMCPVideo} type="video/mp4" />
+</video>
 
 > **SAGE MCP** transforms how researchers, developers, and data scientists interact with 100+ edge nodes worldwide, enabling natural language queries, intelligent plugin discovery, and automated job submission, all through your favorite AI-powered IDE.
 
