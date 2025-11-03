@@ -8,7 +8,7 @@ import {getTeam} from './directory';
 # Advisory Committee
 
 <ul>
-  {getTeam('advisory').map(({name}) =>
-    <li key={name}>{name}</li>
+  {getTeam('advisory').map(({name, institution}) =>
+    <li key={name}>{name} ({institution})</li>
   )}
 </ul>
