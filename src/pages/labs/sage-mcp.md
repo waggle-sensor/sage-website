@@ -70,13 +70,13 @@ Cache hit ratios typically exceed 70%, dramatically reducing response times and 
 
 ### Layer 4: Hybrid Image Search
 
-The image search capability integrates our [hybrid vector + keyword search system](./sage-image-search.md) directly into the MCP interface. This allows LLMs to semantically search through thousands of SAGE images using natural language queries. The MCP layer adds:
+The image search capability integrates our [hybrid vector + keyword search system](./image-search.md) directly into the MCP interface. This allows LLMs to semantically search through thousands of SAGE images using natural language queries. The MCP layer adds:
 
 - **Node-based filtering** to find images from specific locations
 - **Visual feature discovery** to identify nodes by what their cameras can see
 - **Pre-signed URL generation** for secure, authentication-free image access
 
-For details on the underlying search architecture (Florence 2, ImageBind, Weaviate, and reranking), see the [Image Search Labs page](./sage-image-search.md).
+For details on the underlying search architecture (Florence 2, ImageBind, Weaviate, and reranking), see the [Image Search Labs page](./image-search.md).
 
 ### Layer 5: Authentication & Security
 
