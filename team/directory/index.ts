@@ -46,8 +46,8 @@ const team : TeamMember[] = [{
   name: 'Daniel Reed',
   image: require('@site/static/img/team/dan_reed-2.jpg').default,
   institution: 'University of Utah',
-  title: 'Chief Architect',
-  href: null,
+  title: 'Chair: Advisory Committee',
+  href: 'https://www.linkedin.com/in/danreed/',
   teams: 'leadership'
 }, {
   name: 'Rajesh Sankaran',
