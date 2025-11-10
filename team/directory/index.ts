@@ -50,6 +50,13 @@ const team : TeamMember[] = [{
   href: 'https://www.linkedin.com/in/danreed/',
   teams: 'leadership'
 }, {
+  name: 'Helen Taaffe',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
+  institution: 'Northwestern University',
+  title: 'Executive Director / Project Manager',
+  href: 'https://www.linkedin.com/in/helentaaffe/',
+  teams: 'leadership'
+}, {
   name: 'Rajesh Sankaran',
   image: require('@site/static/img/team/raj_sankaran-1.jpg').default,
   institution: 'Northwestern University / ANL',
