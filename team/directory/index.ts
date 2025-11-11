@@ -46,8 +46,15 @@ const team : TeamMember[] = [{
   name: 'Daniel Reed',
   image: require('@site/static/img/team/dan_reed-2.jpg').default,
   institution: 'University of Utah',
-  title: 'Chief Architect',
-  href: null,
+  title: 'Chair: Advisory Committee',
+  href: 'https://www.linkedin.com/in/danreed/',
+  teams: 'leadership'
+}, {
+  name: 'Helen Taaffe',
+  image: 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png',
+  institution: 'Northwestern University',
+  title: 'Executive Director / Project Manager',
+  href: 'https://www.linkedin.com/in/helentaaffe/',
   teams: 'leadership'
 }, {
   name: 'Rajesh Sankaran',
@@ -196,31 +203,37 @@ const team : TeamMember[] = [{
   name: 'Daniel Reed, Chair',
   teams: 'advisory',
   image: null,
-  institution: null,
+  institution: 'University of Utah',
   title: null
 }, {
   name: 'Bill Gropp',
   teams: 'advisory',
   image: null,
-  institution: null,
+  institution: 'University of Illinois Urbana-Champaign',
   title: null
 }, {
   name: 'Diane Pataki',
   teams: 'advisory',
   image: null,
-  institution: null,
+  institution: 'The University of Utah',
   title: null
 }, {
   name: 'Amanda Randles',
   teams: 'advisory',
   image: null,
-  institution: null,
+  institution: 'Duke University',
   title: null
 }, {
   name: 'Ness Shroff',
   teams: 'advisory',
   image: null,
-  institution: null,
+  institution: 'The Ohio State University',
+  title: null
+}, {
+  name: 'Greg Hager',
+  teams: 'advisory',
+  image: null,
+  institution: 'Johns Hopkins University',
   title: null
 }]
 

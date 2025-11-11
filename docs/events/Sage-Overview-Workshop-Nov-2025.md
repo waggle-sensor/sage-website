@@ -5,7 +5,7 @@ import Button from '@mui/material/Button'
 
 # November 2025 Sage Workshop (Virtual)
 
-Join us for an virtual overview of the Sage platform, tentatively scheduled for **Wednesday, November 12th, 2025**, from **2:00 PM to 5:00 PM CST** (currently subject to change).
+Join us for an virtual overview of the Sage platform, scheduled for **Wednesday, November 12th, 2025**, from **2:00 PM to 5:00 PM CST**.
 
 This workshop will feature:
 - An overview of Sage and its capabilities

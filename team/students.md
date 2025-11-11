@@ -9,11 +9,15 @@ breadcrumbs: False
 
 - Henry Abrahamson (Northwestern University)
 - Saleem Alharir (University of Utah)
+- Mahsa Alishiri (University of Illinois Chicago)
 - John Blackwell (Colorado State University)
 - Elizabeth Cardoso (University of Illinois Chicago)
+- Siddharth Chalasani (Northwestern University)
+- Shivani Chiranjeevi (Iowa State University)
 - Avasyu Chukkapalli (Purdue University)
 - Michael Cortez (University of Illinois Chicago)
 - Param Gandhi (University of Utah)
+- Fatima Mora Garcia (University of Illinois Chicago)
 - Hairik Honarchian (Colorado State University)
 - Christopher Lee (University of Hawaiʻi at Māno)
 - Vinayak Kapoor (Northwestern University)
@@ -21,6 +25,7 @@ breadcrumbs: False
 - Saumya Pailwan (Northwestern University)
 - Sangshin Park (University of Utah)
 - JD Pirtle (University of Illinois Chicago)
+- Alejandra Rios (University of Illinois Chicago)
 - Mark Schittenhelm (University of Hawaiʻi at Māno)
 
 ### 2024
