@@ -207,20 +207,14 @@ Cache TTLs are tuned based on data volatility:
 There's exciting potential for expanding this platform:
 
 * **Custom frontend integration** for web-based interfaces and dashboards
-* **VSCode extension** and other IDE integrations beyond Cursor
+* **IDE integration** VSCode and other IDE integrations beyond Cursor
 * **Open source LLM support** with tool calling capabilities (Llama, GPT-oss, Qwen)
 * **End-to-end plugin workflow** from generation to testing to ECR publishing
 * **Multi-platform integration** (Slack, Discord, Jupyter notebooks, custom apps)
 
 ## Why This Matters
 
-Scientific cyberinfrastructure is becoming increasingly complex. SAGE operates 100+ nodes with thousands of sensors, tens of plugins, and terabytes of data. Traditional access methods require:
-
-* **Learning specialized APIs** and authentication systems
-* **Writing custom scripts** for even simple queries
-* **Understanding data schemas** and measurement naming conventions
-* **Managing credentials** and access tokens
-* **Parsing complex responses** and handling errors
+Scientific cyberinfrastructure is becoming increasingly complex. SAGE operates 100+ nodes with thousands of sensors, tens of plugins, and terabytes of data. Traditional access methods require writing custom code, studying documentation, and managing credentials.
 
 **SAGE MCP eliminates these barriers** by providing a natural language interface that:
 
@@ -231,18 +225,6 @@ Scientific cyberinfrastructure is becoming increasingly complex. SAGE operates 1
 * **Accelerates research** by reducing time-to-insight
 
 For researchers, this means spending less time fighting with APIs and more time discovering insights. For developers, it means rapid prototyping and experimentation. For the SAGE community, it means democratizing access to cutting-edge edge computing infrastructure.
-
-## Real-World Impact
-
-Since deployment, SAGE MCP has:
-
-* **Reduced onboarding time** for new users from days to minutes
-* **Enabled non-programmers** to access complex sensor data
-* **Accelerated plugin discovery** through semantic search
-* **Simplified job submission** with natural language commands
-* **Improved data accessibility** through pre-signed image URLs
-
-The system processes thousands of queries monthly, with users ranging from undergraduate students to senior researchers.
 
 ## Open Source & Community
 
