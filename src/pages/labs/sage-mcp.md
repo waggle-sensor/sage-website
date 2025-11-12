@@ -2,13 +2,13 @@ import SageMCPVideo from './sage-mcp-video.mp4'
 
 # Sage MCP: AI-Powered Edge Computing Interface
 
-In the rapidly evolving landscape of AI and edge computing, accessing complex cyberinfrastructure shouldn't require memorizing APIs or writing custom scripts. What if you could simply *ask* for what you need in plain English? That's the vision behind **SAGE MCP**, a **Model Context Protocol** server that bridges the gap between Large Language Models and the SAGE edge computing ecosystem, making advanced sensor networks accessible through natural conversation.
+In the rapidly evolving landscape of AI and edge computing, accessing complex cyberinfrastructure shouldn't require memorizing APIs or writing custom scripts. What if you could simply *ask* for what you need in plain English? That's the vision behind **Sage MCP**, a **Model Context Protocol** server that bridges the gap between Large Language Models and the Sage edge computing ecosystem, making advanced sensor networks accessible through natural conversation.
 
 <video className="w-full h-auto" controls>
   <source src={SageMCPVideo} type="video/mp4" />
 </video>
 
-> **SAGE MCP** transforms how researchers, developers, and data scientists interact with 100+ edge nodes worldwide, enabling natural language queries, intelligent plugin discovery, and automated job submission, all through your favorite AI-powered IDE.
+> **Sage MCP** transforms how researchers, developers, and data scientists interact with 100+ edge nodes worldwide, enabling natural language queries, intelligent plugin discovery, and automated job submission, all through your favorite AI-powered IDE.
 
 Let's explore what it does, how it works, and where it's headed next.
 
@@ -16,7 +16,7 @@ Let's explore what it does, how it works, and where it's headed next.
 
 This project demonstrates the power of **protocol-driven AI integration**, using the Model Context Protocol (MCP) to connect LLMs directly to scientific cyberinfrastructure. At its core, the system:
 
-* **Exposes SAGE capabilities** as MCP tools that LLMs can invoke intelligently
+* **Exposes Sage capabilities** as MCP tools that LLMs can invoke intelligently
 * **Queries real-time sensor data** from edge nodes across the globe
 * **Searches images semantically** using hybrid vector + keyword search with reranking
 * **Discovers and recommends plugins** from the Edge Code Repository
@@ -33,7 +33,7 @@ Here's how the system is architected:
 
 ### Layer 1: FastMCP Framework
 
-We built on **[FastMCP](https://github.com/jlowin/fastmcp)**, a Python framework for creating MCP servers with elegant decorators and type safety. FastMCP handles the protocol complexity, letting us focus on exposing SAGE capabilities as intuitive tools.
+We built on **[FastMCP](https://github.com/jlowin/fastmcp)**, a Python framework for creating MCP servers with elegant decorators and type safety. FastMCP handles the protocol complexity, letting us focus on exposing Sage capabilities as intuitive tools.
 
 Key features:
 - **Automatic tool registration** with type hints and docstrings
@@ -47,7 +47,7 @@ The server is organized into modular services:
 
 ```
 sage_mcp_server/
-├── data_service.py          # SAGE data client wrapper
+├── data_service.py          # Sage data client wrapper
 ├── job_service.py           # Job submission & management
 ├── plugin_registry.py       # ECR plugin metadata & search
 ├── image_search_service.py  # Hybrid image search with embeddings
@@ -70,7 +70,7 @@ Cache hit ratios typically exceed 70%, dramatically reducing response times and 
 
 ### Layer 4: Hybrid Image Search
 
-The image search capability integrates our [hybrid vector + keyword search system](./image-search) directly into the MCP interface. This allows LLMs to semantically search through thousands of SAGE images using natural language queries. The MCP layer adds:
+The image search capability integrates our [hybrid vector + keyword search system](./image-search) directly into the MCP interface. This allows LLMs to semantically search through thousands of Sage images using natural language queries. The MCP layer adds:
 
 - **Node-based filtering** to find images from specific locations
 - **Visual feature discovery** to identify nodes by what their cameras can see
@@ -94,7 +94,7 @@ Security is built-in at multiple levels:
 ```
 User: "What's the highest temperature in Chicago right now?"
 
-MCP: [Automatically finds Chicago nodes, queries temperature data, 
+MCP: [Automatically finds Chicago nodes, queries temperature data,
      computes statistics, and returns formatted results]
 ```
 
@@ -214,9 +214,9 @@ There's exciting potential for expanding this platform:
 
 ## Why This Matters
 
-Scientific cyberinfrastructure is becoming increasingly complex. SAGE operates 100+ nodes with thousands of sensors, tens of plugins, and terabytes of data. Traditional access methods require writing custom code, studying documentation, and managing credentials.
+Scientific cyberinfrastructure is becoming increasingly complex. Sage operates 100+ nodes with thousands of sensors, tens of plugins, and terabytes of data. Traditional access methods require writing custom code, studying documentation, and managing credentials.
 
-**SAGE MCP eliminates these barriers** by providing a natural language interface that:
+**Sage MCP eliminates these barriers** by providing a natural language interface that:
 
 * **Understands intent** rather than requiring exact syntax
 * **Handles complexity** automatically (auth, filtering, formatting)
@@ -224,15 +224,15 @@ Scientific cyberinfrastructure is becoming increasingly complex. SAGE operates 1
 * **Enables exploration** without prior knowledge
 * **Accelerates research** by reducing time-to-insight
 
-For researchers, this means spending less time fighting with APIs and more time discovering insights. For developers, it means rapid prototyping and experimentation. For the SAGE community, it means democratizing access to cutting-edge edge computing infrastructure.
+For researchers, this means spending less time fighting with APIs and more time discovering insights. For developers, it means rapid prototyping and experimentation. For the Sage community, it means democratizing access to cutting-edge edge computing infrastructure.
 
 ## Open Source & Community
 
-SAGE MCP is built on open standards and open source:
+Sage MCP is built on open standards and open source:
 
 * **MCP Protocol**: [modelcontextprotocol.io](https://modelcontextprotocol.io)
 * **FastMCP Framework**: [github.com/jlowin/fastmcp](https://github.com/jlowin/fastmcp)
-* **SAGE Ecosystem**: [sagecontinuum.org](https://sagecontinuum.org)
+* **Sage Ecosystem**: [sagecontinuum.org](https://sagecontinuum.org)
 
 We welcome contributions, feedback, and collaboration. Whether you're building similar infrastructure integration tools or exploring AI-powered interfaces for scientific computing, we'd love to hear from you.
 
