@@ -92,7 +92,7 @@ export default {
           label: 'Docs'
         }, {
           type: 'dropdown',
-          className: 'header-github-link',
+          className: 'github-icon',
           'aria-label': 'GitHub repository',
           to: 'https://github.com/waggle-sensor',
           items: [
