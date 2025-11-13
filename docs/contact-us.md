@@ -12,7 +12,7 @@ import SlackIcon from './slack-icon.svg'
 
 For support, general questions, or comments, you can always reach us at:
 
-[support@waggle-edge.ai](mailto:support@waggle-edge.ai)
+[support@sagecontinuum.org](mailto:support@sagecontinuum.org)
 
 
 ## <Desk />  Office Hours
@@ -22,5 +22,5 @@ Want to meet with us on Zoom?  Join our [Office Hours](/docs/events/office-hours
 
 ## <SlackIcon className="w-[30px]" /> Join us on Slack
 
-Request an invitation to the Sage Community Slack workspace via email: support@waggle-edge.ai.
+Request an invitation to the Sage Community Slack workspace via email: support@sagecontinuum.org.
 
