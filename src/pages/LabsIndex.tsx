@@ -49,7 +49,7 @@ export default function LabsIndex() {
           alt="screenshot of prompting with mcp" src={SageMCP} />
         <div className="m-4">
           <h3 className="flex justify-between items-center">
-            <Link to="./labs/sage-mcp" className="nav-link">MCP (Model Context Protocol)</Link>
+            <Link to="./labs/sage-mcp" className="nav-link">Vibe Coding and AI Agents: Sage MCP</Link>
             <a
               className="github-icon"
               href="https://github.com/waggle-sensor/sage-mcp"
@@ -61,11 +61,11 @@ export default function LabsIndex() {
             />
           </h3>
           <p>
-            The Sage MCP is an interface that connects AI (large language models) to
-            the Sage edge computing resources, enabling researchers and developers to query real-time
-            sensor data, discover plugins, and submit jobs using natural language. By standardizing access
-            through the Model Context Protocol, it makes complex scientific
-            cyberinfrastructure intuitive, conversational, and broadly accessible. <Link to="./labs/sage-mcp">Read more...</Link>
+            Control AI-enabled edge nodes through natural conversation. Use LLM-powered IDEs like Cursor and
+            Cline tp query sensor data, find edge apps, draft python code, and run jobs. Explore agentic
+            instrument control.  Ask “What’s the temperature in Chicago?” or “Write a Yolo plugin,”
+            and the <b>prototype</b> Sage MCP chains tools, handles auth, and lets you explore 
+            vibe-coding conversations. <Link to="./labs/sage-mcp">Read more...</Link>
           </p>
         </div>
       </Card>
