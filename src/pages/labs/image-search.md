@@ -80,4 +80,5 @@ If you’re working on something similar or curious to dive deeper, feel free to
   Try Vision Search
 </a>
 
+
 [Browse the project code on GitHub](https://github.com/waggle-sensor/sage-vectordb-example/tree/main/HybridSearch_example)
