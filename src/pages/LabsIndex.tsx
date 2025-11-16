@@ -62,9 +62,9 @@ export default function LabsIndex() {
           </h3>
           <p>
             Control AI-enabled edge nodes through natural conversation. Use LLM-powered IDEs like Cursor and
-            Cline tp query sensor data, find edge apps, draft python code, and run jobs. Explore agentic
-            instrument control.  Ask “What’s the temperature in Chicago?” or “Write a Yolo plugin,”
-            and the <b>prototype</b> Sage MCP chains tools, handles auth, and lets you explore 
+            Cline to query sensors, find edge apps, draft python code, and run jobs. Explore agentic
+            instrument control.  Ask “What’s the temperature in Hawaii?” or “Write a Yolo plugin,”
+            and the <i><b>prototype</b></i> Sage MCP chains tools, handles auth, and lets you explore 
             vibe-coding conversations. <Link to="./labs/sage-mcp">Read more...</Link>
           </p>
         </div>
