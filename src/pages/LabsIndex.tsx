@@ -67,6 +67,16 @@ export default function LabsIndex() {
             and the <i><b>prototype</b></i> Sage MCP chains tools, handles auth, and lets you explore 
             vibe-coding conversations. <Link to="./labs/sage-mcp">Read more...</Link>
           </p>
+          {/* todo: fix this styling override hack */}
+          <Button
+            variant="contained"
+            href="https://github.com/waggle-sensor/sage-mcp/blob/main/docs/GETTING_STARTED.md#-quick-setup-with-cursor-ide-recommended"
+            onClick={(e) => e.stopPropagation()}
+            sx={{textTransform: 'none', '&:hover': {color: '#fff', opacity: .8}}}
+            className="!text-white"
+          >
+            TL;DR: Try install now! (prototype)
+          </Button>
         </div>
       </Card>
       <Card to="./labs/ptz-yolo" className="flex ltr">
