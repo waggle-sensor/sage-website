@@ -76,4 +76,8 @@ As our object database continues to grow, the challenge of finding the right ima
 
 If you’re working on something similar or curious to dive deeper, feel free to reach out.
 
+<a href="https://portal.sagecontinuum.org/labs/image-search" style="display:inline-block; padding:12px 24px; background:#0366d6; color:white; border-radius:6px; text-decoration:none; font-size:18px;">
+  Try Vision Search
+</a>
+
 [Browse the project code on GitHub](https://github.com/waggle-sensor/sage-vectordb-example/tree/main/HybridSearch_example)
