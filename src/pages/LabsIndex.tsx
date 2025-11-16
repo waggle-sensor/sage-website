@@ -16,7 +16,7 @@ export default function LabsIndex() {
           alt="screenshot of image searching for volcanoes" src={ImageSearch} />
         <div className="m-4">
           <h3 className="flex justify-between items-center">
-            <Link to="./labs/image-search">AI Vision Insight Search</Link>
+            <Link to="./labs/image-search">AI Vision Semantic Search</Link>
             <a
               className="github-icon"
               href="https://github.com/waggle-sensor/sage-vectordb-example"
