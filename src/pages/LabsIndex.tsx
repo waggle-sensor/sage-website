@@ -16,7 +16,7 @@ export default function LabsIndex() {
           alt="screenshot of image searching for volcanoes" src={ImageSearch} />
         <div className="m-4">
           <h3 className="flex justify-between items-center">
-            <Link to="./labs/image-search">Image Search</Link>
+            <Link to="./labs/image-search">AI Vision Insight Search</Link>
             <a
               className="github-icon"
               href="https://github.com/waggle-sensor/sage-vectordb-example"
@@ -27,9 +27,10 @@ export default function LabsIndex() {
             />
           </h3>
           <p>
-            Image Search enables intuitive exploration of large-scale sensor datasets using AI-powered image retrieval.
-            By leveraging advanced visual search techniques, users can efficiently locate relevant
-            images based on content rather than metadata, streamlining research and analysis. <Link to="./labs/image-search">Read more...</Link>
+            AI-powered image search and retrieval enables intuitive exploration of large-scale datasets. The tool leverages
+            the NSF National Research Platform infrastructure. Users can efficiently locate relevant
+            images based on content rather than keywords or metadata, streamlining 
+            research and analysis. <Link to="./labs/image-search">Read more...</Link>
           </p>
           {/* todo: fix this styling override hack */}
           <Button
