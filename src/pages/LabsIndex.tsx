@@ -39,31 +39,8 @@ export default function LabsIndex() {
             sx={{textTransform: 'none', '&:hover': {color: '#fff', opacity: .8}}}
             className="!text-white"
           >
-            See prototype (early preview)
+            Try Image Search (prototype preview)
           </Button>
-        </div>
-      </Card>
-      <Card to="./labs/ptz-yolo" className="flex ltr">
-        <img className="md:max-w-64 max-w-32 rounded-s-xl"
-          alt="deer detectection with PTZ camera" src={PTZYolo} />
-        <div className="m-4">
-          <h3 className="flex justify-between items-center">
-            <Link to="./labs/ptz-yolo" className="nav-link">PTZ-YOLO</Link>
-            <a
-              className="github-icon"
-              href="https://github.com/waggle-sensor/ptz-app"
-              target="_blank"
-              rel="noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              aria-label="ptz app github"
-            />
-          </h3>
-          <p>
-            This lab project is about turning Pan-Tilt-Zoom (PTZ)
-            cameras into smart, autonomous observers for wildlife, ecosystem hazards,
-            and research. Using AI-driven object detection, it scans, zooms, and captures
-            key images––eliminating constant video feeds while running autonomously at the edge. <Link to="./labs/ptz-yolo">Read more...</Link>
-          </p>
         </div>
       </Card>
       <Card to="./labs/sage-mcp" className="flex ltr">
@@ -91,10 +68,32 @@ export default function LabsIndex() {
           </p>
         </div>
       </Card>
+      <Card to="./labs/ptz-yolo" className="flex ltr">
+        <img className="md:max-w-64 max-w-32 rounded-s-xl"
+          alt="deer detectection with PTZ camera" src={PTZYolo} />
+        <div className="m-4">
+          <h3 className="flex justify-between items-center">
+            <Link to="./labs/ptz-yolo" className="nav-link">PTZ-YOLO</Link>
+            <a
+              className="github-icon"
+              href="https://github.com/waggle-sensor/ptz-app"
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              aria-label="ptz app github"
+            />
+          </h3>
+          <p>
+            This lab project is about turning Pan-Tilt-Zoom (PTZ)
+            cameras into smart, autonomous observers for wildlife, ecosystem hazards,
+            and research. Using AI-driven object detection, it scans, zooms, and captures
+            key images––eliminating constant video feeds while running autonomously at the edge. <Link to="./labs/ptz-yolo">Read more...</Link>
+          </p>
+        </div>
+      </Card>
     </Root>
   )
 }
-
 
 const Root = styled.div`
   p {
