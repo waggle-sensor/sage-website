@@ -27,8 +27,8 @@ export default function LabsIndex() {
             />
           </h3>
           <p>
-            AI-powered image search and retrieval enables intuitive exploration of large-scale datasets. The tool leverages
-            the NSF National Research Platform infrastructure. Users can efficiently locate relevant
+            AI-powered image search and retrieval enables intuitive, semantic, exploration of large-scale 
+            datasets using resources hosted on the NSF National Research Platform. Users can efficiently locate relevant
             images based on content rather than keywords or metadata, streamlining 
             research and analysis. <Link to="./labs/image-search">Read more...</Link>
           </p>
