@@ -75,7 +75,7 @@ export default function LabsIndex() {
             sx={{textTransform: 'none', '&:hover': {color: '#fff', opacity: .8}}}
             className="!text-white"
           >
-            TL;DR: Try install now! (prototype)
+            TL;DR: Install now! (prototype)
           </Button>
         </div>
       </Card>
