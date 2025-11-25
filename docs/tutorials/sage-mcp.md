@@ -11,6 +11,8 @@ The Sage MCP Server brings the power of natural language to scientific edge comp
 
 ## What is Sage MCP?
 
+![Sage MCP Client Overview](./images/sage_mcp_client_overview.png)
+
 Sage MCP connects AI-powered tools like Cursor, VSCode, and other IDEs to the Sage cyberinfrastructure through the Model Context Protocol (MCP). Think of it as having a knowledgeable assistant who understands Sage's data, nodes, sensors, and capabilities, and can help you explore and work with them conversationally.
 
 **Key capabilities:**
@@ -34,7 +36,12 @@ Before you begin, you'll need:
 
 Add the Sage MCP server to your MCP client configuration. 
 
-For **Cursor IDE**, add this to `~/.cursor/mcp.json`:
+For **Cursor IDE**, follow these steps to setup the MCP Server:
+
+![Sage MCP Cursor setup](./images/sage_mcp_cursor_setup.jpg)
+
+1. Navigate to **Settings -> Tools & MCP** and click **+ New MCP Server**.
+2. Add this to `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -72,13 +79,15 @@ For **VSCode** IDE, follow these steps to setup the MCP Server:
 }
 ```
 
-Alternatively, run the MCP: Add Server command from the Command Palette, choose the type of MCP server to add and provide the server information. Next, select Workspace to add the server to the .vscode/mcp.json file in your workspace.
+Alternatively, run the **MCP: Add Server** command from the Command Palette, choose the type of MCP server to add and provide the server information. Next, select Workspace to add the server to the .vscode/mcp.json file in your workspace.
 
 Replace `{username}` with your Sage username and `{auth_token}` with your access token from the portal.
 
 ### Your first query
 
-Once configured, restart your IDE and try asking:
+![Sage MCP chat query](./images/sage_mcp_chat_example.gif)
+
+Once configured, restart your IDE and try asking in the chat window:
 
 ```
 "List available Sage nodes"
@@ -403,7 +412,7 @@ If you need access to protected data, [contact the Sage team](/docs/contact-us).
 
 ## Image proxy for easy viewing
 
-The server includes an image proxy that generates browser-accessible URLs:
+The server includes an image proxy that generates browser-accessible pre-signed URLs:
 
 ```
 You: "Get me a shareable URL for recent images from node W097"
@@ -471,15 +480,3 @@ The Sage MCP server provides over 30 tools organized into categories. Your AI as
 - `ask_sage_docs` - Ask questions about Sage documentation
 - `sage_faq` - Get FAQ answers
 - `search_sage_docs` - Search documentation
-
-
-## Additional resources
-
-- [Sage Portal](https://portal.sagecontinuum.org) - Account management and credentials
-- [Sage Documentation](https://sagecontinuum.org/docs) - Complete Sage documentation
-- [Model Context Protocol](https://modelcontextprotocol.io) - Learn about MCP
-- [Python Sage Data Client](https://pypi.org/project/sage-data-client/) - Python API
-- [GitHub Repository](https://github.com/waggle-sensor/sage-mcp) - Source code and issues
-
-
-The Sage MCP server makes edge computing accessible through conversation. Start exploring, and don't hesitate to ask questions, the system is designed to help guide you through the possibilities.
