@@ -8,7 +8,7 @@ The Sage MCP Server brings the power of natural language to scientific edge comp
 
 ## What is Sage MCP?
 
-Sage MCP connects AI-powered tools like Cursor, VSCode, and Claude to the Sage cyberinfrastructure through the Model Context Protocol (MCP). Think of it as having a knowledgeable assistant who understands Sage's data, nodes, sensors, and capabilities, and can help you explore and work with them conversationally.
+Sage MCP connects AI-powered tools like Cursor, VSCode, and other IDEs to the Sage cyberinfrastructure through the Model Context Protocol (MCP). Think of it as having a knowledgeable assistant who understands Sage's data, nodes, sensors, and capabilities, and can help you explore and work with them conversationally.
 
 **Key capabilities:**
 - Query real-time sensor data from nodes across the US
@@ -29,7 +29,9 @@ Before you begin, you'll need:
 
 ### Configuration
 
-Add the Sage MCP server to your MCP client configuration. For **Cursor IDE**, add this to `~/.cursor/mcp.json`:
+Add the Sage MCP server to your MCP client configuration. 
+
+For **Cursor IDE**, add this to `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -386,22 +388,6 @@ Response:
 
 Use get_node_info(node_id) for detailed specifications.
 ```
-
-## Authentication
-
-Sage MCP supports multiple authentication methods for accessing data.
-
-### Token format
-
-Authentication tokens use the format: `username:access_token`
-
-Example: `myusername:9d2183bd5c25df6716e97e5fdafdbcbf4uocb083`
-
-### Getting your access token
-
-1. Visit [portal.sagecontinuum.org/account/access](https://portal.sagecontinuum.org/account/access)
-2. Sign in with your Sage account
-3. Copy your access token from the credentials section
 
 ### Protected data access
 
