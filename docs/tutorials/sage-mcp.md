@@ -4,6 +4,9 @@ sidebar_position: 8
 
 # Sage MCP Server
 
+![Sage MCP Overview](./images/sage_mcp_overview.png)
+
+
 The Sage MCP Server brings the power of natural language to scientific edge computing. Instead of writing scripts or learning APIs, simply ask questions in plain English to query sensor data, discover plugins, search images, and deploy edge applications across 100+ nodes worldwide.
 
 ## What is Sage MCP?
