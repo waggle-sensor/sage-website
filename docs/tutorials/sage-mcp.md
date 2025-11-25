@@ -147,31 +147,31 @@ Now let's find out what these cameras are actually looking at:
 **Response:**
 
 ```
-🖼️ Image Search Results for: 'Images from node W06C'
+Image Search Results for: 'Images from node W06C'
 Found 21 matching images
 1. sample.jpg
-  📍 Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
-  📅 Captured: 25-07-24 05:00 Z
-  🎯 Relevance Score: 0.349
-  📝 caption: The image presents a thermal infrared (TIR) anomaly map derived from a drone-based thermal sensor, likely capturing a forested area. The left panel displays a false-color composite, where ...
-  🔗 Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=...
-  🔗 Direct URL: https://storage.sagecontinuum.org/api/v1/data/...
+  Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
+  Captured: 25-07-24 05:00 Z
+  Relevance Score: 0.349
+  caption: The image presents a thermal infrared (TIR) anomaly map derived from a drone-based thermal sensor, likely capturing a forested area. The left panel displays a false-color composite, where ...
+  Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=...
+  Direct URL: https://storage.sagecontinuum.org/api/v1/data/...
 
 2. sample.jpg
-  📍 Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
-  📅 Captured: 25-07-24 16:00 Z
-  🎯 Relevance Score: 0.335
-  📝 caption: The image presents a thermal infrared (TIR) and visible light composite of a coniferous forest, showcasing the distinct temperature differences between vegetation and the ground. The TIR i...
-  🔗 Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=...
-  🔗 Direct URL: https://storage.sagecontinuum.org/api/v1/data/...
+  Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
+  Captured: 25-07-24 16:00 Z
+  Relevance Score: 0.335
+  caption: The image presents a thermal infrared (TIR) and visible light composite of a coniferous forest, showcasing the distinct temperature differences between vegetation and the ground. The TIR i...
+  Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=...
+  Direct URL: https://storage.sagecontinuum.org/api/v1/data/...
 
 3. sample.jpg
-  📍 Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
-  📅 Captured: 25-07-24 07:00 Z
-  🎯 Relevance Score: 0.245
-  📝 caption: The image presents a thermal infrared (TIR) and visible light composite of a forested area, likely captured during nighttime or under low-light conditions. The TIR image (left) displays a ...
-  🔗 Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=...
-  🔗 Direct URL: https://storage.sagecontinuum.org/api/v1/data/...
+  Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
+  Captured: 25-07-24 07:00 Z
+  Relevance Score: 0.245
+  caption: The image presents a thermal infrared (TIR) and visible light composite of a forested area, likely captured during nighttime or under low-light conditions. The TIR image (left) displays a ...
+  Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=...
+  Direct URL: https://storage.sagecontinuum.org/api/v1/data/...
 
 ...
 ```
@@ -249,20 +249,20 @@ You: "Show me all image plugin data from node W06C in the last hour"
 
 ```
 Response:
-🖼️ Image Search Results for: 'Images from node W06C'
+Image Search Results for: 'Images from node W06C'
 Found 21 matching images
   1. sample.jpg
-  📍 Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
-  📅 Captured: 25-07-24 05:00 Z
-  🎯 Relevance Score: 0.349
-  📝 caption: The image presents a thermal infrared (TIR) anomaly map derived from a drone-based thermal sensor, likely capturing a forested area. The left panel displays a false-color composite, where ...
-  🔗 Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=..
-  🔗 Direct URL: https://storage.sagecontinuum.org/api/v1/data/..
+  Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
+  Captured: 25-07-24 05:00 Z
+  Relevance Score: 0.349
+  caption: The image presents a thermal infrared (TIR) anomaly map derived from a drone-based thermal sensor, likely capturing a forested area. The left panel displays a false-color composite, where ...
+  Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=..
+  Direct URL: https://storage.sagecontinuum.org/api/v1/data/..
   2. sample.jpg
-  📍 Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
-  📅 Captured: 25-07-24 16:00 Z
-  🎯 Relevance Score: 0.335
-  📝 caption: The image presents a thermal infrared
+  Node: W06C | Location: Amk Ranch Rd, Moran, WY 83013 | Camera: mobotix
+  Captured: 25-07-24 16:00 Z
+  Relevance Score: 0.335
+  caption: The image presents a thermal infrared
 ```
 
 ### Image search and discovery
@@ -275,19 +275,19 @@ You: "Show me images of volcanoes"
 
 ```
 Response:
-🖼️ Image Search Results for: 'volcanoes'
+Image Search Results for: 'volcanoes'
 Found 25 matching images
 1. sample.jpg
-  📍 Node: W097 | Location: Hawaii Volcanoes National Park, Pahoa, HI 96778 | Camera: bottom_camera
-  📅 Captured: 25-07-23 23:10 Z
-  🎯 Relevance Score: 0.649
-  📝 caption: An aerial view showcases the volcanic landscape of Hawaiʻi Volcanoes National Park, specifically focusing on the interaction between dense, mature cloud forest vegetation and the active Kī...
-  🔗 Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=..
-  🔗 Direct URL: https://storage.sagecontinuum.org/api/v1/data/..
+  Node: W097 | Location: Hawaii Volcanoes National Park, Pahoa, HI 96778 | Camera: bottom_camera
+  Captured: 25-07-23 23:10 Z
+  Relevance Score: 0.649
+  caption: An aerial view showcases the volcanic landscape of Hawaiʻi Volcanoes National Park, specifically focusing on the interaction between dense, mature cloud forest vegetation and the active Kī...
+  Proxy URL: https://mcp.sagecontinuum.org/proxy/image?pt=..
+  Direct URL: https://storage.sagecontinuum.org/api/v1/data/..
 2. sample.jpg
-  📍 Node: W097 | Location: Hawaii Volcanoes National Park, Pahoa, HI 96778 | Camera: bottom_camera
-  📅 Captured: 25-07-09 23:10 Z
-  🎯 Relevance Score: 0.121
+  Node: W097 | Location: Hawaii Volcanoes National Park, Pahoa, HI 96778 | Camera: bottom_camera
+  Captured: 25-07-09 23:10 Z
+  Relevance Score: 0.121
 ...
 ```
 
@@ -299,20 +299,20 @@ You: "Which nodes have views of mountains?"
 
 ```
 Response:
-🎥 Found 4 nodes with cameras capturing 'mountains' features:
+Found 4 nodes with cameras capturing 'mountains' features:
 1. Node W045
-  📍 Location: 102 S 200 E, Salt Lake City, UT 84111
-  📊 Matching images: 9
+  Location: 102 S 200 E, Salt Lake City, UT 84111
+  Matching images: 9
   Example images:
   sample.jpg
   Captured: 25-07-30 21:00 Z
   caption: The image presents an aerial view of a cityscape situated at the foothills of a mountain range under a predominantly clear blue sky with scat
-  🔗 View: https://mcp.sagecontinuum.org/proxy/image?pt=..
+  View: https://mcp.sagecontinuum.org/proxy/image?pt=..
 2. Node W029
-  📍 Location: Utah Natural History Museum
+  Location: Utah Natural History Museum
   301 Wakara Way
   Salt Lake City, UT 84108
-  📊 Matching images: 8
+  Matching images: 8
 ...
 ```
 
@@ -326,7 +326,7 @@ You: "Create a plugin to detect flowering plants using the camera"
 
 ```
 Response:
-✅ Plugin 'flowering-plant-detector' created successfully at ./flowering-plant-detector
+Plugin 'flowering-plant-detector' created successfully at ./flowering-plant-detector
 
 The plugin includes:
 - YOLOv8 model configuration for plant detection
@@ -381,21 +381,21 @@ You: "List all nodes in Hawaii"
 ```
 Response:
 1. W069 - Lahaina, Maui
-  📍 Location: 980 Lahainaluna Rd, Lahaina, HI 96761
-  🔧 Hardware ID: 000048B02D3AE2DB
-  📊 Status: Deployed
-  🎥 Sensors: Top camera, bottom camera, BME280, GPS, BME680, microphone, raingauge
+  Location: 980 Lahainaluna Rd, Lahaina, HI 96761
+  Hardware ID: 000048B02D3AE2DB
+  Status: Deployed
+  Sensors: Top camera, bottom camera, BME280, GPS, BME680, microphone, raingauge
 2. W071 - Kaneohe, Oahu
-  📍 Location: 45 Kulauli St, Kaneohe, HI 96744
-  🔧 Hardware ID: 000048B02D3AE31E
-  📊 Status: Deployed
-  🎥 Features: Mountain views (Ko'olau Range), PTZ camera, meteorological sensors
+  Location: 45 Kulauli St, Kaneohe, HI 96744
+  Hardware ID: 000048B02D3AE31E
+  Status: Deployed
+  Features: Mountain views (Ko'olau Range), PTZ camera, meteorological sensors
 3. W097 - Hawaii Volcanoes National Park, Big Island
-  📍 Location: Hawaii Volcanoes National Park, Pahoa, HI 96778
-  🔧 Hardware ID: 000048B02DD3C427
-  📊 Status: Deployed
-  🎥 Sensors: Top camera, bottom camera, PTZ camera, Mobotix thermal camera, WXT weather station, AQT air quality sensor
-  🌋 Special: Monitors Kilauea volcano with thermal imaging and captures volcanic activity
+  Location: Hawaii Volcanoes National Park, Pahoa, HI 96778
+  Hardware ID: 000048B02DD3C427
+  Status: Deployed
+  Sensors: Top camera, bottom camera, PTZ camera, Mobotix thermal camera, WXT weather station, AQT air quality sensor
+  Special: Monitors Kilauea volcano with thermal imaging and captures volcanic activity
 ...
 
 Use get_node_info(node_id) for detailed specifications.
@@ -420,12 +420,12 @@ You: "Get me a shareable URL for recent images from node W097"
 
 ```
 Response:
-🖼️ Pre-Signed Sage Image URL Generated
+Pre-Signed Sage Image URL Generated
 
-✨ Pre-Signed URL (No Auth Required):
+Pre-Signed URL (No Auth Required):
 https://mcp.sagecontinuum.org/proxy/image?pt=...
 
-⏰ Expires: 2024-01-15 17:15:30 UTC (in 5 minutes)
+Expires: 2024-01-15 17:15:30 UTC (in 5 minutes)
 
 This URL can be:
 - Opened directly in any browser (no authentication needed)
