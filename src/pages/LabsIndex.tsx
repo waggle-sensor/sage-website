@@ -27,9 +27,9 @@ export default function LabsIndex() {
             />
           </h3>
           <p>
-            AI-powered image search and retrieval enables intuitive, semantic, exploration of large-scale 
+            AI-powered image search and retrieval enables intuitive, semantic, exploration of large-scale
             datasets using resources hosted on the NSF National Research Platform. Users can efficiently locate relevant
-            images based on content rather than keywords or metadata, streamlining 
+            images based on content rather than keywords or metadata, streamlining
             research and analysis. <Link to="./labs/image-search">Read more...</Link>
           </p>
           {/* todo: fix this styling override hack */}
@@ -64,14 +64,14 @@ export default function LabsIndex() {
             Control AI-enabled edge nodes through natural conversation. Use LLM-powered IDEs like Cursor and
             Cline to query sensors, find edge apps, draft python code, and run jobs. Explore agentic
             instrument control.  Ask “What’s the temperature in Hawaii?” or “Write a Yolo plugin,”
-            and the <i><b>prototype</b></i> Sage MCP chains tools, handles auth, and lets you explore 
+            and the <i><b>prototype</b></i> Sage MCP chains tools, handles auth, and lets you explore
             vibe-coding conversations. <Link to="./labs/sage-mcp">Read more...</Link>
           </p>
           {/* todo: fix this styling override hack */}
           <Button
             variant="contained"
-            href="https://github.com/waggle-sensor/sage-mcp/blob/main/docs/GETTING_STARTED.md#-quick-setup-with-cursor-ide-recommended"
-            onClick={(e) => e.stopPropagation()}
+            component={Link}
+            to="docs/tutorials/sage-mcp#getting-started"
             sx={{textTransform: 'none', '&:hover': {color: '#fff', opacity: .8}}}
             className="!text-white"
           >
