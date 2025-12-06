@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
     to="/docs/tutorials/sage-mcp#getting-started"
     className="!normal-case text-nowrap"
   >
-    <span>Install Now</span>
+    <span>Try It Now</span>
   </Button>
 </div>
 
