@@ -1,6 +1,17 @@
 import ImageSearchVideo from './Image_Search.mp4'
+import { Button } from '@mui/material'
 
-# Sage Image Search
+<div className="flex justify-between items-start">
+  # Sage Image Search
+
+  <Button
+    variant="contained"
+    href="https://portal.sagecontinuum.org/labs/image-search"
+    className="!normal-case"
+  >
+    <span>Try It Now</span>
+  </Button>
+</div>
 
 In the age of AI-powered tools, searching through thousands of images shouldn't just be about basic metadata. What if you could search by meaning? That’s exactly what this project aims to do: combine the best of **semantic understanding** and **keyword precision** into one powerful **hybrid image search engine** to help you find relevant image series for your project.
 

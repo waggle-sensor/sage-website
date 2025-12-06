@@ -1,6 +1,21 @@
 import SageMCPVideo from './sage-mcp-video.mp4'
+import { Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 
-# Sage MCP: AI-Powered Edge Computing Interface
+
+<div className="flex justify-between items-start">
+  # Sage MCP: AI-Powered Edge Computing Interface
+
+  <Button
+    variant="contained"
+    component={Link}
+    to="/docs/tutorials/sage-mcp#getting-started"
+    className="!normal-case text-nowrap"
+  >
+    <span>Install Now</span>
+  </Button>
+</div>
+
 
 In the rapidly evolving landscape of AI and edge computing, accessing complex cyberinfrastructure shouldn't require memorizing APIs or writing custom scripts. What if you could simply *ask* for what you need in plain English? That's the vision behind **Sage MCP**, a **Model Context Protocol** server that bridges the gap between Large Language Models and the Sage edge computing ecosystem, making advanced sensor networks accessible through natural conversation.
 
