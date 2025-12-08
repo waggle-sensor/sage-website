@@ -81,7 +81,7 @@ export default function LabsIndex() {
                   onClick={(e) => e.stopPropagation()}
                   className="!text-white !normal-case"
                 >
-                  Install Now
+                  Try It Now
                 </Button>
                 <Button
                   variant="outlined"
