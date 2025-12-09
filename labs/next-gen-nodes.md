@@ -2,4 +2,4 @@
 
 ## Designing and building Sage Grande's newest set of nodes.
 
-(More info coming soon!)http://localhost:3000/labs/ptz-yolo
+(More info coming soon!)
