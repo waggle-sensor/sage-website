@@ -2,22 +2,13 @@
 sidebar_label: Image Search
 sidebar_position: 1
 ---
-
 import ImageSearchVideo from './img/image-search/Image_Search.mp4'
-import { Button } from '@mui/material'
+import LabButtons from './components/LabButtons'
 
 
 # Sage Image Search
 
-<div className="flex justify-between mb-6">
-  <Button
-    variant="contained"
-    href="https://portal.sagecontinuum.org/labs/image-search"
-    className="!normal-case"
-  >
-    <span>Try It Now</span>
-  </Button>
-</div>
+<LabButtons id="image-search" />
 
 In the age of AI-powered tools, searching through thousands of images shouldn't just be about basic metadata. What if you could search by meaning? That’s exactly what this project aims to do: combine the best of **semantic understanding** and **keyword precision** into one powerful **hybrid image search engine** to help you find relevant image series for your project.
 
@@ -93,4 +84,5 @@ As our object database continues to grow, the challenge of finding the right ima
 
 If you’re working on something similar or curious to dive deeper, feel free to reach out.
 
-[Browse the project code on GitHub](https://github.com/waggle-sensor/sage-vectordb-example/tree/main/HybridSearch_example)
+<LabButtons id="image-search" />
+

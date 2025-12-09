@@ -2,8 +2,11 @@
 sidebar_label: PTZ-App
 sidebar_position: 3
 ---
+import LabButtons from './components/LabButtons'
 
 # PTZ-App: Smarter Cameras for Wildlife and Scene Monitoring
+
+<LabButtons id="ptz-app" />
 
 Whether you're monitoring wildlife, securing an area, or collecting snapshots from dynamic outdoor scenes, this application helps you do it automatically, intelligently, and efficiently.
 
@@ -222,3 +225,5 @@ The project has several exciting directions ahead:
 ## Get Involved
 
 If you are working on smart sensing, wildlife AI, or remote image collection, we invite you to explore this project. It is open, modular, and ready for collaboration. Contributions and issues are welcome.
+
+<LabButtons id="ptz-app" />

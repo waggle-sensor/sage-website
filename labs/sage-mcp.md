@@ -3,24 +3,15 @@ sidebar_label: MCP (Model Context Protocol)
 sidebar_position: 2
 ---
 
-import SageMCPVideo from './img/mcp/sage-mcp-video.mp4'
 import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
+import SageMCPVideo from './img/mcp/sage-mcp-video.mp4'
+import LabButtons from './components/LabButtons'
 
 
 # Sage MCP: AI-Powered Edge Computing Interface
 
-<div className="flex justify-between mb-6">
-  <Button
-    variant="contained"
-    component={Link}
-    to="/docs/tutorials/sage-mcp#getting-started"
-    className="!normal-case text-nowrap"
-  >
-    <span>Try It Now</span>
-  </Button>
-</div>
-
+<LabButtons id="sage-mcp" />
 
 In the rapidly evolving landscape of AI and edge computing, accessing complex cyberinfrastructure shouldn't require memorizing APIs or writing custom scripts. What if you could simply *ask* for what you need in plain English? That's the vision behind **Sage MCP**, a **Model Context Protocol** server that bridges the gap between Large Language Models and the Sage edge computing ecosystem, making advanced sensor networks accessible through natural conversation.
 
@@ -256,5 +247,6 @@ Sage MCP is built on open standards and open source:
 
 We welcome contributions, feedback, and collaboration. Whether you're building similar infrastructure integration tools or exploring AI-powered interfaces for scientific computing, we'd love to hear from you.
 
-[Browse the project code on GitHub](https://github.com/waggle-sensor/sage-mcp)
+
+<LabButtons id="sage-mcp" />
 
