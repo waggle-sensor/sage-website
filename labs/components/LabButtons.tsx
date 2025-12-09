@@ -10,6 +10,7 @@ type LabButtonsProps = {
 export default function LabButtons({ id, variant = 'horizontal' }: LabButtonsProps) {
   const project = labProjects.find(p => p.id === id)
 
+  console.log('project', project)
   if (!project) {
     return null
   }

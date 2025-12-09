@@ -56,8 +56,8 @@ export const labProjects: LabProject[] = [
     readMoreUrl: './labs/sage-mcp'
   },
   {
-    id: 'ptz-App',
-    title: 'PTZ-App',
+    id: 'ptz-app',
+    title: 'PTZ App',
     description: 'Using AI and Pan-Tilt-Zoom cameras for autonomous wildlife, hazard observation, and more. AI-driven detection scans, zooms, and captures key images at the edge using models like YOLO and Florence.',
     image: PTZYolo,
     imageAlt: 'deer detectection with PTZ camera',
