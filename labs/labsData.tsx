@@ -14,14 +14,13 @@ export type LabProject = {
   placeholder?: {
     text: string
   }
-  detailsUrl: string
-  githubUrl?: string
   primaryButton?: {
     text: string
     url: string
     external?: boolean
   }
-  readMoreUrl?: string
+  readMoreUrl: string
+  githubUrl?: string
 }
 
 export const labProjects: LabProject[] = [
@@ -31,14 +30,13 @@ export const labProjects: LabProject[] = [
     description: 'AI-powered semantic image search enables intuitive exploration of large-scale datasets. Locate relevant images based on visual content rather than metadata.',
     image: ImageSearch,
     imageAlt: 'screenshot of image searching for volcanoes',
-    detailsUrl: './labs/image-search',
-    githubUrl: 'https://github.com/waggle-sensor/sage-vectordb-example',
     primaryButton: {
       text: 'Try It Now',
       url: 'https://portal.sagecontinuum.org/labs/image-search',
       external: true
     },
-    readMoreUrl: './labs/image-search'
+    readMoreUrl: './labs/image-search',
+    githubUrl: 'https://github.com/waggle-sensor/sage-vectordb-example'
   },
   {
     id: 'sage-mcp',
@@ -46,14 +44,13 @@ export const labProjects: LabProject[] = [
     description: 'Control edge nodes through natural conversation. Use AI-powered IDEs to query sensors, find apps, and run jobs. Ask "What\'s the temperature in Hawaii?" and let the prototype MCP handle the rest.',
     image: SageMCP,
     imageAlt: 'screenshot of prompting with mcp',
-    detailsUrl: './labs/sage-mcp',
-    githubUrl: 'https://github.com/waggle-sensor/sage-mcp',
     primaryButton: {
       text: 'Try It Now',
       url: 'docs/tutorials/sage-mcp#getting-started',
       external: false
     },
-    readMoreUrl: './labs/sage-mcp'
+    readMoreUrl: './labs/sage-mcp',
+    githubUrl: 'https://github.com/waggle-sensor/sage-mcp'
   },
   {
     id: 'ptz-app',
@@ -74,9 +71,8 @@ export const labProjects: LabProject[] = [
         </a> in Wyoming
       </div>
     ),
-    detailsUrl: './labs/ptz-app',
-    githubUrl: 'https://github.com/waggle-sensor/ptz-app',
-    readMoreUrl: './labs/ptz-app'
+    readMoreUrl: './labs/ptz-app',
+    githubUrl: 'https://github.com/waggle-sensor/ptz-app'
   },
   {
     id: 'next-gen-nodes',
@@ -85,7 +81,6 @@ export const labProjects: LabProject[] = [
     placeholder: {
       text: 'Next-Generation Nodes\n(Coming Soon!)'
     },
-    detailsUrl: './labs/next-gen-nodes',
     readMoreUrl: './labs/next-gen-nodes',
     // githubUrl: '_____add_repo_link_here____'
   }

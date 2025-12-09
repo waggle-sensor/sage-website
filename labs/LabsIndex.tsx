@@ -11,79 +11,86 @@ export default function LabsIndex() {
   return (
     <Root className="my-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
-        {labProjects.map((project) => (
-          <Card key={project.detailsUrl} to={project.detailsUrl} className="flex flex-col h-full">
-            {/* Image or Placeholder */}
-            {project.placeholder ? (
-              <div className="w-full h-48 flex items-center justify-center bg-gray-200 rounded-t-xl">
-                <h3 className="text-2xl text-center whitespace-pre-line">{project.placeholder.text}</h3>
-              </div>
-            ) : (
-              <div className="relative">
-                <img
-                  src={project.image}
-                  className="w-full h-48 object-cover rounded-t-xl"
-                  alt={project.imageAlt}
-                />
-                {project.imageOverlay}
-              </div>
-            )}
+        {labProjects.map((project) => {
+          const {
+            id, title, description, image, imageAlt, imageOverlay, placeholder,
+            primaryButton, readMoreUrl, githubUrl
+          } = project
 
-            {/* Content */}
-            <div className="m-4 flex flex-col flex-grow">
-              <h3 className="flex justify-between items-center">
-                {project.title}
-              </h3>
-              <p className="flex-grow text-[#444]">
-                {project.description}
-              </p>
+          return (
+            <Card key={id} to={readMoreUrl} className="flex flex-col h-full">
+              {/* Image or Placeholder */}
+              {placeholder ? (
+                <div className="w-full h-48 flex items-center justify-center bg-gray-200 rounded-t-xl">
+                  <h3 className="text-2xl text-center whitespace-pre-line">{placeholder.text}</h3>
+                </div>
+              ) : (
+                <div className="relative">
+                  <img
+                    src={image}
+                    className="w-full h-48 object-cover rounded-t-xl"
+                    alt={imageAlt}
+                  />
+                  {imageOverlay}
+                </div>
+              )}
 
-              {/* Actions */}
-              <div className="flex justify-between items-center">
-                <div className="flex gap-4">
-                  {project.primaryButton && (
-                    <Button
-                      variant="contained"
-                      {...(project.primaryButton.external
-                        ? { href: project.primaryButton.url }
-                        : { component: Link, to: project.primaryButton.url }
-                      )}
-                      onClick={(e) => e.stopPropagation()}
-                      className="!text-white !normal-case"
-                    >
-                      {project.primaryButton.text}
-                    </Button>
-                  )}
-                  {project.readMoreUrl && (
-                    <Button
-                      variant="outlined"
-                      component={Link}
-                      to={project.readMoreUrl}
-                      onClick={(e) => e.stopPropagation()}
-                      className="!normal-case"
-                      aria-label={`Read more about ${project.title}`}
-                    >
+              {/* Content */}
+              <div className="m-4 flex flex-col flex-grow">
+                <h3 className="flex justify-between items-center">
+                  {title}
+                </h3>
+                <p className="flex-grow text-[#444]">
+                  {description}
+                </p>
+
+                {/* Actions */}
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-4">
+                    {primaryButton && (
+                      <Button
+                        variant="contained"
+                        {...(primaryButton.external
+                          ? { href: primaryButton.url }
+                          : { component: Link, to: primaryButton.url }
+                        )}
+                        onClick={(e) => e.stopPropagation()}
+                        className="!text-white !normal-case"
+                      >
+                        {primaryButton.text}
+                      </Button>
+                    )}
+                    {readMoreUrl && (
+                      <Button
+                        variant="outlined"
+                        component={Link}
+                        to={readMoreUrl}
+                        onClick={(e) => e.stopPropagation()}
+                        className="!normal-case"
+                        aria-label={`Read more about ${title}`}
+                      >
                       Read More
-                    </Button>
+                      </Button>
+                    )}
+                  </div>
+
+                  {githubUrl && (
+                    <IconButton
+                      href={githubUrl}
+                      onClick={(e) => e.stopPropagation()}
+                      className="!text-black"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${title} on GitHub`}
+                    >
+                      <GitHub />
+                    </IconButton>
                   )}
                 </div>
-
-                {project.githubUrl && (
-                  <IconButton
-                    href={project.githubUrl}
-                    onClick={(e) => e.stopPropagation()}
-                    className="!text-black"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Open ${project.title} on GitHub`}
-                  >
-                    <GitHub />
-                  </IconButton>
-                )}
               </div>
-            </div>
-          </Card>
-        ))}
+            </Card>
+          )
+        })}
       </div>
     </Root>
   )
