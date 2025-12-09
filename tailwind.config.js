@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx,md,mdx}',
+    './team/**/*.{js,jsx,ts,tsx,md,mdx}',
     './labs/**/*.{js,jsx,ts,tsx,md,mdx}'
   ],
   theme: {
