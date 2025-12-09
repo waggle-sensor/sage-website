@@ -1,11 +1,16 @@
-import SageMCPVideo from './sage-mcp-video.mp4'
+---
+sidebar_label: MCP (Model Context Protocol)
+sidebar_position: 2
+---
+
+import SageMCPVideo from './img/mcp/sage-mcp-video.mp4'
 import { Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 
-<div className="flex justify-between items-start">
-  # Sage MCP: AI-Powered Edge Computing Interface
+# Sage MCP: AI-Powered Edge Computing Interface
 
+<div className="flex justify-between mb-6">
   <Button
     variant="contained"
     component={Link}

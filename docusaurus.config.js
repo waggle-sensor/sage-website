@@ -240,6 +240,14 @@ export default {
     ], [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'labs',
+        path: 'labs',
+        routeBasePath: 'labs',
+        breadcrumbs: false
+      },
+    ], [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'team',
         path: 'team',
         routeBasePath: 'team',

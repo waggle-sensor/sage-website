@@ -1,9 +1,15 @@
-import ImageSearchVideo from './Image_Search.mp4'
+---
+sidebar_label: Image Search
+sidebar_position: 1
+---
+
+import ImageSearchVideo from './img/image-search/Image_Search.mp4'
 import { Button } from '@mui/material'
 
-<div className="flex justify-between items-start">
-  # Sage Image Search
 
+# Sage Image Search
+
+<div className="flex justify-between mb-6">
   <Button
     variant="contained"
     href="https://portal.sagecontinuum.org/labs/image-search"
