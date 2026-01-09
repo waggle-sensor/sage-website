@@ -1,6 +1,7 @@
 import { Button } from '@mui/material'
 import { labProjects } from '../labsData'
 import { GitHub } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 type LabButtonsProps = {
   id: string
@@ -10,7 +11,6 @@ type LabButtonsProps = {
 export default function LabButtons({ id, variant = 'horizontal' }: LabButtonsProps) {
   const project = labProjects.find(p => p.id === id)
 
-  console.log('project', project)
   if (!project) {
     return null
   }
@@ -26,7 +26,7 @@ export default function LabButtons({ id, variant = 'horizontal' }: LabButtonsPro
           variant="contained"
           {...(project.primaryButton.external
             ? { href: project.primaryButton.url }
-            : { href: project.primaryButton.url }
+            : { to: project.primaryButton.url, component: Link }
           )}
           className="!normal-case"
         >

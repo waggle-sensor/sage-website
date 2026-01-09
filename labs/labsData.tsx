@@ -46,7 +46,7 @@ export const labProjects: LabProject[] = [
     imageAlt: 'screenshot of prompting with mcp',
     primaryButton: {
       text: 'Try It Now',
-      url: 'docs/tutorials/sage-mcp#getting-started',
+      url: '/docs/tutorials/sage-mcp#getting-started',
       external: false
     },
     readMoreUrl: './labs/sage-mcp',
