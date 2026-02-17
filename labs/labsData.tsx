@@ -1,6 +1,7 @@
 import ImageSearch from './img/icons/image-search-icon.png'
 import PTZYolo from './img/icons/ptz-yolo.jpg'
 import SageMCP from './img/icons/sage-mcp-icon.png'
+import HawaiiImg from './img/icons/volcano-placeholder.png'
 
 import { ReactNode } from 'react'
 
@@ -73,6 +74,20 @@ export const labProjects: LabProject[] = [
     ),
     readMoreUrl: './labs/ptz-app',
     githubUrl: 'https://github.com/waggle-sensor/ptz-app'
+  },
+  {
+    id: 'volcano-fire-anomaly',
+    title: 'Volcano, Fire, and Anomaly Detection (coming soon!)',
+    description: 'Detecting volcanic activity, fire, and anomalies using advanced AI models and edge computing.',
+    image: HawaiiImg,
+    imageAlt: 'screenshot of volcano alongside thermal view of volcano',
+    // primaryButton: {
+    //   text: 'Try It Now',
+    //   url: 'https://some_url_or_portal_link_here',
+    //   external: true
+    // },
+    readMoreUrl: './labs/volcano-fire-anomaly',
+    githubUrl: 'https://github.com/waggle-sensor/sage-vectordb-example'
   },
   {
     id: 'next-gen-nodes',
