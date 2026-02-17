@@ -87,7 +87,7 @@ export const labProjects: LabProject[] = [
     //   external: true
     // },
     readMoreUrl: './labs/volcano-fire-anomaly',
-    githubUrl: 'https://github.com/waggle-sensor/sage-vectordb-example'
+    // githubUrl: 'https://github.com/...add_repo_link_here...'
   },
   {
     id: 'next-gen-nodes',
