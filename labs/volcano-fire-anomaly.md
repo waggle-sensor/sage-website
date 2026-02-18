@@ -401,10 +401,8 @@ We did not perform any comparative analysis due to each model requiring differen
 
 ## Future Direction
 
-As requirements change and new ideas are introduced, our approaches must change accordingly. Introducing a temporal feature is one of new requirements. We believe that important information is lost in purely static image comparisons, where sequential images can show animal behaviours, smoke progression, rate of change in water levels, etc. Furthermore, we hope to find a solution to the self learning mechanism without human feedback such that the AI can naturally progress towards better defining its own "decision boundary" accurately.
+As requirements change and new ideas are introduced, our approaches must change accordingly. Introducing a temporal feature is one such requirements. We believe that important information is lost in purely static image comparisons, where sequential images can show animal behaviours, smoke progression, rate of change in water levels, etc. Furthermore, we hope to find a solution to the self learning mechanism without human feedback such that the AI can naturally progress towards better defining its own "decision boundary" accurately.
 
 ## Acknowledgments
 
-- RAPID Award NSF 2346568
-- SGT Award NFS
-- NAIRR Award
+This work was funded in part by the National Science Foundation awards: 2149133, 2201428, 2232862, 2004014, 2003800, 2003387, 2117975, 2138259, 2138286, 2138307, 2137603, and 2138296.
