@@ -11,19 +11,6 @@ import LabButtons from './components/LabButtons'
 
 ## Detecting volcanic activity, fire, and anomalies using advanced AI models and edge computing.
 
-<!-- ## Table of Contents
-
-- [Introduction](#introduction)
-- [Contributions](#contributions)
-- [Experiments](#experiments)
-  - [Object Detection: YOLOv7 Image Detection](#object-detection-yolov7-image-detection)
-  - [Vision Language Models: Moondream2 and GPT](#vision-language-models-moondream2-and-gpt)
-  - [Anomaly Detection: PCA with Resnet Feature Extractor](#anomaly-detection-pca-with-resnet-feature-extractor)
-  - [Anomaly Detection: Dinov3 + Siamese Network Binary Classifier](#anomaly-detection-dinov3--siamese-network-binary-classifier)
-- [Additional Notes](#additional-remarks)
-- [Future Direction](#future-direction)
-- [Acknowledgments](#acknowledgments) -->
-
 ## Introduction
 
 If you need a way to monitor the environment continuously and detect critical events as they happen, this work is for you. As extreme weather events and natural disasters become increasingly frequent, there is a growing need for smart systems that can keep watch over our surroundings 24/7 in real time and flag significant deviations from normal conditions early and reliably—such as wildfires, volcanic eruptions, or severe weather.
@@ -337,7 +324,7 @@ The follow describes an image anomaly detection approach to know if there was si
 
 #### Dataset
 
-The dataset consisted of colored 2560 by 1920 images taken from the [Sage Node W097](https://portal.sagecontinuum.org/node/W097) on the Big Island, overlooking Hawai'i Volcanoes National Park. Images selected were sampled every hour from 06/01/2024 at 8:00 am to 06/21/2024 at 8:00 pm. The whole dataset included 473 images. Eight canonicalized images that captured unique examples of normal scenery in various lighting conditions were selecting to fit the PCA. Another eight as the validation set. The test set included 342 samples of normal and 115 anomalous images. In an effort to better interpret the model's capabilities, two variations of the test sets were created. One set, set A, contained images depicting minor irregularities such as water droplets on lens or blurred regions along with obvious anomalies such as volcanic eruptions or extreme fog. Another set, set B, contains only the extreme anomalies.
+The dataset consisted of colored 2560 by 1920 images taken from the [Sage Node W097](https://portal.sagecontinuum.org/nodes/W097) on the Big Island, overlooking Hawai'i Volcanoes National Park. Images selected were sampled every hour from 06/01/2024 at 8:00 am to 06/21/2024 at 8:00 pm. The whole dataset included 473 images. Eight canonicalized images that captured unique examples of normal scenery in various lighting conditions were selecting to fit the PCA. Another eight as the validation set. The test set included 342 samples of normal and 115 anomalous images. In an effort to better interpret the model's capabilities, two variations of the test sets were created. One set, set A, contained images depicting minor irregularities such as water droplets on lens or blurred regions along with obvious anomalies such as volcanic eruptions or extreme fog. Another set, set B, contains only the extreme anomalies.
 
 #### Evaluation
 
