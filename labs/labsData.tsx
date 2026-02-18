@@ -62,7 +62,7 @@ export const labProjects: LabProject[] = [
     imageOverlay: (
       <div className="absolute bottom-4 left-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded">
         Elk spotted at <a
-          href="https://portal.sagecontinuum.org/node/W06C"
+          href="https://portal.sagecontinuum.org/nodes/W06C"
           target="_blank"
           className="font-bold !text-[#3ca4ff] hover:underline"
           onClick={(e) => e.stopPropagation()}
