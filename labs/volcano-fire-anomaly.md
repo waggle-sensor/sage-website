@@ -35,7 +35,7 @@ The primary goal of this experiment was to utilize the GPU, [Xavier NX](https://
 
 #### Background and Methodology
 
-The base model used for object detection is [YOLOv7](https://arxiv.org/abs/2207.02696) and was finetuned on the [DFire Dataset](https://github.com/gaia-solutions-on-demand/DFireDataset). YOLOv7 was selected because similar models have been demonstrated to run successfully on the Sage Node's hardware and software stack.
+The base model used for object detection is [YOLOv7](https://arxiv.org/abs/2207.02696) and was finetuned on the [DFire Dataset](https://github.com/gaia-solutions-on-demand/DFireDataset). YOLOv7 was selected because similar models have been demonstrated to run successfully on the Sage Node's hardware and software stack; therefore saving us time on testing if newer models would work. Read more in the [Technical Report](img/volcano/assets/GiorgioProject.pdf).
 
 #### Dataset
 
@@ -316,7 +316,7 @@ In an effort to capture events that we don't typically expect, we created a mode
 
 #### Background and Methodology
 
-The follow describes an image anomaly detection approach to know if there was significant changes present at a semantic level in an image. In order to capture and discriminate high level concepts in latent space rather than purely pixel level deductions, Resnet18 was used as a feature extractor forwarding to PCA. PCA acting as the discriminator. Since the PCA has been fitted to a set of existing examples depicting normal, any new unseen images will have their anomalies remove after being reconstructed via the computed PCA. The relative error between the (PCA) vectors allows for the calculation of an anomaly score. Threshold of the relative error is determined by the validation set or a human evaluator. Input to the model are images are down-sampled to 224 by 224 to fit into Resnet18 and the output is an anomaly score.
+The follow describes an image anomaly detection approach to know if there was significant changes present at a semantic level in an image. In order to capture and discriminate high level concepts in latent space rather than purely pixel level deductions, Resnet18 was used as a feature extractor forwarding to PCA. PCA acting as the discriminator. Since the PCA has been fitted to a set of existing examples depicting normal, any new unseen images will have their anomalies remove after being reconstructed via the computed PCA. The relative error between the (PCA) vectors allows for the calculation of an anomaly score. Threshold of the relative error is determined by the validation set or a human evaluator. Input to the model are images are down-sampled to 224 by 224 to fit into Resnet18 and the output is an anomaly score. Learn more in the [Technical Report](img/volcano/assets/dp-pca.pdf).
 
 |            ![img](img/volcano/resnet.png)             |
 | :---------------------------------------------------: |
@@ -378,7 +378,7 @@ The model proposed is an evolution of the PCA approach by augmenting the classif
 
 #### Dataset
 
-Due to manpower limitations for labeling a dataset derived from Sage's historical data, we opted to experiment with artificial dataset generation. The dataset generated, via GPT-Image 1.5, consists of 400 AI generated images and labels equating to 200 image pairs per balanced class with a 80/20/20 split. However, to better evaluate, we created a real world, small, unbalanced, test only set of approximately 70 images pairs constructed from the Sage Sensor's historic data and other online camera sources. During final evaluation, we simply replaced the generated test set; leaving the training and validation set's counts untouched.
+Due to manpower limitations for labeling a dataset derived from Sage's historical data, we opted to experiment with artificial dataset generation. The dataset generated, via GPT-Image 1.5, consists of 400 AI generated images and labels equating to 200 image pairs per balanced class with a 80/10/10 train/test/validation split. However, to better evaluate, we created a real world, small, unbalanced, test only set of approximately 70 images pairs constructed from the Sage Sensor's historic data and other online camera sources. During final evaluation, we simply replaced the generated test set; leaving the training and validation set's counts untouched.
 
 #### Evaluation
 
@@ -401,7 +401,7 @@ We did not perform any comparative analysis due to each model requiring differen
 
 ## Future Direction
 
-As requirements change and new ideas are introduced, our approaches must change accordingly. Introducing a temporal feature is one such requirements. We believe that important information is lost in purely static image comparisons, where sequential images can show animal behaviours, smoke progression, rate of change in water levels, etc. Furthermore, we hope to find a solution to the self learning mechanism without human feedback such that the AI can naturally progress towards better defining its own "decision boundary" accurately.
+As requirements change and new ideas are introduced, our approaches must change accordingly. Introducing a temporal feature is one such requirements. We believe that important information is lost in purely static image comparisons, where sequential images can show animal behaviours, smoke progression, rate of change in water levels, etc. Moreover, We hope to find a continual learning solution to the self learning mechanism without human feedback such that the AI can naturally progress towards better defining its own "decision boundary" accurately. Lastly, with the ongoing deployment of Thor nodes, we expect to see significant improvements in developer experience and usuability! Specifically, we will be able to run larger language model, which typically are more accurate, as a direct consquence of the increase in shared memory.
 
 ## Acknowledgments
 
