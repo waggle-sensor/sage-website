@@ -25,7 +25,7 @@ Markdown text with [links](./hello.md)
 
 ## Links
 
-Regular Markdown links are supported, using url paths or relative file paths.  
+Regular Markdown links are supported, using url paths or relative file paths.
 
 > **Note:** Relative is preferred.
 
@@ -41,10 +41,10 @@ Let's see how to [update a page](./updating-docs.md).
 
 ## Files
 
-Use the same Markdown syntax as links for files (such as PDFs). 
+Use the same Markdown syntax as links for files (such as PDFs).
 
 ```md
-[Wild Sage Node Manual](./pdfs/WSN_GS_V1.pdf)
+[Some PDF](./pdfs/my_pdf.pdf)
 ```
 
 ## Images

@@ -266,7 +266,10 @@ export default {
           }, {
             to: '/science/category/recent-projects',
             from: ['/science']
-          },
+          }, {
+            to: '/docs/node-installation-manuals',
+            from: ['/docs/category/installation-manuals']
+          }
         ],
       },
     ], [

@@ -1,6 +1,6 @@
 ---
-sidebar_label: Getting Started
-sidebar_position: 1
+sidebar_label: Getting started
+sidebar_position: 0
 ---
 
 import { Button, Step, StepLabel, Stepper, StepContent, Chip} from '@mui/material'
@@ -148,7 +148,7 @@ Select the path that best describes your role and goals:
 
 **Key Resources:**
 - [System Architecture](./about/architecture)
-- [WSN Manual](./installation-manuals/wsn-manual)
+- [WSN Manual](./node-installation-manuals)
 - [Plugin Control Tool](./reference-guides/pluginctl)
 - [Edge Scheduler Control Tool](./reference-guides/sesctl)
 
