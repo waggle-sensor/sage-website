@@ -46,7 +46,7 @@ Sage is a national AI research platform that brings artificial intelligence to t
           <StepLabel><big>Do you need to request node access or access to protected data?</big></StepLabel>
           <StepContent>
             {getUser() && <p>Follow the steps here to request node access, scheduling access, or protected file download access:</p>}
-            <Button href="https://portal.sagecontinuum.org/account/access" target="_blank" variant="contained" disabled={!getUser()}>
+            <Button href="https://portal.sagecontinuum.org/request-access" target="_blank" variant="contained" disabled={!getUser()}>
               <span className="normal-case text-[#fff]">Request Access or Join Project</span>
             </Button>
           </StepContent>
@@ -54,7 +54,7 @@ Sage is a national AI research platform that brings artificial intelligence to t
         <Step active={getUser()} expanded={getUser()}>
           <StepLabel><big>Next Steps</big></StepLabel>
           <StepContent>
-            <p>If you’ve already requested access, feel free to take a look below or browse <b><a href="https://portal.sagecontinuum.org" target="_blank" rel="noopener noreferrer">The Portal</a></b> while your account is being approved. Please <b><a href="./contact-us">Contact us</a></b> if you haven't heard from us within 48 hours or if your request is urgent.</p>
+            <p>If you’ve already requested access, feel free to take a look below or browse <b><a href="https://portal.sagecontinuum.org" target="_blank" rel="noopener noreferrer">The Portal</a></b> while your account is being approved. Please <b><a href="./contact-us">Contact Us</a></b> if you haven't heard from us within 48 hours or if your request is urgent.</p>
           </StepContent>
         </Step>
       </Stepper>
