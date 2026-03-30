@@ -1,7 +1,8 @@
 ---
 sidebar_label: PTZ App
-sidebar_position: 3
+sidebar_position: 5
 ---
+
 import LabButtons from './components/LabButtons'
 
 # PTZ App: Smarter Cameras for Wildlife and Scene Monitoring
