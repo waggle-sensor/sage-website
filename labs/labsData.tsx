@@ -2,6 +2,7 @@ import ImageSearch from './img/icons/image-search-icon.png'
 import PTZYolo from './img/icons/ptz-yolo.jpg'
 import SageMCP from './img/icons/sage-mcp-icon.png'
 import HawaiiImg from './img/icons/volcano-placeholder.png'
+import ImageSearchBench from './img/icons/image-search-bench-icon.png'
 
 import { ReactNode } from 'react'
 
@@ -88,6 +89,15 @@ export const labProjects: LabProject[] = [
     // },
     readMoreUrl: './labs/volcano-fire-anomaly',
     // githubUrl: 'https://github.com/...add_repo_link_here...'
+  },
+  {
+    id: 'image-search-bench',
+    title: 'Image Search Benchmarking',
+    description: 'A scalable, AI-driven framework for evaluating and improving image search across models, databases, and domains.',
+    image: ImageSearchBench,
+    imageAlt: 'Example graphs showing results from the image search benchmarking system.',
+    readMoreUrl: './labs/image-search-bench',
+    githubUrl: 'https://github.com/waggle-sensor/sage-nrp-image-search/tree/main/benchmarking'
   },
   {
     id: 'next-gen-nodes',
