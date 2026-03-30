@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import Alert from '@mui/material/Alert'
 
 import * as topojson from 'topojson-client'
 import us from '@site/static/geo/counties-with-pr-10m.json'
@@ -353,6 +355,10 @@ export default function StatusChart() {
 
   const [error, setError] = useState<string>(null)
 
+  const {siteConfig} = useDocusaurusContext()
+  const scheduledMaintenance = siteConfig.themeConfig.scheduledMaintenance
+  const [notice, setNotice] = useState<{message?: string, severity?: 'info'|'warning'|'error'|'success'}>(null)
+
 
   useEffect(() => {
     Promise.all([getRecentData(), getNodes()])
@@ -389,6 +395,25 @@ export default function StatusChart() {
   }, [apps, nodes])
 
 
+  useEffect(() => {
+    if (!scheduledMaintenance) return
+
+    const { schedule, startTime, endTime, message, severity } = scheduledMaintenance
+    const now = new Date()
+    const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+    const [sh, sm] = startTime.split(':').map(Number)
+    const [eh, em] = endTime.split(':').map(Number)
+    const mins = now.getHours() * 60 + now.getMinutes()
+    const inWindow = days[now.getDay()] === schedule.day.toLowerCase()
+      && mins >= sh * 60 + sm
+      && mins < eh * 60 + em
+    if (inWindow) {
+      setNotice({ message, severity })
+      return
+    }
+  }, [scheduledMaintenance])
+
+
   const handleMapHover = (node: Node) => {
     if (!node) {
       setNode(null)
@@ -412,33 +437,41 @@ export default function StatusChart() {
     return <p>{error}</p>
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-center">
-      <div className="md:w-9/12 max-w-3xl">
-        {visibleNodes && apps &&
-          <Map
-            title={
-              node ? `Node ${node.vsn}` :
-                `${nodeCount} Node${nodeCount > 1 ? 's' : ''}`
-            }
-            nodes={nodesWithGps}
-            onHover={handleMapHover}
-            // color={colorScheme[apps.findIndex(obj => obj.appName == hoverID) % 8] || null }
-          />
-        }
-      </div>
+    <div>
+      {notice &&
+        <div className="mx-auto mb-12 max-w-7xl">
+          <Alert severity={notice?.severity || 'info'} className='alert mt-4'>
+            <b>{notice?.message}</b>
+          </Alert>
+        </div>
+      }
+      <div className="flex flex-col md:flex-row md:justify-center">
+        <div className="md:w-9/12 max-w-3xl">
+          {visibleNodes && apps &&
+            <Map
+              title={
+                node ? `Node ${node.vsn}` :
+                  `${nodeCount} Node${nodeCount > 1 ? 's' : ''}`
+              }
+              nodes={nodesWithGps}
+              onHover={handleMapHover}
+              // color={colorScheme[apps.findIndex(obj => obj.appName == hoverID) % 8] || null }
+            />
+          }
+        </div>
 
-      <div className="md:w-3/12 flex mt-12 md:ml-12">
-        {nodes && jobs && apps && dataCounts &&
-          <JobMetrics
-            node={node?.vsn}
-            nodes={nodes.length}
-            jobs={node ? jobs.filter(obj => node.vsn in obj.nodes).length : jobs.length}
-            apps={node ? apps.filter(obj => obj.nodes.includes(node.vsn)).length : apps.length}
-            records={getDataCount(dataCounts, node?.vsn)}
-          />
-        }
+        <div className="md:w-3/12 flex mt-12 md:ml-12">
+          {nodes && jobs && apps && dataCounts &&
+            <JobMetrics
+              node={node?.vsn}
+              nodes={nodes.length}
+              jobs={node ? jobs.filter(obj => node.vsn in obj.nodes).length : jobs.length}
+              apps={node ? apps.filter(obj => obj.nodes.includes(node.vsn)).length : apps.length}
+              records={getDataCount(dataCounts, node?.vsn)}
+            />
+          }
+        </div>
       </div>
-
     </div>
   )
 }

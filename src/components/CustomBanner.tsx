@@ -11,6 +11,7 @@ export default function CustomBanner() {
   const {siteConfig} = useDocusaurusContext()
   const staticNotice: Notice = siteConfig.themeConfig.notice
   const noticeURL = siteConfig.themeConfig.noticeURL
+  const scheduledMaintenance = siteConfig.themeConfig.scheduledMaintenance
 
   const [notice, setNotice] = useState<Notice>(null)
 
@@ -31,7 +32,7 @@ export default function CustomBanner() {
         })
         .catch(err => console.error('Error fetching notice:', err))
     }
-  }, [staticNotice, noticeURL])
+  }, [staticNotice, noticeURL, scheduledMaintenance])
 
 
   return (

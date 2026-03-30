@@ -26,6 +26,15 @@ export default {
   themeConfig: {
     // additional, custom banner above the navbar; see src/components/CustomBanner.tsx
     noticeURL: 'https://raw.githubusercontent.com/waggle-sensor/portal-notice/main/notice.json',
+    scheduledMaintenance: {
+      schedule: {type:  'weekly', day: 'sunday'},
+      startTime: '19:00', // 7:00 PM CST
+      endTime: '22:15',   // 10:15 PM CST
+      message:
+        'Scheduled weekly maintenance is currently underway (Sundays, 7:00 PM–10:15 PM CST). ' +
+        'During this window, node measurements, system status information, and the ' +
+        'Data API may be temporarily unavailable.',
+    },
     /* notice: {
       message: 'Some notice message here',
       severity: 'info', // 'info', 'warning', or 'error'
