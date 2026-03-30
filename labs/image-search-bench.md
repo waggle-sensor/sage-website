@@ -1,9 +1,13 @@
 ---
 sidebar_label: Image Search Benchmarking
-sidebar_position: 5
+sidebar_position: 3
 ---
 
+import LabButtons from './components/LabButtons'
+
 # Benchmarking AI-Powered Image Search at Scale
+
+<LabButtons id="image-search-bench" />
 
 As we develop AI-powered [image search](./image-search) across Sage’s nationwide cyberinfrastructure, one challenge quickly stood out:
 

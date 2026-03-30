@@ -2,7 +2,7 @@ import ImageSearch from './img/icons/image-search-icon.png'
 import PTZYolo from './img/icons/ptz-yolo.jpg'
 import SageMCP from './img/icons/sage-mcp-icon.png'
 import HawaiiImg from './img/icons/volcano-placeholder.png'
-import ImageSearchBench from './img/icons/image-search-bench-icon.png'
+import ImageSearchBench from './img/icons/image-search-bench-icon.jpeg'
 
 import { ReactNode } from 'react'
 
@@ -55,6 +55,29 @@ export const labProjects: LabProject[] = [
     githubUrl: 'https://github.com/waggle-sensor/sage-mcp'
   },
   {
+    id: 'image-search-bench',
+    title: 'Image Search Benchmarking',
+    description: 'A scalable, AI-driven framework for evaluating and improving image search across models, databases, and domains.',
+    image: ImageSearchBench,
+    imageAlt: 'Example graphs showing results from the image search benchmarking system.',
+    readMoreUrl: './labs/image-search-bench',
+    githubUrl: 'https://github.com/waggle-sensor/sage-nrp-image-search/tree/main/benchmarking'
+  },
+  {
+    id: 'volcano-fire-anomaly',
+    title: 'Volcano, Fire, and Anomaly Detection',
+    description: 'Detecting volcanic activity, fire, and anomalies using advanced AI models and edge computing.',
+    image: HawaiiImg,
+    imageAlt: 'view of volcano from node in Hawaii',
+    // primaryButton: {
+    //   text: 'Try It Now',
+    //   url: 'https://some_url_or_portal_link_here',
+    //   external: true
+    // },
+    readMoreUrl: './labs/volcano-fire-anomaly',
+    // githubUrl: 'https://github.com/...add_repo_link_here...'
+  },
+  {
     id: 'ptz-app',
     title: 'PTZ App',
     description: 'Using AI and Pan-Tilt-Zoom cameras for autonomous wildlife, hazard observation, and more. AI-driven detection scans, zooms, and captures key images at the edge using models like YOLO and Florence.',
@@ -76,29 +99,7 @@ export const labProjects: LabProject[] = [
     readMoreUrl: './labs/ptz-app',
     githubUrl: 'https://github.com/waggle-sensor/ptz-app'
   },
-  {
-    id: 'volcano-fire-anomaly',
-    title: 'Volcano, Fire, and Anomaly Detection',
-    description: 'Detecting volcanic activity, fire, and anomalies using advanced AI models and edge computing.',
-    image: HawaiiImg,
-    imageAlt: 'view of volcano from node in Hawaii',
-    // primaryButton: {
-    //   text: 'Try It Now',
-    //   url: 'https://some_url_or_portal_link_here',
-    //   external: true
-    // },
-    readMoreUrl: './labs/volcano-fire-anomaly',
-    // githubUrl: 'https://github.com/...add_repo_link_here...'
-  },
-  {
-    id: 'image-search-bench',
-    title: 'Image Search Benchmarking',
-    description: 'A scalable, AI-driven framework for evaluating and improving image search across models, databases, and domains.',
-    image: ImageSearchBench,
-    imageAlt: 'Example graphs showing results from the image search benchmarking system.',
-    readMoreUrl: './labs/image-search-bench',
-    githubUrl: 'https://github.com/waggle-sensor/sage-nrp-image-search/tree/main/benchmarking'
-  },
+
   {
     id: 'next-gen-nodes',
     title: 'New Sage Grande Edge Nodes',
