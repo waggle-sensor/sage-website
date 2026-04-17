@@ -16,7 +16,7 @@ import Button from '@mui/material/Button'
   sx={{textTransform: 'none', '&:hover': {color: '#fff', opacity: .8}}}
   disabled
 >
-  <span>Sign-up Form (Coming Coon)</span>
+  <span>Sign-up Form (Coming Soon)</span>
 </Button>
 
 ### Overview
@@ -99,5 +99,5 @@ Key pieces: translate the NRP Kubernetes config into a pluginctl setup, swap in 
   sx={{textTransform: 'none', marginBottom: 4, '&:hover': {color: '#fff', opacity: .8}}}
   disabled
 >
-  <span>Sign-up Form (Coming Coon)</span>
+  <span>Sign-up Form (Coming Soon)</span>
 </Button>
