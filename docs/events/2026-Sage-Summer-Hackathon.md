@@ -151,7 +151,7 @@ Topics (to be finalized):
 
 A full walkthrough will be provided: hardware bring‑up, driver development, containerization, testing, documentation, and deployment. The goal is for each team to integrate and deploy at least one new sensor to a nearby node.
 
-## 7. AI Agents at the Edge
+#### 7. AI Agents at the Edge
 
 AI agents capable of perception, reasoning, and action are emerging as a powerful paradigm for scientific instrumentation. 
 Sage is developing experimental frameworks for deploying such agents on edge nodes—systems that can monitor data streams, make decisions, and autonomously control node behavior, from steering PTZ cameras to triggering sampling events to adjusting operating parameters in response to changing conditions.
@@ -165,7 +165,7 @@ This session covers:
 
 By the end of the week, the aim is to have dozens of new agents monitoring, alerting, and responding across the network.
 
-## 8. Future Tech — Next‑Generation Directions
+#### 8. Future Tech — Next‑Generation Directions
 
 This forward‑looking session explores emerging hardware, software, and scientific directions for edge AI.
 
@@ -180,7 +180,7 @@ Topics:
 
 Attendees will be encouraged to organize into teams and tackle projects with guidance and support from the Sage team.
 
-### Image Search at the Edge
+#### Image Search at the Edge
 
 Key pieces: translate the NRP Kubernetes config into a pluginctl setup, swap in edge-friendly models (e.g., Gemma4), replace the vector DB with something edge-compatible (e.g., NVIDIA's NanoDB), and run benchmarks. Example creative ideas: pivot from "image search" to generating daily or weekly summaries of what the node sees.
 
