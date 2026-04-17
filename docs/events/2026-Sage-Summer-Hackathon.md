@@ -8,8 +8,8 @@ import Button from '@mui/material/Button'
 ## Hack and Build AI@Edge
 
 **Dates:** Monday, July 20 – Tuesday, July 28, 2026 \
-**Location:** UIC Electronic Visualization Lab (EVL), Chicago, IL
-**Format:** In-person intensive with hands-on lab sessions
+**Location:** UIC Electronic Visualization Lab (EVL), Chicago, IL \
+**Format:** In-person intensive with hands-on lab sessions \
 **Audience:** Graduate students, postdoctoral researchers, and early-career
 scientists
 
