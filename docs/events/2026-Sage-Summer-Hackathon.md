@@ -9,7 +9,7 @@ import Button from '@mui/material/Button'
 
 **Dates:** Monday, July 20 – Tuesday, July 28, 2026 \
 **Location:** UIC Electronic Visualization Lab (EVL), Chicago, IL \
-**Format:** In-person intensive with hands-on lab sessions \
+**Format:** In-person with hands-on lab sessions \
 **Audience:** Graduate students, postdoctoral researchers, and early-career
 scientists
 
@@ -22,7 +22,7 @@ scientists
   <span>Sign-up Form (Coming Soon)</span>
 </Button>
 
-### Overview
+### Program Overview
 
 This intensive seven-day summer camp brings together students and postdoctoral
 researchers for a deep, hands-on immersion in building and deploying AI systems at the
@@ -60,7 +60,7 @@ require running models and tools on your own machine as well as on the provided 
 | 10:00 AM – 12:30 PM | **Morning session (2.5 hrs)** |
 | 12:30 PM – 1:30 PM | Lunch (on your own — campus dining or nearby restaurants) |
 | 1:30 PM – 4:30 PM | **Afternoon session (3 hrs)** |
-| 4:30 PM – 6:00 PM | Work on your project (on your own or in groups) |
+| 4:30 PM – 6:00 PM | Open hacking / independent work |
 | Evening | Dinner on your own; hacking in teams, optional after-hours activities (see below) |
 
 
