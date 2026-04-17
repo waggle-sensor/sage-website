@@ -205,7 +205,7 @@ Activities are being planned!  More details will be provided closer to the event
 
 ## Interest Form
 
-**Interested in attending the Summer of AI?** Fill out our Sign U below to be notified about registration and updates!
+**Interested in attending the Summer of AI?** Fill out our sign-up form to be notified about registration and updates!
 
 <Button
   variant="contained"
