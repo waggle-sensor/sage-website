@@ -2,9 +2,24 @@ import { useEffect, useState } from 'react'
 
 
 const calID = '65dcf6922cf9f84679f598865716f1fea2b7d974896c300fda9d3e26810aa1e8@group.calendar.google.com'
-const url = `https://www.googleapis.com/calendar/v3/calendars/${calID}/events?key=AIzaSyAchO5mV1RTkQvvQSqndYg3eM6MQSkIr9o&singleEvents=true&calendarID=primary`
+const apiKey = 'AIzaSyAchO5mV1RTkQvvQSqndYg3eM6MQSkIr9o'
+const url = `https://www.googleapis.com/calendar/v3/calendars/${calID}/events?key=${apiKey}&singleEvents=true&calendarID=primary`
 
-const maxResults = 3
+// Number of upcoming "Office Hours" recurring events to always include
+const OFFICE_HOURS_COUNT = 3
+
+// Event IDs to always show, even if they fall outside the normal fetch window.
+// Add new IDs here to pin important future events (e.g. hackathons, workshops).
+const PINNED_EVENT_IDS = [
+  '4ld0b9jdcqt8ofkvqt32c6dea3',  // Sage Grande Summer of AI Hack and Build (Jul 20–29, 2026)
+]
+
+// Max non-office-hours, non-pinned events to include
+const MAX_OTHER_EVENTS = 7
+
+// Fetch pool size — large enough to always find OFFICE_HOURS_COUNT upcoming other events
+const FETCH_POOL_SIZE = 30
+
 const orderBy = 'startTime'
 
 
@@ -53,21 +68,53 @@ export default function Calendar() {
   useEffect(() => {
     fetchEvents()
       .then(events => {
-        // sort and limit events
-        events.sort(
-          (a, b) => Date.parse(a.start.dateTime || a.start.date) - Date.parse(b.start.dateTime || b.start.date)
-        ).slice(0, maxResults)
-
+        console.log('events', events)
         setEvents(events)
       })
       .catch(err => setError(err))
   }, [])
 
-  const fetchEvents = () => {
+  const fetchEvents = async () => {
     const timeMin = new Date().toISOString()
-    return fetch(`${url}&timeMin=${timeMin}&maxResults=${maxResults}&orderBy=${orderBy}`)
-      .then(res => res.json())
-      .then(data => data.items)
+
+    // 1. Fetch a large pool of upcoming events sorted by start time
+    const res = await fetch(`${url}&timeMin=${timeMin}&maxResults=${FETCH_POOL_SIZE}&orderBy=${orderBy}`)
+    const data = await res.json()
+    const pool: any[] = (data.items || []).sort(
+      (a, b) => Date.parse(a.start.dateTime || a.start.date) - Date.parse(b.start.dateTime || b.start.date)
+    )
+
+    // 2. Pick first N office hours + up to MAX_OTHER_EVENTS of everything else
+    const officeHours = pool.filter(e => e.summary === 'Office Hours').slice(0, OFFICE_HOURS_COUNT)
+    const otherEvents = pool.filter(e => e.summary !== 'Office Hours').slice(0, MAX_OTHER_EVENTS)
+
+    // 3. Fetch any pinned events not already present in the pool
+    const poolIds = new Set(pool.map(e => e.id))
+    const pinnedEvents = (
+      await Promise.all(
+        PINNED_EVENT_IDS
+          .filter(id => !poolIds.has(id))
+          .map(id =>
+            fetch(`https://www.googleapis.com/calendar/v3/calendars/${calID}/events/${id}?key=${apiKey}`)
+              .then(r => r.json())
+              .catch(() => null)
+          )
+      )
+    ).filter(Boolean)
+
+    // 4. Merge, deduplicate by ID, and sort
+    const seen = new Set<string>()
+    const merged = [...officeHours, ...otherEvents, ...pinnedEvents].filter(e => {
+      if (seen.has(e.id)) return false
+      seen.add(e.id)
+      return true
+    })
+
+    merged.sort(
+      (a, b) => Date.parse(a.start.dateTime || a.start.date) - Date.parse(b.start.dateTime || b.start.date)
+    )
+
+    return merged
   }
 
   return (
