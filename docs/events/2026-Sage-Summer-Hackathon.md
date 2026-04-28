@@ -18,7 +18,7 @@ import WSN from './img/wsn.jpg'
 ## Hack and Build AI@Edge
 
 **Dates:** Monday, July 20 – Tuesday, July 28, 2026 \
-**Location:** [UIC Electronic Visualization Lab (EVL)](https://www.evl.uic.edu/location), Chicago, IL \
+**Location:** [UIC Electronic Visualization Laboratory (EVL)](https://www.evl.uic.edu/location), Chicago, IL \
 **Format:** In-person with hands-on lab sessions \
 **Audience:** Graduate students, postdoctoral researchers, and early-career
 scientists
