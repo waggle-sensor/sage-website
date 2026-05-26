@@ -4,18 +4,10 @@
         <title>Sage Blog</title>
         <link>https://waggle-sensor.github.io/news</link>
         <description>Sage Blog</description>
-        <lastBuildDate>Tue, 26 May 2026 07:40:20 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 14 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
-        <item>
-            <title><![CDATA[img/discover-us-bcn-workshop/foo]]></title>
-            <link>https://waggle-sensor.github.io/news/img/discover-us-bcn-workshop/foo</link>
-            <guid>https://waggle-sensor.github.io/news/img/discover-us-bcn-workshop/foo</guid>
-            <pubDate>Tue, 26 May 2026 07:40:20 GMT</pubDate>
-            <description><![CDATA[test]]></description>
-            <content:encoded><![CDATA[<p>test</p>]]></content:encoded>
-        </item>
         <item>
             <title><![CDATA[CSU Visits Argonne]]></title>
             <link>https://waggle-sensor.github.io/news/2025/07/15/csu-visits-argonne</link>

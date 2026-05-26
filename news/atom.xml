@@ -2,19 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://waggle-sensor.github.io/news</id>
     <title>Sage Blog</title>
-    <updated>2026-05-26T07:40:20.000Z</updated>
+    <updated>2025-07-14T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://waggle-sensor.github.io/news"/>
     <subtitle>Sage Blog</subtitle>
     <icon>https://waggle-sensor.github.io/img/sage-favicon.png</icon>
-    <entry>
-        <title type="html"><![CDATA[img/discover-us-bcn-workshop/foo]]></title>
-        <id>https://waggle-sensor.github.io/news/img/discover-us-bcn-workshop/foo</id>
-        <link href="https://waggle-sensor.github.io/news/img/discover-us-bcn-workshop/foo"/>
-        <updated>2026-05-26T07:40:20.000Z</updated>
-        <summary type="html"><![CDATA[test]]></summary>
-        <content type="html"><![CDATA[<p>test</p>]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[CSU Visits Argonne]]></title>
         <id>https://waggle-sensor.github.io/news/2025/07/15/csu-visits-argonne</id>
