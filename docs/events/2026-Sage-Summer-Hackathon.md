@@ -170,16 +170,6 @@ Self-directed exploration, project planning, or if needed, rest :-)
 
 AI Agents, Autonomous systems, future Sage opportunities.  Project plans finalized
 
-#### Monday Afternoon, July 27: Hack Time
-
-Work on your project
-
-#### Tuesday Morning, July 28: Development, Testing, and Preparation
-
-
-
-#### 7. AI Agents at the Edge
-
 AI agents capable of perception, reasoning, and action are emerging as a powerful paradigm for scientific instrumentation.
 Sage is developing experimental frameworks for deploying such agents on edge nodes—systems that can monitor data streams, make decisions, and autonomously control node behavior, from steering PTZ cameras to triggering sampling events to adjusting operating parameters in response to changing conditions.
 
@@ -189,23 +179,27 @@ This session covers:
 - Safety and governance considerations for autonomous systems
 - Hands‑on development of agents that interact with real Sage APIs
 - Deployment of agents to live nodes (where appropriate)
-
-By the end of the week, the aim is to have dozens of new agents monitoring, alerting, and responding across the network.
-
-#### 8. Future Tech — Next‑Generation Directions
-
-This forward‑looking session explores emerging hardware, software, and scientific directions for edge AI.
-
-Topics:
-
 - Next‑generation edge accelerators
 - New sensor modalities
 - Evolving NSF cyberinfrastructure capabilities
 - Open research questions in scientific edge computing
 
-## Hackathon Projects
 
-Attendees will be encouraged to organize into teams and tackle projects with guidance and support from the Sage team.
+#### Monday Afternoon, July 27: Hack Time
+
+Work on your project
+
+#### Tuesday Morning, July 28: Development, Testing, and Preparation
+
+#### Tuesday Afternoon, July 28: Project Presentations and Demos
+
+Show off your project!  Celebrate.  Enjoy dinner and farewell.
+
+
+
+## Potential Hackathon Projects
+
+Did you have a project in mind?  If not, here are some examples that we can help you with.  Attendees will be encouraged to organize into teams and tackle projects with guidance and support from the Sage team.
 
 #### Image Search at the Edge
 
@@ -221,14 +215,6 @@ following by the end of the week:
 - Get new code into the ECR and run it on a deployed node
 - Process a batch of images using an LLM and write the results to the Beehive
 - Build and test a data pipeline connecting two or more sensor streams
-
-## Optional After-Hours Activities (TBD)
-
-Activities are being planned!  More details will be provided closer to the event.
-
-- Kayak trip on the Chicago River
-- Chicago food night
-- Chicago lakefront boat trip
 
 ## Interest Form
 
