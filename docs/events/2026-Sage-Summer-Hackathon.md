@@ -68,41 +68,41 @@ require running models and tools on your own machine as well as on the provided 
 
 | Time | Activity |
 |------|----------|
-| 8:00 AM – 10:00 AM | Open hacking / independent work |
-| 10:00 AM – 12:30 PM | **Morning session (2.5 hrs)** |
+| 8:00 AM – 9:30 AM | Open hacking / independent work |
+| 10:00 AM – 12:30 PM | **Morning session (3 hrs)** |
 | 12:30 PM – 1:30 PM | Lunch (on your own — campus dining or nearby restaurants) |
 | 1:30 PM – 4:30 PM | **Afternoon session (3 hrs)** |
 | 4:30 PM – 6:00 PM | Open hacking / independent work |
 | Evening | Dinner on your own; hacking in teams, optional after-hours activities (see below) |
 
 
-### Deep‑Dive Topics
+### Agenda:
 
-*These are examples of possible deep‑dive sessions. Final topics may vary based on participant interest and schedule.*
+#### Sunday, July 19: Check-in
 
-#### 1. System Software
+Check-in and informal welcome dinner.
 
-Participants will receive a comprehensive tour of the full Sage software stack, from node boot to the lifecycle of a running application. Topics include the Waggle node architecture, the Kubernetes‑based container orchestration system, the `pluginctl` scheduler, and the data pipeline.
+#### Monday, July 20: Sage Foundations and System Software
+
+A comprehensive tour of the full Sage software stack, from node boot to the lifecycle of a running application. Topics include the node architecture, the Kubernetes‑based container orchestration system, the `pluginctl` scheduler, and the data pipeline.
 
 By the end of this session, participants will have:
 
-- Built and deployed their own container to a Sage node
-- Written an application that calls an inference service
-- Connected their application to an automated cloud‑based data workflow
+- Code development and AI coding assistant environment set up and working with GitHub
+- Submitted several AI prompts to Sage nodes
+- Submit a Sage job that calls an existing Sage inference service
 
-#### 2. AI‑Enabled Code Generation and LLM Tools
+#### Tuesday Morning, July 21: Finalize Setup
 
-Modern AI development tools — including large language models, code agents, and Model Context Protocol (MCP) servers — are transforming how scientific software is written and maintained. This session teaches participants how to use these tools effectively in the context of Sage development.
-
-Possible topics:
+Modern AI development tools — including large language models, code agents, and Model Context Protocol (MCP) servers — are transforming how scientific software is written and maintained. Students will be testing their AI development toolchains:
 
 - Using tools such as Cursor and Claude Code for AI‑assisted programming
 - Setting up MCP servers to give AI agents access to Sage APIs and node‑management tools
 - Prompt‑engineering strategies for generating reliable, testable code
 
-Participants will leave with a fully configured AI‑assisted development environment for Sage.
+By the end of this session, students will have completed several foundational Sage skill checkpoints -- AI development environment complete, submit job, explore cloud data, demonstrate your skills and begin making plans for your own project -- what will you accomplish before finishing the Summer Camp?  Create a project plan with your AI assistant.
 
-#### 3. AI Enablement — Models for the Edge
+#### Tuesday Afternoon, July 21: AI+Sage (part 1)
 
 The scientific value of AI depends on accurate, reliable, and efficient AI models running on its nodes. This session surveys the models currently deployed across the fleet, such as:
 
@@ -112,7 +112,9 @@ The scientific value of AI depends on accurate, reliable, and efficient AI model
 - **Cloud motion vectors** — atmospheric dynamics estimation
 - **Wildfire and smoke detection** — early warning from RGB and thermal imagery
 
-Participants will learn how to:
+#### Wednesday, July 22: AI+Sage (part 2 & 3)
+
+AI Workflows:
 
 - Test model performance on real datasets
 - Understand failure modes and edge cases
@@ -121,9 +123,15 @@ Participants will learn how to:
 - Apply quantization and optimization for edge deployment
 - Submit new models to the Edge Code Repository (ECR)
 
-#### 4. Data and NSF Resources
+#### Thursday Morning, July 23: AI+Sage (part 4)
 
-Sage generates a continuous stream of data from hundreds of nodes nationwide. This session teaches participants how to work with that data effectively — from raw sensor readings to publication‑ready datasets.
+Wrap up end-to-end AI exploration and work with AI coding agent to advance your project
+
+#### Thursday Afternoon, July 23: NRP/NDP and NSF Resources
+
+The NSF provides cyberinfrastructure for research, including the National Data Platform (NDP), the National Research Platform (NRP), and NSF supercomputer centers such as SDSC, TACC, and NCSA.  This session will guide students through connecting Sage data and AI computation to other NSF resources.
+
+Using the Sage generates a continuous stream of data from hundreds of nodes nationwide. We will explore how to work with data effectively - from raw sensor readings to publication‑ready datasets.
 
 Topics include:
 
@@ -135,20 +143,7 @@ Topics include:
 
 Participants will build end‑to‑end data pipelines that move from raw measurements to reproducible, shareable outputs.
 
-#### 5. AI for Domain Science
-
-This session connects Sage’s technical capabilities to the scientific questions that motivated its creation. Participants will collaborate with active domain‑science teams to prototype new capabilities.
-
-Projects:
-
-- Drought Mitigation and Prediction — soil moisture, vegetation stress, and snowpack monitoring
-- Fire and Flood Detection Strategies
-- Atmospheric Science
-
-Teams will form around specific scientific challenges, and participants are encouraged to bring their own domain‑science questions.
-
-
-#### 6. Hardware, Sensors, and Physical Integration
+#### Friday, July 24: Sensors, Hardware, and Physical Integration
 
 Sage nodes are extensible — new sensors and hardware can be added to expand observational capabilities. This hands‑on session explores sensor integration from first principles. Participants are encouraged to bring their own hardware.
 
@@ -162,6 +157,26 @@ Topics (to be finalized):
 - Actuators and robotic systems (PTZ cameras, robotic arms, autonomous platforms)
 
 A full walkthrough will be provided: hardware bring‑up, driver development, containerization, testing, documentation, and deployment. The goal is for each team to integrate and deploy at least one new sensor to a nearby node.
+
+#### Saturday, July 25: Community Day
+
+Chicago River Architecture turn, Chicago pizza, etc. Networking and team building.  Hacking.
+
+#### Sunday, July 26: Free Day
+
+Self-directed exploration, project planning, or if needed, rest :-)
+
+#### Monday Morning, July 27: The Future
+
+AI Agents, Autonomous systems, future Sage opportunities.  Project plans finalized
+
+#### Monday Afternoon, July 27: Hack Time
+
+Work on your project
+
+#### Tuesday Morning, July 28: Development, Testing, and Preparation
+
+
 
 #### 7. AI Agents at the Edge
 
