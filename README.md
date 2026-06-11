@@ -40,6 +40,14 @@ npm run build
 
 GIT_USER=<GITHUB_USERNAME> npm run deploy
 
+## Scripts
+
+Generate a horizontal collage from multiple images:
+
+```console
+python scripts/make-collage.py output.jpg input1.jpg input2.jpg [input3.jpg ...]
+```
+
 
 
 

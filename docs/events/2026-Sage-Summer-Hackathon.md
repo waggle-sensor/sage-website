@@ -3,17 +3,12 @@ sidebar_label: Sage Grande Summer of AI
 slug: 2026-Sage-Summer-Hackathon
 ---
 import Button from '@mui/material/Button'
-import UIC from './img/uic-evl-lab.jpg'
-import Thor from './img/thor-blade.jpg'
-import WSN from './img/wsn.jpg'
+
 
 # Sage Grande: Summer of AI
 
-<div className="float-right ml-4 flex gap-2">
-  <img src={UIC} alt="UIC EVL Lab" style={{maxHeight: 200, width: '100%', objectFit: 'cover', flex: 1, minWidth: 0}} />
-  <img src={Thor} alt="Thor blade node" style={{maxHeight: 200, width: '100%', objectFit: 'cover', flex: 1, minWidth: 0}} />
-  <img src={WSN} alt="Older wild sage node" style={{maxHeight: 200, width: '100%', objectFit: 'cover', flex: 1, minWidth: 0}} />
-</div>
+
+![Collage of Sage Summer of AI event images. UIC Viz Lab, a Sage Thor-blade, a ptz camera, and wild sage node (v1)](./img/2026-sage-summer-hackathon-collage.jpg)
 
 ## Hack and Build AI@Edge
 
@@ -23,15 +18,16 @@ import WSN from './img/wsn.jpg'
 **Audience:** Graduate students, postdoctoral researchers, and early-career
 scientists
 
-**Interested in attending?** Fill out our sign-up form to be notified about registration and updates!
+:::info
+**Sign-up is now closed.** If you're still interested in attending, please **[contact us](/docs/contact-us)** and we'll do our best to accommodate you.  Everyone who has already signed up will receive an update by **Monday, June 15** with confirmation details and next steps.
+:::
 
 <Button
   variant="contained"
-  href="https://forms.gle/MS87XK6fmoW4uDeS9"
+  disabled
   className="!normal-case hover:text-white hover:opacity-80"
-  target="_blank"
 >
-  <span>Sign-up Form</span>
+  <span>Sign-up Closed</span>
 </Button>
 
 ### Program Overview
@@ -160,7 +156,7 @@ A full walkthrough will be provided: hardware bring‑up, driver development, co
 
 #### Saturday, July 25: Community Day
 
-Chicago River Architecture turn, Chicago pizza, etc. Networking and team building.  Hacking.
+Chicago River Architecture tour, Chicago pizza, etc.  Networking and team building.  Hacking.
 
 #### Sunday, July 26: Free Day
 
@@ -218,13 +214,12 @@ following by the end of the week:
 
 ## Interest Form
 
-**Interested in attending the Summer of AI?** Fill out our sign-up form to be notified about registration and updates!
+**Sign-up is now closed.** If you're still interested in attending, please [contact us](/docs/contact-us) and we'll do our best to accommodate you.  Everyone who has already signed up will receive an update by **Monday, June 15** with confirmation details and next steps.
 
 <Button
   variant="contained"
-  href="https://forms.gle/MS87XK6fmoW4uDeS9"
+  disabled
   className="!normal-case hover:text-white hover:opacity-80"
-  target="_blank"
 >
-  <span>Sign-up Form</span>
+  <span>Sign-up Closed</span>
 </Button>
