@@ -38,7 +38,7 @@ export const labProjects: LabProject[] = [
       external: true
     },
     readMoreUrl: './labs/image-search',
-    githubUrl: 'https://github.com/waggle-sensor/sage-vectordb-example'
+    githubUrl: 'https://github.com/waggle-sensor/sage-nrp-image-search'
   },
   {
     id: 'sage-mcp',
