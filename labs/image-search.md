@@ -86,5 +86,9 @@ As our object database continues to grow, the challenge of finding the right ima
 
 If you’re working on something similar or curious to dive deeper, feel free to reach out.
 
+## Publication
+
+This work was presented at [USRSE'25](https://us-rse.org/usrse25). For a high-level overview of the system architecture and motivation, see the [official poster](https://doi.org/10.5281/zenodo.17237284): *Searching Sage: AI-Powered Image Retrieval on a Nationwide Edge Computing Cyberinfrastructure*.
+
 <LabButtons id="image-search" />
 
