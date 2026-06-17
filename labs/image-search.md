@@ -34,6 +34,8 @@ This project is all about **hybrid search** — combining **vector-based** and *
 
 Why all this? Because combining these techniques helps you go beyond surface-level matching — it helps find the *right* image even if the words in the query aren’t an exact match to the caption.
 
+> **Note:** Individual components (captioning models, embedding models, rerankers, and so on) are interchangeable — the deployed system may use updated versions of those listed above, but the **pipeline** stays the same. For the latest models and services in use, see the [Github Repository](https://github.com/waggle-sensor/sage-nrp-image-search).
+
 ## The Tech Stack & Pipeline
 
 Here’s how it all fits together:
@@ -83,6 +85,10 @@ There’s a lot of exciting ground to cover next. Some upcoming improvements inc
 As our object database continues to grow, the challenge of finding the right image at the right moment becomes increasingly difficult. With thousands of visuals available, building rich datasets with Sage is possible — but navigating that volume can be frustrating and time-consuming. Traditional search methods in our cyberinfrastructure are starting to show their limits. **Time-based filtering** assumes users already know when the relevant images were captured, while **metadata filtering** often forces them to sift through large volumes manually to find what they need. That’s where this **hybrid approach** makes a real difference — by combining the **semantic power of vector search** with the **precision of keyword matching**, users can efficiently locate the exact image they’re looking for — and pinpoint the precise moment it was captured.
 
 If you’re working on something similar or curious to dive deeper, feel free to reach out.
+
+## Publication
+
+This work was presented at [USRSE'25](https://us-rse.org/usrse25). For a high-level overview of the system architecture and motivation, see the [official poster](https://doi.org/10.5281/zenodo.17237284): *Searching Sage: AI-Powered Image Retrieval on a Nationwide Edge Computing Cyberinfrastructure*.
 
 <LabButtons id="image-search" />
 
