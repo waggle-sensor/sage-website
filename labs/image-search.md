@@ -34,6 +34,8 @@ This project is all about **hybrid search** — combining **vector-based** and *
 
 Why all this? Because combining these techniques helps you go beyond surface-level matching — it helps find the *right* image even if the words in the query aren’t an exact match to the caption.
 
+> **Note:** Individual components (captioning models, embedding models, rerankers, and so on) are interchangeable — the deployed system may use updated versions of those listed above, but the **pipeline** stays the same. For the latest models and services in use, see the [Github Repository](https://github.com/waggle-sensor/sage-nrp-image-search).
+
 ## The Tech Stack & Pipeline
 
 Here’s how it all fits together:
