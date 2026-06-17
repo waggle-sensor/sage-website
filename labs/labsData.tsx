@@ -3,6 +3,7 @@ import PTZYolo from './img/icons/ptz-yolo.jpg'
 import SageMCP from './img/icons/sage-mcp-icon.png'
 import HawaiiImg from './img/icons/volcano-placeholder.png'
 import ImageSearchBench from './img/icons/image-search-bench-icon.jpeg'
+import NextGenNodes from './img/icons/next-gen-node-icon.jpg'
 
 import { ReactNode } from 'react'
 
@@ -104,9 +105,8 @@ export const labProjects: LabProject[] = [
     id: 'next-gen-nodes',
     title: 'New Sage Grande Edge Nodes',
     description: 'The future of edge computing with Sage Grande\'s Next-Gen nodes, built on the NVIDIA Jetson Thor platform.',
-    placeholder: {
-      text: 'Next-Generation Nodes\n(Coming Soon!)'
-    },
+    image: NextGenNodes,
+    imageAlt: 'icon representing next-generation Sage Grande edge nodes',
     readMoreUrl: './labs/next-gen-nodes',
     // githubUrl: '_____add_repo_link_here____'
   }
