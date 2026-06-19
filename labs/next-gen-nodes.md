@@ -14,19 +14,21 @@ Both designs push AI capability directly to the edge, so users can run advanced 
 ![Illustration of Thor Blade deployment](img/nextgen-node/thorblade-deployment.png)
 > NOTE: The illustration above is AI generated.
 
-1) Thor Blade DevKit Node
+#### 1) Thor Blade DevKit Node
 
 The devkit-based node is our high-flexibility platform for rapid prototyping, model bring-up, and educational AI exploration. It gives researchers, developers, and students room to move quickly: test new model pipelines, connect multiple data sources, and iterate without friction.
 
+This DevKit configuration is the precursor "v0" version of the node, used to validate architecture and operations before the Carrier Board Node design.
+
 For full setup details, deployment steps, and operational guidance, see the detailed manual:
 
-* [SGT Manual: Thor Devkit Blade (PDF)](/docs/manuals/SGT_Manual_ThorDev_Blade_V1.0.pdf)
+[SGT Manual: Thor Devkit Blade (PDF)](../docs/manuals/SGT_Manual_ThorDev_Blade_V1.0.pdf)
 
-2) Thor Blade + Carrier Board Node
+#### 2) Thor Blade + Carrier Board Node
 
 The Thor Blade node with AVerMedia carrier board brings the same Thor compute core into a form factor optimized for production-style deployments. This architecture is designed for repeatability and scalability, making it easier to deploy powerful AI capability across larger fleets of edge sites. Additionally, [the out-of-band management module](https://professional.avermedia.com/product-detail/ERMI-module) enables remote device management for recovering the Thor device from failures.
 
-### **What's under the hood** 
+### **What's under the hood**
 ![SGT Thor Blade inside look](img/nextgen-node/thorblade-inside.png)
 The components inside SGT Thor Blade Nodes: (left) Thor Blade Devkit node and (right) Thor Blade + carrier board node.
 
@@ -36,7 +38,7 @@ The components inside SGT Thor Blade Nodes: (left) Thor Blade Devkit node and (r
 
 3) Active Cooling: The Thor device is rated to consume over 100 W for computation, which is around 10 times more than our Wild Sage node with Jetson Xavier NX.
 
-4) Out-of-band Management (Thor Blade + carrier board node only): This device provides remote management for the Thor device including serial console access, power control, and OS update via BSP OTA. 
+4) Out-of-band Management (Thor Blade + carrier board node only): This device provides remote management for the Thor device including serial console access, power control, and OS update via BSP OTA.
 
 ### Thermal and Energy Evaluation
 
@@ -49,7 +51,7 @@ We present a thermal characterization of the SGT Thor Blade nodes under sustaine
 | Ambient temperature on SoC | 60 - 70 C | 58 - 62 C |
 | Energy efficiency | 0.1 tokens/sec per W on average | 0.078 tokens/sec per W on average |
 
-The Thor Blade with AVerMedia carrier board has additional cooling fans constantly consuming at around 30 W (15 W + 6 W + 7.8 W) and 2 NVMe cards; this explains the difference in power consumption from the Devkit node. As a result, the SoC temperature is about 8 degree Celcius less, and AI throughput is slightly higher.  
+The Thor Blade with AVerMedia carrier board has additional cooling fans constantly consuming at around 30 W (15 W + 6 W + 7.8 W) and 2 NVMe cards; this explains the difference in power consumption from the Devkit node. As a result, the SoC temperature is about 8 degree Celcius less, and AI throughput is slightly higher.
 
 For reference, a couple of detailed time series plots are presented as follows,
 
