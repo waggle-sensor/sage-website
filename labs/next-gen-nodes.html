@@ -25,7 +25,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
 <script src="https://apis.google.com/js/api.js"></script><link rel="stylesheet" href="/assets/css/styles.6260746b.css">
-<script src="/assets/js/runtime~main.01373817.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e03f1275.js" defer="defer"></script>
 <script src="/assets/js/main.7db77468.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -72,7 +72,7 @@ The components inside SGT Thor Blade Nodes: (left) Thor Blade Devkit node and (r
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="thermal-and-energy-evaluation">Thermal and Energy Evaluation<a href="#thermal-and-energy-evaluation" class="hash-link" aria-label="Direct link to Thermal and Energy Evaluation" title="Direct link to Thermal and Energy Evaluation" translate="no">​</a></h3>
 <p>We present a thermal characterization of the SGT Thor Blade nodes under sustained foundational AI inference. We set different module power modes to limit the maximum performance and measure AI inference throughput. The table below shows a summary of the characterization on the Thor Blade nodes over 3 Thor power modes (70 W, 120 W, and maximum) (see <a href="https://docs.nvidia.com/jetson/archives/r38.4/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonThor.html#supported-modes-and-power-efficiency" target="_blank" rel="noopener noreferrer" class="">Jetson Thor Module Power Modes</a>).</p>
 <table><thead><tr><th>Metric</th><th>SGT Thor Blade Devkit</th><th>SGT Thor Blade AVerMedia</th></tr></thead><tbody><tr><td>AI throughput</td><td>9.72 - 8.13 tokens/sec</td><td>9.2 - 10.43 tokens/sec</td></tr><tr><td>Power consumption</td><td>80 - 100 W on average</td><td>120 - 140 W on average</td></tr><tr><td>Ambient temperature on SoC</td><td>60 - 70 C</td><td>58 - 62 C</td></tr><tr><td>Energy efficiency</td><td>0.1 tokens/sec per W on average</td><td>0.078 tokens/sec per W on average</td></tr></tbody></table>
-<p>The Thor Blade with AVerMedia carrier board has additional cooling fans constantly consuming at around 30 W (15 W + 6 W + 7.8 W) and 2 NVMe cards; this explains the difference in power consumption from the Devkit node. As a result, the SoC temperature is about 8 degree Celcius less, and AI throughput is slightly higher.</p>
+<p>The Thor Blade with AVerMedia carrier board has additional cooling fans constantly consuming at around 30 W (15 W + 6 W + 7.8 W) and 2 NVMe cards; this explains the difference in power consumption from the Devkit node. As a result, the SoC temperature is about 8 degree Celsius less, and AI throughput is slightly higher.</p>
 <p>For reference, a couple of detailed time series plots are presented as follows,</p>
 <p><img decoding="async" loading="lazy" alt="Continuous AI inference on Thor Blade AVerMedia with power mode 1" src="/assets/images/thorblade-devkit-mode1-20b4605f52610314322fdbbec3129e33.png" width="2340" height="2325" class="img_ev3q"></p>
 <p><img decoding="async" loading="lazy" alt="Continuous AI inference on Thor Blade AVerMedia with power mode 1" src="/assets/images/thorblade-am-mode1-7d0139bdb428976d20916a6a517eaa30.png" width="2340" height="2325" class="img_ev3q"></p>
