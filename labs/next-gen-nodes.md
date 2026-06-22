@@ -51,7 +51,7 @@ We present a thermal characterization of the SGT Thor Blade nodes under sustaine
 | Ambient temperature on SoC | 60 - 70 C | 58 - 62 C |
 | Energy efficiency | 0.1 tokens/sec per W on average | 0.078 tokens/sec per W on average |
 
-The Thor Blade with AVerMedia carrier board has additional cooling fans constantly consuming at around 30 W (15 W + 6 W + 7.8 W) and 2 NVMe cards; this explains the difference in power consumption from the Devkit node. As a result, the SoC temperature is about 8 degree Celcius less, and AI throughput is slightly higher.
+The Thor Blade with AVerMedia carrier board has additional cooling fans constantly consuming at around 30 W (15 W + 6 W + 7.8 W) and 2 NVMe cards; this explains the difference in power consumption from the Devkit node. As a result, the SoC temperature is about 8 degree Celsius less, and AI throughput is slightly higher.
 
 For reference, a couple of detailed time series plots are presented as follows,
 
