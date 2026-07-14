@@ -65,18 +65,18 @@ require running models and tools on your own machine as well as on the provided 
 | Time | Activity |
 |------|----------|
 | 8:00 AM – 9:30 AM | Open hacking / independent work |
-| 10:00 AM – 12:30 PM | **Morning session (3 hrs)** |
+| 9:30 AM – 12:30 PM | **Morning session (3 hrs)** |
 | 12:30 PM – 1:30 PM | Lunch (on your own — campus dining or nearby restaurants) |
 | 1:30 PM – 4:30 PM | **Afternoon session (3 hrs)** |
 | 4:30 PM – 6:00 PM | Open hacking / independent work |
-| Evening | Dinner on your own; hacking in teams, optional after-hours activities (see below) |
+| Evening | Dinner on your own; hacking in teams, optional after-hours activities |
 
 
 ### Agenda:
 
 #### Sunday, July 19: Check-in
 
-Check-in and informal welcome dinner.
+We're planning to meet 5:00 PM at [EVL](https://www.evl.uic.edu/location), and then head to an informal welcome dinner.
 
 #### Monday, July 20: Sage Foundations and System Software
 
