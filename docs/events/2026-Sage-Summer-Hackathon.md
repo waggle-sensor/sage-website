@@ -69,6 +69,8 @@ We will meet at 5:00 PM at [EVL](https://www.evl.uic.edu/location), and then hea
 
 #### Monday, July 20: Sage Foundations and System Software
 
+**Introduction**: Framing for the 7 days of learning:  The Sage Grande Testbed and the future of AI@Edge.
+
 A comprehensive tour of the full Sage software stack, from node boot to the lifecycle of a running application. Topics include the node architecture, the Kubernetes‑based container orchestration system, the `pluginctl` scheduler, and the data pipeline.
 
 Students will learn:
@@ -83,7 +85,7 @@ Students will learn:
 - Scheduling apps
 
 
-#### Tuesday Morning, July 21: Finalize Setup
+#### Tuesday Morning, July 21: Finalize AI Setup for Sage Development
 
 Modern AI development tools — including large language models, code agents, and Model Context Protocol (MCP) servers — are transforming how scientific software is written and maintained. Students will be testing their AI development toolchains:
 
@@ -94,23 +96,6 @@ Modern AI development tools — including large language models, code agents, an
 By the end of this session, students will have completed several foundational Sage skill checkpoints -- AI development environment complete, submit job, explore cloud data, demonstrate your skills and begin making plans for your own project -- what will you accomplish before finishing the Summer Camp? Create a project plan with your AI assistant.
 
 #### Tuesday Afternoon, July 21: AI and Sage (part 1)
-
-This session’s focus is on the benefits of foundation models and their utility and adaptability to scientific workflows, including at the edge. It uses taxonomic image classification and the BioCLIP family of models to explore how large pretrained models may be adapted to a scientific task and deployed under constraints. 
-
-Participants will develop a mental model of AI concepts and approaches including image encoders, embeddings, CLIP-style image-text alignment, and the taxonomic supervision used with BioCLIP models. We will identify the strengths of such an approach, encounter where it still struggles, and implement targeted strategies for performance improvement such as fine-tuning and few-shot probing, and performance monitoring with benchmarking. 
-
-Edge deployment imposes constraints to the process, such as low-latency requirements, bandwidth limitations, and open-ended sensor data. Approaches to address these needs will be covered through model distillation and quantization to compress and speed up model inference and discuss the topic of open-set recognition motivated by topics such as invasive and new species detection.
-
-Learning outcomes:
-
-- Explain why a pretrained foundation model is a useful starting point for scientific tasks, and what is involved in adapting one compared to training from scratch.
-- Distinguish zero-shot classification, few-shot probing, fine-tuning, and continued pretraining, and recognize which approach fits a given task and data availability.
-- Train and evaluate a small classifier on frozen foundation-model embeddings from a small number of labeled examples.
-- Benchmark a model on a dataset relevant to a task; judge performance level adequacy.
-- Explain conditions that motivate inference at the edge, why distillation and/or quantization can help, and why continued benchmarking is important.
-
-
-#### Wednesday, July 22: AI and Sage (part 2 & 3)
 
 An overview of how the University of Hawaii has used Sage for volcano and anomaly detection.
 
@@ -127,7 +112,25 @@ Results:
 - Participants should be able to converse terminology with coding agents
 - Understand the training loop (forward pass, backprop, loss function, hyperparameter tuning)
 
-Semantic Image Search:
+#### Wednesday Morning, July 22: AI and Sage (part 2 & 3)
+
+**Foundation Models**
+
+This session’s focus is on the benefits of foundation models and their utility and adaptability to scientific workflows, including at the edge. It uses taxonomic image classification and the BioCLIP family of models to explore how large pretrained models may be adapted to a scientific task and deployed under constraints. 
+
+Participants will develop a mental model of AI concepts and approaches including image encoders, embeddings, CLIP-style image-text alignment, and the taxonomic supervision used with BioCLIP models. We will identify the strengths of such an approach, encounter where it still struggles, and implement targeted strategies for performance improvement such as fine-tuning and few-shot probing, and performance monitoring with benchmarking. 
+
+Edge deployment imposes constraints to the process, such as low-latency requirements, bandwidth limitations, and open-ended sensor data. Approaches to address these needs will be covered through model distillation and quantization to compress and speed up model inference and discuss the topic of open-set recognition motivated by topics such as invasive and new species detection.
+
+Learning outcomes:
+
+- Explain why a pretrained foundation model is a useful starting point for scientific tasks, and what is involved in adapting one compared to training from scratch.
+- Distinguish zero-shot classification, few-shot probing, fine-tuning, and continued pretraining, and recognize which approach fits a given task and data availability.
+- Train and evaluate a small classifier on frozen foundation-model embeddings from a small number of labeled examples.
+- Benchmark a model on a dataset relevant to a task; judge performance level adequacy.
+- Explain conditions that motivate inference at the edge, why distillation and/or quantization can help, and why continued benchmarking is important.
+
+**Semantic Image Search**
 
 How do we turn a gigantic, unsearchable library of images into something scientists can actually use?
 
@@ -138,40 +141,67 @@ Working inside a Jupyter Notebook on the National Data Platform (NDP), students 
 Rather than focusing solely on coding, this session emphasizes AI systems literacy—understanding how production AI systems are designed, evaluated, and deployed. Students will compare the simplified notebook implementation with the production Sage Image Search architecture, gaining insight into how research prototypes evolve into scalable scientific infrastructure. 
 
 
-#### Thursday Morning, July 23: AI+Sage (part 4)
+#### Thursday Morning, July 23: AI and Sage (part 4)
 
 Wrap up end-to-end AI exploration and work with AI coding agent to advance your project
 
+Student presentations
+
 #### Thursday Afternoon, July 23: NRP/NDP and NSF Resources
 
-The NSF provides cyberinfrastructure for research, including the National Data Platform (NDP), the National Research Platform (NRP), and NSF supercomputer centers such as SDSC, TACC, and NCSA.  This session will guide students through connecting Sage data and AI computation to other NSF resources.
-
-Using the Sage generates a continuous stream of data from hundreds of nodes nationwide. We will explore how to work with data effectively - from raw sensor readings to publication‑ready datasets.
+The NSF provides cyberinfrastructure for research, including the National Data Platform (NDP), the National Research Platform (NRP), and NSF supercomputer centers such as SDSC, TACC, and NCSA. This session will guide students through connecting Sage data and AI computation to other NSF resources. 
+Participants will connect to the National Data Platform, explore its capabilities, and see how it links data repositories, compute resources, and analysis tools into a single workflow.
 
 Topics include:
 
-- Querying Beehive data using the Sage Data Client and HTTP APIs
-- Integrating Sage data with NEON, NOAA, and satellite imagery
-- Publishing and citing datasets using DOIs and FAIR principles
-- Working with the Pelican data federation and open data catalogs
-- Connecting Sage workflows to NSF cyberinfrastructure (TACC, NDP, NRP)
+- Registering and discovering digital assets in NDP
+- Setting up and executing workspaces in NRP
+- Using the Sage Data Client SDK for hands-on data analysis within NDP workspaces
+- Building Sage-based workflows that combine NDP, NRP, and the Pelican data federation
+- Publishing workspaces to support open, reproducible research
 
-Participants will build end‑to‑end data pipelines that move from raw measurements to reproducible, shareable outputs.
+Through hands-on exercises, participants will learn to design and run end-to-end pipelines that connect Sage to the broader NSF research infrastructure.
 
-#### Friday, July 24: Sensors, Hardware, and Physical Integration
+#### Friday Morning, July 24: Sensors, Hardware, and Physical Integration (Part 1)
 
-Sage nodes are extensible — new sensors and hardware can be added to expand observational capabilities. This hands‑on session explores sensor integration from first principles. Participants are encouraged to bring their own hardware.
+Sage nodes are extensible edge-computing platforms that can support a wide range of scientific sensors, instruments, radios, and actuators. This session introduces the complete hardware-integration path, from physical connectivity and power delivery to application development, containerization, data publication, and device sharing.
+The session will combine short presentations, demonstrations, guided design exercises, and hands-on activities. Participants are encouraged to bring sensors, actuators, interface boards, cables, radios, power supplies, and device documentation for use during the afternoon workshop.
 
-Topics (to be finalized):
+Major topics
 
-- Infrasound sensors
-- Seismic sensors
-- Hyperspectral cameras
-- HaLow (802.11ah) wireless cameras
-- LoRaWAN sensor nodes
-- Actuators and robotic systems (PTZ cameras, robotic arms, autonomous platforms)
+- Sage node architecture, expansion interfaces, and boundary connectors
+- Directly attached, networked, wireless, and microcontroller-mediated devices
+- Communication interfaces, including USB, Ethernet, Wi-Fi, Bluetooth, LoRaWAN, UART, RS-232/RS-485, I2C, SPI, GPIO, and analog signals
+- Tradeoffs involving bandwidth, distance, latency, reliability, software support, and environmental deployment
+- Power requirements, voltage conversion, transient loads, grounding, isolation, connector selection, and electrical protection
+- Linux device access, drivers, permissions, communication libraries, and hardware discovery
+- Containerizing applications that read sensors or control actuators
+- Publishing measurements with timestamps, units, sensor identity, and metadata
+- Sharing sensors, measurements, and actuator access among applications
+- Reliability, calibration, health monitoring, failure recovery, and outdoor deployment considerations
 
-A full walkthrough will be provided: hardware bring‑up, driver development, containerization, testing, documentation, and deployment. The goal is for each team to integrate and deploy at least one new sensor to a nearby node.
+Representative devices may include environmental sensors, cameras, microphones, air-quality sensors, GPS receivers, serial instruments, microcontroller-based systems, relays, lights, motors, and pumps. Participants will examine the power, communication, software, data-rate, calibration, and deployment requirements of selected examples.
+
+#### Friday Afternoon, July 24: Sensors, Hardware, and Physical Integration (Part 2)
+
+This hands-on workshop will guide participants through connecting a sensor or actuator to a Sage development environment and implementing as much of the following end-to-end workflow as possible:
+
+physical device → electrical interface → communication protocol → application code → container → Sage node → shared data or control service
+
+Participants may work individually or in small teams. Example hardware may be available for participants who do not bring their own devices.
+
+Hands-on activities
+
+- Define a concrete integration objective, such as reading a sensor, capturing images or audio, receiving wireless data, controlling an actuator, or using measurements in a local AI application.
+- Verify device voltage, current, connector pinout, signal levels, and communication requirements.
+- Connect and detect the device through USB, Ethernet, serial, GPIO, a microcontroller, or a wireless interface.
+- Establish basic communication by reading a measurement, capturing a record, or issuing a safe actuator command.
+- Develop an application that initializes the device, exchanges data or commands, timestamps measurements, handles errors, records logs, and supports configuration.
+- Package the application in a container with the required libraries, device access, network settings, and runtime parameters.
+- Publish structured measurements through Sage data services or define a safe actuator-control interface.
+- Demonstrate the integration and document what worked, what remains incomplete, and what would be required for field deployment.
+
+AI coding assistants may be used to interpret device documentation, generate initial code, diagnose errors, and develop tests. All generated code must be validated against the device documentation and observed hardware behavior.
 
 #### Saturday, July 25: Community Day
 
@@ -210,24 +240,14 @@ Work on your project
 
 Show off your project!  Celebrate.  Enjoy dinner and farewell.
 
-
-
-## Potential Hackathon Projects
-
-Did you have a project in mind?  If not, here are some examples that we can help you with.  Attendees will be encouraged to organize into teams and tackle projects with guidance and support from the Sage team.
-
-#### Image Search at the Edge
-
-Key pieces: translate the NRP Kubernetes config into a pluginctl setup, swap in edge-friendly models (e.g., Gemma4), replace the vector DB with something edge-compatible (e.g., NVIDIA's NanoDB), and run benchmarks. Example creative ideas: pivot from "image search" to generating daily or weekly summaries of what the node sees.
-
-*(More hackathon topics will be selected based on participants' interests and announced prior to registration.)*
-
 ### Baseline Deliverables for All Participants
 
 In addition to hackathon project work, all participants are expected to complete the
 following by the end of the week:
 
 - Get new code into the ECR and run it on a deployed node
-- Process a batch of images using an LLM and write the results to the Beehive
+- Build AI tools and skills, and share them with the whole class
+- Write an overview of your project, present and share with the class
+- Process a batch of images using an LLM
 - Build and test a data pipeline connecting two or more sensor streams
 
