@@ -11,6 +11,7 @@ import Button from '@mui/material/Button'
 ![Collage of Sage Summer of AI event images. UIC Viz Lab, a Sage Thor-blade, a ptz camera, and wild sage node (v1)](./img/2026-sage-summer-hackathon-collage.jpg)
 
 ## Hack and Build AI@Edge
+## Training the Next Generation of AI Scientists!
 
 **Dates:** Monday, July 20 – Tuesday, July 28, 2026 \
 **Location:** [UIC Electronic Visualization Laboratory (EVL)](https://www.evl.uic.edu/location), Chicago, IL \
