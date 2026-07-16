@@ -64,17 +64,23 @@ require running models and tools on your own machine as well as on the provided 
 
 #### Sunday, July 19: Check-in
 
-We're planning to meet 5:00 PM at [EVL](https://www.evl.uic.edu/location), and then head to an informal welcome dinner.
+We will meet at 5:00 PM at [EVL](https://www.evl.uic.edu/location), and then head to an informal welcome dinner.
 
 #### Monday, July 20: Sage Foundations and System Software
 
 A comprehensive tour of the full Sage software stack, from node boot to the lifecycle of a running application. Topics include the node architecture, the Kubernetes‑based container orchestration system, the `pluginctl` scheduler, and the data pipeline.
 
-By the end of this session, participants will have:
+Students will learn:
 
-- Code development and AI coding assistant environment set up and working with GitHub
-- Submitted several AI prompts to Sage nodes
-- Submit a Sage job that calls an existing Sage inference service
+- What is Sage and what does the platform provide?
+- Accounts and the portal
+- Finding nodes
+- Working with data
+- SSH and development nodes
+- Basic app development
+- Publishing to ECR
+- Scheduling apps
+
 
 #### Tuesday Morning, July 21: Finalize Setup
 
@@ -84,17 +90,24 @@ Modern AI development tools — including large language models, code agents, an
 - Setting up MCP servers to give AI agents access to Sage APIs and node‑management tools
 - Prompt‑engineering strategies for generating reliable, testable code
 
-By the end of this session, students will have completed several foundational Sage skill checkpoints -- AI development environment complete, submit job, explore cloud data, demonstrate your skills and begin making plans for your own project -- what will you accomplish before finishing the Summer Camp?  Create a project plan with your AI assistant.
+By the end of this session, students will have completed several foundational Sage skill checkpoints -- AI development environment complete, submit job, explore cloud data, demonstrate your skills and begin making plans for your own project -- what will you accomplish before finishing the Summer Camp? Create a project plan with your AI assistant.
 
 #### Tuesday Afternoon, July 21: AI+Sage (part 1)
 
-The scientific value of AI depends on accurate, reliable, and efficient AI models running on its nodes. This session surveys the models currently deployed across the fleet, such as:
+This session’s focus is on the benefits of foundation models and their utility and adaptability to scientific workflows, including at the edge. It uses taxonomic image classification and the BioCLIP family of models to explore how large pretrained models may be adapted to a scientific task and deployed under constraints. 
 
-- **BioClip2** — species identification from camera imagery
-- **YOLO variants** — real‑time object detection for wildlife, vehicles, and human presence
-- **Flood detection** — water‑level and inundation classification
-- **Cloud motion vectors** — atmospheric dynamics estimation
-- **Wildfire and smoke detection** — early warning from RGB and thermal imagery
+Participants will develop a mental model of AI concepts and approaches including image encoders, embeddings, CLIP-style image-text alignment, and the taxonomic supervision used with BioCLIP models. We will identify the strengths of such an approach, encounter where it still struggles, and implement targeted strategies for performance improvement such as fine-tuning and few-shot probing, and performance monitoring with benchmarking. 
+
+Edge deployment imposes constraints to the process, such as low-latency requirements, bandwidth limitations, and open-ended sensor data. Approaches to address these needs will be covered through model distillation and quantization to compress and speed up model inference and discuss the topic of open-set recognition motivated by topics such as invasive and new species detection.
+
+Learning outcomes:
+
+- Explain why a pretrained foundation model is a useful starting point for scientific tasks, and what is involved in adapting one compared to training from scratch.
+- Distinguish zero-shot classification, few-shot probing, fine-tuning, and continued pretraining, and recognize which approach fits a given task and data availability.
+- Train and evaluate a small classifier on frozen foundation-model embeddings from a small number of labeled examples.
+- Benchmark a model on a dataset relevant to a task; judge performance level adequacy.
+- Explain conditions that motivate inference at the edge, why distillation and/or quantization can help, and why continued benchmarking is important.
+
 
 #### Wednesday, July 22: AI+Sage (part 2 & 3)
 
