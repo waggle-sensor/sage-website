@@ -92,7 +92,7 @@ Modern AI development tools — including large language models, code agents, an
 
 By the end of this session, students will have completed several foundational Sage skill checkpoints -- AI development environment complete, submit job, explore cloud data, demonstrate your skills and begin making plans for your own project -- what will you accomplish before finishing the Summer Camp? Create a project plan with your AI assistant.
 
-#### Tuesday Afternoon, July 21: AI+Sage (part 1)
+#### Tuesday Afternoon, July 21: AI and Sage (part 1)
 
 This session’s focus is on the benefits of foundation models and their utility and adaptability to scientific workflows, including at the edge. It uses taxonomic image classification and the BioCLIP family of models to explore how large pretrained models may be adapted to a scientific task and deployed under constraints. 
 
@@ -109,16 +109,33 @@ Learning outcomes:
 - Explain conditions that motivate inference at the edge, why distillation and/or quantization can help, and why continued benchmarking is important.
 
 
-#### Wednesday, July 22: AI+Sage (part 2 & 3)
+#### Wednesday, July 22: AI and Sage (part 2 & 3)
 
-AI Workflows:
+An overview of how the University of Hawaii has used Sage for volcano and anomaly detection.
 
-- Test model performance on real datasets
-- Understand failure modes and edge cases
-- Identify opportunities for improvement
-- Discover and adapt new models from Hugging Face and other sources
-- Apply quantization and optimization for edge deployment
-- Submit new models to the Edge Code Repository (ECR)
+Familiarization with high level deep learning concepts and workflows to provide knowledge/understanding to interact with coding agents and get experience with coding agent outputs. 
+
+At the end, there will be a quick example of training a head on top of a pretrained network.  Students may just watch or attempt to participate.  This should take no more than 30 minutes as examples are just running scripts and the code is thoroughly commented.
+The first shows an example of running the standalone model (patch embeddings and cls embeddings).
+The second demonstrates patch similarity with PCA to enforce the idea that the embeddings have related meanings with each other.
+The last is the practical example which is training a head on top of the frozen DINOV2 model.  Examples are contained in such a way that the user should just be able to run a script, see the outcoming and inspect the code.
+
+Results:
+
+- Understand neural networks and deep learning at a high level
+- Participants should be able to converse terminology with coding agents
+- Understand the training loop (forward pass, backprop, loss function, hyperparameter tuning)
+
+Semantic Image Search:
+
+How do we turn a gigantic, unsearchable library of images into something scientists can actually use?
+
+In this hands-on lab we will look into this, students will build a simplified version of Sage Image Search, the AI-powered image retrieval system used by Sage. Rather than treating AI as a black box, participants will explore every stage of a real multimodal retrieval pipeline—from image captioning and embeddings to hybrid search, reranking, and interactive search interfaces. 
+
+Working inside a Jupyter Notebook on the National Data Platform (NDP), students will use open-source AI models and tools including Gemma, OpenCLIP, Milvus Lite, and Gradio to build a complete search workflow capable of finding scientific images from natural language queries. Along the way, they will learn why modern retrieval systems combine semantic understanding with traditional keyword search, and how these techniques scale to collections containing tens of millions of images. 
+
+Rather than focusing solely on coding, this session emphasizes AI systems literacy—understanding how production AI systems are designed, evaluated, and deployed. Students will compare the simplified notebook implementation with the production Sage Image Search architecture, gaining insight into how research prototypes evolve into scalable scientific infrastructure. 
+
 
 #### Thursday Morning, July 23: AI+Sage (part 4)
 
