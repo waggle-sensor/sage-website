@@ -25,7 +25,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous">
 <script src="https://apis.google.com/js/api.js"></script><link rel="stylesheet" href="/assets/css/styles.6260746b.css">
-<script src="/assets/js/runtime~main.a9c7dd27.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ad985f20.js" defer="defer"></script>
 <script src="/assets/js/main.7db77468.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -68,14 +68,19 @@ require running models and tools on your own machine as well as on the provided 
 <table><thead><tr><th>Time</th><th>Activity</th></tr></thead><tbody><tr><td>8:00 AM – 9:30 AM</td><td>Open hacking / independent work</td></tr><tr><td>9:30 AM – 12:30 PM</td><td><strong>Morning session (3 hrs)</strong></td></tr><tr><td>12:30 PM – 1:30 PM</td><td>Lunch (on your own — campus dining or nearby restaurants)</td></tr><tr><td>1:30 PM – 4:30 PM</td><td><strong>Afternoon session (3 hrs)</strong></td></tr><tr><td>4:30 PM – 6:00 PM</td><td>Open hacking / independent work</td></tr><tr><td>Evening</td><td>Dinner on your own; hacking in teams, optional after-hours activities</td></tr></tbody></table>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="agenda">Agenda:<a href="#agenda" class="hash-link" aria-label="Direct link to Agenda:" title="Direct link to Agenda:" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sunday-july-19-check-in">Sunday, July 19: Check-in<a href="#sunday-july-19-check-in" class="hash-link" aria-label="Direct link to Sunday, July 19: Check-in" title="Direct link to Sunday, July 19: Check-in" translate="no">​</a></h4>
-<p>We&#x27;re planning to meet 5:00 PM at <a href="https://www.evl.uic.edu/location" target="_blank" rel="noopener noreferrer" class="">EVL</a>, and then head to an informal welcome dinner.</p>
+<p>We will meet at 5:00 PM at <a href="https://www.evl.uic.edu/location" target="_blank" rel="noopener noreferrer" class="">EVL</a>, and then head to an informal welcome dinner.</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="monday-july-20-sage-foundations-and-system-software">Monday, July 20: Sage Foundations and System Software<a href="#monday-july-20-sage-foundations-and-system-software" class="hash-link" aria-label="Direct link to Monday, July 20: Sage Foundations and System Software" title="Direct link to Monday, July 20: Sage Foundations and System Software" translate="no">​</a></h4>
 <p>A comprehensive tour of the full Sage software stack, from node boot to the lifecycle of a running application. Topics include the node architecture, the Kubernetes‑based container orchestration system, the <code>pluginctl</code> scheduler, and the data pipeline.</p>
-<p>By the end of this session, participants will have:</p>
+<p>Students will learn:</p>
 <ul>
-<li class="">Code development and AI coding assistant environment set up and working with GitHub</li>
-<li class="">Submitted several AI prompts to Sage nodes</li>
-<li class="">Submit a Sage job that calls an existing Sage inference service</li>
+<li class="">What is Sage and what does the platform provide?</li>
+<li class="">Accounts and the portal</li>
+<li class="">Finding nodes</li>
+<li class="">Working with data</li>
+<li class="">SSH and development nodes</li>
+<li class="">Basic app development</li>
+<li class="">Publishing to ECR</li>
+<li class="">Scheduling apps</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="tuesday-morning-july-21-finalize-setup">Tuesday Morning, July 21: Finalize Setup<a href="#tuesday-morning-july-21-finalize-setup" class="hash-link" aria-label="Direct link to Tuesday Morning, July 21: Finalize Setup" title="Direct link to Tuesday Morning, July 21: Finalize Setup" translate="no">​</a></h4>
 <p>Modern AI development tools — including large language models, code agents, and Model Context Protocol (MCP) servers — are transforming how scientific software is written and maintained. Students will be testing their AI development toolchains:</p>
@@ -84,15 +89,18 @@ require running models and tools on your own machine as well as on the provided 
 <li class="">Setting up MCP servers to give AI agents access to Sage APIs and node‑management tools</li>
 <li class="">Prompt‑engineering strategies for generating reliable, testable code</li>
 </ul>
-<p>By the end of this session, students will have completed several foundational Sage skill checkpoints -- AI development environment complete, submit job, explore cloud data, demonstrate your skills and begin making plans for your own project -- what will you accomplish before finishing the Summer Camp?  Create a project plan with your AI assistant.</p>
+<p>By the end of this session, students will have completed several foundational Sage skill checkpoints -- AI development environment complete, submit job, explore cloud data, demonstrate your skills and begin making plans for your own project -- what will you accomplish before finishing the Summer Camp? Create a project plan with your AI assistant.</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="tuesday-afternoon-july-21-aisage-part-1">Tuesday Afternoon, July 21: AI+Sage (part 1)<a href="#tuesday-afternoon-july-21-aisage-part-1" class="hash-link" aria-label="Direct link to Tuesday Afternoon, July 21: AI+Sage (part 1)" title="Direct link to Tuesday Afternoon, July 21: AI+Sage (part 1)" translate="no">​</a></h4>
-<p>The scientific value of AI depends on accurate, reliable, and efficient AI models running on its nodes. This session surveys the models currently deployed across the fleet, such as:</p>
+<p>This session’s focus is on the benefits of foundation models and their utility and adaptability to scientific workflows, including at the edge. It uses taxonomic image classification and the BioCLIP family of models to explore how large pretrained models may be adapted to a scientific task and deployed under constraints.</p>
+<p>Participants will develop a mental model of AI concepts and approaches including image encoders, embeddings, CLIP-style image-text alignment, and the taxonomic supervision used with BioCLIP models. We will identify the strengths of such an approach, encounter where it still struggles, and implement targeted strategies for performance improvement such as fine-tuning and few-shot probing, and performance monitoring with benchmarking.</p>
+<p>Edge deployment imposes constraints to the process, such as low-latency requirements, bandwidth limitations, and open-ended sensor data. Approaches to address these needs will be covered through model distillation and quantization to compress and speed up model inference and discuss the topic of open-set recognition motivated by topics such as invasive and new species detection.</p>
+<p>Learning outcomes:</p>
 <ul>
-<li class=""><strong>BioClip2</strong> — species identification from camera imagery</li>
-<li class=""><strong>YOLO variants</strong> — real‑time object detection for wildlife, vehicles, and human presence</li>
-<li class=""><strong>Flood detection</strong> — water‑level and inundation classification</li>
-<li class=""><strong>Cloud motion vectors</strong> — atmospheric dynamics estimation</li>
-<li class=""><strong>Wildfire and smoke detection</strong> — early warning from RGB and thermal imagery</li>
+<li class="">Explain why a pretrained foundation model is a useful starting point for scientific tasks, and what is involved in adapting one compared to training from scratch.</li>
+<li class="">Distinguish zero-shot classification, few-shot probing, fine-tuning, and continued pretraining, and recognize which approach fits a given task and data availability.</li>
+<li class="">Train and evaluate a small classifier on frozen foundation-model embeddings from a small number of labeled examples.</li>
+<li class="">Benchmark a model on a dataset relevant to a task; judge performance level adequacy.</li>
+<li class="">Explain conditions that motivate inference at the edge, why distillation and/or quantization can help, and why continued benchmarking is important.</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="wednesday-july-22-aisage-part-2--3">Wednesday, July 22: AI+Sage (part 2 &amp; 3)<a href="#wednesday-july-22-aisage-part-2--3" class="hash-link" aria-label="Direct link to Wednesday, July 22: AI+Sage (part 2 &amp; 3)" title="Direct link to Wednesday, July 22: AI+Sage (part 2 &amp; 3)" translate="no">​</a></h4>
 <p>AI Workflows:</p>
