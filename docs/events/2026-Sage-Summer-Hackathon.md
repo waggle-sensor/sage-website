@@ -18,10 +18,6 @@ import Button from '@mui/material/Button'
 **Audience:** Graduate students, postdoctoral researchers, and early-career
 scientists
 
-:::info
-**Sign-up is now closed.** 
-:::
-
 ### Program Overview
 
 This intensive seven-day summer camp brings together students and postdoctoral
