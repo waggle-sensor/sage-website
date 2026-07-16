@@ -200,14 +200,3 @@ following by the end of the week:
 - Process a batch of images using an LLM and write the results to the Beehive
 - Build and test a data pipeline connecting two or more sensor streams
 
-## Interest Form
-
-**Sign-up is now closed.** If you're still interested in attending, please [contact us](/docs/contact-us) and we'll do our best to accommodate you.  Everyone who has already signed up will receive an update by **Monday, June 15** with confirmation details and next steps.
-
-<Button
-  variant="contained"
-  disabled
-  className="!normal-case hover:text-white hover:opacity-80"
->
-  <span>Sign-up Closed</span>
-</Button>
