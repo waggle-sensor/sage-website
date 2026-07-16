@@ -19,16 +19,8 @@ import Button from '@mui/material/Button'
 scientists
 
 :::info
-**Sign-up is now closed.** If you're still interested in attending, please **[contact us](/docs/contact-us)** and we'll do our best to accommodate you.  Everyone who has already signed up will receive an update by **Monday, June 15** with confirmation details and next steps.
+**Sign-up is now closed.** 
 :::
-
-<Button
-  variant="contained"
-  disabled
-  className="!normal-case hover:text-white hover:opacity-80"
->
-  <span>Sign-up Closed</span>
-</Button>
 
 ### Program Overview
 
