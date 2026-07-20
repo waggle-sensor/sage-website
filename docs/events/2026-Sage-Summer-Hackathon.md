@@ -242,12 +242,15 @@ Show off your project!  Celebrate.  Enjoy dinner and farewell.
 
 ### Baseline Deliverables for All Participants
 
-In addition to hackathon project work, all participants are expected to complete the
-following by the end of the week:
+- A clearly defined "Challenge Problem".  If you didn’t arrive with one, we will help you find a team
 
-- Get new code into the ECR and run it on a deployed node
-- Build AI tools and skills, and share them with the whole class
-- Write an overview of your project, present and share with the class
-- Process a batch of images using an LLM
-- Build and test a data pipeline connecting two or more sensor streams
+- A classroom-notes.md file in GitHub – (for AI design help)
+- New public GitHub repo called sage-summer-camp-2026
+
+Artifacts of accomplishments:
+     - A five-minute presentation (July 27 & 28)
+     - A project.md overview of your work for the Sage website
+     - An ECR app (if applicable)
+     - A Poster
+- Your Hermes brain (more later)
 
