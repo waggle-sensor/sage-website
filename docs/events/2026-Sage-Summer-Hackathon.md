@@ -247,10 +247,12 @@ Show off your project!  Celebrate.  Enjoy dinner and farewell.
 - A classroom-notes.md file in GitHub – (for AI design help)
 - New public GitHub repo called sage-summer-camp-2026
 
-Artifacts of accomplishments:
+**Artifacts of accomplishments:**
+
      - A five-minute presentation (July 27 & 28)
      - A project.md overview of your work for the Sage website
      - An ECR app (if applicable)
      - A Poster
+
 - Your Hermes brain (more later)
 
