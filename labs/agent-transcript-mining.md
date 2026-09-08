@@ -3,7 +3,11 @@ sidebar_label: Many Agents, One Better Brain
 sidebar_position: 3
 ---
 
+import LabButtons from './components/LabButtons'
+
 # Many Agents, One Better Brain: Turning a Week of Debugging into a Better Shared Profile
+
+<LabButtons id="agent-transcript-mining" />
 
 Every student at the 2026 Sage Grande summer camp got the same AI agent ([Hermes](https://hermes-agent.nousresearch.com/)) and hardware ([NVIDIA Jetson AGX Thor](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-thor/)) for a week and every prompt, tool call, failure, and fix was logged. The recovered transcripts hold **9,077 messages and 4,424 tool calls, and 237.8 hours** of agent wall-time. This is the pipeline we built to read all of it, and the knowledge that came out.
 

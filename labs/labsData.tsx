@@ -63,7 +63,7 @@ export const labProjects: LabProject[] = [
     image: AgentMining,
     imageAlt: 'screenshot of Hermes Terminal',
     readMoreUrl: './labs/agent-transcript-mining',
-    // githubUrl: '_____add_repo_link_here____'
+    githubUrl: 'https://github.com/waggle-sensor/Wisp'
   },
   {
     id: 'image-search-bench',
