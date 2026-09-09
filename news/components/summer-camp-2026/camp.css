@@ -1,0 +1,692 @@
+/* Styles for the 2026 Summer Camp news post figures.
+ *
+ * Written as plain CSS rather than Tailwind utilities on purpose: the Tailwind
+ * content globs in tailwind.config.js cover src/, team/ and labs/ but not
+ * news/, so a utility class used only here would be purged from the production
+ * bundle. These class names are all namespaced `camp-` to keep them out of the
+ * way of the global stylesheet. */
+
+.camp-figure {
+  margin: 2.5rem 0;
+}
+
+.camp-figure figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #52514e;
+}
+
+/* screen-reader-only table header row for the bar chart */
+.camp-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- map ---- */
+
+.camp-map {
+  position: relative;
+  background: #fcfcfb;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.camp-map svg {
+  display: block;
+}
+
+.camp-map circle[tabindex]:focus-visible {
+  outline: 2px solid #0080c7;
+  outline-offset: 2px;
+}
+
+.camp-map-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.75rem;
+  padding: 0.35rem 0.5rem 0.2rem;
+  font-size: 0.85rem;
+  color: #52514e;
+}
+
+.camp-key-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.camp-key-label {
+  font-weight: 600;
+}
+
+.camp-key-scale {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.camp-key-scale svg {
+  display: block;
+}
+
+.camp-swatch-dot {
+  border-radius: 50%;
+  background: #eb6834;
+  width: 13px;
+  height: 13px;
+}
+
+.camp-tip {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 14px));
+  background: #ffffff;
+  border: 1px solid rgba(11, 11, 11, 0.12);
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(11, 11, 11, 0.12);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.camp-tip strong {
+  display: block;
+  color: #0b0b0b;
+  margin-bottom: 0.15rem;
+}
+
+.camp-tip span {
+  display: block;
+  color: #52514e;
+}
+
+/* ------------------------------------------------------------ schedule ---- */
+
+.camp-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: #52514e;
+}
+
+.camp-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.camp-legend-n {
+  color: #898781;
+}
+
+.camp-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.camp-legend-wide {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------- donut ---- */
+
+/* Floated so the prose wraps alongside it. The float is dropped below 900px,
+   where a 250px aside would leave the text in a gutter. */
+.camp-figure-aside {
+  float: right;
+  width: 366px;
+  margin: 0.25rem 0 1.25rem 1.75rem;
+}
+
+.camp-clear {
+  clear: both;
+}
+
+/* chart and key sit side by side, which keeps the floated aside short enough
+   that the surrounding paragraphs wrap past it rather than under it */
+.camp-donut {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: #fcfcfb;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+
+.camp-donut svg {
+  display: block;
+  flex: 0 0 auto;
+  width: 124px;
+  height: auto;
+}
+
+.camp-donut-key {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1.25;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.camp-donut-key li {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.camp-donut-key .camp-swatch {
+  /* nudge the square onto the text baseline */
+  transform: translateY(1px);
+}
+
+.camp-donut-key-label {
+  color: #52514e;
+  line-height: 1.35;
+}
+
+.camp-donut-key-n {
+  color: #898781;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 900px) {
+  .camp-figure-aside {
+    float: none;
+    width: auto;
+    max-width: 380px;
+    margin: 1.75rem auto;
+  }
+}
+
+/* Narrow phones cannot fit a 132px chart beside a 26-character label, so the
+   key goes back under the chart there. */
+@media (max-width: 420px) {
+  .camp-donut {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .camp-donut svg {
+    width: 150px;
+  }
+
+  .camp-donut-key {
+    width: 100%;
+  }
+}
+
+.camp-days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.camp-days li {
+  display: grid;
+  grid-template-columns: 4px 6.5rem 1fr;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #f1f0ec;
+}
+
+.camp-day-rule {
+  width: 4px;
+  height: 100%;
+  min-height: 1.6rem;
+  border-radius: 2px;
+  background: #0080c7;
+}
+
+.camp-day-date {
+  font-size: 0.85rem;
+  color: #52514e;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.camp-day-dow {
+  color: #898781;
+  margin-left: 0.15rem;
+}
+
+.camp-day-label {
+  font-size: 0.92rem;
+  color: #0b0b0b;
+}
+
+/* ----------------------------------------------------------- bar chart ---- */
+
+.camp-bars {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.camp-bar-row {
+  display: grid;
+  grid-template-columns: 11.5rem 1fr;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.camp-bar-label {
+  font-size: 0.88rem;
+  color: #52514e;
+  text-align: right;
+  line-height: 1.25;
+}
+
+.camp-bar-track {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.camp-bar-fill {
+  height: 18px;
+  background: #0080c7;
+  border-radius: 0 4px 4px 0;
+  min-width: 2px;
+}
+
+.camp-bar-value {
+  font-size: 0.85rem;
+  color: #52514e;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------- stats ---- */
+
+.camp-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.camp-stat {
+  background: #fcfcfb;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+
+.camp-stat-value {
+  font-size: 2.3rem;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #0080c7;
+}
+
+.camp-stat-label {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  color: #52514e;
+}
+
+/* ------------------------------------------------------------ projects ---- */
+
+.camp-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 1.1rem;
+  margin: 2rem 0;
+}
+
+.camp-project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fcfcfb;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.camp-project,
+.camp-project:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.camp-project:hover {
+  border-color: #0080c7;
+  transform: translateY(-2px);
+}
+
+.camp-project img {
+  width: 100%;
+  height: 132px;
+  object-fit: cover;
+  display: block;
+  background: #f1f0ec;
+}
+
+.camp-project-body {
+  padding: 0.85rem 1rem 1.05rem;
+}
+
+.camp-project h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.02rem;
+  line-height: 1.3;
+  color: #0b0b0b;
+}
+
+.camp-project-team {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  color: #898781;
+  line-height: 1.4;
+}
+
+.camp-project-blurb {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: #52514e;
+}
+
+/* --------------------------------------------------------------- small ---- */
+
+@media (max-width: 768px) {
+  .camp-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .camp-bar-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .camp-bar-label {
+    text-align: left;
+  }
+
+  .camp-days li {
+    grid-template-columns: 4px 1fr;
+    row-gap: 0.15rem;
+  }
+
+  .camp-day-label {
+    grid-column: 2;
+  }
+}
+
+/* ------------------------------------------------------- survey outcomes ---- */
+
+.camp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.camp-bar-label-wide {
+  line-height: 1.3;
+}
+
+/* the agreement statements are sentences, not short category names, so that
+   chart gets a wider label column than the themes one */
+.camp-bars-wide .camp-bar-row {
+  grid-template-columns: 17rem 1fr;
+}
+
+.camp-dumbbells {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.camp-dumbbell-row {
+  display: grid;
+  grid-template-columns: 13rem 1fr 2.6rem;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.camp-dumbbell-track {
+  position: relative;
+  height: 18px;
+}
+
+/* the full 1-5 scale, so a short gain looks short */
+.camp-dumbbell-rule {
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 1px;
+  background: #e1e0d9;
+}
+
+.camp-dumbbell-gain {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  border-radius: 2px;
+  background: #0080c7;
+  opacity: 0.35;
+}
+
+.camp-dumbbell-dot {
+  position: absolute;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  margin-left: -5.5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  /* 2px surface ring so the two dots stay legible where they nearly touch */
+  box-shadow: 0 0 0 2px #fcfcfb;
+}
+
+.camp-dumbbell-delta {
+  font-size: 0.82rem;
+  color: #0080c7;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.camp-dumbbell-axis {
+  display: grid;
+  grid-template-columns: 13rem 1fr 2.6rem;
+  gap: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.camp-dumbbell-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #898781;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------------------------------------------------------- quotes ---- */
+
+.camp-quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.camp-quote {
+  position: relative;
+  margin: 0;
+  /* room at the top-left for the decorative mark to sit behind the text */
+  padding: 2.1rem 1.3rem 1.15rem;
+  background: #fcfcfb;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* The oversized opening quote. Decorative only — a real quotation mark in the
+   text would be read out twice, so this is aria-hidden by construction
+   (::before content is not exposed as content to AT in practice, and the
+   blockquote element already carries the semantics). */
+.camp-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.55rem;
+  left: 0.55rem;
+  font-size: 5.5rem;
+  line-height: 1;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #0080c7;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.camp-quote:hover,
+.camp-quote:focus-visible {
+  border-color: rgba(0, 128, 199, 0.45);
+  box-shadow: 0 2px 10px rgba(11, 11, 11, 0.07);
+  outline: none;
+}
+
+.camp-quote blockquote {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #0b0b0b;
+}
+
+.camp-quote figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #898781;
+}
+
+.camp-quote-who {
+  display: block;
+}
+
+/* The question is secondary: collapsed until the card is hovered or focused.
+   It animates on height rather than appearing from display:none so the reveal
+   reads as one motion, and it stays in the accessibility tree throughout. */
+.camp-quote-prompt {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  color: #52514e;
+  transition: max-height 0.22s ease, opacity 0.22s ease, margin-top 0.22s ease;
+}
+
+.camp-quote:hover .camp-quote-prompt,
+.camp-quote:focus-visible .camp-quote-prompt,
+.camp-quote:focus-within .camp-quote-prompt {
+  max-height: 3.5rem;
+  opacity: 1;
+  margin-top: 0.12rem;
+}
+
+/* Hover is not available on touch, so there the question is simply always shown. */
+@media (hover: none) {
+  .camp-quote-prompt {
+    max-height: 3.5rem;
+    opacity: 1;
+    margin-top: 0.12rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .camp-quote-prompt {
+    transition: none;
+  }
+}
+
+/* ----------------------------------------------------------- unit chart ---- */
+
+.camp-units {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.camp-unit-row {
+  display: grid;
+  grid-template-columns: 17rem 1fr 3.1rem;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.camp-unit-cells {
+  display: flex;
+  gap: 3px;
+}
+
+/* one square per respondent; the 3px gaps are what make 16 countable against 17 */
+.camp-unit {
+  flex: 1 1 0;
+  max-width: 22px;
+  height: 18px;
+  border-radius: 3px;
+  background: #e8e7e1;
+}
+
+.camp-unit-on {
+  background: #0080c7;
+}
+
+.camp-unit-value {
+  font-size: 0.85rem;
+  color: #52514e;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .camp-dumbbell-row,
+  .camp-dumbbell-axis {
+    grid-template-columns: 1fr 2.6rem;
+    row-gap: 0.2rem;
+  }
+
+  .camp-dumbbell-row .camp-bar-label {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .camp-dumbbell-axis .camp-bar-label {
+    display: none;
+  }
+
+  .camp-unit-row {
+    grid-template-columns: 1fr 3.1rem;
+    row-gap: 0.2rem;
+  }
+
+  .camp-unit-row .camp-bar-label {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}

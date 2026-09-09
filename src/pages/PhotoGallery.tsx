@@ -12,9 +12,24 @@ import { ArrowCircleRightOutlined, Close } from '@mui/icons-material'
 import { Box, CircularProgress, DialogActions } from '@mui/material'
 
 
-const importAllImages = (limit?: number) => {
-  const images = require.context('/static/img/gallery', false, /\.(png|jpe?g|gif|svg|jpg)$/i)
-  const names = images.keys()
+// webpack's require.context needs a literal path, so each usable image folder is
+// registered here rather than passed in as a string. Add a line to add a gallery.
+// Filenames carry their own caption and order: "<n>. <caption>.<ext>".
+const COLLECTIONS = {
+  gallery: {
+    ctx: require.context('/static/img/gallery', false, /\.(png|jpe?g|gif|svg|jpg)$/i),
+    load: (file: string) => require(`@site/static/img/gallery/${file}`).default,
+  },
+  'summer-camp': {
+    ctx: require.context('/news/img/summer-camp', false, /\.(png|jpe?g|gif|svg|jpg)$/i),
+    load: (file: string) => require(`@site/news/img/summer-camp/${file}`).default,
+  },
+}
+
+export type Collection = keyof typeof COLLECTIONS
+
+const importAllImages = (collection: Collection, limit?: number) => {
+  const names = COLLECTIONS[collection].ctx.keys()
     .map((image) => image.replace('./', ''))
     .sort((a, b) => parseInt(a.split('.')[0]) - parseInt(b.split('.')[0]))
 
@@ -23,15 +38,28 @@ const importAllImages = (limit?: number) => {
 
 
 
+// Column counts are written out in full rather than interpolated because
+// Tailwind scans source text for class names: a template literal like
+// `md:columns-${n}` produces no CSS at all.
+const COLUMN_CLASSES = {
+  3: 'columns-1 sm:columns-2 md:columns-3 gap-4',
+  4: 'columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4',
+}
+
 type Props = {
   viewMore?: string // url
   limit?: number
+  /** which registered image folder to show; defaults to the sitewide gallery */
+  collection?: Collection
+  /** widest column count. Use 3 inside a blog post, where the content column is
+   *  narrower than a full page and four columns leave the images tiny. */
+  columns?: keyof typeof COLUMN_CLASSES
 }
 
 const Gallery = (props: Props) => {
-  const {viewMore, limit} = props
+  const {viewMore, limit, collection = 'gallery', columns = 4} = props
 
-  const imageList = importAllImages(limit)
+  const imageList = importAllImages(collection, limit)
   const history = useHistory()
 
   const [images] = useState(imageList)
@@ -56,9 +84,24 @@ const Gallery = (props: Props) => {
     setImage(document.getElementById(fileName)?.src)
   }
 
+  useEffect(() => {
+    if (!imgName) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft' && imgNum > 0) {
+        history.replace(`?img=${images[imgNum - 1]}`)
+      } else if (event.key === 'ArrowRight' && imgNum < images.length - 1) {
+        history.replace(`?img=${images[imgNum + 1]}`)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [imgName, imgNum, images, history])
+
   return (
     <div>
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
+      <div className={COLUMN_CLASSES[columns]}>
         {imageList.map((fileName, i) => (
           <div key={i} className="mb-4">
             <Link
@@ -68,7 +111,7 @@ const Gallery = (props: Props) => {
             >
               <img
                 id={fileName}
-                src={require(`@site/static/img/gallery/${fileName}`).default}
+                src={COLLECTIONS[collection].load(fileName)}
                 alt={`Image ${i + 1}`}
                 className="w-full rounded-lg shadow-md"
               />
@@ -90,6 +133,8 @@ const Gallery = (props: Props) => {
         open={!!imgName}
         onClose={handleClose}
         aria-labelledby="photo-description"
+        maxWidth="xl"
+        fullWidth
       >
         <DialogTitle className="mr-12">
           Photo Gallery
@@ -107,7 +152,12 @@ const Gallery = (props: Props) => {
         {imgName ?
           <>
             <DialogContent>
-              {image && <img src={image} />}
+              {image &&
+                <img
+                  src={image}
+                  className="mx-auto block max-h-[75vh] w-auto max-w-full object-contain"
+                />
+              }
               <div id="photo-description" className="font-medium text-slate-500 text-center">
                 {imgName.split('.')[1]}
               </div>
