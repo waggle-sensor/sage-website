@@ -127,7 +127,7 @@ Select the path that best describes your role and goals:
 
 
 **Key Resources:**
-- [Sample Data for Education](./tutorials/accessing-data#data-bundles)
+- [Sample Data for Education](./tutorials/accessing-data)
 - [Edge App Examples](https://portal.sagecontinuum.org/apps/)
 
 ---

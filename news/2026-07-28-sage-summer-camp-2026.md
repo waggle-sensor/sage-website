@@ -155,7 +155,7 @@ Renambot, and all of the EVL Students at UIC's EVL for hosting a lab full of peo
 and hardware for ten days.
 
 Thanks to the National Science Foundation for its support of the camp, and to
-[https://www.nvidia.com/](NVIDIA) for providing educational credits to [brev.nvidia.com](https://brev.nvidia.com/)
+[NVIDIA](https://www.nvidia.com/) for providing educational credits to [brev.nvidia.com](https://brev.nvidia.com/)
 for cloud computing and GPU resources.
 
 Browse every report on the [AI &amp; Science](/science) page, or see the
