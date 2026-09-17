@@ -1,9 +1,0 @@
-{
-  "extends": "@docusaurus/tsconfig",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "target": "es2015",
-    "resolveJsonModule": true
-  }
-}

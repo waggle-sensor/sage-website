@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8949],{47064:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"2026","slug":"/category/2026","permalink":"/science/category/2026","sidebar":"tutorialSidebar","navigation":{"next":{"title":"Sage-NDP-SciDx MCP","permalink":"/science/2026/ndp-scidx-mcp"}}}}')}}]);
