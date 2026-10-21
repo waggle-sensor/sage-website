@@ -1,11 +1,10 @@
 # Developer quick reference
 
 
-## Disclaimer
-:warning: This is a quick-reference guide, not a complete guide to making a plugin.
+:::info Note: This is a quick-reference guide, not a complete guide to making a plugin.
 Use this to copy-paste commands while working on plugins and to troubleshoot them in the testing and scheduling stages.
 Please consult the official :green_book:[Plugin Tutorials](/docs/tutorials/edge-apps/intro-to-edge-apps) for detailed guidance.
-
+:::
 
 ## Tips
 :information_source:  Plugin=App

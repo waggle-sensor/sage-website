@@ -1,5 +1,5 @@
 ---
-sidebar_label: Sage NEON Kafka mirror
+sidebar_label: Using the NEON Kafka mirror
 sidebar_position: 5
 ---
 
