@@ -62,9 +62,9 @@ The NEON Kafka mirror runs on these Sage nodes, with more on the way.
 | Node | Kafka access |
 | --- | --- |
 | [H01B](https://portal.sagecontinuum.org/nodes/H01B) | Available |
+| [H036](https://portal.sagecontinuum.org/nodes/H036) | Available |
 | [H03C](https://portal.sagecontinuum.org/nodes/H03C) | Coming soon |
 | [H03B](https://portal.sagecontinuum.org/nodes/H03B) | Coming soon |
-| [H036](https://portal.sagecontinuum.org/nodes/H036) | Coming soon |
 
 The sensor lists for H03C, H03B and H036 will be added here once their mirrors are online.
 
@@ -107,6 +107,42 @@ These are the NEON sensor topics that carry data on the mirror at node H01B, wit
 | `reading.sensor.tdr315n_raw` | Acclima TDR-315N |
 | `reading.sensor.windobserverii` | Gill WindObserver II 2D Ultrasonic Anemometer |
 
+### H036
+
+These are the NEON sensor topics that carry data on the mirror at node H036, with the instrument each one comes from, as described in NEON's schema registry.
+
+| Topic | Sensor |
+| --- | --- |
+| `reading.sensor.cmp22` | Kipp & Zonen CMP22 Pyranometer |
+| `reading.sensor.cr1000x` | Campbell CR1000X Data Logger |
+| `reading.sensor.csat3b` | Campbell Scientific CSAT3B 3D Wind Sensor |
+| `reading.sensor.dualfan` | NEON Dual-Fan Aspirated Shield Fan Honeycomb stack |
+| `reading.sensor.g2131i_raw` | Picarro G2131-i Isotope and Gas Concentration Analyzer |
+| `reading.sensor.gmp343` | Vaisala CARBOCAP GMP343 Carbon Dioxide Probe |
+| `reading.sensor.grape` | NEON Grape Data Logger |
+| `reading.sensor.hfp01sc` | Hukseflux HFP01SC Heat Flux Plate |
+| `reading.sensor.hmp155` | Vaisala HMP155 Humidity and Temperature Probe |
+| `reading.sensor.l2130i_raw` | Picarro L2130-i Isotope Water Analyzer |
+| `reading.sensor.li191r` | LI-COR LI-191R Line Quantum Sensor |
+| `reading.sensor.li7200_raw` | LI-COR Biosciences LI-7200 Enclosed CO2/H2O Gas Analyzer |
+| `reading.sensor.li840a` | LI-COR LI-840A CO2 and H2O Gas Analyzer |
+| `reading.sensor.mcseries` | ALICAT MC-Series Gas Mass Flow Controllers |
+| `reading.sensor.metone370380` | Met One Instruments 370-380 Series Precipitation Gauges |
+| `reading.sensor.mti300ahrs` | XSense MTi-300 AHRS Accelerometer |
+| `reading.sensor.mwseries` | ALICAT MW-Series Low Pressure Drop Gas Mass Flow Meters |
+| `reading.sensor.nr01` | Hukseflux NR01 Net Radiometer |
+| `reading.sensor.picarro3way` | Picarro L2130i 3 way valve |
+| `reading.sensor.pressuretransducer` | Generic Pressure Transducer |
+| `reading.sensor.prt` | 100 Ohm Platinum Resistance Thermometer |
+| `reading.sensor.ptb330a` | Vaisala BAROCAP PTB330 Digital Barometer |
+| `reading.sensor.pump` | DAC output for vacuum pump speed control |
+| `reading.sensor.si111` | Apogee SI-111 Infrared Radiometer |
+| `reading.sensor.solenoid` | Solenoid with 8 digital outputs |
+| `reading.sensor.spn1` | Delta-T Devices SPN1 Sunshine Pyranometer |
+| `reading.sensor.sq500ss` | Apogee SQ-500-SS Full-Spectrum Quantum Sensor |
+| `reading.sensor.t7610_raw` | Comet T7610 Remote Thermometer Hygrometer Barometer |
+| `reading.sensor.tdr315l_raw` | Acclima TDR-315L Integrated Waveform digitizing True Domain Reflectometer |
+| `reading.sensor.windobserverii` | Gill WindObserver II 2D Ultrasonic Anemometer |
 ## How to get started
 
 Each step points to the repository or Sage document that covers it in detail.
