@@ -113,12 +113,10 @@ These are the NEON sensor topics that carry data on the mirror at node H036, wit
 
 | Topic | Sensor |
 | --- | --- |
-| `reading.sensor.aepg600m_heated` | Belfort AEPG-600M Precipitation Gauge - Heated |
 | `reading.sensor.cmp22` | Kipp & Zonen CMP22 Pyranometer |
 | `reading.sensor.cr1000x` | Campbell CR1000X Data Logger |
 | `reading.sensor.csat3b` | Campbell Scientific CSAT3B 3D Wind Sensor |
 | `reading.sensor.dualfan` | NEON Dual-Fan Aspirated Shield Fan Honeycomb stack |
-| `reading.sensor.enviroscan` | Sentek EnviroSCAN Current Probe Interface |
 | `reading.sensor.g2131i_raw` | Picarro G2131-i Isotope and Gas Concentration Analyzer |
 | `reading.sensor.gmp343` | Vaisala CARBOCAP GMP343 Carbon Dioxide Probe |
 | `reading.sensor.grape` | NEON Grape Data Logger |
@@ -127,14 +125,13 @@ These are the NEON sensor topics that carry data on the mirror at node H036, wit
 | `reading.sensor.l2130i_raw` | Picarro L2130-i Isotope Water Analyzer |
 | `reading.sensor.li191r` | LI-COR LI-191R Line Quantum Sensor |
 | `reading.sensor.li7200_raw` | LI-COR Biosciences LI-7200 Enclosed CO2/H2O Gas Analyzer |
-| `reading.sensor.li850` | LI-COR LI-850 CO2 and H2O Gas Analyzer |
+| `reading.sensor.li840a` | LI-COR LI-840A CO2 and H2O Gas Analyzer |
 | `reading.sensor.mcseries` | ALICAT MC-Series Gas Mass Flow Controllers |
+| `reading.sensor.metone370380` | Met One Instruments 370-380 Series Precipitation Gauges |
 | `reading.sensor.mti300ahrs` | XSense MTi-300 AHRS Accelerometer |
 | `reading.sensor.mwseries` | ALICAT MW-Series Low Pressure Drop Gas Mass Flow Meters |
 | `reading.sensor.nr01` | Hukseflux NR01 Net Radiometer |
 | `reading.sensor.picarro3way` | Picarro L2130i 3 way valve |
-| `reading.sensor.pluvio_raw` | OTT Pluvio2 |
-| `reading.sensor.pqs1` | Kipp & Zonen PQS1 Photosynthetically Active Radiation (PAR) |
 | `reading.sensor.pressuretransducer` | Generic Pressure Transducer |
 | `reading.sensor.prt` | 100 Ohm Platinum Resistance Thermometer |
 | `reading.sensor.ptb330a` | Vaisala BAROCAP PTB330 Digital Barometer |
@@ -142,10 +139,10 @@ These are the NEON sensor topics that carry data on the mirror at node H036, wit
 | `reading.sensor.si111` | Apogee SI-111 Infrared Radiometer |
 | `reading.sensor.solenoid` | Solenoid with 8 digital outputs |
 | `reading.sensor.spn1` | Delta-T Devices SPN1 Sunshine Pyranometer |
+| `reading.sensor.sq500ss` | Apogee SQ-500-SS Full-Spectrum Quantum Sensor |
 | `reading.sensor.t7610_raw` | Comet T7610 Remote Thermometer Hygrometer Barometer |
-| `reading.sensor.tdr315n_raw` | Acclima TDR-315N |
+| `reading.sensor.tdr315l_raw` | Acclima TDR-315L Integrated Waveform digitizing True Domain Reflectometer |
 | `reading.sensor.windobserverii` | Gill WindObserver II 2D Ultrasonic Anemometer |
-
 ## How to get started
 
 Each step points to the repository or Sage document that covers it in detail.
